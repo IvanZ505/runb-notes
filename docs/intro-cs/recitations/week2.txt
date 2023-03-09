@@ -1,0 +1,31 @@
+Beginner Algorithm:
+
+READ num1
+READ num2
+
+SET count to 0
+SET result to 0
+
+WHILE count < num2
+	COMPUTE result AS num1 + result
+	COMPUTE count AS count + 1
+ENDWHILE
+
+DISPLAY result
+
+
+Mod Algo:
+
+SET count AS 1
+WHILE count <= 100
+	IF count%15 == 0 THEN
+		DISPLAY Fizzbuzz
+	ELIF count%5 == 0 THEN
+		DISPLAY Buzz
+	ELIF count%3 == 0 THEN
+		DISPLAY Fizz
+	ELSE
+		DISPLAY count
+	ENDIF
+	ADD 1 to count
+ENDWHILE

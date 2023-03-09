@@ -1,0 +1,211 @@
+Course Title: CompTIA IT Fundamentals (FC0-U61) Cert Prep 1: Computer Basics, Hardware, and Operating Systems
+
+Description: Learn the fundamentals you need to ace the CompTIA IT Fundamentals (FC0-U61) exam. Passing the exam earns you the ITF+ certification, designed for advanced users considering a career in IT. This certification is a great entry point for novices transitioning to IT pros—and this three-part cert prep series provides "self-help" style guidance that you can use to study for the exam. The first course covers computer basics, hardware, and operating systems. Instructor Scott Jernigan helps you identify the components of a computer, connect devices and peripherals, set up data storage, and recognize the commonalities of different operating systems. In the final chapter, he provides a hands-on demo of setting up a PC and closes with an Ask Me Anything-style video where he answers common questions about PCs.This course was created by Total Seminars. We are pleased to offer this training in our library.We are a CompTIA Partner. As such, we are able to offer CompTIA exam vouchers at a 10% discount. For more information on how to obtain this discount, please download these PDF instructions.
+
+
+***********************************************
+Chapter: 1. How People Use Computers
+***********************************************
+
+
+-----------------------------------------------
+Video: The case for computer literacy
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:54            Understanding how computers work is called computer literacy 
+
+0:01:32            once you understand hwo things work or how it should work, you should be able to understand how things work. 
+
+
+-----------------------------------------------
+Video: Features common to every computing device
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:27            The computer process gets broken down into four stages: Input, processing, output, storage. 
+
+0:01:09            Processing means the computer reads the input and decides what to do. 
+
+
+-----------------------------------------------
+Video: Common general-purpose computing devices
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:30            A General purpose computing device is something that does stuff by default! 
+
+0:01:40            All computing devices have adaptibility. 
+
+
+-----------------------------------------------
+Video: Networks of computing devices
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:42            The Internet is a network.     
+
+0:02:25            A local network: A group of computers or network devices that are on the same switch. 
+
+0:02:43            LANs are limited by a relatively small geographic location and are much faster. 
+
+0:03:19            WAN (Wide Area Network) is 2 or more LANs connected over a larger location by two different routers. 
+
+0:03:40            When you combine a ton of LANs and WANs together you get the internet 
+
+
+-----------------------------------------------
+Video: Remotely-accessed computer systems
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:43            Online Applications: are applications not installed locally, but installed on remote computers on the internet that you can access. 
+
+0:00:58            Remotely-accessed computer system is what it's called 
+
+0:02:02            Cellular Network: connects you to remote servers to stream content 
+
+0:03:32            Online storage protects ur data 
+
+
+-----------------------------------------------
+Video: Specialized computer systems
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:11            Specialized ccomputer systems handle specific tasks 
+
+0:00:30            Things like your thermostat and phone is all computers 
+
+0:00:41            Point of sales (POS) System has enough processing power to take your money 
+
+0:00:49            ATM (Automated Teller machine) 
+
+0:01:12            GPS (Global Positioninng System) 
+
+
+-----------------------------------------------
+Video: Specialty I/O devices
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:39            Input Output devices can add functionality to other devices. 
+
+0:00:58            Controllers, Printer/scanners are all I/O devices 
+
+
+***********************************************
+Chapter: 2. System Hardware
+***********************************************
+
+
+-----------------------------------------------
+Video: CPUs
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:25            CPU (Central processing unit)  
+
+0:01:17            CPUs are great at doing what you ask it to do without any idea what it meant. 
+
+0:01:40            CPUs have speed and complexity. 
+
+0:01:52            A CPU's speed is measured in hertz 
+
+0:02:29            Complexity of CPUs. They come in 32-bit or 64-bit GPUs. 
+
+
+-----------------------------------------------
+Video: Passive and active cooling
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:40            There are 2 ways to cool computer, passive and active 
+
+0:01:23            Passive cooling relies on air using heat sinks to dissipate heat into the air. 
+
+0:02:03            Active cooling uses some device to push or pull heat away from a device such as a fan. 
+
+0:02:37            Liquid cooling uses a radiator filled with fluid that moves around to disappate heat. 
+
+
+-----------------------------------------------
+Video: RAM and active memory
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:56            A CPU has no memory so it needs a memory piecec. 
+
+0:00:58            RAM(Random Access Memory)      
+
+0:01:22            Functions of RAM: RAM stores temporary data 
+
+0:02:00            The total capacity of system memory puts a limit. 
+
+0:04:20            32-bit systems can only have up to 4 gigs of ram 
+
+
+-----------------------------------------------
+Video: Motherboards
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:03            The backplate of the motherboard is where the inputdevices plug into 
+
+0:01:19            Every computing device has a motherboard 
+
+
+-----------------------------------------------
+Video: Power supplies
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:30            AC (Alternate current) is what powers most of the US 
+
+0:00:33            The Power supply has 2 different types. 
+
+0:00:45            DC (Direct current) is what powers computing devices 
+
+0:00:55            Batteries provvide DC power    
+
+0:01:09            All devices need a power converter, which is what a power adapter 
+
+0:01:45            A PSU (power supply unit) handles the connection from AC to DC for desktop computers to directly power the desktop without a battery 
+
+
+-----------------------------------------------
+Video: AMA: Ask me anything about system hardware
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:17            Computer cores for CPUs are basically multiple processors stitched together to work together. 
+
+
+***********************************************
+Chapter: 5. Understanding Operating Systems
+***********************************************
+
+
+-----------------------------------------------
+Video: Operating system functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:40            Every operating systems offer the same four features, UI, coordination among hardware components, stores and retrieves data, and monitors health and functionality. 
+
+0:00:58            operating systems enables the I/O and processing software to work together to get stuff done. 
+
+0:01:16            Every operating system provides ways to interact with the machine 
+
+0:02:25            The operating system enables all the things to connect like keyboard and attachables 
+
+0:03:37            Chromebooks makes data storage structures too, but it uses a different type (microSD) 
+
+
+-----------------------------------------------
+Video: Operating system interfaces
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:06            Wrong, Ubuntu uses Nautilus as well as a bunch of Gnome applications. 
+

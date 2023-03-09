@@ -1,0 +1,40 @@
+September 8, 2022 - Intro to CS
+
+Assignments: 
+
+Algorithm Development:
+
+1. Analyze:
+	Understand the problem you are solving.
+2. Solve:
+	Develope a step by step algo.
+	Use a "language" to express it
+3. Evaluate:
+	Play a human computer to see how the algo works.
+	Mistake? Go back to 1 and/or 2.
+
+
+ALGO RUNTIME: Understand the running time of an algo.
+
+
+Example:
+
+Inputs: HoursW, wage
+Output: Salary
+
+Errors: negative hours, wages <=0
+
+READ HoursW 				-- 1 operation
+READ wages  				-- 1 operation
+if(HoursW < 0) or (wages <= 0):		-- 2 operations
+	DISPLAY error			-- 1 operation
+else:					-- no operations
+	HoursW * wages = salary		-- 1 operation
+	Sys.out.print(salary)		-- 1 operations
+ENDIF					-- 0 operations
+
+mod--- % (12 %2 = 0)
+
+
+
+

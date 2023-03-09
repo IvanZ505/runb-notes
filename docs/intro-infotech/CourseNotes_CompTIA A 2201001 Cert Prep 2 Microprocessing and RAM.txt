@@ -1,0 +1,177 @@
+Course Title: CompTIA A+ (220-1001) Cert Prep 2: Microprocessing and RAM
+
+Description: Are you looking to pass the CompTIA A+ (220-1001) exam for the first time or refresh your IT skills? If so, then this series is for you. The CompTIA A+ (220-1001): Cert Prep series is a comprehensive 10-part series designed to help IT professionals prepare for the CompTIA A+ Core 1 (220-1001) exam, which focuses on critical IT support tasks and essential troubleshooting skills. In this installment of the series, CompTIA expert Mike Meyers digs into the topics of microprocessing and RAM. Learn all about CPU speeds and cores, extensions, and sockets, as well as how to install a CPU and cool your PC. Plus, Mike covers RAM technologies and features, RAM capacity, and installing RAM.This Total Seminars course covers the exam certification topics. For information on additional study resources—including practice tests, lab simulations, books, and discounted exam vouchers—visit totalsem.com/linkedin. LinkedIn Learning members receive special pricing.This course was created by Total Seminars. We are pleased to offer this training in our library.We are a CompTIA Partner. As such, we are able to offer CompTIA exam vouchers at a 10% discount. For more information on how to obtain this discount, please download these PDF instructions.We are a CompTIA Partner. As such, we are able to offer CompTIA exam vouchers at a 10% discount. For more information on how to obtain this discount, please download these PDF instructions.
+
+
+***********************************************
+Chapter: 1. Microprocessing
+***********************************************
+
+
+-----------------------------------------------
+Video: What is a CPU?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:57            The CPU is a incredible calculator that does things really fast. 
+
+0:02:04            The external data bus helps communicate with the CPU 
+
+0:03:40            8-bits is a byte               
+
+0:05:43            Registers in the CPU to remember some information for the operations (general purpose registers) 
+
+0:05:53            A modern CPU can have more than 100 registers 
+
+0:07:27            The clock's job is to tell the CPU to do something 
+
+0:12:27            A pipeline is basically running multiple tasks simultaneously 
+
+0:13:48            Pipeline is also called a core 
+
+
+-----------------------------------------------
+Video: CPU speeds and cores
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:53            A system crystal is what pushes the clock on the CPU 
+
+0:04:38            Clock multiplying helps to account for the differences in clock speeds in the CPU and the motherboard. 
+
+0:06:17            Codenames describe the microarchitecture 
+
+0:08:12            Overclocking is a process to push the motherboard and CPU faster 
+
+0:08:23            Overclocking makes the system unstable 
+
+0:08:40            Overclocking turns the knob up to make motherboard faster 
+
+0:08:58            Multiple cores - multiple of these pipelines on it 
+
+0:10:01            hyperthreading is when one super smart thread can handle two incoming threads of code 
+
+
+-----------------------------------------------
+Video: CPU cache
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:57            CPU cache is a place in the CPU to store some information temporarily 
+
+0:01:08            When you run a program, some parts of the program gets copied to the RAM 
+
+0:01:20            Then, it's fed into the CPU to be processed 
+
+0:01:40            CPU is way faster than the RAM and the RAM cant keep up 
+
+0:02:14            Cache is basically a little tiny piece of ram called SRAM, which is much fastrer 
+
+0:03:28            How companies design a cache is different and can affect the performance of the CPU 
+
+0:03:42            when the piece of code a CPU needs isnt there when it needs it, it's called a pipeline stall 
+
+0:03:59            Every CPU comes with 3 cache, majority 
+
+0:04:25            1. L1 Cache (level 1 cache) - So fast that it runs at the multiplied speed of the CPU 
+
+0:04:44            2. L2 Cache feeds the L1 cache, much bigger, but runs at half of the clock multiplier speed 
+
+0:05:28            3. L3 Cache is big, megabyte size, and is base motherboard speed 
+
+
+-----------------------------------------------
+Video: 32-bit and 64-bit processing 
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:36            RAM looks like a 1 column spreadsheet 
+
+0:02:20            Memory controller Chips used to be a separate chip but nowadays is built into the CPU 
+
+0:02:38            It can grab any byte of memory to be sent to the CPUI 
+
+0:03:11            Address bus is a direct connection between the CPU and MCC to tell the MCC which byte of mem it needs rn 
+
+0:05:05            32-bit / 64-bit actually describes the size of the address buses. 32 bit = 32 wires as each wire can emit a on/off signal of 0/1 
+
+0:05:20            32-bit supports up to 4 gigs of ram 
+
+0:05:45            64-bit CPUs are able to support much much more than 4 gigs of ram 
+
+0:06:43            every 64-bit CPU can run 32-bit apps as well 
+
+0:10:16            x86 means 32-bit               
+
+
+-----------------------------------------------
+Video: CPU sockets
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:58            Microarchitecture is the circuit diagram inside the CPU 
+
+0:02:47            Manufacturers of CPUs will create a Family name for a microarchitecture and create many different models based on that.
+
+Example: Intel Alder Lake, Raptor Lake, all split between i5, i7, i9. AMD Zen 2, Zen 3, Zen 3+, Zen 4 architecture split between Ryzen 5, 7, 9 as well. 
+
+0:05:58            SKU - sales inventory code     
+
+0:08:05            Some CPU gens can change the socket types 
+
+0:08:06            PGA - pin grid array           
+
+0:08:24            LGA - land grid array, it has little pads and the sockets we drop it into has pins to make contact 
+
+0:09:08            AM4 is what AMD calls their sockets 
+
+0:09:29            LGA 1151 is the number of pins 
+
+0:10:14            LGA 1151 is a mainstream type of socket for i5-i7 
+
+0:10:25            LGA 2066 is for high end CPUs like i9s 
+
+0:10:45            AMD uses the AM4 socket which is for like ryzen 5, ryzen 7 
+
+0:10:57            AMD TR4 is for like the ryzen 9s 
+
+
+-----------------------------------------------
+Video: Installing a CPU
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:27            There are AM4 socket CPUs that are too fast for the motherboard 
+
+0:03:00            Zero insertion force socket has a bar you can raise to drop the CPU in. 
+
+0:04:18            Orientation notch is much more squared 
+
+0:04:51            Close arm to lock it in        
+
+0:05:02            thermal paste!!!!!!            
+
+0:05:19            OEM CPUs all come with a fan, these fans are call OEM fans 
+
+0:06:17            Thermal paste helps pull the heat from the CPU into the cooler 
+
+0:08:56            Fans are super annoying to install 
+
+0:09:03            Make sure everything is level  
+
+0:09:50            4 pin connector on motherboard to give CPU power 
+
+
+-----------------------------------------------
+Video: Liquid cooling
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:31            Alternatives to OEM fans is liquid cooling 
+
+0:00:46            Fans make noise, and if we can make it less noisy its good 
+
+0:01:05            OEM fan made by cooler master made to take away more heat 
+
+0:02:39            Two hoses, one to take away hot liquid and one to bring back the cooled air 
+
