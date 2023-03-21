@@ -462,4 +462,18 @@ Hall's Distance Categories:
 - Time spent signals significance
 - Perceptions of time depend on cultural background
 
+### Culture, Power and Communication
+
+
+#### Cultural Adaptation
+
+#### McLuhan's Global Village
+- We will be using communication tools to unite the world into something like a "village".
+
+#### C-Type Conflict
+- Occurs when relationships/trust are strong
+
+#### Tuckman's Team Development Model
+- In a group there are certain tasks and certain behaviors to look for.
+- Depending on what each group is able to produce shows what level they are on.
 
