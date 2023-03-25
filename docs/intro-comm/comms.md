@@ -257,6 +257,9 @@ Animals andhumans are *"open processes"*, meaning that they participate in conti
 
 ## Perception and Verbal Code
 
+### Functions of Language/Verbal Code
+- Cooperation, interaction, persuasion and inoculation.
+
 #### Communication Expectations
 - **The perceived self**: The person you really beleive yourself to be.
 - **The ideal or possible self**: The person you would like to be or might become
@@ -400,13 +403,15 @@ The Nonbeliever:
 ### The Revised Milgram Experiments
 - Stanley Milgrim's original experiment explored whether ordinary humans could commit heinous acts.
 
+## Interpersonal Communication
+
 ### Communication Styles
 
 - Open communicator
 - Closed communicator
-- The amount of feedback and disclosure
+- Determining whether a person is a open or closed communicator relies on feedback and self-disclosure.
 
-TODO: Get image
+![Communication Styles](imgs/communication-style.png)
 
 ### Relationships
 
@@ -415,9 +420,16 @@ TODO: Get image
 - **Control:** The need for influence and power, for being in  charge, for others to respect our abilities.
 - **Affection:** The need for a sense of reciprocated love, to know that someone still loves you when you are not at your worst.
 
-TODO: Get Onion Model
+***Another model that helps us Define Relationships***:
+#### The Onion Model
+
+- Breadth: Refers to the number of topics that you can discuss with someone.
+- Depth: The quality of that discussion regarding the topics.
+
+![Onion Model](imgs/onion-model.png)
 
 #### The Importance of Reciprocity
+- Relationships are always reciprocal.
 - The return of openness from one person to another.
 
 The **Cost Benefit Theory**:
@@ -425,15 +437,25 @@ The **Cost Benefit Theory**:
 
 **Perceived relationship reward** - **Perceived relationship costs** = **perceived relationship benefit**
 
-Defining Conflict:
+#### Defining Conflict:
 - The interpersonal process that occurs whenever the actions of one person interfere with the actions of another.
 - You can not avoid conflicts, only learn to manage it.
 
+## Nonverbal Communication
+
+#### Types of Nonverbal communications include:
+- Facial expressions and eye contact
+- Body movements and gestures - Kinesics/Haptics
+- Clothing and appearance
+- Distance and personal space - Proxemics
+- Physical environment
+- Time - Chronemics
+
 ### Movements and Gestures
-- Emblems
-- Illustrators: Using gestures to illustrate your point.
+- Emblems: nonverbal movements that translates to a very clear verbal meaning.
+- Illustrators: Using gestures to reininforce verbal messages. (Such as pointing in a direction when directing someone to a place.)
 - Regulators: Nonverbal cues that affect the conversation. (Such as leaning forward in the meeting)
-- Adaptors: Nonverbal cues we use when we're nervous.
+- Adaptors: Nonverbal cues we use when we're nervous. (Tapping your leg, playing with your pen, etc.)
 
 ### Clothing and Appearance
 - Determines credibility, persuasiveness, status & hiring decisions
@@ -460,20 +482,130 @@ Hall's Distance Categories:
 - Most business conducted on informal level
 - Status determins sequences of lateness
 - Time spent signals significance
-- Perceptions of time depend on cultural background
+- Perceptions of time depend on cultural background.
+
+#### Self: The Johari Window
+- Tells us how we withhold information from others to give us more power.
+
+![Johari Window](imgs/johari-window.png)
+
+#### Power in Relationships:
+- Reward Power (Your boss giving you a raise for doing well)
+- Coercive power (Your boss threatening to fire you if you don't do well)
+- Legitimate power (Your boss having the authority to fire you)
+- Expert power (Your professor having the knowledge to teach you)
+- Referent Power (Your professor being a well-known professor)
+- Persuasive power (Your professor being able to convince you to do well in the class)
+
+#### The Competencies to determine Emotional Intelligence:
+- **Self-awareness:** The ability to recognize your own feelings and emotions.
+- **Self-management:** The ability to control your own feelings and emotions.
+- **Motivation:** The ability to be self-motivated and to motivate others.
+- **Empathy:** The ability to understand the feelings of others.
+- **Social skills:** The ability to communicate effectively with others.
+
+#### The Triangle of Love - Robert Sternberg:
+- **Passion:** The intense emotional and physical attraction that we feel for another person.
+- **Commitment:** The decision to stay in a relationship.
+- **Intimacy:** The emotional closeness that we feel for another person.
+
+![Triangle of Love](imgs/triangle-of-love.png)
+
+## Intercultural Communication
+
+#### What is Culture in Communication?
+- Complex combination of common symbols, knowledge, folklore, customs, language, information processing patterns, rituals, habits, and other behavioral pattern that link and give a common identity to a particular group of people at a particular point in time.
+
+It can be:
+- A symbol
+- A frame of reference
+- National origin
+- Heritage
+- Set of traditions
+
+Characteristics of Culture:
+1) Complexed/ multifaceted
+2) Invisible
+3) Subjective
+4) Subject to change
 
 ### Culture, Power and Communication
+- Persons from **high-context culture** tend to be more indirect in their communication, so the context of the communication is more important than the actual words used.
+- They value politeness.
+- Rely on nonverbal, contextual cues.
+- Are often concerned with face-saving and are unlikely to publicly criticize others.
 
+Persons from **low-context culture** tend to be more direct in their communication, so the actual words used are more important than the context of the communication.
+- Value assertion and directness.
+- Asks direct questions in a effort to get to know otheres and do not hesitate to speak out about themselves.
+- Are seldom concerned with face-saving.
 
-#### Cultural Adaptation
+#### Cultural Adaptation (Shock)
+- Phase 1 **Honeymoon:** The initial excitement of being in a new culture.
+- Phase 2 **Frustation:** The realization that the new culture is not as easy as it seemed.
+- Phase 3 **Readjustment:** The process of adapting to the new culture.
+- Phase 4 **Resolution:** There are four outcomes, "full participation", "accommodation", "separation", and "rejection".
+
+![Cultural Adaptation](imgs/cultural-adaptation.png)
 
 #### McLuhan's Global Village
 - We will be using communication tools to unite the world into something like a "village".
 
-#### C-Type Conflict
+We are more like **The `local` village**.
+
+## Group Communication
+
+A-Type Conflict:
+- Occurs when relationships/trust are weak
+- Sidetracks team from issues
+- Creates defensiveness and anger
+
+C-Type Conflict:
 - Occurs when relationships/trust are strong
+- Members are willing to discuss issues
+- Ground rule "Ideas are not personal attacks"
+- Creates feeling of satisfaction
+- Improves team performance
+
+![Conflict Styles](imgs/conflict-styles.png)
 
 #### Tuckman's Team Development Model
 - In a group there are certain tasks and certain behaviors to look for.
 - Depending on what each group is able to produce shows what level they are on.
+- Very few groups are able to reach the final stage.
+- The four stages are:
+  - Forming (Getting to know each other)
+  - Storming (Dealing with conflict)
+  - Norming (Establishing ground rules)
+  - Performing (Working together)
+
+#### Trait Theory of Leadership
+- Ambitious
+- Trustworthy
+- Motivated
+- Self-confident
+- Knowledgeable
+- Creative
+
+#### Functional Theory of Leadership
+- Any person can be a leader for the duration of a task.
+
+#### Three-Dimensional Theory
+- Autocratic leadership: Leader decides, no votes
+- Democratic leadership: Leader decides, votes
+- Laissé-faire leadership: Leader lets group decide, takes really long to make decisions.
+
+#### Situational Contingency Theory
+- The best leadership style depends on the situation.
+- Leadership depends on:
+  - Leader-member relations
+  - Position of power
+  - Task structure
+
+#### Transformational Leadership
+- Leaders who inspire followers to transcend their own self-interests for the good of the group.
+- Articulates a vision
+- Provides plan for achieving vision
+- Mobilize commitment
+
 
