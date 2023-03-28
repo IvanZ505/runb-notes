@@ -608,4 +608,53 @@ C-Type Conflict:
 - Provides plan for achieving vision
 - Mobilize commitment
 
+### Organizational Communication
+- Direction of communication
+- Style of communication (Formal vs informal)
+etc.
+
+#### Formal Communication
+- Communication that is planned and structured.
+- Downward communication: From management to employees.
+- Upward communication: From employees to management.
+- Horizontal communication: Between employees at the same level.
+
+#### Informal Communication (Grapevine)
+- Communication that is unplanned and unstructured.
+- Indicates the health of the organization.
+- Adds to the employee satisfaction and commitment.
+- Indicates employee concerns
+- Is 75-90% accurate
+- Travels fast
+
+#### Obstacles to Organizational Communication:
+- Communicator anxiety
+- Inadequate preparation
+- Vague instructions
+- Jumping to conclusions
+- Bypassing
+- Harrasement
+- Communication technology
+
+Human Relations Model:
+- Supportive, but mostly downwards
+- Employees need to be treated with Trust, Respect, and Fairness
+- etc
+
+Human Resources Model:
+- Aka "Theory Y"
+- Team based model
+- Information and feedback flow freely up & down
+
+Systems Contingency Model:
+- Aka "Theory Z"
+- The best model is the one that works best for the organization
+- Communication flexibility is valued
+- Requires communication skills at all levels.
+
+Transformational Model (Newest):
+- Two types: Virtual and Multiunit.
+- Horizontal Communication is essential
+- Upward and downward comunication is used
+- Awareness of frame-of-reference
 
