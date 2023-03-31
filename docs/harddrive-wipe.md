@@ -8,9 +8,9 @@
 
 ### To Wipe:
 
-1. Go to [DBAN - SourceForge]("https://sourceforge.net/projects/dban/files/dban/dban-2.2.8/") and download Derik's Boot and Nuke Live ISO.
+1. Go to [DBAN - SourceForge](https://sourceforge.net/projects/dban/files/dban/dban-2.2.8/) and download Derik's Boot and Nuke Live ISO.
 	- Please be aware that you need the `2.2.8` version!!! Make sure you are downloading the `2.2.8` version!!!
-2. Go to [Rufus]("https://rufus.ie/en/#") and download the latest version they have.
+2. Go to [Rufus](https://rufus.ie/en/#) and download the latest version they have.
 	- Rufus is a open-sourced software used for creating Bootable USBs.
 3. Next, grab a USB and connect it to the computer you used to install rufus. (Use at least USB 3.0 unless you want to regret life)
 4. Run the Rufus installation.
