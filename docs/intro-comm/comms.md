@@ -626,6 +626,7 @@ etc.
 - Indicates employee concerns
 - Is 75-90% accurate
 - Travels fast
+- Example: Our Facebook group, because it's informal and takes place outside of the classroom.
 
 #### Obstacles to Organizational Communication:
 - Communicator anxiety
@@ -657,4 +658,107 @@ Transformational Model (Newest):
 - Horizontal Communication is essential
 - Upward and downward comunication is used
 - Awareness of frame-of-reference
+
+Virtual Organization:
+- Two or more organizations that are linked by technology.
+- Example: Apple collaborating with Samsung to deliver the first iPhone.
+
+---
+
+## PR/ Advertising
+- PR functions/ definitions and areas of activity.
+- Crisis management.
+- Spin control.
+- Advertising evolution and trends
+- Advertising pros and cons.
+- Advertising ethics.
+- Advertising regulations.
+
+PR (Public Relations) Defined:
+- "... the art and science of analyzing trends and predicting their effects on the organization and its relationship to the public."
+
+Places it's used:
+
+![PR](imgs/pr-activities.png)
+
+Spin Control:
+- The process of managing the flow of information to the public in order to control the public's perception of an organization.
+
+Spin Techniques:
+- Selectively leak information in advance of a crisis, hoping reporters will pay more attention to the leak than to the crisis.
+
+Crisis Communication:
+- "A reputational threat to operations that can have negative consequences for the organization if not handled properly."
+- Three Approaches to Crisis Communication:
+- Corporate Apologia:
+  - Denial
+  - Apology
+  - Explanation
+- Image Repair/Restoration:
+  - Acknowledge the problem
+  - Explain the problem
+  - Explain the solution
+- Situational Crisis Communication:
+  - Matching the response to the crisis.
+
+### Crisis Communication Theory:
+- The Crisis Communication Theory (CCT) is a model that explains how organizations should respond to a crisis.
+
+#### Why is it important?
+- Crises are inevitable and organizations need to handle these crises to survive.
+- These companies will provide reasons why the crisis occurred and how they will fix it.
+- (ETC.)
+
+### Organizational Crisis Definition:
+- A specific, unexpected, and non-routine series of events that create high levels of uncertainty...
+
+
+#### Discourse of Renewal:
+- Discourse of renewal adds to crisis communication by moving beyond image repair to stakeholder engagement.
+
+Four components of the discourse of renewal:
+- Organizational Learning
+- Ethical Communication
+  - Open and transparent communication
+- Prospective Vision
+  - Future-oriented outlook
+- Engaged Organizational Rhetoric
+  - Telling a specific interpretation about the crisis and how the organization moves forward.
+
+#### Avertising and Radio:
+- 'Free' radio
+- Advertising takeover.
+
+#### Advertising and Television:
+- Parity Productions
+  - **Unique Selling Proposition (USP):** The one thing that makes your product different from all the others.
+
+### Advertising Effects:
+
+**Pros:**
+- Advertising supports our economic program.
+- People use advertising to gather information.
+- Ad revenues make the "free" mass media possible
+- Advertising increases national productivity and improves the standard of living.
+
+**Cons:**
+- Advertising is intrusive.
+- Ads are deceptive.
+- Advs exploit children.
+- Advertising demeans and corrupts culture.
+- **AIDA approach** - Attention, Interest, Desire, Action
+- **Cosumer culture** - A culture in which personal worth and identity reside in the products which we surround ourselves.
+
+### Advertising Regulations:
+- Ads are regulated by the Federal Trade Commission (FTC).
+- The FTC can issue a cease and desist order ordering the creation and distribution of a corrective statement.
+- The FTC allows a certain amount of puffery.
+- An ad is false if it:
+  - Lies outright.
+  - Does not tell the whole truth.
+  - Lies by implication, words, or meanings.
+
+Determining the Advertising Rate (TV):
+- The rating of the TV show.
+- The share of households watching a program.
 
