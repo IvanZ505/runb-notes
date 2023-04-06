@@ -1,0 +1,64 @@
+Course Title: SQL for Non-Programmers
+
+Description: Do you want to learn about SQL but aren’t sure where to start? In this beginner-level course, instructor Julianne Thouin covers basic concepts of relational database design and explains how to write simple SELECT statements using joins and proper filtering. Julianne explains what SQL Server is and what it is used for. Next, she shows how tables in a relational database relate to one another through surrogate, primary, and foreign keys. Julianne teaches you how to tackle the most basic query possible. She explains how AND and OR logic applies to filtering queries on more than one data point, then discusses INNER joins and OUTER joins. Julianne covers how to use subqueries for filtering your results. She walks you through some commonly used examples of built-in functions. In conclusion, Julianne shows you how aggregate functions work using the GROUP BY and HAVING clauses.
+
+
+***********************************************
+Chapter: 1. Introduction to SQL Server and Relational Database Concepts
+***********************************************
+
+
+-----------------------------------------------
+Video: What is SQL Server?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:27            SQL stands for Structured Query Language 
+
+0:00:40            Database: A organized collection of data 
+
+0:00:55            SQL is used for managing Relational Databases which involve tables connected with data relationships 
+
+
+-----------------------------------------------
+Video: Understanding servers, databases, and tables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:07            Data on databases is organized into tables. Tables in SQL Server has 2 part names. The first part is called the schema and then the second part is the table they are separated by a table. 
+
+0:03:26            The data is stored in rows and the data points in divided in collumns 
+
+0:03:51            there are a bunch of keys that are attached to the table and it leads to a different table. 
+
+
+-----------------------------------------------
+Video: Relational database concepts
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:24            Relational Database Transformation 
+
+0:01:18            A relational database tries to store the data points in as few places as possible and are linked to one another using keys. 
+
+0:01:49            This is a one-to-many relationship as it each data point is only stored once in the customer table but can be referenced many times in the Order table 
+
+0:03:06            An association table aka a join table helps to connect the information in a many-to-many relationship 
+
+0:03:17            Normalization: organizing data in a database by establishing relationships between tables in order to avoid redundancy and maintain data integrity. 
+
+
+-----------------------------------------------
+Video: Surrogate, primary, and foreign keys
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:29            Surrogate Keys
+- A unique identifier to represent the contents on a row in the logical design of a relational database; value is not derived from the content of the data itself. 
+
+0:01:35            Natural Keys
+- A unique identifier for the row in the logical design of a relational database as described using data attributes that exist within the data set and also have meaning outside the context of the database. 
+
+0:02:16            Foreign Key
+- A key that points to a primary key and creates a relationship between two tables and maintains data integrity. 
+

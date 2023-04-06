@@ -1,0 +1,146 @@
+Course Title: CISSP Cert Prep (2021): 1 Security and Risk Management
+
+Description: Learn about information security and risk management practices needed to complete the first domain of the 2021 Certified Information Systems Security Professional (CISSP) exam. CISSP is the industry's gold standard certification, necessary for many mid- and senior-level positions. This course includes coverage of key exam topics from the Security and Risk Management domain: security governance, compliance and policy issues, personnel security, threat modeling, and vendor management. Author Mike Chapple also covers the trifecta of information confidentiality, integrity, and availability. He reviews business continuity and risk management strategies, and highlights the importance of ongoing security awareness and education in any organization.Find the companion study books at the Sybex test prep site and review the complete CISSP Body of Knowledge at https://www.isc2.org/cissp-domains/default.aspx.
+
+
+***********************************************
+Chapter: 1. Security Fundamentals
+***********************************************
+
+
+-----------------------------------------------
+Video: The goals of information security
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:28            CIA Triad : Highlights the three most important functions of IT systems 
+
+0:00:52            Confidentiality protects info and sys from unauthorized access 
+
+0:01:08            Disclosure atacks seek to undermine confidentiality 
+
+0:01:09            Integrity: prtects info and sys from unauthorized modification 
+
+0:01:28            Alterations attacks seek to undermine integrity 
+
+0:01:40            Availibility ensures that info and sys are available for authorized users when needed. 
+
+
+-----------------------------------------------
+Video: Confidentiality
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:14            Denial of services attacks try to crash or overwhelm a system 
+
+0:00:53            Confidentiality: restrict users from accessing sensitive info without permission. 
+
+0:01:40            Encryption protects info at rest or in transit 
+
+0:02:33            Steganography hides info within images or others in files that are undetectable to the naked eye 
+
+
+-----------------------------------------------
+Video: Integrity
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:15            Integrity controls protect protect a orgs info from accidental or intentional ampering 
+
+0:00:56            Intentional alteration, user error, software or hardware error, acts of nature. 
+
+0:01:13            hash functions create message digests from large files. 
+
+0:02:19            Non repudiation is achieved when the recipient of a message can prove to an independent third party that the message actiually came frmo the purported sener 
+
+0:02:37            To create a digital signature: 
+
+0:02:55            1. Compute the hash value of a message and encrypt it with the sender's private key 
+
+
+-----------------------------------------------
+Video: Availability
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:22            Availability protects against disruptions to normal system operation or data availability. 
+
+0:01:00            Could result frmo malicious attackers, component failures, application failures or utility failures 
+
+0:01:18            High availability protects services by having multiple servers dedicated to the same purpose 
+
+0:01:18            Redundant components include having 2 power supplies or having multiple hard drives set up in a RAID system 
+
+0:01:42            Fault tolerance protects services from small failures 
+
+
+***********************************************
+Chapter: 2. Security Governance
+***********************************************
+
+
+-----------------------------------------------
+Video: Aligning security with the business
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:35            Security leader serves as the subject matter expert on issues of confidentiality, integrity, and availability 
+
+0:01:14            Security leaders must be business leaders too and understand the missions, goals, and objectives of the boarder profession. 
+
+0:01:32            Security controls can often be a barrier to the efficient operation of the business. The challenge they face is that they must balance security with business needs. 
+
+0:02:46            When proposing new security controls, security leaders must present a case that justifies the investment of time and money, balance security and business concerns, achieve confidentiality, integrity and availability. 
+
+
+-----------------------------------------------
+Video: Organizational processes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:20            Information security must align themselves with the governance processes. These processes involve many different levels and can involve committees such as the Information Governance Committee, Risk management Committee, Board of Directors. 
+
+0:01:27            INtegrating Security Governance, ensures governing bodies understand the security risks that are faced by the organization 
+
+0:01:44            Governance organizations must also inform the governing bodies of security incidents and review the results of audits and provide audit reports to governing bodies. 
+
+0:01:51            Theres no one size fits all model to security governance and it is up to you to find a security governance model that fits your organization's culture. 
+
+0:02:33            Corporate acquisitions require integration of controls in order to remove redundancies and to ensure that the security controls are compatible with one another. 
+
+0:03:01            Corporate divestitures must ensure that the branch splitting off has adequate security controls and that the parent company is not affected negatively by this. 
+
+
+-----------------------------------------------
+Video: Security roles and responsibilities
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:15            CISO is the Chief Information Security Officer and he is the most senior information security leader in an organization. 
+
+0:01:00            The person the CISOs report to differs 
+
+0:01:08            CISOs lead a team              
+
+
+-----------------------------------------------
+Video: Control frameworks
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:16            Security professions oversee the designs, implementation of security controls 
+
+0:00:39            Security control frameworks help to guide security program designs 
+
+0:00:56            COBIT, Control objectives for IT was developed by the Information Systems Audit and Control Association. 
+
+0:01:09            It is used by auditors         
+
+0:02:10            ISO standards cover security control standards 
+
+0:02:53            Government agencies and contractors have a standard of their own called the NIST 800-53 
+
+0:03:16            it is mandatory for government agencies 
+
+0:04:58            NIST publishes a Cybersecurity framework to provide a common language for cybersecurity risk. Helps identify and prioritize actions and align security actions across control types. 
+

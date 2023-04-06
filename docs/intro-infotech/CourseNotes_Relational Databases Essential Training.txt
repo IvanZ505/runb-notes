@@ -1,0 +1,148 @@
+Course Title: Relational Databases Essential Training
+
+Description: In today’s big-data world, understanding how to model phenomena with a relational database is an invaluable skill. A variety of different users—from government agency employees to gamers—rely on relational databases for everyday operations. In this course, join Adam Wilbert as he covers the fundamentals of the relational model for creating databases of real-world situations. Adam goes over concepts that are applicable to a wide variety of platforms, including SQL Server, Oracle, Access, MySQL, and PostgreSQL. Learn the basics of data storage, review the structure of a data table, and learn how to plan your relational database using an entity-relationship design tool. Plus, explore data integrity and validation, table relationships, writing queries, and more.
+
+
+***********************************************
+Chapter: 1. Get to Know Relational Databases
+***********************************************
+
+
+-----------------------------------------------
+Video: A brief introduction to data storage
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:52            The simplest way to store data is just in a list. 
+
+0:01:36            You can also organize the data in a hierarchy such as like a folder of photos and divide them by location. 
+
+0:02:13            Organizing Data in a Table with each attribute being it's own column. 
+
+0:03:03            Table structure pros and cons: 
+
+0:03:12            Attributes can be added with additrional columns 
+
+0:03:18            New records can be added with addtional rows 
+
+0:03:26            creates the need to store repetitive info 
+
+0:03:33            cant easily accomodate special circumnstances 
+
+0:04:14            Relational Databases allow you to store different information about the same entry in multiple different tables 
+
+
+-----------------------------------------------
+Video: E.F. Codd's relational model
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:52            The Relational Model:
+- Developed by data scientist E.F. COdd
+- Separated the retrieval of info from its storage. 
+
+0:01:45            Traverse through these tables with their related keys 
+
+
+-----------------------------------------------
+Video: What the CRUD?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:19            In order to store data in a relational database you need to use a relational database management system (RDBMS 
+
+0:01:24            RDBMS Vendors include Microsoft SQL Server, Azure, Oracle, PostgreSQL, MySQL etc. 
+
+0:01:35            They must also create key-value columns and create relationships 
+
+0:01:35            RDBMS tasks include creating and modifying the structure of the data, define tables and column names 
+
+0:02:12            They must also be able to perform CRUD tasks. 
+
+0:02:23            CRUD stands for Create, read, update, delete. 
+
+0:03:18            SQL: Structural Query Language 
+
+
+-----------------------------------------------
+Video: Relations, tuples, tables, and records
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:32            The core parts of a relational database are relations, domains, and tuples 
+
+0:00:55            Or table, columns and records  
+
+0:01:12            A table is the main storage device for data in a database 
+
+0:02:27            Records can be sorted in any order 
+
+
+***********************************************
+Chapter: 2. Entity Relationship Diagrams
+***********************************************
+
+
+-----------------------------------------------
+Video: Develop a model of the real world
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:34            Database Model helps outline what you need 
+
+0:00:41            To designa  relational databse 
+
+0:00:46            identify the facts it needs to store 
+
+0:01:03            think about what you want to get out of the database 
+
+0:02:09            Group facts into themed table groups 
+
+0:02:30            Consider tables as nouns and columns as adjectives 
+
+0:04:37            UML Unified Modeling notation  
+
+
+-----------------------------------------------
+Video: Choose an ER design tool
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:15            ERD - Entity relationship diagram 
+
+
+-----------------------------------------------
+Video: Attribute data types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:20            You need to define the type of data each column will store 
+
+0:00:27            examples: int, string, bool, etc 
+
+0:01:07            better storage efficiency because when the RDBMS knows what type of data its working with, it can store it in less bytes. 
+
+0:01:07            The benefits of using data types is: 
+
+0:01:20            Better performance predictions 
+
+0:01:32            Enforces data consistency and improves quality 
+
+0:01:45            Eliminates an entire class of data entry errors 
+
+
+-----------------------------------------------
+Video: Use primary keys to identify records
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:30            They designate a column as the primary key to access data in a diff table 
+
+0:01:25            Defining a primary key: you need it to be guaranteed to be unique forever 
+
+0:01:48            You should also look for unique identifiers naturally present in your data 
+
+0:02:10            It may be a concatenation or composite of multiple columns 
+
+0:02:35            Create your own identifiers, or called surrogate keys. 
+

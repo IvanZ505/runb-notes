@@ -1,0 +1,95 @@
+Course Title: Data Analytics: Graph Analytics
+
+Description: Since the inception of data analytics, the way in which analysts view and interpret data has evolved tremendously. New technologies, tools, and approaches have advanced what's possible with data analytics, and network analysis is no exception. In this course, longtime data analyst and data visualization expert Heather Johnson shares the fundamentals of using graph analytics, or network analysis, when analyzing data. Heather begins by reviewing the components of a network analysis and detailing the advantages of using a graph analytics approach. She then walks through key applications of using graph analytics when reviewing data. To wrap up the course, Heather discusses career opportunities within the realm of graph analytics. Upon completion, you’ll be equipped with the knowledge of what graph analytics is and how it can be leveraged within your analytics career.This course was created by Madecraft. We are pleased to host this training in our library.
+
+
+***********************************************
+Chapter: 1. Understanding Graph Analytics
+***********************************************
+
+
+-----------------------------------------------
+Video: Demystifying graph analytics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:30            Graph analytics show relationships between data points in a way superior to traditional tables 
+
+0:01:55            BART Timetables are traditional dbs where info is stored in cols and rows 
+
+0:02:18            Join is a SQL clause that combines data from two tables into one. With Join you need to define how the data will be combined row by row. 
+
+
+-----------------------------------------------
+Video: Nodes, edges, and properties
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:25            Maps show you important elements 
+
+0:01:00            and the properties categorize or connect points. 
+
+0:01:00            The edges are the connections between those points 
+
+0:01:00            In graph analytics nodes are the points on a network 
+
+0:01:25            Node to edge relationship      
+
+
+***********************************************
+Chapter: 2. Benefits and Applications
+***********************************************
+
+
+-----------------------------------------------
+Video: Applying graph analytics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:05            Graph analytics can be used to analyze networks visually using nodes edges and properties. 
+
+0:00:19            They can be applied to any dataset that can be described in those terms 
+
+0:00:37            Train system maps are a good way to look at a system of graph analytics 
+
+0:01:08            You can also use graph analytics to analyze the effects of certain nodes being shut down as well as how central a connection is. 
+
+0:01:26            Bro the canal question had to be targeted. 
+
+
+-----------------------------------------------
+Video: Social networks and marketing
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:37            Node to edge relationships have properties that are in common. 
+
+0:02:01            By maximizing the number of connections a node connects to can get you mor einfluence. 
+
+
+-----------------------------------------------
+Video: Financial analysis
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:20            Financial transactions can be tracked using graph analytics 
+
+0:01:33            Money moves through separate accounts (nodes) through transactions. 
+
+
+***********************************************
+Chapter: 3. Career Opportunities
+***********************************************
+
+
+-----------------------------------------------
+Video: Tools to know
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:48            Graph Database Providers: create dashboards that store data in the graphical elements of nodes, edges, and properties. 
+
+0:01:47            graph database data is stroed as graphical elements 
+
+0:01:56            Graph database providers use multiple languages. 
+

@@ -1,0 +1,132 @@
+Course Title: Ethical Hacking: Cryptography
+
+Description: While the science of cryptography—in which data is mathematically scrambled—has roots in the protection of top-secret military communications, modern cryptography helps secure information for anyone with an email account. Cryptography techniques and practices are used for authentication, data integrity, confidentiality, and non-repudiation. In this course, Stephanie Domas takes this traditionally complex topic and breaks it down into understandable and approachable segments. Stephanie covers the basic principles of cryptography and the most popular algorithms (and how they're used,) as well as attack strategies and methodologies. Learn about the different types of cyphers, hashing, digital certificates, public key infrastructure (PKI) components, and more.Note: The Ethical Hacking series maps to the 20 parts of the EC-Council Certified Ethical Hacker (CEH) exam (312-50) version 10.
+
+
+***********************************************
+Chapter: 1. Cryptography Basics
+***********************************************
+
+
+-----------------------------------------------
+Video: What does cryptography mean?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:06            Cryptography is the conversion of data into a scrambled form/ 
+
+0:00:54            What are the uses of cryptography? 1. Authentication, 2. Integrity, 3. Confidentiality, 4. Non-repudiation 
+
+0:01:23            Cryptography is when data is mathemateically scrambled 
+
+0:01:43            It involved encryption, which is legible data and is scrambled into cipher text. 
+
+
+-----------------------------------------------
+Video: Different types of cryptography
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            Then, you have decryption, which is the act of taking the cipher text and translating it back to legible data 
+
+0:00:06            There are two branches of cryptography, symmetrical and asymmetrical. 
+
+0:00:27            In symmtretical cryptography, the same key is used to encrypt and to decrypt the data. These keys are called secret, shared, or private keys. 
+
+0:01:32            Symmtrical cryptography provides confidentiality but does not provide authentication, integrity or non-repudiation. 
+
+0:02:07            Asymmetrical cryptography means we do not use the same key but use a public key to encrypt and a private key in order to decrypt. 
+
+0:02:11            The public and the private key together forms the key pair 
+
+0:02:24            Public keys are freely distributed. 
+
+0:03:08            It provides confidentiality and authentication 
+
+0:03:32            There is a third cryptography which is called hashing, which is a one way function. 
+
+
+***********************************************
+Chapter: 2. Ciphers
+***********************************************
+
+
+-----------------------------------------------
+Video: Different types of ciphers
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            Ciphers are algorithms used for encryption and decryption. 
+
+0:00:35            Plain text refers to the original text and the algorithm is the mathematical computation to encrypt it and key is a unique piece of info to guide the algorithm and the ciphertext is a name for that garbled text you get after encryption. 
+
+0:01:22            Substitution cipher involves replacing each unique charater with a different character. It is encoded and without the decoder ring, you could never get the message. 
+
+0:02:02            Transposition cipher, when you transpose the letter. If it's a key of 3, you shift a letter 3 times, so, A-> D 
+
+0:02:41            XOR ciphers is written with a little hat and uses a lookup table to figure out what the cipher is 
+
+0:04:48            Modern ciphers are divided into block ciphers: which are finite blocks at once and must all data prior to processing, which is like PDF or word 
+
+0:04:53            A stream cipher can encrypt data continiously 
+
+
+-----------------------------------------------
+Video: Symmetric encryption
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:22            Symmetric encryption algorithms are computationally fast, a 
+
+0:00:34            scalability issues occur with large numebr of unique keys 
+
+0:02:12            Data encryption standard (DES) is a block cipher and is symmetrical 
+
+0:02:29            Iit encrypts in 640bit sizes   
+
+0:02:57            Replaced by AES                
+
+0:04:05            AES (advanced encryption standard) is symmetrical, and is iterated block cipher. 
+
+0:04:25            It operates on 128-bit blocks  
+
+0:04:53            Rivest Cipher (RC) is a family of ciphers 
+
+0:05:06            RC4 is a stream cipher         
+
+0:06:09            RC5 is a block cipher however so despite belonging to the same family it is different 
+
+0:06:19            RC6 is built on top of RC5     
+
+0:06:29            It still has the variable block sizes 
+
+
+-----------------------------------------------
+Video: Asymmetric encryption
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            However it added itneger multiplciation and 4x4 working registers 
+
+0:00:32            Asymmetric encryption algos are computationally slow compared to symmetric encryption 
+
+0:00:47            THey often depend on large prime numnbers in trapdoor funcitons 
+
+0:00:57            Easy to do one way but hard to do the other way 
+
+0:02:07            Rivest-Shamir-Adleman (RSA) is most widely used authentication algo 
+
+0:02:24            They use two very large prime numebrs, or up to 4096 bits 
+
+0:03:01            ElGamal is developed for digital signature usage. 
+
+0:03:30            Ellptical curve cryptography performs discrete logarithm problems over points on an elliptic graph 
+
+
+-----------------------------------------------
+Video: Mixing asymmetric with symmetric
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            Diffie-Hellman is used for key exchanges and is used in SSL and IPsec and is susceptible to ataattack 
+
