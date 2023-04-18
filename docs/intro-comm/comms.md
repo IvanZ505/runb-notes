@@ -698,7 +698,7 @@ Crisis Communication:
   - Acknowledge the problem
   - Explain the problem
   - Explain the solution
-- Situational Crisis Communication:
+- Situational Crisis Communication (Most contemporary approach):
   - Matching the response to the crisis.
 
 ### Crisis Communication Theory:
@@ -762,3 +762,92 @@ Determining the Advertising Rate (TV):
 - The rating of the TV show.
 - The share of households watching a program.
 
+## Final Challenge Contents
+- Organizational communication
+- Mediated/Mass communication
+- Advertising/Public relations
+- Public Speaking
+- Interviews
+- **Videos** are critical.
+	- They are all video/ scenario based on the finals.
+
+---
+
+## Public Speaking
+- Types of presentations
+- Persuasion variables
+	- What makes someone persuasive.
+- Organizational Patterns
+- Devlivery methods and visuals
+
+Public Speaking as a Dynamic Process
+- When speaking in person and synchronously, you get audience feedback.
+
+Types of Presentations:
+- Informative
+	- In order to teach
+- Persuasive
+- Special Occasion
+	- (I.E.) : Commencement, wedding, funeral.
+
+#### Organizational pattern
+- Arrangement of main points of the presentation.
+- Informative presentations are usually structured as:
+	- Chronological
+	- Topical
+	- Spatial
+- Persuasive presentations are usaully:
+	- Cause and effect
+	- criteria-satisfaction
+	- motivated sequence
+
+### Persuasive Factors
+- Evidence and logic (Logos)
+- Psychological Needs (Pathos)
+- Credibility of Speaker (Ethos)
+- Opinion of **key** people
+
+### Delivery Methods
+- Speaking from memory
+- Extemporaneous speaking
+	- Speaking from the heart or done without preparation.
+- Speaking from visuals (Using slides as a guide)
+- Speaking from manuscript (Entire presentation is written out)
+- Impromptu speaking  (Related to extemporaneous speaking)
+
+**The importance of visuals**:
+
+![Recall rates of visuals](imgs/recallrate.png)
+
+<b style="color: red">nterviews Unit is the most important damn unit!!!i</b>
+
+## Interviews
+- Types of interviews
+- Types of questions
+- Structure and format of the interview
+- Lawful and unlawful questions
+- **Strategies for succeeding in an interview scenario**
+
+---
+
+### Preparing for Interview
+- Have a positive attitude
+- Dress for the occassion
+	- Create a positive impression and image
+
+### Strategies for Impression Management
+- Speaking rapidly and forcefully
+- Etc
+
+### Interviewer Responsibilities
+- Contact interviewee before interview
+- Plan the environment
+- Asking questions that are lawful
+- Etc
+
+### Lawful Questions
+- All questions must be job-related. (Ability to complete the job)
+- The same basic questions must be asked of all applicants.
+
+#### Arrest/Conviction
+- There is no law against asking for arrest or conviction records in an interview. However, the employee should be given the opportunity to explain their explanation and the interviewer can determine if that is valid.
