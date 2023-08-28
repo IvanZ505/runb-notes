@@ -6,6 +6,8 @@
 #### 1) [Definitions of Communication](#1.-definitions-of-communication)
 #### 2) [Communication Theories](#communication-theories-%26-models)
 #### 3) [Perception and Verbal Code](#perception-and-verbal-code)
+#### 4) [Interpersonal Communication](#interpersonal-communication)
+#### 5) [Organizational Communication](#organizational-communication)
 
 **Important:** Check out the Class Recordings!
 
@@ -608,16 +610,21 @@ C-Type Conflict:
 - Provides plan for achieving vision
 - Mobilize commitment
 
-### Organizational Communication
+## Organizational Communication
 - Direction of communication
 - Style of communication (Formal vs informal)
-etc.
+- Trust, expectations and relationships between management and employees.
+- Decision making
+- Responding to different communciations tyles.
+- Organization 'culture'
+- Organizational communication obstacles
 
 #### Formal Communication
 - Communication that is planned and structured.
+	- Specifically, it is a 3 part structure.
 - Downward communication: From management to employees.
 - Upward communication: From employees to management.
-- Horizontal communication: Between employees at the same level.
+- Horizontal communication: Between employees and colleagues at the same level.
 
 #### Informal Communication (Grapevine)
 - Communication that is unplanned and unstructured.
@@ -630,32 +637,45 @@ etc.
 
 #### Obstacles to Organizational Communication:
 - Communicator anxiety
+	- People are just not comfortable communcating
 - Inadequate preparation
-- Vague instructions
+- Vague instructions (unclear)
 - Jumping to conclusions
 - Bypassing
 - Harrasement
 - Communication technology
 
-Human Relations Model:
+### Key Models of Organizational Management
+
+#### Traditional Model:
+- Values decision making by management.
+- Rational, task-oriented, usually written
+- Social side less important
+- Structured roles define expectations
+- Expectations mainly determined by position
+- Mainly downwards.
+
+#### Human Relations Model:
 - Supportive, but mostly downwards
 - Employees need to be treated with Trust, Respect, and Fairness
 - etc
 
-Human Resources Model:
+#### Human Resources Model:
 - Aka "Theory Y"
 - Team based model
 - Information and feedback flow freely up & down
+- Informal communication is encouraged
+- Communication skills are needed at all levels.
 
-Systems Contingency Model:
+#### Systems Contingency Model:
 - Aka "Theory Z"
 - The best model is the one that works best for the organization
 - Communication flexibility is valued
 - Requires communication skills at all levels.
 
-Transformational Model (Newest):
+#### Transformational Model (Newest):
 - Two types: Virtual and Multiunit.
-- Horizontal Communication is essential
+- Horizontal Communication is /essential
 - Upward and downward comunication is used
 - Awareness of frame-of-reference
 
@@ -665,6 +685,42 @@ Virtual Organization:
 
 ---
 
+## Mass and Mediated Communication
+
+#### Does More platforms mean more choice???
+- The most popular media platform is still Youtube.
+- A majority of users of facebook use it several times a day.
+
+#### Power and Censorship
+- 90% of republicans believe that social media sites do censor political viewpoints.
+- However, there is a wide partisan difference in labeling posts from officials as misleading or inaccurate. 71% of Republicans disapprove and 73% of Democrats approve.
+- Also a large divide in trust in the social media platform to censor correctly or label inaccurate views correctly.
+
+### Media Characteristics:
+- Synchronicity
+	- How long it takes for feedback to be transmitted.
+	- Ex: Taking class on zoom = high synchronicity, watching recordfing = low.
+- Interactivity
+	- Degree of interaction and control over message content or timing.
+	- iClicker questions = high interactivity
+- Social presence
+	- How personal, sociable and warm the pocess of communication appears to be.
+	- Seeing classmates and professor's faces, high social presence.
+
+### Mediated Communication Theories
+
+1. Media richness Theory
+- So the three components described above help in reproducing the information sent over the media.
+
+
+2. Uses and Gratification Theory
+- We are using media to fulfill certain needs, such as get information, or for amusement.
+
+
+3. Agenda-Setting Theory
+- Sets the agenda for what we should be thinking about.
+
+
 ## PR/ Advertising
 - PR functions/ definitions and areas of activity.
 - Crisis management.
@@ -673,6 +729,8 @@ Virtual Organization:
 - Advertising pros and cons.
 - Advertising ethics.
 - Advertising regulations.
+
+---
 
 PR (Public Relations) Defined:
 - "... the art and science of analyzing trends and predicting their effects on the organization and its relationship to the public."
@@ -686,8 +744,10 @@ Spin Control:
 
 Spin Techniques:
 - Selectively leak information in advance of a crisis, hoping reporters will pay more attention to the leak than to the crisis.
+- Contact press immediately after an event with your interpretation of the situation.
+- Push the idea that there are always two sides to every story.
 
-Crisis Communication:
+### Crisis Communication:
 - "A reputational threat to operations that can have negative consequences for the organization if not handled properly."
 - Three Approaches to Crisis Communication:
 - Corporate Apologia:
@@ -698,8 +758,9 @@ Crisis Communication:
   - Acknowledge the problem
   - Explain the problem
   - Explain the solution
-- Situational Crisis Communication:
+- Situational Crisis Communication (Most contemporary approach):
   - Matching the response to the crisis.
+
 
 ### Crisis Communication Theory:
 - The Crisis Communication Theory (CCT) is a model that explains how organizations should respond to a crisis.
@@ -714,7 +775,10 @@ Crisis Communication:
 
 
 #### Discourse of Renewal:
-- Discourse of renewal adds to crisis communication by moving beyond image repair to stakeholder engagement.
+- Discourse of renewal adds to crisis communication by moving beyond image repair to stakeholder engagement as part of criis management.
+- It is basically renewing and changing the direction of the organization as it emerges from a crisis.
+- Goal is to create a criss response that is authentic and helps the organization not only to survive but to grow.
+
 
 Four components of the discourse of renewal:
 - Organizational Learning
@@ -725,6 +789,8 @@ Four components of the discourse of renewal:
 - Engaged Organizational Rhetoric
   - Telling a specific interpretation about the crisis and how the organization moves forward.
 
+## Advertising
+
 #### Avertising and Radio:
 - 'Free' radio
 - Advertising takeover.
@@ -733,6 +799,7 @@ Four components of the discourse of renewal:
 - Parity Productions
   - **Unique Selling Proposition (USP):** The one thing that makes your product different from all the others.
 
+- The facebook ad we watched did have a USP.
 ### Advertising Effects:
 
 **Pros:**
@@ -760,5 +827,161 @@ Four components of the discourse of renewal:
 
 Determining the Advertising Rate (TV):
 - The rating of the TV show.
-- The share of households watching a program.
+	- The share of households watching a program.
+	- \# of households watching a program / # households owning a TV set.
 
+- Share of the program
+	- \# of households watching a program / # of households watching TV
+
+
+
+## Final Challenge Contents
+- Organizational communication
+- Mediated/Mass communication
+- Advertising/Public relations
+- Public Speaking
+- Interviews
+- **Videos** are critical.
+	- They are all video/ scenario based on the finals.
+
+---
+
+## Public Speaking
+- Types of presentations
+- Persuasion variables
+	- What makes someone persuasive.
+- Organizational Patterns
+- Devlivery methods and visuals
+
+Public Speaking as a Dynamic Process
+- When speaking in person and synchronously, you get audience feedback.
+
+Types of Presentations:
+- Informative
+	- In order to teach
+- Persuasive
+- Special Occasion
+	- (I.E.) : Commencement, wedding, funeral.
+
+#### Organizational pattern
+- Arrangement of main points of the presentation.
+- Informative presentations are usually structured as:
+	- Chronological
+	- Topical
+	- Spatial
+- Persuasive presentations are usaully:
+	- Cause and effect
+	- criteria-satisfaction
+	- motivated sequence
+
+### Persuasive Factors
+- Evidence and logic (Logos)
+- Psychological Needs (Pathos)
+- Credibility of Speaker (Ethos)
+- Opinion of **key** people
+
+### Delivery Methods
+- Speaking from memory
+- Extemporaneous speaking
+	- Speaking from the heart or done without preparation.
+- Speaking from visuals (Using slides as a guide)
+- Speaking from manuscript (Entire presentation is written out)
+- Impromptu speaking  (Related to extemporaneous speaking)
+
+**The importance of visuals**:
+
+![Recall rates of visuals](imgs/recallrate.png)
+
+<b style="color: red">Interviews Unit is the most important damn unit!!!</b>
+
+## Interviews
+- Types of interviews
+- Types of questions
+- Structure and format of the interview
+- Lawful and unlawful questions
+- **Strategies for succeeding in an interview scenario**
+
+---
+
+### Types of Interviews
+- Counseling Interview
+- Employment interview
+- Exit interview
+	- Takes place after you're leaving your job
+- Grievance interview
+	- Some type of complaint about something
+- Group interview
+	- Panel: You have more interviewees than interviewers
+	- Board: You are being interviewed by more than one person at the same time. (Senate hearings)
+- Informational interview
+	- Gathering information, nothing else much
+- Interrogation interview
+        - Implies some type of offense, you getting pulled over by the cops.
+- Media interview
+	- News networks interviewing you.
+- Performance review, evaluation
+- Persuasive interview
+	- To meet needs
+
+### Structure of Interview
+
+1. Opening Phase (When you just joined)
+- Rapport
+	- When you first see each other.
+- Orientation
+	- Provides a sense of how this interview is going to take place.
+- Motivation
+	- They try to put the interviewee at ease and extract as much information as possible.
+
+2. Question Phase
+- Carefully prepare
+- Decide what information is sought
+- Decide what information to divulge
+- Interviewees should anticipate questions and their answers
+
+3. Closing Phase
+- Summarize major points covered
+- Make sure all important topics covered
+- Give interviewee chance to ask questions
+- Never leave without knowing what's next
+
+### Preparing for Interview
+- Have a positive attitude
+- Dress for the occassion
+	- Create a positive impression and image
+
+### Strategies for Impression Management
+- Speaking rapidly and forcefully
+- Look directly at interviewer
+- Nod headin positive manner
+- Gesture and smile often
+- Lean forward, maintain comfortable postures
+
+### Interviewer Responsibilities
+- Contact interviewee before interview
+- Plan the environment
+- Asking questions that are lawful
+- Organizing the interview carefully
+
+### Types of Interview Questions
+- Open-ended
+- Hypothetical
+- Direct (One or two word answers) Specific and limit possible options.
+- Closed Question (Giving basically your option)
+- Loaded questions (See how employees would handle the pressure)
+- Leading questions (Implies the correct answer)
+- Third-person questions
+- Verbal and nonverbal probes (Something you use to get the conversation going)
+
+#### Organizing Interview Questions
+- Funnel sequence (Open to closed)
+- Inverted funnel (Closed to open)
+- Hourglass sequence (Opn to closed to open again)
+- Diamond Sequence (Closed to open to closed)
+
+### Lawful Questions
+- All questions must be job-related. (Ability to complete the job)
+- The same basic questions must be asked of all applicants.
+
+#### Arrest/Conviction
+- There is no law against asking for arrest or conviction records in an interview. However, the employee should be given the opportunity to explain their explanation and the interviewer can determine if that is valid.
