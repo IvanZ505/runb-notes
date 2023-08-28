@@ -8,6 +8,7 @@
     - [Statics and Global](#statics-and-global)
     - [Pointers (***Very Important***)](#pointers-very-important)
       - [Deferencing:](#deferencing)
+      - [Pointers for Arrays](#pointers-for-arrays)
     - [Structures (Structs)](#structures-structs)
       - [Typedefs:](#typedefs)
       - [Pointers to Structures:](#pointers-to-structures)
@@ -103,7 +104,7 @@ int columns = sizeof(array[0]) / sizeof(array[0][0]);
 **Pointers for functions:**
 - While you can reference a variable as static to access it anywhere in the file, you could also just pass a pointer in as a parameter.
 - Passing in a pointer allows the function to edit the actual data at the physical location of the data in the memory. (Shit its all making sense)
-- So, remember if you are passing in a pointer variable, pass in the ACTUAL data, not the location of the data.
+- So, remember if you are passing in a pointer variable, pass in the actual location of the data, not the variable name itself.
 - For example:
 ```C
 void addone(int *a) {
@@ -111,8 +112,20 @@ void addone(int *a) {
 }
 
 int a = 5;
-addone(&a); // Remember to pass in ACTUAL data, not location. Use "&" operator.
+addone(&a); // Remember to pass in the location
 ```
+
+#### Pointers for Arrays
+
+Using the example below:
+
+```C
+char vowels[] = {'A', 'E', 'I', 'O', 'U'};
+char *pvowels = vowels;
+```
+
+- Calling on `&vowels[0]`, `pvowel` and `vowels` will all return the location of the data in the memory.
+- Calling on `vowels[0]`, `*pvowels`, and `*vowels` will all return the ACTUAL data.
 
 ---
 
