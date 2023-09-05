@@ -61,3 +61,7 @@ console.log(imageSource)
 1. Use the native JS route with assigning a `Image()` variable and then change the source to the image file path.
 2. Use the ThreeJS `TextureLoader`. 
 
+## Materials
+
+What are materials?
+- Materials are used to put a color on each visible pixel of the geometries.
