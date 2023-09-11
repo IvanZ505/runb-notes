@@ -1,6 +1,9 @@
 Introduction to Discrete Structures 1
 ===
 
+### Table of Contents
+- [Propositional Logic](#propositional-logic)
+
 Propositional Logic
 ---
 The Foundation for Writing Proofs:
@@ -73,12 +76,12 @@ Truth Tables for the following propositional statements, where p,q,r are proposi
 
 1. (P ^ Q) v r
 
-| p | q | (p ^ q) |
-|---|---|---------|  
-| T | T |    T    |
-| T | F |    F    |
-| F | T |    F    |
-| F | F |    F    |
+| p   | q   | (p ^ q) |
+| --- | --- | ------- |
+| T   | T   | T       |
+| T   | F   | F       |
+| F   | T   | F       |
+| F   | F   | F       |
 
 
 ---
@@ -107,12 +110,12 @@ Examples:
 - Then we will introduce a third proposition to show when they are no longer consistent.
 
 
-| p | q | p v q | p v ¬q | ¬p |
-|---|---|-------|--------|----|
-| T | T | T     | T      | F  |
-| T | F | T     | T      | F  |
-| F | T | T     | F      | T  |
-| F | F | F     | T      | T  |
+| p   | q   | p v q | p v ¬q | ¬p  |
+| --- | --- | ----- | ------ | --- |
+| T   | T   | T     | T      | F   |
+| T   | F   | T     | T      | F   |
+| F   | T   | T     | F      | T   |
+| F   | F   | F     | T      | T   |
 
 
 ---
@@ -122,12 +125,12 @@ Is the following set of statements consistent?
 	Statement 1: p ^ q
 	Statement 2: p v ¬q 
 	Statement 3: ¬q 
-| p | q | p^q | p v ¬q | ¬q |
-|---|---|-----|--------|----|
-| T | T | T   | T      | F  |
-| T | F | F   | T      | T  |
-| F | T | F   | F      | F  |
-| F | F | F   | T      | T  |
+| p   | q   | p^q | p v ¬q | ¬q  |
+| --- | --- | --- | ------ | --- |
+| T   | T   | T   | T      | F   |
+| T   | F   | F   | T      | T   |
+| F   | T   | F   | F      | F   |
+| F   | F   | F   | T      | T   |
 
 Not consistent.
 
@@ -136,18 +139,28 @@ Not consistent.
 **Implications**:
 - An implication is a compound proposition using propositions, p and q, stated as if p then q or p implies q.
 - p is called the premise or sufficient condition for q.
-- q is called the conclusion mor necessary condition for q.
+- q is called the conclusion for necessary condition : p.
+- This means that if p is true, q HAS to be true.
+- However, if p is not true, q can STILL be true.
 
-| p | q | p => q |
-|---|---|--------|
-| T | T | T      |
-| T | F | F      |
-| F | T | T      |
-| F | F | T      |
+| p   | q   | p => q |
+| --- | --- | ------ |
+| T   | T   | T      |
+| T   | F   | F      |
+| F   | T   | T      |
+| F   | F   | T      |
 
 **Implication: Converse**
 - Give an implication p, implies q, the converse is q implies p.
 - If an implication is true, its converse does not need to be true.
+
+| p   | q   | p => q | q => p |
+| --- | --- | ------ | ------ |
+| T   | T   | T      | T      |
+| T   | F   | F      | F      |
+| F   | T   | T      | T      |
+| F   | F   | T      | T      |
+|     |     |        |        |
 - Let's consider the following truth table:
 
 	- Example: Let x and y be real numbers with y not equal to zero.
@@ -156,24 +169,29 @@ Not consistent.
          - q = "x/y is rational."
          - ¬q = "x/y is not rational."
 
-| p | q | p => q | ¬p => ¬q |
-|---|---|--------|----------|
-| T | T | T      | T        |
-| T | F | F      | T        |
-| F | T | T      | F        |
-| F | F | T      | T        |
+| p   | q   | p => q | ¬p => ¬q |
+| --- | --- | ------ | -------- |
+| T   | T   | T      | T        |
+| T   | F   | F      | T        |
+| F   | T   | T      | F        |
+| F   | F   | T      | T        |
 
 **Implication: Inverse**
 - Give an implication, p implies q, the inverse is not p implies not q.
 - If an implication is true, its inverse need not be true.
 - However, if the converse of an implication is true, than the inverse is true and vice versa.
 
-| p | q | p => q | ¬p => ¬q |
-|---|---|--------|----------|
-| T | T | T      | T        |
-| T | F | F      | T        |
-| F | T | T      | F        |
-| F | F | T      | T        |
+| p   | q   | p => q | ¬p => ¬q |
+| --- | --- | ------ | -------- |
+| T   | T   | T      | T        |
+| T   | F   | F      | T        |
+| F   | T   | T      | F        |
+| F   | F   | T      | T        |
+
+**Implication: Contrapositive**
+- Give an implication p implies q, the **contrapositive** is not q implies not p.
+- If an implication is true, its contrapositive is true and vice versa.
+- This can be used in prove by contraposition.
 
 Recitation 1
 ---
@@ -183,16 +201,16 @@ Proposition Statements
 1) p ^ (q v r)
 
 
-| p | q | r | q v r | p ^ (q v r) |
-|---|---|---|-------|-------------|
-| F | F | F | F     | F           |
-| F | F | T | T     | F           |
-| F | T | F | T     | F           |
-| T | F | F | F     | F           |
-| F | T | T | T     | F           |
-| T | F | T | T     | T           |
-| T | T | F | T     | T           |
-| T | T | T | T     | T           |
+| p   | q   | r   | q v r | p ^ (q v r) |
+| --- | --- | --- | ----- | ----------- |
+| F   | F   | F   | F     | F           |
+| F   | F   | T   | T     | F           |
+| F   | T   | F   | T     | F           |
+| T   | F   | F   | F     | F           |
+| F   | T   | T   | T     | F           |
+| T   | F   | T   | T     | T           |
+| T   | T   | F   | T     | T           |
+| T   | T   | T   | T     | T           |
 
 Question: Given integer n, write all possible assigments from a(1) to a(n).
 
@@ -211,16 +229,16 @@ Question: Given integer n, write all possible assigments from a(1) to a(n).
 
 2) (p ^ q) v (p ^ r)
 
-| p | q | r | p ^ q | p ^ r | (p ^ q) v (p ^ r) |
-|---|---|---|-------|-------|-------------------|
-| T | T | T | T     | T     | T                 |
-| T | T | F | T     | F     | T                 |
-| T | F | T | F     | T     | T                 |
-| T | F | F | F     | F     | F                 |
-| F | T | T | F     | F     | F                 |
-| F | T | F | F     | F     | F                 |
-| F | F | T | F     | F     | F                 |
-| F | F | F | F     | F     | F                 |
+| p   | q   | r   | p ^ q | p ^ r | (p ^ q) v (p ^ r) |
+| --- | --- | --- | ----- | ----- | ----------------- |
+| T   | T   | T   | T     | T     | T                 |
+| T   | T   | F   | T     | F     | T                 |
+| T   | F   | T   | F     | T     | T                 |
+| T   | F   | F   | F     | F     | F                 |
+| F   | T   | T   | F     | F     | F                 |
+| F   | T   | F   | F     | F     | F                 |
+| F   | F   | T   | F     | F     | F                 |
+| F   | F   | F   | F     | F     | F                 |
 
 **Proposition hunt**:
 
@@ -244,12 +262,12 @@ Applications of Propositions
 - p <=> q is the bicondition implication between p and q.
 - Biconditional implication is true only if an implication and it's converse are both true. (So, if p implies q and q also implies p)
 
-| p | q | p <=> q |
-|---|---|---------|
-| T | T | T       |
-| T | F | F       |
-| F | T | F       |
-| F | F | T       |
+| p   | q   | p <=> q |
+| --- | --- | ------- |
+| T   | T   | T       |
+| T   | F   | F       |
+| F   | T   | F       |
+| F   | F   | T       |
 
 #### Examples:
 
@@ -265,12 +283,12 @@ Convert the following statements to logical propositions.
 
 3. you can only pass the exam if you study tonight. **hard**
 
-	| p | q | Statement |
-	|---|---|-----------|
-	| T | T | T         |
-	| T | F | F         |
-	| F | T | T         |
-	| F | F | T         |
+	| p   | q   | Statement |
+	| --- | --- | --------- |
+	| T   | T   | T         |
+	| T   | F   | F         |
+	| F   | T   | T         |
+	| F   | F   | T         |
 
 	p => q
 
@@ -287,12 +305,12 @@ Convert the following statements to logical propositions.
 
 	p => q
 
-	| p | q | statement |
-	|---|---|-----------|
-	| T | T | T         |
-	| T | F | F         |
-	| F | T | T         |
-	| F | F | T         |
+	| p   | q   | statement |
+	| --- | --- | --------- |
+	| T   | T   | T         |
+	| T   | F   | F         |
+	| F   | T   | T         |
+	| F   | F   | T         |
 
 #### More complex example
 
@@ -308,15 +326,98 @@ Are these system specifications consistent?
 - When the system software is being upgraded (p), users can not access the file system (¬p). (p -> ¬q)
 
 
-| p | q | r | p -> ¬q | q -> r | ¬r -> ¬p |
-|---|---|---|---------|--------|----------|
-| T | T | T | F       | T      | T        |
-| T | T | F | F       | F      | T        |
-| T | F | T | T       | T      | T        |
-| T | F | F | T       | T      | F        |
-| F | F | F | T       | T      | T        |
-| F | T | T | T       | T      | T        |
-| F | T | F | T       | F      | T        |
-| F | F | T | T       | T      | T        |
+| p   | q   | r   | p -> ¬q | q -> r | ¬r -> ¬p |
+| --- | --- | --- | ------- | ------ | -------- |
+| T   | T   | T   | F       | T      | T        |
+| T   | T   | F   | F       | F      | T        |
+| T   | F   | T   | T       | T      | T        |
+| T   | F   | F   | T       | T      | F        |
+| F   | F   | F   | T       | T      | T        |
+| F   | T   | T   | T       | T      | T        |
+| F   | T   | F   | T       | F      | T        |
+| F   | F   | T   | T       | T      | T        |
 
 
+| p   | q   | p ^ q | p ^ ¬q | ¬q  |
+| --- | --- | ----- | ------ | --- |
+| T   | T   | T     | F      | F   |
+| T   | F   | F     | T      | T   |
+| F   | T   | F     | F      | F   |
+| F   | F   | F     | F      | T   |
+
+### Logic Gates
+- A logic gate is a big part of computer hardware design.
+
+![Logic Gates](imgs/logic-gates.png)
+
+#### todo  finish this
+
+| p   | q   | s1  | s2  |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   |
+| 0   | 1   | 0   | 1   |
+| 1   | 0   | 0   | 1   |
+| 1   | 1   | 1   | 1   |
+
+### Sensor network
+
+Requirement: Assuming there is a 3-sensor network. If 2 or more of the sensors are true, then we must send TRUE to the control station.
+
+Design a logic circuit that meets these requirements.
+
+(¬p ^ q ^ r) v (p ^ ¬q ^ r) v (p ^ q ^ ¬r) v (p ^ q ^ r)
+
+----
+
+---
+
+
+	There are many ways of saying p => q:
+	- If p, then q
+	- p implies q
+	- p is sufficient for q
+	- q is necessary for p
+	- q whenever p
+	- q if p
+	- q when p
+	- p only if q
+	- q is a sufficient condition for p
+	- p is a necessary condition for q
+	- q unless ¬p
+
+----
+----
+
+#### Convert the following statements to logical propositions.
+
+- Roads will be wet, if it rains.
+
+	q => p
+
+- students will pass the exam if he studies tonight.
+
+	q => p
+
+- you can only pass the exam if you study tonight. (**hard**)
+
+	p => q
+
+- It is below freezing and snowing.
+
+	p ^ q
+
+- It is either below freezing or snowing, but not both.
+
+	p ⊕(exclusive or) q
+
+- I will go to class if I feel like it.
+
+	p => q
+
+----
+----
+
+### De Morgan's Laws
+
+- ¬(p ^ q) = ¬p v ¬q
+- ¬(p v  q) = ¬p ^ ¬q

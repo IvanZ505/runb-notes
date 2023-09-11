@@ -100,4 +100,6 @@ Functionalism:
 
 We think about minds in the same way we think about the computer with I/O.
 
+Everything you do has to be able to be described as "computations".  	
+
 ---
