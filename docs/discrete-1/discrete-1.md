@@ -255,6 +255,32 @@ Question: Given integer n, write all possible assigments from a(1) to a(n).
 	d) You get a A on final, but you don't do every exercise in the textbook, nevertheless, you get A in class.
 		P ^ ¬Q ^ R
 
+Exercise: There are three students in a class (A, B, C) each can vote YES or NO on an issue. Create a truth table for the boolean function which takes as an input the votes and returns whether or not an even number of votes was casted.
+
+(¬A ^ B ^ C) v (¬A ^ ¬B ^ ¬C) v (A ^ ¬B ^ C) v (A ^ B ^ ¬C)
+
+or the better one:
+
+¬((A ⊕ B ⊕ C) v (A ^ B ^ C))
+
+	Why is this better?
+	This is a better answer because with the ex-or you can just count the number of trues and falses and if the number of trues is even, then the result is true. 
+	
+	The ex-ors will return true if there are exactly 1 Yes. The other side will give a true if there are exactly 3 yes. Then, the negation outside cancels it out, making the statement return false, which is what we want.
+
+| A   | B   | C   | A ^ B ^ ¬C | A ^ ¬B ^ C | ¬A ^ B ^ C | ¬A ^ ¬B ^ ¬C |
+| --- | --- | --- | ---------- | ---------- | ---------- | ------------ |
+| T   | T   | T   | F          | F          | F          | F            |
+| T   | T   | F   | T          | F          | F          | F            |
+| T   | F   | T   | F          | T          | F          | F            |
+| T   | F   | F   | F          | F          | F          | F            |
+| F   | T   | T   | F          | F          | T          | F            |
+| F   | T   | F   | F          | F          | F          | F            |
+| F   | F   | T   | F          | F          | F          | F            |
+| F   | F   | F   | F          | F          | F          | T            |
+
+----
+
 Applications of Propositions
 ---
 
