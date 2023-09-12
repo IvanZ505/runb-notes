@@ -126,3 +126,55 @@ Fetch --> Decode --> Execute
 - Execute
 
 ### Memory Hierarchy (More to come)
+
+- Registers
+	- Fastest memory
+	- Small
+	- Inside the CPU
+	- Used for storing the most important data.
+
+---
+
+### How Source Code Becomes Executable
+
+- Source code is written in a high level language.
+- The preprocessing stage is where the preprocessor replaces the macros with the actual code.
+- The compiler then converts the code into assembly code.
+- The assembler then converts the assembly code into machine code.
+- The linker then links the machine code with the libraries and other code.
+- After the linking, the executable is created.
+
+### Preprocessing Phase
+- First phase that takes the source code as input.
+  - Includes the header files and replaces the macros with the actual code.
+  - The output of this phase is the expanded source code.
+  - Removes comments and whitespace.
+  - Conditional compilation.
+    - #ifdef, #ifndef, #else, #endif, #if, #elif
+  - Stored in a file with the extension .i
+
+To use it in iLab:
+
+`gcc -E <input_file> -o <output_file>`
+
+### Compiler
+- Second phase that takes the expanded source code as input.
+  - Converts the code into assembly code.
+  - The output of this phase is the assembly code.
+  - Stored in a file with the extension .s
+
+
+### Assembler
+- Third phase that takes the assembly code as input.
+  - Converts the assembly code into machine code.
+  - The output of this phase is the object code.
+  - Stored in a file with the extension .o
+
+### Linker
+- Fourth phase that takes the object code as input.
+  - Links the object code with the libraries and other code.
+  - The output of this phase is the executable.
+  - Stored in a file with the extension .out
+
+
+
