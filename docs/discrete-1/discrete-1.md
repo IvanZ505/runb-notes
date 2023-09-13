@@ -447,3 +447,173 @@ Design a logic circuit that meets these requirements.
 
 - ¬(p ^ q) = ¬p v ¬q
 - ¬(p v  q) = ¬p ^ ¬q
+
+
+### Quiz 1
+
+Covers 3 things: Propositions, Propositional equivalences
+
+### Propositional Equivalences
+
+---
+Definitions:
+
+Tautology: A compound proposition that is always true, regardless of the truth values of the propositional variables it contains.
+
+Contradiction: A compound proposition that is always false.
+
+Contingency: A compound proposition that is neither a tautology nor a contradiction.
+
+---
+
+Precedence Rules of Logical Operators:
+
+- **Operator precedence** is an ordering of logical operators designed to allow dropping of the parenthesis in logical expressions.
+	1. ¬
+	2. ^
+	3. v
+	4. =>, <=>
+	5. ( )
+
+- **Unparenthesized statements** associate the expression with the one with higher precedence.
+  - For example, p ^ q v r is equivalent to (p ^ q) v r.
+  - p v q ^ r is equivalent to p v (q ^ r).
+- All operators are **right associative**. Which means you start putting the parenthesis around the ones furthest to the right.
+
+---
+
+Workshop:
+
+Identify each of the following as tautology, contradiction or contingency.
+
+1. p ^ q ^ ¬p
+
+	Contradiction
+
+2. (p ^ q) v ¬p
+
+	Contingency
+
+3. p => ¬p
+
+	Contingency
+
+| p   | p => ¬p |
+| --- | ------- |
+| T   | F       |
+| F   | T       |
+
+### Logical Equivalence (≡)
+- Two compond propositions p and q are logically equivalent if p <=> q is a tautology.
+
+Examples: 
+
+#### p => and ¬p v q are logically equivalent.
+
+| p   | q   | p => q | ¬p v q |
+| --- | --- | ------ | ------ |
+| T   | T   | T      | T      |
+| T   | F   | F      | F      |
+| F   | T   | T      | T      |
+| F   | F   | T      | T      |
+
+	Notice that these two have the same table.
+
+	This means one can be substituted for the other one.
+
+#### Find a logically equivalent implication to p v ¬q
+
+	How to look at it...
+
+	p => ¬q
+	¬(¬p) => ¬q
+	and then it becomes
+	¬p => ¬q
+
+	Which is the same as:
+
+	q => p
+
+#### Show that p v ¬p => q and q are logically equivalent
+
+Talking way:
+
+	p v ¬p => q
+	p v ¬p is a Tautology
+	True implies q is always q.
+
+The Proof Way:
+
+	p v ¬p => q ≡ q
+	r ≡ p v ¬p
+	r => q
+	(Math Stuff)
+	¬r v q
+
+	Now Take r
+	¬r ≡ ¬(p v ¬q)
+
+	(De Morgan's Law)
+	≡ ¬p ^ ¬(¬p)
+	≡ ¬p ^ p which is F
+
+	Go back to ¬r v q
+	Replace ¬r with F.
+
+	F v q which is just q.
+
+## Important MEMORIZE
+![Logical Equivalences](imgs/logical-equivalences.png)
+
+Find the negations of the following statements using DeMorgan's Law and/or logical equivalences.
+
+- If it rains roads will be wet.
+
+		p => q
+		¬(p => q) ≡ ¬(¬p v q)
+		≡ ¬(¬p) ^ ¬q
+		≡ p ^ ¬q
+		≡ q => p
+
+- You can take CS 205 only if you are a junior
+
+		p => q
+		¬(p => q) ≡ ¬(¬p v q)
+		≡ ¬(¬p) ^ ¬q
+		≡ p ^ ¬q
+		≡ q => p
+
+### Proving Propositional Equivalences using Rules
+
+- A method of proof where result is obtained by applying known equivalences.
+
+Show ¬(p => q) and p ^ ¬q are logically equivalent.
+
+	¬(p => q) ≡ ¬(¬p v q)
+	≡ ¬(¬p) ^ ¬q
+	≡ p ^ ¬q
+
+### Fermats Last Theorem
+
+- While a^2 + b^2 = c^2 can give you infinitely many combinations of a, b, c, you can not find any integers a, b, c such that a^n + b^n = c^n for any n > 5.
+
+----
+
+### Predicates
+- A **predicate** is a proposition that depends on some state of its propositional vavriables.
+
+Example: Every computer connected to the unversity network is functioning properly
+
+*is expressed as*
+
+if n is a computer AND n is connected to university network, then n is functioning properly.
+
+P(n) ^ Q(n) => R(n)
+
+	Notation:
+	- P(x) is a predicate that involves the propositional variable x.
+	- P(x,y) is a predicate that involves the propositional variables x and y.
+	- In general, P(x1, x2, ...., xn) is a predicate that involves the propositional variables x1, x2, ...., xn.
+
+
+
