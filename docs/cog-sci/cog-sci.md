@@ -235,4 +235,16 @@ The human mind is a representational system that uses symbols and concepts to st
 - Spectrum
 - e.g: stopwatch
 
+- **Weber's Law**: The discriminability of any two magnitudes is a function of their ratio.
+
 ---
+
+#### These Mental Representations:
+
+Allow us to:
+- Picture objects and situations.
+- Reason about objects and abstract ideas.
+- Plan and carry out appropriate actions.
+- Communicate with others.
+- Engage in forms of social cooperation.
+
