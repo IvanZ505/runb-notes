@@ -163,3 +163,76 @@ Models:
 	
 	- "There is a trade-off, any particular representation makes certain information explicit at the expense of information that is pushed into the background and might be hard to recover." - David Marr
 		- Examples of this: Tallies, Roman numerals
+
+---
+
+### What's in your mind?
+- Actions : When you move, walk, run, driving.
+- Perception: To do action, you really do need perception. To smell, to see, to hear
+- Memory: You need to remember things like what you learn in this class.
+- Language: We use language every day, it's a cognitive system.
+- Decision:  You need to decide which classes to take, whether to come in this morning.
+- Reason: How to rationale. 
+- Creativity: Ability to create things and do novel things contained in your mind.
+- Emotions
+
+---
+
+Everything in your mind can be described as **Computation representation**.
+
+### Representation Systems
+- There is an *indirect* relation between the signal and the system. It needs to be *anticipatory*
+	- (There needs to be ***Storage*** for the representation system)
+	- For example, a plant responding to the sun is not a representation system because it responds to the sun hitting its leaves, but doesn't store that information.
+- something *stands in* for the signal
+	- Using some sort of symbols to stand in for the signal.
+	- If that plant encoded something in their molecules to remember when the sun comes out.
+- the stand ins are part of a larger representation *scheme*
+	- There are many other purposes for stand in.
+	- For example, when you take a photo of someone, that is a representation system because the stand-in (the photo encoded onto your phone) can be used to recognize the person, to set as their profile, etc...
+	
+The human mind is a representational system that uses symbols and concepts to stand in for things in the world.
+
+**Bearer**: The bearer realizes the representation.
+
+- This is where the stand-in happens.
+- Bearer sees cat. Can not fit cat in your head.
+- The stand-in for cat gets encoded in your brain.
+
+**Referent**: The thing in the external world that the representation stands for.
+
+- The cat is the bearer.
+	
+**Content**: The content is the stand-in for the real world item.
+
+**Intentionality**: The mental content has a relationship to the real world referent.
+
+---
+
+#### Types of Mental Representations
+- Imagistic -----> Picture of money
+- Propositional -----> "Money"
+- Symbolic ------> $
+
+**Propositional**:
+- Sentence like structure.
+- Truth value: can be *true* or *false*.
+- Objects of "propositional attitudes".
+- Specify some way the world *could* be.
+
+**Symbolic**:
+- A symbol  stands for an idea or object but does not have a genuine resemblance.
+
+#### All mental Representations are:
+
+**Digital**:
+- Discrete
+- Categorical
+- e.g: numbers, specific hexcodes.
+
+**Analog**:
+- Continuous
+- Spectrum
+- e.g: stopwatch
+
+---
