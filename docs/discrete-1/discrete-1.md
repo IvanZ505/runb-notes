@@ -8,7 +8,7 @@ Propositional Logic
 ---
 The Foundation for Writing Proofs:
 
-Axioms
+Axioms 
 - Are statements that can be used without any proof.
 - 
 Propositions
@@ -68,6 +68,10 @@ The third logician says "Yes."
 **NEGATION**: "¬"
 
 - Ovserve either a proposition is true or false and swaps it.
+
+**IMPLICATION**: -->
+
+**BICONDITIONAL**: <-->
 
 
 ---
@@ -615,5 +619,115 @@ P(n) ^ Q(n) => R(n)
 	- P(x,y) is a predicate that involves the propositional variables x and y.
 	- In general, P(x1, x2, ...., xn) is a predicate that involves the propositional variables x1, x2, ...., xn.
 
+#### Workshops for Predicates
+
+1. Let P(x) : x >= 3. What are the values of P(4), P(-1), P(10).
+
+	P(4) = T
+	P(-1) = F
+	P(10) = T
+
+2. Let P(x, y) : "x is a city in state y". Give two examples where P(x,y) is true and false.
+
+	True: P(Chicago, Illinois), P(New York, New York)
+	False: P(Chicago, New York), P(New York, Illinois)
+
+There are **preconditions** and **postconditions**.
+
+- Preconditions are the conditions that must be met before the predicate is evaluated.
+- Postconditions are the conditions that are evaluated after the predicate is evaluated.
+
+---
+
+Useful domains for predicates:
+
+`N`: The set of natural numbers {0, 1, 2, 3, ...}
+
+`Z`: The set of integers {..., -2, -1, 0, 1, 2, ...}
+
+`Q`: The set of rational numbers {m/n where m and n are integers}
+
+`R`: The set of real numbers
+
+----
+
+Workshop:
 
 
+	Precondition: Assert(x=a, y=b)
+	x=x+y
+	y=y-x
+	x=x-y
+	Postcondition: Assert(x=?, y=?)
+	x = 2a+b
+	y = -a
+	
+| x    | y   |
+| ---- | --- |
+| a+b  | b   |
+| a+b  | -a  |
+| 2a+b | -a  |
+
+Let the precondition for the code by (x>=0) && y>=0. WHat is a post conditions for the following code?
+
+```Java
+
+int f(int x, int y) {
+	int r = 1;
+	while(y>1) {
+		if(y%2==1) {
+			r = x *r;
+		} 
+		x = x*x;
+		y = y/2;
+}	
+	return r*x;
+}
+
+```
+
+| x   | y   | r   |
+| --- | --- | --- |
+| 2   | 3   | 1   |
+| 4   | 1   | 2   |
+
+return 8
+
+### Quantifiers
+
+**Quantifiers** express the truth of a proposition over a domain.
+
+There are two types of quantifiers:
+
+- **Universal Quantifier**: Expresses the truth of a predicate overa n entire domain.
+  - A predicate P(x) is true for all x in X.
+- **Existential Quantifier**: Expresses the truth of a predicate for at least one instance.
+  - There exists some x, such that P(x) is true.
+  
+---
+
+Workshop
+
+	Someone knows more than two other people.
+
+	Use the negation.
+
+	P(x, y) = "x does not know y"
+
+
+Consider the following predicates:
+
+	P(x) : x is a baby
+	Q(x) : x is logical
+	R(x) : x can manage a lion
+	S(x) : x is despised
+
+Assume that the domain consists of all people. Express each of the following using quantifiers and logical connectives.
+
+1. All babies are illogical
+
+	P(x) => ~Q(x)
+
+2. Nobody is despised who can manage a lion
+
+	~S(x) => R(x)

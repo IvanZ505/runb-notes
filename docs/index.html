@@ -96,16 +96,44 @@
 <h1 class="header">Ivan's Notes</h1>
 
 <div class=button-div>
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/discrete-1/discrete-1';">CS205 Notes</button>
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/comp-arch/c';">C Lang Notes</button>
-
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/intro-cs/cs111';">CS111 Notes</button>
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/data-structures/cs112';">CS112 Notes</button>
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/intro-infotech/iti103';">ITI103 Notes</button>
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/intro-comm/comms';">COM101 Notes</button>
-<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/three-js/threejs';">ThreeJS Notes</button>
 </div>
 
+<script>
+	const url = window.location.href;
+	const button_div = document.querySelector(".button-div");
 
+	const pathways = [{
+		name : "Discrete 1",
+		path : "discrete-1/discrete-1"},
+		{
+		name: "C Language",
+		path: "comp-arch/c"},
+		{
+		name: "Comp Arch",
+		path: "comp-arch/comp-arch"
+		},
+		{
+		name: "Cog Sci",
+		path: "cog-sci/cog-sci"
+		},
+		{
+		name: "Intro CS",
+		path: "intro-cs/cs111"},
+		{
+		name: "Data Structures",
+		path: "data-structures/cs112"},
+		{
+		name: "Intro to IT",
+		path: "intro-infotech/iti103"},
+		 {
+		name: "Intro to Comms",
+		path: "intro-comm/comms"},
+		{
+		name: "Three",
+		path: "three-js/threejs"}];
 
+	for(let i = 0; i < pathways.length; i++) {
+		button_div.innerHTML += `<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/${pathways[i].path}';">${pathways[i].name}</button>`;
+	}
 
+</script>
