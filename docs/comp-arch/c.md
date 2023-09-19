@@ -101,6 +101,19 @@ int columns = sizeof(array[0]) / sizeof(array[0][0]);
 - You can pass a pointer to a function or return a pointer from a function as well.
 - Or, just keep pointing.
 
+```C
+
+int main() {
+    // The x variable is first stored into the memory without any number attached
+    int x;
+    // the & operator returns the memory address of x, so that you can write to that address properly.
+    scanf("%d", &x);
+
+    printf("\n %d", x);
+}
+
+```
+
 **Pointers for functions:**
 - While you can reference a variable as static to access it anywhere in the file, you could also just pass a pointer in as a parameter.
 - Passing in a pointer allows the function to edit the actual data at the physical location of the data in the memory. (Shit its all making sense)
