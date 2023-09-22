@@ -366,3 +366,95 @@ Descartes came to this Substance Dualism through the:
 
 **Qualia**: An unfamiliar term for someting that could not be more familiar to each of us - the way things seem to us. (Or how it **feels** to be you)
 
+	Quantifying Thought:
+	Qualia and the Mind-Body problem leaves us in a pickle.
+	How can we bridgeg the subjective-object divide and quantify thought?
+	How can we get at cognition?
+	
+#### The human mind is a black box.
+- We can put in a stimuli, and see the response, but we do not know what is going on inside the black box.
+
+---
+
+"A purely objective experimental branch of natural science. Its theoretical goal is the prediction and control of behavior. Introspection forms are not an essential part of its methods, nor is the scientific value of its data dependent upon the readiness with which they lend themselves to interpretation in terms of conscious." - John B. Watson
+
+- We need to focus on what we observe.
+- Introspection is not going to get us to an answer.
+- Interested in what can be measured.
+
+---
+
+### Behaviorism
+
+**Methodological Behaviorism**
+- Science should focus on observable, measurable entities and behaviors.
+	- Watson, Hull, Tolman
+	
+**Radical Behaviorism**
+- Internal mental states exist but they are unimportant and not very explanatory.
+	- B.F. Skinner
+
+- "Maybe those internal states exist but who cares?"
+	
+**Analytical Behaviorism**
+- Mental concepts refer to behavioral tendencies.
+	- Ryle
+	
+- Mind states do not actually exist. Those are BS. The feeling of "happy" is really just referring to all the behaviors that are associated with happy.
+
+---
+
+### Timeline of the Cognitive Revolution
+
+**1930** - E.C. Tolman and Honzik
+- Introduction and removal of reward, and maze performance in rats.
+- Wanted to figure out how animals learned.
+- Beginning of the end for behaviorism.
+
+**1948** - Claude Shannon
+- Information Theory : A way of quantifying communication of information.
+
+**1950** - Alan Turing
+- *Computing Machinery and Intelligence*
+- Turing test
+
+**1956** - George Miller
+- *The Magical Number Seven, Plus or Minus Two*
+- The magical number seven refers to how much you can keep in your short term memory.
+- George Miller quantified memory (literally) into what **number**.
+
+**1957** - Noam Chomsky
+- *Syntactic structures*, creates modern generative linguistics.
+- He did some interesting work and came up with a metric for measuring the complexity of different computations.
+
+---
+
+#### E.C. Tolman's Rats
+
+- Rats put into the maze
+- They are divided into 3 different categories.
+
+![Tolman Rats Layout](imgs/tolman-layout.png)
+
+![Tolman Rats Result](imgs/tolman-result.png)
+
+- The rats that never got rewards do no better than chance.
+- The rats that always got a reward get better with time, ending at around 20% of an error rate.
+- The rats that only got a reward after a delay, immediately got way better.
+	- They were learning that entire time.
+	
+**This experiment proved that you can still learn things when you are not being rewarded.** 
+
+#### How are the rats navigating the maze?
+
+(What is the algorithm for the rats to solve the maze.)
+
+- *Response Learning* - Learning by remembering a sequence of movements.
+- *Place Learning* - Learning by remembering the spatial layout of the maze.
+
+![Rats Part 2](imgs/tolman-rats-pt2.png)
+
+![Rats pt 2](imgs/toman-rats-pt2-results.png)
+
+- Rats are not able to remember to always turn right.
+- If you move the food, they do not know where the food is.
