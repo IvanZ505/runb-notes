@@ -731,3 +731,23 @@ Assume that the domain consists of all people. Express each of the following usi
 2. Nobody is despised who can manage a lion
 
 	~S(x) => R(x)
+	
+## Introduction to Proofs
+
+**Types of Proofs**
+
+- Proof by evidence
+- Proof by picture
+- Geometric proof
+- Proof by experiment
+- Direct Proofs
+- Proof by contraposition
+- Proof by contradiction
+- Inductive Proofs
+
+---
+
+### Rules of Inference
+
+![Rules of Inference](imgs/rules-of-inference.png)
+
