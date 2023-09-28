@@ -385,6 +385,7 @@ Descartes came to this Substance Dualism through the:
 ---
 
 ### Behaviorism
+- The view that a mental state is a disposition to some behavior.
 
 **Methodological Behaviorism**
 - Science should focus on observable, measurable entities and behaviors.
@@ -403,6 +404,20 @@ Descartes came to this Substance Dualism through the:
 - Mind states do not actually exist. Those are BS. The feeling of "happy" is really just referring to all the behaviors that are associated with happy.
 
 ---
+
+### Functionalism
+
+(Mental states defined by functional profiles (computational levels))
+
+**It goes against Behaviorism**
+- Mental states are internal states.
+
+**It goes against Identity Theory**
+- Mental states multiply realizable and that mental states are not identical to single unique physical states.
+
+- Behaviors can occur without conditioning, neural mapping doesn't explain mental states because it's not known how it relates (unknown relationship between neural circuits + experience).
+- Much more useful to explain things in terms of mental states. (ex: dialed 911 because you wanted to get help is a non-conditional behavior. You were not trained to do that through conditioning. Specific neural circuits are also unhelpful to study.)
+
 
 ### Timeline of the Cognitive Revolution
 
@@ -458,3 +473,40 @@ Descartes came to this Substance Dualism through the:
 
 - Rats are not able to remember to always turn right.
 - If you move the food, they do not know where the food is.
+
+
+#### Meat Machines
+- The fact that it is meat does not matter, what matters is the machine.
+
+### Computational Theory of Mind:
+- The brain is merely a meat machine.
+- The mental processes are computations.
+- A machine computes an algorithm: roughly an explicit, step-by-step procedure for answering some questions or solving some problem.
+- The algorithm maps structural states of a physical system as an input to other structural states.
+
+#### Symbols
+- Crucial for Turing computation
+- The mind contains symbols ($$$)
+- Symbols have two features at least:
+	- Formal properties: How the symbol is shaped
+	- Semantic properties: How the symbol represents the world.
+
+- What is so powerful about Turing computation is that there can then be transitions between arrangements of symbols in virtue of their formal properties that nonetheless respect their semantic properties.
+
+
+### Andy Clark
+- The mind is not *like* a computer, it **is** a computer.
+
+#### Definitions of Computer
+
+**Functional**
+- Someone/something that performs mathematical operations.
+
+**Churchland + Seinowski (1992)**
+- Something can only be identified as a computer if inputs + outputs can be usefully + systematically interpreted as representing ordered pairs of some function of interest.
+	- Input/output mapping, interpret as how it describes as interesting function.
+	
+### Computations are a FORMAL system
+- Extremely rule-based operations where the content does not matter as much as the rules. (Board games, **discrete mathematics(ugh)**) Even if all content is replaced, all arguments will still hold so long as rules apply.
+	- This goes against *Identity theory* because this is saying that the physical makeup of something does not matter, only how it works.
+
