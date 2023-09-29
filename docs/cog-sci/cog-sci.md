@@ -10,6 +10,7 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 
 - Cognitive Science is the science of the mind.
 - You need a set of cognitive laws in order to explain how it is that anything on this planet is capable of thinking.
+- Amended 9/29 : Cognitive Science looks into computational laws that govern our world, not physical or natural laws.
 
 #### ChatGPT Rules
 - Create your own prompt
@@ -510,3 +511,32 @@ Descartes came to this Substance Dualism through the:
 - Extremely rule-based operations where the content does not matter as much as the rules. (Board games, **discrete mathematics(ugh)**) Even if all content is replaced, all arguments will still hold so long as rules apply.
 	- This goes against *Identity theory* because this is saying that the physical makeup of something does not matter, only how it works.
 
+### The Halting Problem
+- Some programs, given some inputs, will complete and give a good output. Some programs, given some inputs, will get stuck in an infinite loop. --> **Turing Machine**
+
+---
+
+### Turing Machine
+
+**It contains**:
+- An infinite tape
+- A read/write head
+- An alphabet of Symbols
+- A set of instructions (the machine table)
+
+![Machine Table](imgs/machine-table.png)
+
+**His Impact**:
+- The Turing Machine formalized algorithms and is the basis of all modern computing.
+- Turing has been influential not just for computer science, but for cognitive science as a whole.
+
+**Computability (Church-Turing Thesis)**:
+- "No computational procedure will be considered as an algorithm unless it can be represented as a Turing Machine."
+- "A function is effectively calculable if its values can be found by some purely mechanical process."
+
+#### Artificial Intelligence
+- A Turing machine is a symbolic processor that can compute anything.
+- Does this mean everything a human mind can do, a Turing machine can do?
+- Can computers have minds?
+
+---
