@@ -767,6 +767,31 @@ There are two types of quantifiers:
 - **Existential Quantifier (∃)**: Expresses the truth of a predicate for at least one instance.
   - There exists some x, such that P(x) is true. ∃xP(x)
   
+| Universal Quantifier                                                   | Existential Quantifier                                                     |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ∀                                                                      | ∃                                                                          |
+| "for all"                                                              | "for some"                                                                 |
+| When **TRUE**: When P(x) is true for every `x` in the domain.          | When **TRUE**: There is an `x` (any `x`) in the domain where P(x) is true. |
+| When **FALSE**: When there is a `x` in the domain where P(x) is false. | When **FALSE**: When P(x) is false for every `x` in the domain.            |
+| ∀xP(x) ≡ P(x1) ^ P(x2) ^ ... ^ P(xn) | ∃xP(x) ≡ P(x1) v P(x2) v ... v P(xn) |
+
+---	
+
+### The Uniqueness Quantifier (∃!)
+- This quantifier says that there is uniquely **1** value in the domain for which P(x) is true.
+
+---
+
+### DeMorgan's Law for Quantifiers
+
+#### ¬∃xP(x) ≡ ∀x¬P(x)
+- True when P(x) is *FALSE* for every `x`.
+- *FALSE* when there is an `x` for which P(x) is *TRUE*.
+
+#### ¬∀xP(x) ≡ ∃x¬P(x)
+- *TRUE* when there is an `x` for which P(x) is *FALSE*.
+- *FALSE* when P(x) is *TRUE* for every `x`.
+
 ---
 
 Workshop
@@ -795,7 +820,132 @@ Assume that the domain consists of all people. Express each of the following usi
 
 	~S(x) => R(x)
 	
+### Nested Quantifiers
+
+#### Every real number has an additive inverse...
+
+∀x∃y : (x + y = 0)
+
+*Is this true?*
+
+	Doamin: All real #s. *Reasoning + Proof*
+	(You can not prove this for EVERY real number cus they are not exhaustive.)
+
+	Instead...
+	x = {0, 1, 2} - This means you are saying for all `x` in your set that x + y =0.
+
+#### Example:
+
+Let `P(x, y)` denote "xy = yx". Assume the domain is the real numbers.
+
+Is `∀x∀y P(x, y)` true?
+
+	What does this statement actually mean?
+	- For all real numbers x, all real numbers y, when multiplied by x, would be equal to y * x. (xy = yx)
+
+	This is TRUE, cus commutative property of multiplication. (Not formal proof)
+
+Is `∀y∀x P(x, y)` true?
+
+	What does this statement mean?
+	- For all real numbers y, all real numbers x, when multiplied by y, would be equal to x * y. (yx = xy)
+
+#### Example 2:
+
+Let `Q(x, y)` denote `"x + y = 5"`. Assume that the domain is all real numbers.
+
+1. Is `∀x∃y Q(x, y)` true?
+
+		What is this saying?
+		- For all real numbers (x), there exists some y such that x + y = 5.
+
+		This is TRUE.
+
+2. Is `∃y∀x Q(x, y)` true?
+
+		What is this saying?
+		- This is slightly different. This is saying that there exists some value (y) such that for ALL real numbers (x) x + y = 5.
+
+		This is FALSE.
+
+#### Translating Nested Quantifiers
+
+Translate "The sum of two positive integers is always positive" into a logical expression.
+
+	Let P(x, y) be x + y > 0 in ∈ ℤ⁺.
+	∀x∀y P(x, y)
+
+### Rules of Inference
+
+
+![Rules of Inference](imgs/rules-of-inference.png)
+
+---
+
+**Arguments**: a sequence of propositions (p₁, p₂, ...)
+
+	(p₁ ^ p₂ ^ ... ^ pₙ) → q ----> Where q is the conclusions.
+
+**Valid Argument**: The premises imply the conclusion.
+
+**Modus Ponens** :
+
+	Given p → q, if p is true, then q is true.
+
+	As a Tautology: ((p → q) ^ p) → q
+
+**Modus Tollens** :
+
+	Given p → q, if ¬q, then ¬p.
+
+	As a Tautology: ((p → q) ^ ¬q) → ¬p
+
+**Hypothetical Syllogism** :
+
+	Given p → q and q → r, p → r.
+
+	((p → q) ^ (q → r)) → (p → r)
+
+**Disjunctive Syllogism** :
+
+	Given p v q, if ¬p, then q.
+
+	((p v q) ^ ¬p) → q
+
+**Addition**:
+
+	Given p, then p v q is true. (Makes sense cus p is always true.)
+
+**Simplification** :
+
+	Given p ^ q, then q (or p) both work.
+
+**Conjunction** :
+
+	Given that p is true and q is true, then p ^ q is also true.
+
+**Resolution** :
+
+	Given ¬p v r and p v q, then q v r.
+
+
 ## Introduction to Proofs
+
+### What are proofs?
+- A mathematical proof of a proposition is a chain of logical deductions leading to the proposition from a base set of axioms.
+
+#### Lemmas
+- Lemmas are a simple statement that can be shown to be true in just a few steps (like helper functions). Lemma’s are used to simplify the steps in the proof.
+
+Simple Lemma. If n2 is even, then n is even.
+
+#### Theorem
+- Theorems are a major statement that can be shown to be true. Lemmas may be used in proving the theorem.
+
+#### Corollary
+- Corollary is a result that can be established directly from a theorem that has been proved.
+
+---
 
 **Types of Proofs**
 
@@ -810,8 +960,29 @@ Assume that the domain consists of all people. Express each of the following usi
 
 ---
 
-### Rules of Inference
+### Direct Proofs
 
-![Rules of Inference](imgs/rules-of-inference.png)
+- In a direct proof, we assume the premise (P) is true and use logic and the rules of inference to show that the conclusion (Q) follows.
 
 ---
+
+Necessary Definitions for Direct Proofs
+
+**Definition 1:** 
+
+- The integer n is even if there exists an integer k such that n = 2k, and n is odd if there exists an integer k such that n = 2k + 1. (Note that every integer is either even or odd, and no integer is both even and odd.) Two integers have the same parity when both are even or both are odd; they have opposite parity when one is even and the other is odd.
+
+---
+
+#### Example of Direct Proof:
+- Give a direct proof of the theorem, If n is an odd integer, then n² is odd.
+
+		We assume n is odd.
+		Then, by definition, n = 2k + 1 for ∃k ∈ ℤ.
+		So, to show that n² is odd, we just have to square both sides. (n² = (2k + 1)²)
+		That becomes n² = 4k² + 4k + 1
+		Then, you make make that into n² = 2(2k² + 2k) + 1
+		And because 2k² + 2k is still just k (k is any number in ℤ)...
+		2(2k² + 2k) + 1 ≡ 2k + 1, which is the def. of being odd.
+		n² is odd.
+
