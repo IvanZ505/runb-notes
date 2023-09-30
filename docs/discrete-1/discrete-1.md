@@ -986,3 +986,23 @@ Necessary Definitions for Direct Proofs
 		2(2k² + 2k) + 1 ≡ 2k + 1, which is the def. of being odd.
 		n² is odd.
 
+### Proof By contraposition
+
+(Reminder) : p → q ≡ ¬q → ¬p
+- In a proof by contraposition, of (p → q), we assume the negation of the conclusion (¬q) to be true. Then, following logic and rules of inference, we show that the negation of the premise (¬p) follows.
+
+#### Example of Proof by Contraposition:
+- Let y ≠ 0. If x/y is irrational, then either x is irrational or y is irrational.
+
+		1. Take the opposite of the conclusion (¬q)
+		2. ¬q is x is rational and y is rational.
+		3. Now prove ¬p
+		4. if you have ∃ p₁, p₂, q₁, q₂ ∈ ℤ such that q₁, q₂ ≠ 0
+		5. x = p₁/q₁ and y = p₂/q₂
+		6. Then, x/y = p₁q₂/p₂q₁ and since p₂q₁ ≠ 0, x/y is rational.
+
+### Proof By Contradiction
+
+- In a proof by contradiction, you instead assume the opposite of the premise. (¬p). By showing a contradiction when trying to prove ¬p, you have proven p.
+
+
