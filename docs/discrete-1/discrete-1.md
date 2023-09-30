@@ -603,10 +603,52 @@ Show ¬(p => q) and p ^ ¬q are logically equivalent.
 
 ----
 
-### Predicates
-- A **predicate** is a proposition that depends on some state of its propositional vavriables.
+## Predicates
 
-Example: Every computer connected to the unversity network is functioning properly
+### What are Predicates and why do we Need them?
+
+---
+
+**When do propositions fail?**
+
+If I say:
+- All candy made with chocolates is delicious.
+- M&Ms are made with chocolate.
+
+Does it follow that M&M's are delicious?
+
+We are unable to model this relationship with propositions, hence the need for predicates.
+
+---
+
+- A **predicate** is a proposition that depends on some state of its propositional variables.
+
+- Statements involving variables, such as ` x < 2` and `x + y = z` are often found in mathematical assertions, in computer programs and in system specifications. The statements are neither true nor false when the values of the variables aren't specified.
+
+- The statement "x is less than 2" has two parts. First, the variable x is the subject of the statement. The second part, the predicate "is less than 2" refers to the property that the subject of our statement can have. The predicate "is less than 2" can be denoted by P(x), where **P** denotes the predicate and x the variable.
+
+- As you can tell, `P(x)` looks like a function.
+
+#### Propositional Functions
+- Propositional functions become propositions (and have truth values) when their variables are each replaced by a value form the domain (or bound by a quantifier).
+- The statement `P(x)` is said to be the value of the propositional function *P* at *x*.
+
+**Example**:
+
+Let P(x) denote `x > 0` and the domain (usually denoted with `U`) be integers. Then:
+
+- P(-3) is *false*
+- P(0) is *false*
+- P(3) is *true*
+
+----
+
+Predicate logic includes:
+- Variables : x, y, z, these are the subjects of the statement.
+- Predicate : A property that the variables can have. (x is greater than 3)
+- Quantifiers : 
+
+Example: Every computer connected to the university network is functioning properly
 
 *is expressed as*
 
@@ -618,6 +660,8 @@ P(n) ^ Q(n) => R(n)
 	- P(x) is a predicate that involves the propositional variable x.
 	- P(x,y) is a predicate that involves the propositional variables x and y.
 	- In general, P(x1, x2, ...., xn) is a predicate that involves the propositional variables x1, x2, ...., xn.
+
+---
 
 #### Workshops for Predicates
 
@@ -631,8 +675,27 @@ P(n) ^ Q(n) => R(n)
 
 	True: P(Chicago, Illinois), P(New York, New York)
 	False: P(Chicago, New York), P(New York, Illinois)
+	
+3. Let `x + y = z` be denoted by *R(x, y, z)* and *U* (for all three variables) be the integers. Find these truth values.
 
-There are **preconditions** and **postconditions**.
+	P(2, -1, 5) is *false*
+	P(3, 4, 7) is *true*
+	P(x, 3, z) is **not a proposition** because it does not have a singular true or false value.
+
+---
+
+### Compound Expressions
+- Connectives from propositional logic carry over to predicate logic.
+- So, `P(x)` denotes "x > 0," find these truth values.
+
+	P(3) v P(-1) --> T v F --> T
+	P(3) ^ P(-1_ --> T ^ F --> F
+	
+- Expressions with variables are not propositions and therefore do not have truth values. Ex: `P(3) ^ P(y)`
+
+
+
+There are **preconditions** and **post-conditions**.
 
 - Preconditions are the conditions that must be met before the predicate is evaluated.
 - Postconditions are the conditions that are evaluated after the predicate is evaluated.
@@ -693,16 +756,16 @@ int f(int x, int y) {
 
 return 8
 
-### Quantifiers
+## Quantifiers
 
 **Quantifiers** express the truth of a proposition over a domain.
 
 There are two types of quantifiers:
+- **Universal Quantifier (∀)**: Expresses the truth of a predicate over an entire domain.
 
-- **Universal Quantifier**: Expresses the truth of a predicate overa n entire domain.
   - A predicate P(x) is true for all x in X.
-- **Existential Quantifier**: Expresses the truth of a predicate for at least one instance.
-  - There exists some x, such that P(x) is true.
+- **Existential Quantifier (∃)**: Expresses the truth of a predicate for at least one instance.
+  - There exists some x, such that P(x) is true. ∃xP(x)
   
 ---
 
@@ -751,3 +814,4 @@ Assume that the domain consists of all people. Express each of the following usi
 
 ![Rules of Inference](imgs/rules-of-inference.png)
 
+---
