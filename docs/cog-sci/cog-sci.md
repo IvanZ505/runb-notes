@@ -540,3 +540,104 @@ Descartes came to this Substance Dualism through the:
 - Can computers have minds?
 
 ---
+
+### History of Artificial Intelligence
+
+**1936** - Alan Turing : Turing Machine
+
+**1949** - Donald Hebb : Neural learning
+
+**1951** - Marvin Minsky : First neural network
+
+(*Between this time was the Dartmouth Conference when the term Artificial Intelligence was coined)
+
+**1958** - Mark I Perceptron
+
+**AI Winter 1** - Connectionism abandoned
+
+**1986** - Rumelhart, Hinton & Williams : Backpropagation algorithm
+
+**AI Winter 2** - Can machines think?
+
+**2010** - Deep Learning Revolution : IBM Watson AlphaGo
+
+---
+
+#### The Frame Problem
+- How can AI deal with uncertainty and irrelevance?
+
+- Problem: The set of possible consequences is immense!
+
+### The Great Debate
+
+(Classical Computation VS Connectionism)
+
+**Computational Theory of Mind**
+- The algorithm are what matter -- and a symbolic processor like a Turing machine can compute *anything*.
+
+**Connectionism**
+
+- The brain is nothing like a Turing machine.
+- We need a different architecture, something that imitates the architecture of the brain.
+
+#### Reconstructing Cognition
+
+**Maybe instead of these:**
+- Thoughts
+- Images
+- Memories
+- Language
+
+**We just need:**
+- Neurons
+
+*if we just feed the AI with a load of data, maybe it'll just figure it out itself.* - **Emergence**
+
+---
+
+#### Hebbian Learning
+- Neurons fire in all-or-nothing pulses.
+- Neuropsychologist Donald Hebb formulates a rule to explain how neurons enable learning.
+- Neurons that fire in synchrony strengthen their connections.
+
+![Artificial Neural Network](imgs/artificial-neural-network.png)
+
+#### Mark I Perceptron
+(First hardware implementation of a Perceptron.)
+
+- "The embryo of an electronic computer that [the Navy] expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence."
+- "It fell slightly short..."
+- The Mark I Perceptron was built for image recognition: 400 photocells connected randomly to "neurons".
+
+#### First AI Winter
+- In **1969**: Marvin Minsky and Seymour Papert publish the book *Perceptrons*.
+- They proved mathematically that there are several classes of computations that single-layer perceptrons cannot learn, including XOR.
+
+- **Connectionism is abandoned**
+
+---
+
+#### In 1986...
+- Major breakthrough with the Backpropagation algorithm.
+
+![AI Winter 1 breakthrough](imgs/ai-winter1-breakthrough.png)
+
+----
+
+### Three Types of Learning
+
+#### Unsupervised Learning
+- No training
+- Clustering
+- Association
+- Dimensionality Reduction
+
+#### Supervised Learning
+- Training data plus human supervision.
+- Classification
+- Regression
+
+#### Reinforcement Learning
+- Using principles from behaviorism.
+- Exploration of rewards.
+
