@@ -357,4 +357,159 @@ I Have 4 bits to work with (I can represent 2⁴ unique digits.)
 
 		So in Hexa: 1B5₁₆
 	
+## Negative numbers
 
+**4 Bits** is called a *nibble*.
+
+**8 bits** is called a *byte* (ahaha).
+
+### First Form
+- In the case of negative numbers, one form is that 4 bits are allocated for negative numbers.
+- The first bit of the sequence keeps track of whether or not the number is negative.
+  - For example: `-5 : 1101`
+
+|     | (-?) | 2²  | 2¹  | 2¹  |
+| --- | ---- | --- | --- | --- |
+| -0  | 1    | 0   | 0   | 0   |
+| -1  | 1    | 0   | 0   | 1   |
+| -2  | 1    | 0   | 1   | 0   |
+| -3  | 1    | 1   | 0   | 1   |
+| -4  | 1    | 1   | 1   | 0   |
+| -5  | 1    | 1   | 0   | 1   |
+| -6  | 1    | 1   | 1   | 0   |
+| -7  | 1    | 1   | 1   | 1   |
+
+For this method... **there is a problem**:
+- You can not do addition between positive and negative binary numbers.
+	- Example: 
+  
+			-7 + 7
+			(This should equal zero)
+
+			Let's represent it as binary.
+
+			1111 + 0111 = (1)0110 (1 gets deleted) Not correct.
+
+### Complement Method of Representing Negatives
+- You flip the bits.
+
+|     | 2³  | 2²  | 2¹  | 2¹  |
+| --- | --- | --- | --- | --- |
+| -0  | 1   | 1   | 1   | 1   |
+| -1  | 1   | 1   | 1   | 0   |
+| -2  | 1   | 1   | 0   | 1   |
+| -3  | 1   | 1   | 0   | 0   |
+| -4  | 1   | 0   | 1   | 1   |
+| -5  | 1   | 0   | 1   | 0   |
+| -6  | 1   | 0   | 0   | 1   |
+| -7  | 1   | 0   | 0   | 0   |
+
+- This method flips the bits so:
+  - Normally 0 is represented as `0000`, but in the complement, it will be represented as `1111`.
+
+**Addition with this method:**
+
+	-7 + 7 = 0
+
+	1000 + 0111 = 1111 = -0 (very close!)
+
+	-3 + 5 = 2
+
+	1100 + 0101 = (1)0001 (1 gets deleted again) Value is 1 (Off by 1)
+
+Why is it off??
+- It's off by 1 because of the value -0 in the complement form.
+- So what should we do?
+  - Remove the damn -0.
+
+### New Twos Complement Form
+
+|     | 2³  | 2²  | 2¹  | 2¹  |
+| --- | --- | --- | --- | --- |
+| -1  | 1   | 1   | 1   | 1   |
+| -2  | 1   | 1   | 1   | 0   |
+| -3  | 1   | 1   | 0   | 1   |
+| -4  | 1   | 1   | 0   | 0   |
+| -5  | 1   | 0   | 1   | 1   |
+| -6  | 1   | 0   | 1   | 0   |
+| -7  | 1   | 0   | 0   | 1   |
+| -8  | 1   | 0   | 0   | 0   |
+
+#### Addition again with this form:
+
+	-7 + 7 = 0
+	1001 + 0111 = (1)0000 (1 gets discarded again), this gets us the actual result (0)
+
+	-3 + 5 = 2
+	1101 + 0101 = (1)0010 (1 gets discarded), this gets us 2 (actual result)
+
+---
+
+### Signed Integers - Binary
+- Signed binary integers converts half of range as negative
+- Signed representation identical, except for most significant bit.
+  - For signed binary most significant bit indicates sign.
+    - 0 for nonnegative
+    - 1 for negative
+  - **must know number of bits** for signed representation.
+
+### Signed Integers - Convert to/from Decimal
+- Convert Signed binary int to decimal
+  - Easy – just use place value notation
+- Convert Decimal to Signed Binary Integer
+	- MUST know number of bits in signed representation
+	- Algorithm:
+
+		1. Convert magnitude (abs val) of decimal number to unsigned binary
+		2. Decimal number originally negative?
+      		1. If positive, conversion is done
+      		2. If negative, perform negation on answer from part a)
+            	-  zero extend answer from a) to N bits (size of signed repr)
+         		- negate: flip bits and add 1
+
+### Signed Integers - Convert Decimal to Base-R
+
+TODO : FILL OUT
+
+## Representing Strings
+
+### Strings in C
+- Represented by array of characters
+- Each character encoded in ASCII format
+  - Standard 7-bit encoding of character set
+  - Character “0” has code 0x30
+- String should be null-terminated
+  - Final character = 0
+- ASCII characters organized such that:
+  - Numeric characters sequentially increase from 0x30
+	- Digit i has code 0x30+i
+- Alphabetic characters sequentially increase in order
+	- Uppercase chars ‘A’ to ‘Z’ are 0x41 to 0x5A
+	- Lowercase chars ‘a’ to ‘z’ are 0x61 to 0x7A
+- Control characters, like `<RET>`, `<TAB>`, `<BKSPC>`, are 0x00 to 0x1A
+
+#### Limitations of ASCII
+- 7-bit encoding limits set of characters to 2⁷ = 128
+- 8-bit extended ASCII exists, but still on 2⁸ = 256 characters
+- Unable to represent most other languages in ASCII.
+
+**How to fix this??**
+
+### Unicode
+
+### Endianness
+- Recall that memory is byte-addressable
+  - Four bytes in a 32-bit integer, which order are they stored with?
+  
+**there are two ways to store : `unsigned X = 15398; // 0x00003C26`**
+
+#### Why does Endianness Matter?
+- The CPU is designed to work with whichever the system it has
+  - ex: reads, writes, arithmetic will all work correctly.
+- But what about sending data to other computers?
+  - Need a standard representation for compatibility.
+  - Most network standards are big-endian.
+  - Sender-receiver must agree to a mutual endianness.
+- Some files have byte-order marks (BOM)
+  - It is a speciail character or sequence of bytes placed at the begiinning of a text file to indicate the byte order (endianness) and character encoding used withint he file.
+  - The primary purpose of a BOM is to help software correctly interpret and process the text data, especially when dealing with multi-byte character encodings like UTF-16, UTF-32.
