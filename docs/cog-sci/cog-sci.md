@@ -641,3 +641,48 @@ Descartes came to this Substance Dualism through the:
 - Using principles from behaviorism.
 - Exploration of rewards.
 
+---
+
+#### Evaluating Connectionism
+
+- Connectionism can do a lot, but on a core level it really is just statistics.
+- Is there a limit to what neural networks can do?
+
+**Strength**:
+- Provides an attractive account of *concepts*.
+	- Think about it, what is a chair?
+- Graceful Degradation - Even if you take a few things away, the Connectionism algorithm can still perform pretty well.
+
+**Weaknesses**:
+- Unable to perform one-off learning.
+	- Humans are good at learning from single examples. Neural networks typically require huge numbers of parameters and massive data sets.
+- Mere association?
+	- Can connectionism models truly master abstract rules or are they just learning associations?
+	- Connectionism models sometimes have difficulty generalizing performance from training set.
+- Lack of systematicity?
+	- Thoughts are systematic.
+	- If you can think 'John loves Mary', you can also think 'Mary loves John' even though they have different meanings.
+	- There are predictable patterns in the thoughts we can understand.
+- Lack of constitution.
+	- Thoughts are constitutive. A and B are constituents of A&B.
+	- Mortar & Pestle (but does not know they are two separate objects)
+
+---
+
+### Language of thought
+- Thoughts are composed of language-like components with compositional structure.
+- To what extent is your thoughts symbolically structured.
+
+### The Great Debate
+(Classical Computation vs Connectionism)
+
+**Implementational Connectionism**
+
+- Connectionism might be the implementational way to realize classical computational algorithm.
+
+**Radical Connectionism**
+
+- Reject classical computing and seek to eliminate the idea of symbolic processing completely and only use connectionist networks.
+	
+---
+
