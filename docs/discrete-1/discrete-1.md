@@ -900,6 +900,7 @@ Translate "The sum of two positive integers is always positive" into a logical e
 
 	As a Tautology: ((p → q) ^ ¬q) → ¬p
 
+
 **Hypothetical Syllogism** :
 
 	Given p → q and q → r, p → r.
@@ -1005,4 +1006,82 @@ Necessary Definitions for Direct Proofs
 
 - In a proof by contradiction, you instead assume the opposite of the premise. (¬p). By showing a contradiction when trying to prove ¬p, you have proven p.
 
+## Sets
+- A *set* is an unordered collection of objects, called *elements* or *members* of the set. A set is said to *contain* it's elements.
 
+---
+We write a ∈ A to show that a is an element of the set A.
+
+The notation a ∌ A denotes that a is not an element of A.
+
+---
+
+### Set as Mathematical Numbers
+- Much of discrete math is devoted to the study of discrete structures, used to represent discrete objects.
+- Many important discrete structures are built using **sets**, which are a collection of objects.
+- Among the discrete structures built from sets are combinations, unordered collections of objects used extensively in counting;
+- **Relations** are sets of ordered pairs that represent relationships between objects; graphs, sets of
+vertices and edges that connect vertices;
+- Finite state machines, used to model computing machines are represented by a set of states.
+
+---
+
+#### Subset of Set
+- A is a subset of B, which means that A ∈ B, but ¬∀a ∈ B.
+
+#### Set Equality
+- Two sets are said to be equal if they have the same elements. That is, ∀a ∈ A, a ∈ B and vice cersa.
+
+#### The Size and Cardinality of a Set
+- Let *S* be a set. If there are exactly *n* distinct elements in *S* where *n* is a nonnegative integer, we say that *S* is a *finite set* and that *n* is the *cardinality* of S. The cardinality is denoted by `|S|`.
+
+#### Power Set of a Set
+- Given a set *S* the *power set* of *S* is the set of all subsets of the set *S*. The power set of *S* is denoted by `P(S)`.
+
+**Power sets** are of size 2ⁿ where n is the size of the set.
+
+	Example:
+	If the set A = {1}
+	Then the P(A) = {Φ, 1}
+	Then P(P(A)) = {Φ, {1}, {Φ} {{1}}}
+
+#### Cartesian product of Two Sets (Cross product)
+- Cartesian product of two sets A × B is the set of all pairs in the form (a, b) where a is an element of A and b is an element of B.
+- Defining some relation between A and B.
+
+Example:
+
+	Given 3 sets, P(rofessors) = {p1, p2}, S(tudents)={s1, s2, s3} and C(ourses) = {c1, c2, c3}
+	Find P x S and S x C
+
+	P x S :
+	P x S = {{p1, s1}, {p1, s2}, {p1, s3}, {p2, s1}, {p2, s2}, {p2, s3}}
+
+	S x C:
+	S x C = {{s1, c1}, ..., {s3, c3}}
+
+### Proofs Involving Sets
+
+- In order to prove the set `A = B`:
+  - You must prove ∀x ∈ A ↔ x ∈ B.
+
+Prove (A ∩ B)̄ ⊆ Ā ∪ B̄
+
+	x ∈ A ∩ B → x ∈ U - (A ∩ B)
+	→ x ∉ A or x ∉ B
+	→ x ∈ Ā or x ∈ B̄
+	→ x ∈ Ā ∪ B̄
+
+Question: Show that (A ∩ B) ∪ A = A
+
+So, you need to prove x ∈ (A ∩ B) ∪ A.
+
+	(A ∩ B) ∪ A → (A ∩ B) or x ∈ A
+	→ (x ∈ A and x ∈ B) or x ∈ A.
+	→ (p and q) or p = P
+	P is the statement x ∈ A.
+
+## Functions
+
+The formal definition of a function:
+- Let X and Y be non-empty sets. A function f from X to Y is an assignment of **exactly one** element of Y to each element of X. We write f(x) = y if y is the unique element of Y assigned by the function f to element x of X. We write f : X → Y to indicate a function from X to Y.
