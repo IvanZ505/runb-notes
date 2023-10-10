@@ -686,3 +686,53 @@ Descartes came to this Substance Dualism through the:
 	
 ---
 
+## Week 6: The Brain
+
+- Why do we study the brain?
+	- To understand the Brain
+	- For clinical purposes
+	- To build a brain 2.0
+	- **To understand the mind**
+- What are the techniques and tools for studying the brain?
+- What can the brain tell us about the mind?
+
+---
+
+### Structure of the Brain:
+- The brain is wrinkly.
+- It's a bit more hard then you would think (not squishy).
+- WHY IS IT WRINKLY??
+	- For surface area!
+		- It increases the surface area of a certain layer. (the cortex)
+		- The cortex seems to be responsible for things like perception, understanding, and etc.
+- There are different lobes in the brain:
+	- Frontal Lobe: Responsible for emotions, decision making and organization.
+	- Prefontal Cortex: Responsible for short term memory and ability to pay attention.
+	- Temporal Lobe: Responsible for long term memory, language comprehension, and identifying and naming objects.
+	- Motor Cortex: Responsible for movement and coordination.
+	- Somatosensory Cortex: Responsible for sensations.
+	- Parietal Lobe: Responsible for processing sensory information and spatial awareness.
+	- Occipital Lobe: Responsible for processing visual information.
+	- Cerebellum: Responsible for skill memory and movement coordination.
+	- Brain Stem: Responsible for body basics such as heart rate and breathing. Also central to alertness and the ability to sleep.
+
+![The brain](imgs/the_brain.png)
+
+---
+
+### What's Going on in the Corpus Callosum??
+- You have two hemispheres to the brain.
+- The way they are connected is via the corpus callosum.
+- There are certain functions that are localized on a certain hemisphere in your brain, but then are not able to communicate with the other.
+
+#### WADA Test
+- Cool test to determine the localization of the your functions.
+
+#### Contralateral organization
+- Your left and right hemispheres are responsible for the **opposite** function.
+- Your right hemisphere is responsible for processing the left eye, and vice versa.
+
+#### Right ear Advantage
+- The place we process sound is the auditory cortex. It's very close to your ear.
+- The right ear has an advantage because it sends a signal to the left hemisphere's auditory cortex and language is typically localized in the left hemisphere.
+
