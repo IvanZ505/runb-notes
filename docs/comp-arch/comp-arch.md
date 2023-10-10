@@ -1,10 +1,72 @@
-
+<style>.markdown-body {font-family:"Times New Roman", Times, serif;}</style>
 
 # Computer Architecture
 
 Taught By Kania Jay
 
 ----
+
+- [Computer Architecture](#computer-architecture)
+	- [Course Logistics](#course-logistics)
+		- [What is a Computer?](#what-is-a-computer)
+			- [Fixed computers](#fixed-computers)
+			- [Stored Computers](#stored-computers)
+			- [The Von Neumann Model](#the-von-neumann-model)
+			- [High Level to Low Level](#high-level-to-low-level)
+			- [Harvard Architecture](#harvard-architecture)
+			- [The Operating Systems](#the-operating-systems)
+			- [Moore's Law](#moores-law)
+	- [The Overview of Comp Arch](#the-overview-of-comp-arch)
+		- [5 Great Realities of Systems](#5-great-realities-of-systems)
+		- [Memory Hierarchy (More to come)](#memory-hierarchy-more-to-come)
+		- [How Source Code Becomes Executable](#how-source-code-becomes-executable)
+		- [Preprocessing Phase](#preprocessing-phase)
+		- [Compiler](#compiler)
+		- [Assembler](#assembler)
+		- [Linker](#linker)
+	- [Data Representation in Memory](#data-representation-in-memory)
+			- [Byte-Oriented Memory Organization](#byte-oriented-memory-organization)
+		- [Why use Bits and Binaries?](#why-use-bits-and-binaries)
+		- [Bits and bytes](#bits-and-bytes)
+		- [Encoding Byte values](#encoding-byte-values)
+		- [Binary is Hard to represent!](#binary-is-hard-to-represent)
+			- [So, in order to use it, we change it into a different representation.](#so-in-order-to-use-it-we-change-it-into-a-different-representation)
+			- [Expressing Byte Values](#expressing-byte-values)
+			- [Convert Bteween Binary and Hex](#convert-bteween-binary-and-hex)
+		- [Signed VS Unsigned](#signed-vs-unsigned)
+			- [Unsigned Integers - Binary](#unsigned-integers---binary)
+			- [Unsigned Integers - Hexadecimals](#unsigned-integers---hexadecimals)
+			- [Unsigned Integers - Convert Decimal to Base-R](#unsigned-integers---convert-decimal-to-base-r)
+	- [Negative numbers](#negative-numbers)
+		- [First Form](#first-form)
+		- [Complement Method of Representing Negatives](#complement-method-of-representing-negatives)
+		- [New Twos Complement Form](#new-twos-complement-form)
+			- [Addition again with this form:](#addition-again-with-this-form)
+		- [Signed Integers - Binary](#signed-integers---binary)
+		- [Signed Integers - Convert to/from Decimal](#signed-integers---convert-tofrom-decimal)
+		- [Signed Integers - Convert Decimal to Base-R](#signed-integers---convert-decimal-to-base-r)
+	- [Representing Strings](#representing-strings)
+		- [Strings in C](#strings-in-c)
+			- [Limitations of ASCII](#limitations-of-ascii)
+		- [Unicode](#unicode)
+		- [Endianness](#endianness)
+			- [Why does Endianness Matter?](#why-does-endianness-matter)
+		- [Basic Processor Organization](#basic-processor-organization)
+		- [Boolean Algebra](#boolean-algebra)
+			- [General Boolean Algebras](#general-boolean-algebras)
+	- [Bit-Level operations in C](#bit-level-operations-in-c)
+			- [Contrast: Logic Operations in C](#contrast-logic-operations-in-c)
+		- [Bitwise Operations: Applications](#bitwise-operations-applications)
+		- [Shift Operations](#shift-operations)
+			- [Bitwise-NOT Operator: One's Complement](#bitwise-not-operator-ones-complement)
+		- [Unsigned Addition](#unsigned-addition)
+			- [VIsualizing Unsigned Addition](#visualizing-unsigned-addition)
+		- [Two's complement Addition](#twos-complement-addition)
+			- [Signed Addition](#signed-addition)
+			- [Visualizing Signed Addtion](#visualizing-signed-addtion)
+
+
+---
 
 ## Course Logistics
 
@@ -496,12 +558,24 @@ TODO : FILL OUT
 **How to fix this??**
 
 ### Unicode
+- First 128 characters are ASCII format
+- UTF-8: 1-byte version
+- UTF-16: 2-byte version
+  - Allows: 2¹⁶= 65,536 unique characters
 
 ### Endianness
 - Recall that memory is byte-addressable
   - Four bytes in a 32-bit integer, which order are they stored with?
-  
-**there are two ways to store : `unsigned X = 15398; // 0x00003C26`**
+
+**There are two ways to store : `unsigned X = 15398; // 0x00003C26`**
+
+- Little endian
+  - Least significant bits stored first in memory
+  - x86 uses this representation
+- Big endian
+  - Most significant bits stored first in memory.
+
+![Endianness](imgs/endianness.png)
 
 #### Why does Endianness Matter?
 - The CPU is designed to work with whichever the system it has
@@ -513,3 +587,161 @@ TODO : FILL OUT
 - Some files have byte-order marks (BOM)
   - It is a speciail character or sequence of bytes placed at the begiinning of a text file to indicate the byte order (endianness) and character encoding used withint he file.
   - The primary purpose of a BOM is to help software correctly interpret and process the text data, especially when dealing with multi-byte character encodings like UTF-16, UTF-32.
+
+### Basic Processor Organization
+![CPU Overview](imgs/cpu_overview.png)
+- Register file (active data)
+- Arithmetic Logic Unit (ALU)
+  - Performs signed and unsigned arithmetic
+  - Performs logic operations
+  - Performs bitwise operations
+
+### Boolean Algebra
+- Developed by George Boole in 19th cetnry.
+  - Algebraic representation of logic.
+    - He encoded "True" as 1 and "False" as 0.
+
+#### General Boolean Algebras
+- Operate on Bit Vectors
+  - Operations applied bitwise
+  - Bitwise-AND operator: `&`
+  - Bitwise-OR operator: `|`
+  - Bitwise-XOR operator: `^`
+  - Bitwise-NOT operator: `~`
+
+Example:
+
+	  01101001    01101001
+	& 01010101  | 01010101
+	= 01000001  = 01111101
+
+
+## Bit-Level operations in C
+- Operations `&, |, ~, ^`, Available in C
+  - Apply to any "integral" data type
+    - long, int short, char, unsigned
+  - View arguments as bit vectors
+  - Arguments applied bit-wise
+  - It looks at your argument as a **BIT**, which is different.
+
+#### Contrast: Logic Operations in C
+- Contrast to Logical operators:
+  - &&, ||, !
+    - View 0 as "false"
+    - Anthing nonzero as "True"
+    - Always return 0 or 1
+    - *early termination*
+- Examples (`char` data type):
+  - !0x41 → 0x00
+  - !0x00 → 0x01
+  - !!0x41 → 0x01
+
+### Bitwise Operations: Applications
+- Bit fields
+  - One byte can fit up to eight options in a single field
+  - Example: `char flags = 0x1 | 0x4 | 0x8`
+
+### Shift Operations
+- **Left Shift**: x << y
+  - Shift bit-vector x left of y places
+    - Throw away extra bits on left
+  - Fill with 0's on the right.
+
+Example:
+
+| Argument `x` | 01100010          |
+| ------------ | ----------------- |
+| << 3         | 00010 → 00010000  |
+
+
+- **Right Shift**: x >> y
+- Shift bit-vector x right y positions
+- There are **two** types of right shifts
+  - *Logical Right Shift*:
+    - Fill with 0's on the left
+  - *Arithmetic Right Shift*:
+    - Replicate most significant bit on the right
+
+Example:
+
+| Argument `x` | 01100010          |
+| ------------ | ----------------- |
+| Log. >> 2    | 011000 → 00011000 |
+| Arith. >> 22 | 011000 → 00011000 |
+
+Example 2:
+
+| Argument `x` | 10100010 |
+| ------------ | -------- |
+| << 3         | 00010000 |
+| log. >> 2    | 00101000 |
+| arith. >> 2  | 11101000 |
+
+- **Undefined behavior**
+  - Shift amount < 0 or >= word size
+
+#### Bitwise-NOT Operator: One's Complement
+- Negate a number by taking 2's complement
+  - Fliip bits (one's complement)
+    - ~x + 1 == ~x
+
+---
+
+### Unsigned Addition
+![Addition Discard](imgs/discard-carry.png)
+- Operands: *w* bits
+- True Sum: *w+1* bits
+- Discard Carry: *w* bits
+
+**Addition Operation**
+- Carry output dropped at end of addition
+- Valid **ONLY** if true sum is within w-bit range.
+
+Example:
+
+	1111 + 0001 = 10000 → True value
+	However, 1 gets dropped because out of range.
+	Gives us 0000.
+
+Example 2:
+
+	110₁₀: 01101110
+	202₁₀: 11001010
+	     =100111000 = 00111000 → 56₁₀
+
+	NOT VALID
+
+#### VIsualizing Unsigned Addition
+- There is a wraparound or overflow. Once you go over 255, it will wrap back to 0.
+
+![Unsigned Overflow](imgs/unsigned-overflow.png)
+
+### Two's complement Addition
+- Operands: *w* bits
+- True Sum: *w+1* bits
+- Discard Carry: *w* bits
+
+**Signed/Unsigned adds have Identical Bit-level behavior**
+
+**The Only difference is our interpretation of the sign bit value**
+
+#### Signed Addition
+
+Example 1:
+
+	98₁₀: 01100010
+	74₁₀: 01001010
+	     =10101100 = 1101100 →(First bit is negative) -84₁₀
+
+	NOT VALID in 8-bit signed range (172 > 127)
+
+Example 2:
+
+	-30₁₀: 11100010
+	-40₁₀: 11011000
+	      =110111010 = 10111010 → -70₁₀
+	
+	VALID in 8-bit signed range (-70 < -128)
+
+#### Visualizing Signed Addtion
+![Overflow Signed](imgs/overflow-signed.png)

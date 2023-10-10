@@ -14,6 +14,7 @@
       - [Pointers to Structures:](#pointers-to-structures)
     - [Dynamic Allocation (***Very Important***)](#dynamic-allocation-very-important)
 
+
 ---
 
 ### Data Types
