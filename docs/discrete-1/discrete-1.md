@@ -1055,10 +1055,10 @@ Example:
 	Find P x S and S x C
 
 	P x S :
-	P x S = {{p1, s1}, {p1, s2}, {p1, s3}, {p2, s1}, {p2, s2}, {p2, s3}}
+	P x S = { {p1, s1}, {p1, s2}, {p1, s3}, {p2, s1}, {p2, s2}, {p2, s3} }
 
 	S x C:
-	S x C = {{s1, c1}, ..., {s3, c3}}
+	S x C = { {s1, c1}, ..., {s3, c3} }
 
 ### Proofs Involving Sets
 
