@@ -2,13 +2,19 @@
 
 - [C Notes For Programming in C](#c-notes-for-programming-in-c)
     - [Data Types](#data-types)
+  - [C Basics](#c-basics)
+    - [C Inbuilt Operations](#c-inbuilt-operations)
     - [Getting Length of Array in C](#getting-length-of-array-in-c)
     - [Strings](#strings)
       - [String concatenation](#string-concatenation)
     - [Statics and Global](#statics-and-global)
     - [Pointers (***Very Important***)](#pointers-very-important)
+      - [Creation:](#creation)
       - [Deferencing:](#deferencing)
       - [Pointers for Arrays](#pointers-for-arrays)
+      - [A Special Pointer in C](#a-special-pointer-in-c)
+      - [Void Pointers](#void-pointers)
+    - [Understanding Pointer Code](#understanding-pointer-code)
     - [Structures (Structs)](#structures-structs)
       - [Typedefs:](#typedefs)
       - [Pointers to Structures:](#pointers-to-structures)
@@ -40,6 +46,25 @@ unsigned int | 2 | 0 to 65535 | %u |
 Long | 4 | -9223372036854775808 to 9223372036854775807 | %l|
 
 ---
+
+## C Basics
+
+### C Inbuilt Operations
+
+**scanf(format_str, &variable1, &variable2,...)**:
+- Takes in an input from the user. format_str takes in input using the str format defined in [Data Types](#data-types).
+- & → passes the address of the variable.
+- You are *in literal terms* saying to take the parsed data and store it in the memory location of the variable.
+
+**for(initialization; condition; increment/decrement)**:
+- The for loop is the same as Java.
+- Use the keyword `continue` to skip the current iteration of the loop.
+- Use the keyword `break` to break out of the loop.
+
+**Functions**:
+- Functions are extremely similar to Java.
+- You can pass in pointers to functions as well.
+- `int myFunction(int)` can be declared without specific implementation until later. (This allows the functions to be "used" before they are defined.)
 
 ### Getting Length of Array in C
 
@@ -87,18 +112,23 @@ int columns = sizeof(array[0]) / sizeof(array[0][0]);
 - `char * name = John`
 - The "*" is used to indicate a pointer.
 
+#### Creation:
+- You can create a pointer to a variable by using the "&" operator.
+- For example:
+
+```C 
+int a = 1;
+int* ptr_to_a = &a;
+```
+
 #### Deferencing:
-
-    int a = 1;
-    char * pointer_to_a = &a;
-
-- This is when you refer to where the pointer points. So, it's like a pointer to a variable which contains the location of the data.
-- You point to the variable using the *&* operator.
+- Deferencing is the act of accessing the actual data in the memory.
 - To access this deferenced variable, you add the "*" to the beginning of the deference. For example:
   - `*pointer_to_a += 1;`
   - This will affect the actual variable as well.
 
 - You can use a array of pointers to hold a number of pointers.
+  - This can be done as such: `int** ptr_to_ptr`
 - You can pass a pointer to a function or return a pointer from a function as well.
 - Or, just keep pointing.
 
@@ -140,6 +170,76 @@ char *pvowels = vowels;
 
 - Calling on `&vowels[0]`, `pvowel` and `vowels` will all return the location of the data in the memory.
 - Calling on `vowels[0]`, `*pvowels`, and `*vowels` will all return the ACTUAL data.
+
+#### A Special Pointer in C
+- Special constant pointer `NULL`
+- Deferencing a `NULL` pointer is illegal (causes segmentation fault)
+  - Memory address of NULL → *0x00000000*
+  - `int* ptr = NULL;`
+  
+#### Void Pointers
+- Void pointers can be considered pointers to everything
+  - Defined as: `void* ptr;`
+  - You can point the pointer at different memory addresses of different data types.
+  - However, in order to use the data (deference), you must use typecasting in order to interpret the data at the address in a specific format.
+- **When using void pointers, you lose all type safety.**
+  - Reduces the effectiveness of the compiler's type checking.
+  - You can't do pointer arithmetic with void pointers.
+
+Example:
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+void main() {
+  void* ptr;
+  int i;
+  char c;
+
+  // You can set the pointer to point to different data types
+  p = &i;
+  p = &c;
+
+  // However, when deferencing...
+  // You must typecast the pointer to the correct data type
+  printf("%d\n", *(int*)p);
+}
+```
+
+### Understanding Pointer Code
+
+```C
+int a, b;
+    int* ptr1;
+    int* ptr2;
+    a = 1;
+    b = 2;
+
+    ptr1 = &a;
+    printf("%i is stored at %i\n",a, &a);
+    // This is getting the memory address that pointer is pointer to
+    // This memory address was set previously to the memory address of "a"
+    // This should be the same address as what was printed previously
+    printf("ptr1 is pointing at %i\n",ptr1);
+    // This is fetching the memory address of the literal variable ptr
+    // The ptr needs space in the memory too!
+    printf("the pointer variable ptr1 is physically stored at %i\n", &ptr1);
+
+    // This will set the address held by ptr2 to the same address held by ptr1
+    // This will return the same address as "&a" and "ptr1"
+    ptr2 = ptr1;
+    printf("ptr2 is pointing at %i\n", ptr2);
+    // This is going to be different
+    printf("the pointer variable ptr2 is physically stored at %i\n", &ptr2);
+
+    // This goes down to the address stored in ptr2
+    // which happens to be the same as ptr1 and the variable a
+    *ptr2 = 5;
+    printf("changed the number to %i\n", *ptr2);
+    printf("changed here too %i\n", *ptr1);
+    printf("and here too %i\n", a);
+  ```
 
 ---
 
