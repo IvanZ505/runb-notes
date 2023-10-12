@@ -77,6 +77,7 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 			- [WADA Test](#wada-test)
 			- [Contralateral organization](#contralateral-organization)
 			- [Right ear Advantage](#right-ear-advantage)
+			- [Double Dissociation](#double-dissociation)
 
 
 ## What is Cognitive Science?
@@ -809,3 +810,22 @@ Descartes came to this Substance Dualism through the:
 - The place we process sound is the auditory cortex. It's very close to your ear.
 - The right ear has an advantage because it sends a signal to the left hemisphere's auditory cortex and language is typically localized in the left hemisphere.
 
+---
+
+Phineas Gage
+- He was a railroad worker who had a metal rod go through his frontal lobe.
+- He survived, but his personality changed.
+
+#### Double Dissociation
+- Suppose a lesion in one part of the brain affects some cognitive task. What can we infer about the relationship between that area of the brain and the cognitive task?
+  - We would infer that the area in the brain with the lesion is responsible for that cognitive task.
+  - However, we can not infer that the area of the brain is *only* responsible for that cognitive task.
+  
+Hans-Lucas Teuber said...
+- Double dissociations were "needed for conclusive proof of localization of function in the brain."
+
+*What followed?*
+- The fact that patient A is impaired on Task II supports the hypothesis that Task II is localized in an area including the site of patient A's lesion.
+- Patient B's pattern of impairement and sparing provides evidence for two further hypotheses.
+- First, the fact that patient B is unimpaired on Task II supports the hypothesis that the area in which Task II is localized does not extend as far as the site of patient B's lesion.
+- Second, the fact that patient B is impaired on Task I supports the hypothesis that patient A's pattern of impairment and sparing is not to be explained by different levels of complexity for the two tasks.
