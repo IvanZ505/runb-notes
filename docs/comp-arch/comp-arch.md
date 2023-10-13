@@ -64,6 +64,10 @@ Taught By Kania Jay
 		- [Two's complement Addition](#twos-complement-addition)
 			- [Signed Addition](#signed-addition)
 			- [Visualizing Signed Addtion](#visualizing-signed-addtion)
+		- [Multiplication](#multiplication)
+			- [In Binary](#in-binary)
+		- [Division](#division)
+			- [Unsigned Power of 2 Division](#unsigned-power-of-2-division)
 
 
 ---
@@ -745,3 +749,31 @@ Example 2:
 
 #### Visualizing Signed Addtion
 ![Overflow Signed](imgs/overflow-signed.png)
+
+### Multiplication
+- Goal: Computing Product of *w*-bit operands x,y
+  - This can either be signed or unsigned.
+- But, exact results can be bigger than *w* bits
+  - *Unsigned*: Up to 2*w* bits
+    - Result range 0 ≤ x * y ≤ (2ʷ-1)² = 2ʷ-2ʷ⁺¹+1
+  - Two’s complement min (negative): Up to 2w-1 bits
+    - Result range: x * y ≥ (–2ʷ⁻¹)*(2wʷ⁻¹-1) = –2²ʷ⁻² + 2ʷ⁻¹
+  
+**Unsigned**
+![Unsigned Mult](imgs/unsigned-mult.png)
+
+**Signed**
+![Signed Mult](imgs/signed-mult.png)
+
+#### In Binary
+- It's like how you multiply normally. Each digit at a time.
+  
+![True Binary Multiplication](imgs/true-bin-mult.png)
+
+### Division
+
+#### Unsigned Power of 2 Division
+- Division by power of 2 is equivalent to right shift
+  - x / 2ⁿ = x >> n
+  - Uses *logical* right shift
+	- Fill with 0's on the left. Check out [Right shift](#shift-operations)
