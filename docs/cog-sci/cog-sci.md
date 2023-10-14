@@ -78,6 +78,14 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 			- [Contralateral organization](#contralateral-organization)
 			- [Right ear Advantage](#right-ear-advantage)
 			- [Double Dissociation](#double-dissociation)
+	- [Measuring Brain Activity](#measuring-brain-activity)
+		- [Electrophysiology](#electrophysiology)
+		- [Hemodynamics](#hemodynamics)
+		- [EEG (Electroencephalography)](#eeg-electroencephalography)
+			- [Event related potentials](#event-related-potentials)
+		- [PET (Positron Emission Tomography)](#pet-positron-emission-tomography)
+		- [MRI and fMRI (Magnetic Resonance Imaging and Functional MRI)](#mri-and-fmri-magnetic-resonance-imaging-and-functional-mri)
+			- [Functional MRI](#functional-mri)
 
 
 ## What is Cognitive Science?
@@ -829,3 +837,72 @@ Hans-Lucas Teuber said...
 - Patient B's pattern of impairement and sparing provides evidence for two further hypotheses.
 - First, the fact that patient B is unimpaired on Task II supports the hypothesis that the area in which Task II is localized does not extend as far as the site of patient B's lesion.
 - Second, the fact that patient B is impaired on Task I supports the hypothesis that patient A's pattern of impairment and sparing is not to be explained by different levels of complexity for the two tasks.
+
+---
+
+## Measuring Brain Activity
+
+### Electrophysiology
+- Measures brain activity
+- Neurons fire, sending electrical signals to connected neurons.
+
+### Hemodynamics
+- Energy to power brain activity.
+- Neuronal activity > metabolic
+demand for glucose and oxygen >
+cerebral blood flow to active region
+
+---
+
+![Measuring Techniques](imgs/measuring-techniques.png)
+
+### EEG (Electroencephalography)
+- Measures electrical activity in the brain.
+- You see the data in real time.
+
+There are two types of signals a neuron can fire:
+- Action potential:
+  - Within a neuron (fast 1msec)
+- Postsynaptic potential:
+  - Between neurons (slow 10s/ 100 msec)
+
+#### Event related potentials
+- Each EEG electrode records the average of many thousands of neurons.
+- The ERP is the average of many EEG recordings.
+  
+![ERP](imgs/event-related-potentials.png)
+
+### PET (Positron Emission Tomography)
+- Measures blood flow in the brain.
+- Can show which areas of the brain are active during a task by measuring regional Cererbral Blood Flow (rCBF).
+- Spatial resolution: 4mm.
+- Temporal resolution: Very bad, 30 seconds. (No measurements until 30 seconds after the task is performed)
+
+Procedure:
+- Inject radioactive tracer into bloodstream.
+- Scanner detects radioactive decay.
+
+![PET](imgs/pet.png)
+
+### MRI and fMRI (Magnetic Resonance Imaging and Functional MRI)
+- The MRI machine consists of a large superconducting magnet.
+- The magnet aligns the protons in your body.
+- A radio frequency pulse is applied to the body.
+- The protons absorb the energy and flip.
+- When the pulse is turned off, the protons relax and emit a radio signal in return, which can be easured.
+
+However, for fMRI, the MRI machine is used to measure the blood flow in the brain. (We want this for COGSCI)
+
+![MRI and fMRI](imgs/mri-and-fmri.png)
+
+#### Functional MRI
+- **BOLD** signal: Blood Oxygen Level Dependent
+- No radioactive tracer needed.
+- fMRI is correlative, but does not tell you that these brain regions are **necessary**.
+- Doesn't tell anything about the cognitive *process*.
+
+Data:
+- Spatial resolution: 3-6mm
+- Temporal resolution: 3-6 seconds
+
+---
