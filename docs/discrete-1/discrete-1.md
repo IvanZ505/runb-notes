@@ -52,12 +52,18 @@ Introduction to Discrete Structures 1
 	- [Sets](#sets)
 		- [Set as Mathematical Numbers](#set-as-mathematical-numbers)
 			- [Subset of Set](#subset-of-set)
+			- [Empty Set](#empty-set)
 			- [Set Equality](#set-equality)
-			- [The Size and Cardinality of a Set](#the-size-and-cardinality-of-a-set)
+			- [Ordered Pairs](#ordered-pairs)
+		- [Cartesian product of Two Sets (Cross product)](#cartesian-product-of-two-sets-cross-product)
+			- [Relations](#relations)
+			- [Set Builder Notation vs Set Roster Notation](#set-builder-notation-vs-set-roster-notation)
+			- [Set Operations](#set-operations)
+		- [The Size and Cardinality of a Set](#the-size-and-cardinality-of-a-set)
 			- [Power Set of a Set](#power-set-of-a-set)
-			- [Cartesian product of Two Sets (Cross product)](#cartesian-product-of-two-sets-cross-product)
 		- [Proofs Involving Sets](#proofs-involving-sets)
 	- [Functions](#functions)
+			- [Properties of Functions](#properties-of-functions)
 
 
 Propositional Logic
@@ -1063,6 +1069,15 @@ Necessary Definitions for Direct Proofs
 
 ## Sets
 - A *set* is an unordered collection of objects, called *elements* or *members* of the set. A set is said to *contain* it's elements.
+- You can imagine it as a bag, and the elements in it as the things in the bag.
+- The order of the set and repetition does not matter. SO..
+  - {1, 3, 5, 7} = {7, 5, 3, 1} = {1, 1, 3, 5, 7, 7, 7, 7, 7, 7, 7, 7}
+
+Examples:
+
+	A = Students in the class
+	B = {1, 3, 5, 7}
+	ℤ = Set of all integers
 
 ---
 We write a ∈ A to show that a is an element of the set A.
@@ -1082,27 +1097,39 @@ vertices and edges that connect vertices;
 ---
 
 #### Subset of Set
-- A is a subset of B, which means that A ∈ B, but ¬∀a ∈ B.
+- A is a subset of B, which means that A is contained in B, if every element (x) of A is also an element of B.
+- A ⊆ B means that A is a subset of B.
+- A ⊈ B means that A is not a subset of B.
+
+#### Empty Set
+- The empty set is the set that contains no elements. It is denoted by Φ or {}.
+- `{Φ}` is the set of an empty set. It's like having a box inside a box.
+  - *Technically*, the outside box is not empty because it has the box inside, just like how the outside set is not empty because it has the empty set inside.
+- When asked how many elements are in the empty set, it's asking how many elements are in the box. The answer is 1.
+
+So then...
+
+	Is Φ ⊂ {1, 2, 3}?
+	(What does it mean to be a subset?)
+	Since there *are* no elements in Φ, it is a subset of {1, 2, 3}, because there are no x in Φ that you can check.
+
+	This is VACUOUSLY TRUE. (Nothing to check)
 
 #### Set Equality
 - Two sets are said to be equal if they have the same elements. That is, ∀a ∈ A, a ∈ B and vice cersa.
 
-#### The Size and Cardinality of a Set
-- Let *S* be a set. If there are exactly *n* distinct elements in *S* where *n* is a nonnegative integer, we say that *S* is a *finite set* and that *n* is the *cardinality* of S. The cardinality is denoted by `|S|`.
-
-#### Power Set of a Set
-- Given a set *S* the *power set* of *S* is the set of all subsets of the set *S*. The power set of *S* is denoted by `P(S)`.
-
-**Power sets** are of size 2ⁿ where n is the size of the set.
-
-	Example:
-	If the set A = {1}
-	Then the P(A) = {Φ, 1}
-	Then P(P(A)) = {Φ, {1}, {Φ} {{1}}}
-
-#### Cartesian product of Two Sets (Cross product)
+#### Ordered Pairs
+- An ordered pair is a pair of objects in a specific order.
+- For example:
+  - `(1, 2)` is an ordered pair.
+  - `(2, 1)` is a different ordered pair.
+  - `(a, b) = (c, d)` if and only if `a = c` and `b = d`.
+    - The a and b could come from different sets for example `(3, Apple)`.
+  
+### Cartesian product of Two Sets (Cross product)
 - Cartesian product of two sets A × B is the set of all pairs in the form (a, b) where a is an element of A and b is an element of B.
 - Defining some relation between A and B.
+- The coordinate plane is an example of a cartesian product of two sets. (x, y) which is an ordered pair of a particular cross product.
 
 Example:
 
@@ -1115,10 +1142,58 @@ Example:
 	S x C:
 	S x C = { {s1, c1}, ..., {s3, c3} }
 
-### Proofs Involving Sets
+Example 2:
 
+	{a, b} X {1, 2} =
+	{ {a, 1}, {a, 2}, {b, 1}, {b, 2} }
+
+#### Relations
+- A relation R from a set A to a set B is a subset of the cartesian product A x B.
+  - ie: (a, b) are relations where (a, b) ∈ A x B.
+  - It is some collection that is in the cartesian product but does not have to be the entirety.
+
+#### Set Builder Notation vs Set Roster Notation
+- Set roster notation is a way to describe a set by listing the elements of the set. `{0, 2, 4, ...}` -> The ... means that the set goes on forever.
+- Set builder notation is a way to describe a set by listing the properties that its members must satisfy.
+- For example, the set of all even integers can be described as `{x | x = 2k for some k ∈ ℤ}`.
+
+#### Set Operations
+- Unions (⋃) : Is basically a massive "or" sign. It's the set of all elements that are in either set.
+- Intersection (⋂) : Is basically a massive "and" sign. It's the set of all elements that are in both sets.
+
+![Set Operations](imgs/set-operations-venn-diagrams.png)
+
+### The Size and Cardinality of a Set
+- Let *S* be a set. If there are exactly *n* distinct elements in *S* where *n* is a nonnegative integer, we say that *S* is a *finite set* and that *n* is the *cardinality* of S. The cardinality is denoted by `|S|`.
+
+#### Power Set of a Set
+- Given a set *S* the *power set* of *S* is the set of all subsets of the set *S*. The power set of *S* is denoted by `P(S)`.
+
+**Power sets** are of size 2ⁿ where n is the size of the set.
+
+	Example:
+	If the set A = {1}
+	Then the P(A) = {Φ, 1}
+	Then P(P(A)) = {Φ, {1}, {Φ} {{1}}}
+
+### Proofs Involving Sets
+- For all proofs, start with assumption, the definition, and then go into manipulating the definitions.
 - In order to prove the set `A = B`:
   - You must prove ∀x ∈ A ↔ x ∈ B.
+
+Example: Suppose that
+
+	A = {n ∈ ℤ | n = 4p, p ∈ ℤ}
+	B = {n ∈ ℤ | n = 2q, q ∈ ℤ}
+
+	Prove A ⊆ B.
+
+	Let x ∈ A
+	Then, x = 4p for p ∈ ℤ
+	Then x = 2(2p) for 2p ∈ ℤ
+	Then x = 2q for q = 2p ∈ ℤ
+	Then x ∈ B
+	A ⊆ B
 
 Prove (A ∩ B)̄ ⊆ Ā ∪ B̄
 
@@ -1139,4 +1214,14 @@ So, you need to prove x ∈ (A ∩ B) ∪ A.
 ## Functions
 
 The formal definition of a function:
-- Let X and Y be non-empty sets. A function f from X to Y is an assignment of **exactly one** element of Y to each element of X. We write f(x) = y if y is the unique element of Y assigned by the function f to element x of X. We write f : X → Y to indicate a function from X to Y.
+- Let X and Y be non-empty sets. A function **F** from X to Y is an assignment of **exactly one** element of Y to each element of X.
+- A function can also be defined as the subset of A X B.
+- We write `f(x) = y` if y is the unique element of Y assigned by the function f to element x of X. We write f : X → Y to indicate a function from X to Y.
+
+#### Properties of Functions
+- For every element x ∈ A, there is an element y ∈ B such that (a, b) ∈ F.
+  - Or that (x,y) is inside your function.
+- If (x, y) ∈ F and (x, z) ∈ F, then y = z.
+  - This is because a function can only have one output for each input.
+- 
+
