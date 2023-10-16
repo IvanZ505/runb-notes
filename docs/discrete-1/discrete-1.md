@@ -64,6 +64,11 @@ Introduction to Discrete Structures 1
 		- [Proofs Involving Sets](#proofs-involving-sets)
 	- [Functions](#functions)
 			- [Properties of Functions](#properties-of-functions)
+	- [Sequences and Reoccurances](#sequences-and-reoccurances)
+		- [Sequences](#sequences)
+			- [Example of a Sequence](#example-of-a-sequence)
+			- [Geometric Sequence](#geometric-sequence)
+		- [Reoccurance Relations](#reoccurance-relations)
 
 
 Propositional Logic
@@ -1164,6 +1169,49 @@ Example 2:
 ![Set Operations](imgs/set-operations-venn-diagrams.png)
 
 ### The Size and Cardinality of a Set
+
+**For any set**:
+- The set can be finite (n number of elements)
+- Countably infinite (it can be ennumerated) : ℕ, ℕ⁺, ℤ, ℚ
+- Uncountably infinite (it can not be ennumerated) : ℝ, ℝ⁺, ℝ-ℚ (set of Irrational numbers)
+
+If we had a function:
+
+	f:S → ℕ⁺
+	Then, S is countably infinite.
+	S is a bijection because it is a one-to-one and onto correspondence.
+
+Proving a set is countable:
+
+Set of all even numbers are countable:
+
+	S = {n | n = 2k for some k ∈ ℕ}
+	Then you need to prove that there is a surjection and a injection.
+
+	Prove surjection:
+	f(n) → n/2
+	Prove injection:
+	f(n) = f(m) → n/2 = m/2 → n = m
+	Then, f is a bijection.
+
+If A and B are countable sets, then A ∪ B is also countable:
+
+	Proof by cases:
+
+	Case 1: A, B are finite, A = {a₁,...,aₙ}, B = {b₁, ... , bₙ}
+	Then, A ∪ B = {a₁, ... , aₙ, b₁, ... , bₙ}
+	Then, A ∪ B is finite.
+
+	Case 2: A is countable, B is finite, A = {a₁, ...}, B = {b₁, ... , bₙ}
+	Then, A ∪ B = {b₁, ... , bₙ, a₁, ...}
+					1 2 3... n, n+1, ...
+	Then, A ∪ B is countable.
+
+	Case 3: A, B are countable, A = {a₁, ...}, B = {b₁, ...}
+	Then, A ∪ B = {a₁, ... , b₁, ...}
+					1 3 5 ...2 4 6 ...	
+	Then, A ∪ B is countable.
+
 - Let *S* be a set. If there are exactly *n* distinct elements in *S* where *n* is a nonnegative integer, we say that *S* is a *finite set* and that *n* is the *cardinality* of S. The cardinality is denoted by `|S|`.
 
 #### Power Set of a Set
@@ -1225,3 +1273,31 @@ The formal definition of a function:
   - This is because a function can only have one output for each input.
 - 
 
+## Sequences and Reoccurances
+
+### Sequences
+- A sequence is a function from a subset of integers (usually ℕ or ℕ⁺) to a set S. We use the notation aₙ to denote the image of n. We can aₙ the nth term of the sequence.
+
+#### Example of a Sequence
+- The sequence of even integers is a function from ℕ⁺ to ℤ. The nth term of the sequence is 2n.
+  - Represented as aₙ = 2n
+- aₙ = (-1)ⁿ → is called a oscillating sequence.
+  - {1, -1, 1, -1, ...}
+
+#### Geometric Sequence
+- A geometric sequence is a sequence of the form aₙ = arⁿ⁻¹ where a and r are real numbers.
+  - a is the first term of the sequence.
+  - r is the common ratio of the sequence.
+  - aₙ is the nth term of the sequence.
+
+![Geometric Sequence](imgs/geometric-sequence.png)
+
+Applying Geometric sequences:
+![Geometric sequence applications](imgs/geom-sequence-appl.png)
+
+### Reoccurance Relations
+- A reoccurance relation for the sequence {aₙ} is an equation that expresses aₙ in terms of one or more of the previous terms of the sequence, namely a₀, a₁, ..., aₙ₋₁ for all integers n with n ≥ n₀, where n₀ is a nonnegative integer.
+- A sequence is called a solution of a reoccurance relation if its terms satisfy the reoccurance relation.
+- A reoccurance relation is a recursively defined sequence.
+
+**xₙ₊₁ = 0.5(xₙ + a/xₙ)** is a reoccurance relation.
