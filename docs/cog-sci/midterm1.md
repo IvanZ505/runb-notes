@@ -85,28 +85,35 @@
 
 **Philosophy**:
 
-| Raises questions | Defines Concepts | Gives us direction |
+|                  |                  |                    |
 | ---------------- | ---------------- | ------------------ |
+| Raises questions | Defines Concepts | Gives us direction |
+
+
 
 **Psychology**:
 
-| Focus on mental processes | Learning, memory, attention |
+|                           |                             |
 | ------------------------- | --------------------------- |
+| Focus on mental processes | Learning, memory, attention |
 
 **Neuroscience**:
 
-| Focuses on the brain | Maps mental processes to physical structures |
+|                      |                                              |
 | -------------------- | -------------------------------------------- |
+| Focuses on the brain | Maps mental processes to physical structures |
 
 **Computer science**:
 
-| Creating artificial minds | Defines old problems in new ways |
+|                           |                                  |
 | ------------------------- | -------------------------------- |
+| Creating artificial minds | Defines old problems in new ways |
 
 **Linguistics**:
 
-| Models language as a cognitive system |
+|                                       |
 | ------------------------------------- |
+| Models language as a cognitive system |
 
 Anthropology:
 
