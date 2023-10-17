@@ -68,6 +68,7 @@ Taught By Kania Jay
 			- [In Binary](#in-binary)
 		- [Division](#division)
 			- [Unsigned Power of 2 Division](#unsigned-power-of-2-division)
+	- [Midterm Review](#midterm-review)
 
 
 ---
@@ -777,3 +778,6 @@ Example 2:
   - x / 2ⁿ = x >> n
   - Uses *logical* right shift
 	- Fill with 0's on the left. Check out [Right shift](#shift-operations)
+
+## Midterm Review
+

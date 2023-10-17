@@ -15,7 +15,6 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 			- [ChatGPT Rules](#chatgpt-rules)
 			- [What is it REALLY?](#what-is-it-really)
 			- [The Intersections of 6 Fields:](#the-intersections-of-6-fields)
-				- [While original diagrams were all hexagons with these 6 fields, we can really also add:](#while-original-diagrams-were-all-hexagons-with-these-6-fields-we-can-really-also-add)
 		- [The Different Stages of Cog Sci (But science in General)](#the-different-stages-of-cog-sci-but-science-in-general)
 		- [Minds](#minds)
 		- [Multiple Realizability Thesis](#multiple-realizability-thesis)
@@ -135,7 +134,7 @@ Cognitive science is the *interdisciplinary* study of the mind (or minds) as an 
 **Anthropology**:
 - Gives us a scope of human culture, behavior, thought
 
-##### While original diagrams were all hexagons with these 6 fields, we can really also add:
+**While original diagrams were all hexagons with these 6 fields, we can really also add:**
 
 - **Economics**
 - **Engineering** (robotics, AI in robots)
