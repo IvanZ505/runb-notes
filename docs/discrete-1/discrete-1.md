@@ -69,6 +69,7 @@ Introduction to Discrete Structures 1
 			- [Example of a Sequence](#example-of-a-sequence)
 			- [Geometric Sequence](#geometric-sequence)
 		- [Reoccurance Relations](#reoccurance-relations)
+			- [Proof by Induction](#proof-by-induction)
 
 
 Propositional Logic
@@ -1301,3 +1302,20 @@ Applying Geometric sequences:
 - A reoccurance relation is a recursively defined sequence.
 
 **xₙ₊₁ = 0.5(xₙ + a/xₙ)** is a reoccurance relation.
+
+#### Proof by Induction
+
+Show that n²-1 is divisible by 8 for all positive odd integers n:
+
+	Step 1) Show that it is true for n = 1
+	1² - 1 = 0 which is divisible by 8.
+
+	Step 2) Assume it is true for n = k for some odd integer k ∈ ℕ⁺.
+	k²-1 is divisible by 8.
+	Then, k²-1 = 8m for some m ∈ ℕ.
+
+	Step 3) Find the next occurance, which would be k+2
+
+	(k+2)²-1 = k²+4k+4-1 = (k²-1)+4k+4 = 8m+4k+4 = 4(2m+k+1)
+		 k is odd, but k+1 is even.
+	Then, (k+2)²-1 is divisible by 8.

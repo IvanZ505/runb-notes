@@ -86,6 +86,7 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 		- [PET (Positron Emission Tomography)](#pet-positron-emission-tomography)
 		- [MRI and fMRI (Magnetic Resonance Imaging and Functional MRI)](#mri-and-fmri-magnetic-resonance-imaging-and-functional-mri)
 			- [Functional MRI](#functional-mri)
+	- [Midterm](#midterm)
 
 
 ## What is Cognitive Science?
@@ -906,3 +907,7 @@ Data:
 - Temporal resolution: 3-6 seconds
 
 ---
+
+## Midterm
+
+[Midterm Review Page](https://ivanz505.github.io/runb-notes/cog-sci/midterm1)
