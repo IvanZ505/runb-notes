@@ -781,3 +781,4 @@ Example 2:
 
 ## Midterm Review
 
+[Comp Arch Midterm Review](https://ivanz505.github.io/comp-arch/comp-arch-midterm1)
