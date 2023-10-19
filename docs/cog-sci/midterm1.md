@@ -2,38 +2,6 @@
 
 # Midterm 1
 
-- [Midterm 1](#midterm-1)
-  - [Key Terms](#key-terms)
-    - [Module 1 - Introduction](#module-1---introduction)
-    - [Module 2 - Foundation](#module-2---foundation)
-    - [Module 3 - History](#module-3---history)
-    - [Module 4 - Computational Mind?](#module-4---computational-mind)
-    - [Module 5 - Artificial Minds](#module-5---artificial-minds)
-    - [Module 6 - Mind and Brain](#module-6---mind-and-brain)
-  - [Interdisciplinarity of CogSci](#interdisciplinarity-of-cogsci)
-  - [Multiple Realizability](#multiple-realizability)
-  - [Functionalism](#functionalism)
-  - [Three Levels of Analysis](#three-levels-of-analysis)
-  - [Representations](#representations)
-    - [Mental Representations](#mental-representations)
-      - [Aphantasia in Mental Representation](#aphantasia-in-mental-representation)
-      - [Digital vs. Analog Representations](#digital-vs-analog-representations)
-  - [Mind and Body](#mind-and-body)
-  - [Behaviorism](#behaviorism)
-  - [Tolman's Rats](#tolmans-rats)
-  - [Simulation vs Instantiation](#simulation-vs-instantiation)
-  - [Turing Machines](#turing-machines)
-    - [Computability](#computability)
-  - [Chinese Room Argument](#chinese-room-argument)
-  - [Classical Computationalism vs Connectionism](#classical-computationalism-vs-connectionism)
-  - [Artificial Neural Networks](#artificial-neural-networks)
-  - [Neuroimaging](#neuroimaging)
-    - [fMRI](#fmri)
-    - [EEG](#eeg)
-
-
-----
-
 ## Key Terms
 
 ### Module 1 - Introduction
@@ -66,11 +34,14 @@
 - **The Frame Problem:** How does the machine know waht is relevant and irrelevant to the task at hand? (Problem is there is a *ton*)
 
 ### Module 5 - Artificial Minds
-- Emergence
-- Hebbian Learning
+- **Connectionism:** The idea that the mind is a network of interconnected nodes that are constantly changing their connections. (*see [Artificial Neural Networks](#artificial-neural-networks) below*)
+- **Emergence:** When the components of a system produce a behavior that is not present in the components themselves.
+- **Hebbian Learning:** Neurons that fire together, wire together. 
+  - If two neurons are active at the same time, then the connection between them is strengthened.
 - Perceptron (***PURGED***)
 - **Backpropagation:** Major breakthrough that got us out of the first AI winter.
-- Graceful Degradation
+  - This involved adjusting the weight values for different nodes in the neural network to get the correct output. [See Section Below ↓](#backpropagation)
+- **Graceful Degradation:** Even when quite a bit of information is taken away from a system, the connectionism algorithm will still function.
 - Systematicity
 - Language of Thought Hypothesis
 
@@ -233,6 +204,14 @@ Anthropology:
 - It has an alphabet of symbols that it can read and write.
 - It has a machine table that tells it what to do based on the symbol it reads and the state it is in.
 
+## Backpropagation
+
+![](imgs/ai-winter1-breakthrough.png)
+
+- By comparing the desired outputs to the achieved system outputs, the systems can be tuned to adjust and narrow down the difference between the two as much as possible.
+
+---
+
 ### Computability
 - A problem is computable if there is a Turing Machine that can solve it.
 - This means that, if the Turing Machine is able to compute anything, then you can be computed.
@@ -261,5 +240,29 @@ Anthropology:
 ## Neuroimaging
 
 ### fMRI
+- MRI machine is just a giant superconducting magnet that aligns all the protons in your body in the same direction.
+- A radio frequency pulse is then sent through the body, which the protons absorb and then they flip.
+- After the pulse is turned off, the protons relax back to their original state, emitting a radio frequency signal.
+- Now, the **fMRI** uses the MRI machine to measure the blood flow in the brain.
 
-### EEG
+---
+
+- BOLD signal: Blood Oxygen Level Dependent
+- No radioactive tracer needed.
+- fMRI is correlative, but does not tell you that these brain regions are necessary.
+- Doesn’t tell anything about the cognitive process.
+
+Data:
+
+    Spatial resolution: 3-6mm
+    Temporal resolution: 3-6 seconds
+
+
+### EEG (Electroencephalography)
+- A EEG scan is not very invasive, being able to measure brain activity from the scalp.
+- It is also extremely quick, being able to measure brain activity in real time.
+
+#### Event related potentials
+![](imgs/event-related-potentials.png)
+- Each EEG electrode records thousands of neurons firing, and takes the sum of those recordings.
+- The event related potential is the average of the EEG recordings over many trials.
