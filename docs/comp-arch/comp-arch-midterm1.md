@@ -173,3 +173,67 @@ Both of these are closer in size to decimal however, which one is superior???
 - Easy, simply group the binary digits into groups of 4 and convert each group into a hexadecimal digit.
 - To convert from hexadecimal to binary, simply convert each hexadecimal digit into 4 binary digits and slap em together.
 
+## Representing Integers
+
+### Unsigned Integers:
+- Computers store integers in binary representation(base-2).
+- Binary numbers use place value notations, just like decimal numbers. 
+- For example, in the ones place for base-10, it's the value of the digit times 10⁰, in the tens place, it's the value of the digit times 10¹, etc.
+- For binary (base-2) numbers, it's the value of the digit times 2⁰, 2¹, 2², etc.
+
+---
+
+*To translate from any base-R to decimal, we use the following equation:*
+
+**value₁₀ = ∑(aᵢ * Rⁱ)** where the upper limit of the summation is `n-1` where n is the number of digits in the number and our initial index is 0.
+
+---
+
+*To translate from decimal to any base-R, we follow the following steps:*
+- Divide the decimal number by your `R` value.
+- Your remainder is your rightmost digit.
+- Then, take the quotient and divide by `R` again.
+- Repeat until the quotient is 0.
+
+---
+
+#### Unsigned Integer Ranges
+- Unsigned integers are represented in binary, and are always positive.
+- Due to the minimum value always 0, the maximum value is 2ⁿ-1, where n is the number of bits used to represent the number.
+  
+(Each bit can be either 0 or 1, so 2 possibilities per bit)
+
+    For char: (Unsigned char is 1 byte) 2⁸-1 = 255 unique values
+    For int: (Unsigned int is 4 bytes) 2³²-1 = 4,294,967,295 unique values
+    For short: (Unsigned short is 2 bytes) 2¹⁶-1 = 65,535 unique values
+
+### Signed Integers:
+- For signed integers, half of the range is converted to negative. (Most significant bit represents the sign)
+
+![](imgs/signed-int-rep.png)
+
+### Ways to Represent Signed Integers
+
+**Sign-Magnitude**
+- The most significant bit represents the sign of the number.
+- The rest of the bits represent the magnitude of the number the same way as it would in unsigned.
+
+**One's Complement**
+- The most significant bit represents the sign of the number.
+- For the rest of the  bits, each bit is flipped for a certain magnitude.
+  - Example: To show -1 in 1's Complement with 4 bits, -1₁₀ = 1110₂
+
+**Two's Complement**
+- 2's Complement is basically the 1's complement, except you add 1 to the number.
+- This is to account for the fact that 0 has two representations in 1's complement. (0000₂ and 1111₂)
+  - Example: To show -1 in 2's Complement with 4 bits, -1₁₀ = 1111₂
+
+
+#### Signed Integer Ranges
+- Given a representation of *n* bits, minimum value is always going to be: 1000...000₂ = -2ⁿ⁻¹ (Most significant bit is 1, rest are 0) **using 2's complement*
+- The max value is going to be: 0111.111₂ = 2ⁿ⁻¹-1 (Remember there's 1 less value because of 0)
+
+![](imgs/signed-range.png)
+
+## String Representation
+- Strings in C are represented in the **ASCII** format.
