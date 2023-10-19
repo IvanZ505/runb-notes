@@ -1,6 +1,6 @@
 <style>.markdown-body {font-family:"Times New Roman", Times, serif;}</style>
 
-# Midterm 1
+# 电脑 Architecture Midterm 1
 
 ## Key Terms
 
@@ -42,13 +42,25 @@
 - **Backpropagation:** Major breakthrough that got us out of the first AI winter.
   - This involved adjusting the weight values for different nodes in the neural network to get the correct output. [See Section Below ↓](#backpropagation)
 - **Graceful Degradation:** Even when quite a bit of information is taken away from a system, the connectionism algorithm will still function.
-- Systematicity
-- Language of Thought Hypothesis
+- **Systematicity:** Thoughts are systematic, meaning that if you are capable of thinking "Mary loves John", then you are also capable of thinking "John loves Mary", even though they have two different meanings.
+  - These predictable patterns are what make the thoughts we have systematic.
+  - Another example: 
+    - "Who is the father of Mary's child?" and "Who is the child of Mary's father?" are two different questions, but they have the same answer.
+- **Language of Thought Hypothesis:** Thoughts are composed of language-like components with compositional structure.
+  - To what extent is your thoughts symbolically structured.
+  - As the name suggests, what language is your thought??
+
 
 ### Module 6 - Mind and Brain
-- Cortex
-- Contralateral
-- Hemodynamics
+- **Cortex:** The outer layer of the brain. The one that gets all folded up and wrinkly.
+  - *It is important because the cortex seems to be responsible for the cool thinky stuff like perception and understanding.*
+- **Contralateral:** Your left and right hemispheres of your brain are responsible for the *opposite* side of your body.
+  - Your right hemisphere is responsible for processing the left eye, and vice versa.
+- **Localization:** The idea that different parts of the brain are responsible for different functions. 
+  - However, this it is not as simple as that. Other parts of the brain may also contribute.
+  - Also, the part of the brain a certain function is localized to may be different for different people.
+- **Hemodynamics:** When you use the flow of the blood in order to determine the activity of the brain.
+- **Right Ear Advantage:** The right ear is better at processing speech than the left ear. Because in majority of people, speech is localized in the left hemisphere of the brain, which is responsible for the right ear as well.
 
 ----
 
