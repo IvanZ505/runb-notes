@@ -236,4 +236,52 @@ Both of these are closer in size to decimal however, which one is superior???
 ![](imgs/signed-range.png)
 
 ## String Representation
-- Strings in C are represented in the **ASCII** format.
+
+---
+*Note: The following representations are all in hexadecimal.*
+
+---
+
+- Strings in C are represented technically just arrays of characters.
+- Strings are always null terminating, ending with `0x00` (null)
+
+### ASCII
+
+2 Types of ASCII:
+- 7-bit ASCII: 0x00 to 0x7F : 128 characters
+- 8-bit ASCII: 0x00 to 0xFF : 256 characters
+
+*Very Limited!*
+
+- The numerical digits start with `0x30` (0) and end with `0x39` (9)
+- The uppercase letters start with `0x41` (A) and end with `0x5A` (Z)
+- The lowercase letters start with `0x61` (a) and end with `0x7A` (z)
+- Control characters start with `0x00` (null) and end with `0x1F` (unit separator)
+
+
+### Unicode
+
+3 Types of Unicode:
+
+- UTF-8: 1 byte version of Unicode, capable of representing 2⁸ = 256 characters
+- UTF-16: 2 byte version of Unicode, capable of representing 2¹⁶ = 65,536 characters
+- UTF-32: 4 byte version of Unicode, capable of representing 2³² = 4,294,967,296 characters
+
+## Endianness
+- Memory is byte-addressable, which means that each byte has a unique address.
+
+There are two ways to store `unsigned X = 15398; // 0x00003C26`:
+![](imgs/endianness.png)
+
+---
+*Note to self:*
+
+Hexadecimal takes 4-bits to represent a single digit, so 2 hexadecimal digits = 1 byte, meaning you can fit 2 hexadecimal digits into a byte. [Check here if still uncertain](#octal-or-hexadecimal)
+
+#### Little Endian
+- Least significant byte is stored in the lowest address.
+- x86 is little endian.
+
+#### Big Endian
+- Most significant byte is stored in the lowest address.
+
