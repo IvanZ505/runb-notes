@@ -285,3 +285,118 @@ Hexadecimal takes 4-bits to represent a single digit, so 2 hexadecimal digits = 
 #### Big Endian
 - Most significant byte is stored in the lowest address.
 
+## Bitwise Operations
+- There are 4 boolean operators in C:
+  - `&` : AND
+  - `|` : OR
+  - `^` : XOR
+  - `~` : NOT
+
+Bitwise operations with each:
+
+**&**:
+
+      00110101
+    & 11010111
+    ------------
+      00010101
+
+**|**:
+
+      00110101
+    | 11010111
+    ------------
+      11110111
+
+
+**^**:
+
+      00110101
+    ^ 11010111
+    ------------
+      11100010
+
+**~**:
+  
+    ~00110101 = 11001010
+
+---
+
+**Bit-level operations can be applied to any *integral* data type.**
+- `long`, `short`, `int`, `char`, `unsigned`, etc.
+
+![](imgs/bitwise-operators.png)
+
+**Using bitwise negation to properly negate a integer**
+- In two's complement: `~x + 1 = -x`
+- In one's complement: `~x = -x`
+
+### Bitwise Flags
+- Bitwise flags are used to store multiple boolean values in a single variable.
+- One byte is capable of storing 8 boolean values.
+
+**For example:**
+
+By defining a `char flag`, we now have access to the size of `char` (1 byte)'s number of boolean representations.
+- `char flag = 0x1 | 0x4 | 0x8`
+  - This is equivalent to (in boolean values) `flag = 00001101₂`
+  - Then, you can use bitwise operations to see if a certain bit in the flag is true.
+    - ```C
+      if (flag & 0x1) {
+        // First bit is true!
+      } else {
+        // First bit is false!
+      }
+      ```
+
+### Shift Operations
+- Shift operations are used to shift the bits of a number to the left or right.
+
+#### Left Shift (<< *points to left*)
+- Delete *x* number of leftmost bits, and add *x* number of 0's to the rightmost bits.
+- Example: `11110001 << 2 = 11000100`
+
+#### Right Shift (>> *points to right*)
+
+Logical Right Shift:
+- Delete *x* number of rightmost bits, and add *x* number of 0's to the leftmost bits.
+- Example: `10110101 >> 2 = 00101101`
+
+Arithmetic Right Shift:
+- Delete *x* number of rightmost bits, and add *x* number of the leftmost bit to the left.
+- Example: `10110101 >> 2 = 11101101`
+
+*If shift amount is 0 or ≥ bit-size, behavior is undefined.*
+
+## Arithmetics
+
+![](imgs/unsigned-mult.png)
+
+Signed Multiplication requires extension of the sign bit.
+
+Example:
+
+    1001 (-7) * 1010 (-6) =
+
+            11111001
+            * 11111010 =
+            ------------
+            00000000
+           111110010
+          0000000000
+         11111001000
+        111110010000
+       1111100100000
+      11111001000000
+     111110010000000
+    ----------------
+    (Cutoff)00101010
+
+
+`10011010₂ = -38₁₀`
+
+![Alt text](imgs/unsigned-division.png)
+
+Signed division requires biasing in order to round to the correct direction. 
+
+![](imgs/correct-signed-division.png)
