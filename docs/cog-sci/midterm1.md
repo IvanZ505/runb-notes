@@ -1,6 +1,6 @@
 <style>.markdown-body {font-family:"Times New Roman", Times, serif;}</style>
 
-# 电脑 Architecture Midterm 1
+# Midterm 1
 
 ## Key Terms
 
@@ -163,11 +163,11 @@ Anthropology:
 **Need to Know**:
 - Know the difference between Dualism and Monism
 - **Platonic Dualism** - There is a ideal world and then our physical world. The ideal world is perfect and the us in the ideal world has access to all the knowledge in the world. When we think hard enough and in the right way, we are able to access this knowledge.
-- Aristotelian Physicalism
-- Cartesian Dualism
-- Idealism
-- Physicalism
-- Identity Theory
+- **Aristotelian Physicalism:** The distinction between mind and body is the distinction between **form** and **matter**. The mind is just the form of the body.
+- **Cartesian Dualism:** The mind and body are made of different substances, literally thinky stuff and gooey stuff.
+- **Idealism:** The mind is the only thing that exists and everything you think you know about the world is just a figment of your imagination.
+- **Physicalism:** Everything in the world is physically constructed. 
+- **Identity Theory:** Mental states are brain states. 
 - **Reductionism** - Reducing everything down to the simplest possible explanation.
 
 ## Behaviorism
