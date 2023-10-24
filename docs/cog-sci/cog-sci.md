@@ -86,6 +86,11 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 		- [MRI and fMRI (Magnetic Resonance Imaging and Functional MRI)](#mri-and-fmri-magnetic-resonance-imaging-and-functional-mri)
 			- [Functional MRI](#functional-mri)
 	- [Midterm](#midterm)
+	- [Language](#language)
+		- [Why language?](#why-language)
+		- [What is language?](#what-is-language)
+		- [Competence and Performance](#competence-and-performance)
+		- [Core of Language](#core-of-language)
 
 
 ## What is Cognitive Science?
@@ -910,3 +915,55 @@ Data:
 ## Midterm
 
 [Midterm Review Page](https://ivanz505.github.io/runb-notes/cog-sci/midterm1)
+
+---
+
+## Language
+
+### Why language?
+
+"Cognitive science *is* linguistics, plus a little vision." - Jerry Fodor
+
+- Language is important to how the mind works.
+
+### What is language?
+
+There are 7 essential features to language:
+
+> 1. Mode = Can have more than one mode of expression (verbal speech, sign language, etc.)
+> 2. Meaning = Terms have specific semantic meaning
+> 3. Arbitrariness = Terms are arbitrary + have an arbitrary relationship with meaning
+> 4. Discreteness = languages are composed of atomic units
+> 5. Displacement = can talk about things not immediately present in scenario
+> 6. Productivity = Can create novel sentences
+> 7. Cultural transmission = Main way of acquiring a language is having it be transmitted to you. (You need to learn it from someone else)
+
+**Case Study: Bees!**
+- **Mode:** they dance in order to communicate
+- **Meaning:** 
+- **Arbitrariness:** 
+- **Displacement:**
+
+### Competence and Performance
+- **Competence**
+  	> **Knowing what to say**\
+	> Subconscious knowledge of language
+
+- **Performance**
+	> **Being able to say it**\
+	> Coordinating your linguistic knowledge with your other cognitive systems.
+
+---
+
+### Core of Language
+
+- **Sounds:** (Phonology)
+  - Inventory sequences
+- **Words:** (Morphology)
+  - Word forms, word parts, word building
+- **Sentences:** (Syntax)
+  - Word order, sentence structure
+- **Meaning:** (Semantics)
+  - Word meaning, sentence meaning
+
+---
