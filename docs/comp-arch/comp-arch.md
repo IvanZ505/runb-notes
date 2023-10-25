@@ -69,6 +69,12 @@ Taught By Kania Jay
 		- [Division](#division)
 			- [Unsigned Power of 2 Division](#unsigned-power-of-2-division)
 	- [Midterm Review](#midterm-review)
+	- [Floating Points](#floating-points)
+		- [Background: Fractional Binary Numbers](#background-fractional-binary-numbers)
+		- [Floating Point Definition](#floating-point-definition)
+		- [Types of Floating Points](#types-of-floating-points)
+		- [Representation](#representation)
+		- [Precision](#precision)
 
 
 ---
@@ -378,7 +384,7 @@ I Have 4 bits to work with (I can represent 2⁴ unique digits.)
 
 	| 0   | 1   | 1   | 1   | 0   | 1   | 0   | 1   |
 	| --- | --- | --- | --- | --- | --- | --- | --- |
-	| 2⁷  | 2⁶  | 2⁵  | 2⁴  | 2³  | 2²  | 2¹ |   2⁰  |
+	| 2⁷  | 2⁶  | 2⁵  | 2⁴  | 2³  | 2²  | 2¹  | 2⁰  |
 
 	This is all equal to:
 	
@@ -654,9 +660,9 @@ Example:
 
 Example:
 
-| Argument `x` | 01100010          |
-| ------------ | ----------------- |
-| << 3         | 00010 → 00010000  |
+| Argument `x` | 01100010         |
+| ------------ | ---------------- |
+| << 3         | 00010 → 00010000 |
 
 
 - **Right Shift**: x >> y
@@ -782,3 +788,48 @@ Example 2:
 ## Midterm Review
 
 [Comp Arch Midterm Review](https://ivanz505.github.io/runb-notes/comp-arch/comp-arch-midterm1)
+
+---
+
+## Floating Points
+
+### Background: Fractional Binary Numbers
+
+Value: 5³/₄ = 101.11₂ → 4 + 1 + ¹/₂ + ¹/₄
+
+### Floating Point Definition
+- The floating point representation is similar to scientific notation
+	- > 1.25 * 10³ = 1250\
+		> 2.78 * 10⁻² = 0.0278
+- Floating points are basically this exact concept except with an efficient binary format.
+  - Uses base-2 instead of base-10
+  - Places restrictions on how certain values are represented.
+  - Deals with finiteness of representation.
+
+### Types of Floating Points
+- **IEEE Standard 754**
+  - Established in 1985 as uniform standard for floating point arithmetic.
+    - Before that, many idiosyncratic formats.
+  - Supported by all major CPUs and programming languages.
+
+### Representation
+
+> **Numerical Form**\
+> (-1)ˢ `M` 2ᴱ\
+> Sign bit `s` determines whether the number is negative or positive.
+> Significand (Mantissa) `M` is a fractional binary number in the range `[1,2)`.
+> Exponent `E` weights value by power of two.
+
+> **Encoding**\
+> `S` is the sign bit `s`
+> `exp` field encodes the `E` (but is not equal to E)
+> `frac` field encodes the `M` (but is not equal to M)
+> | S | exp | frac |
+> |----|---|---|
+
+### Precision
+- Due to the finiteness of data, we can not represent all real numbers.
+- That said, we have some options for precision of floating point numbers.
+
+![Single and Double Precision](imgs/fp-precision.png)
+
