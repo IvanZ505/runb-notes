@@ -101,6 +101,8 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 		- [Eric Lenneberg](#eric-lenneberg)
 		- [What happens when the Critical Period is Missed?](#what-happens-when-the-critical-period-is-missed)
 			- [The Tragedy of Genie Wiley](#the-tragedy-of-genie-wiley)
+		- [Home Sign](#home-sign)
+		- [Nicaraguan Sign Language](#nicaraguan-sign-language)
 
 
 ## What is Cognitive Science?
@@ -1027,3 +1029,16 @@ Biologically Controlled Behaviors
 
 #### The Tragedy of Genie Wiley
 - Genie was severely abused and missed out on the critical period for language.
+
+### Home Sign
+
+### Nicaraguan Sign Language
+- If kids are not exposed to language, they will create their own.
+- The first generation of kids created a language that was very simple.
+- The second generation of kids created a language that was more complex and containing all the features of a language.
+
+1980 - First school for the deaf in Nicaragua
+
+	First Gen: home sign
+	Second Gen: Full blown language
+

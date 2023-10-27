@@ -11,7 +11,7 @@
 
 ## What is a Database?
 
-A **database** is a logically coherent collection of related data whose perform specific [**CRUD**](#crud-operations) operations. The database is usually controlled by a **Database Management System** (DBMS). Together, the data and the DBMS are referred to as a **database system**, often shortened to just database.
+A **database** is a logically coherent collection of related data whose purpose is to perform specific [**CRUD**](#crud-operations) operations. The database is usually controlled by a **Database Management System** (DBMS). Together, the data and the DBMS are referred to as a **database system**, often shortened to just database.
 
 > For more information on DBMS, see [this link](https://www.appdynamics.com/topics/database-management-systems#~1-what-is-dbms).
 
