@@ -91,6 +91,16 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 		- [What is language?](#what-is-language)
 		- [Competence and Performance](#competence-and-performance)
 		- [Core of Language](#core-of-language)
+			- [What do we do with Language?](#what-do-we-do-with-language)
+			- [Socially-Determined Conventions](#socially-determined-conventions)
+		- [Chomsky](#chomsky)
+		- [Language Is Heirarchical](#language-is-heirarchical)
+		- [Recursion in Language](#recursion-in-language)
+		- [Verbal Behavior](#verbal-behavior)
+		- [Poverty of the Stimulus](#poverty-of-the-stimulus)
+		- [Eric Lenneberg](#eric-lenneberg)
+		- [What happens when the Critical Period is Missed?](#what-happens-when-the-critical-period-is-missed)
+			- [The Tragedy of Genie Wiley](#the-tragedy-of-genie-wiley)
 
 
 ## What is Cognitive Science?
@@ -967,3 +977,53 @@ There are 7 essential features to language:
   - Word meaning, sentence meaning
 
 ---
+
+#### What do we do with Language?
+- Communicate
+- Think to ourselves
+- Preserve information
+- Refer to things in the world
+- Assert beliefs and propositions that have truth values
+- Be creative
+
+#### Socially-Determined Conventions
+- Languages, like English are social entities, created collectively by groups of individuals to facilitate communication betwene themselves and their fellows.
+- Thus, what words belong to the language (what they mean and how they sound) and what rules govern how those words can be combined (their grammatical and syntactic rules) are matters of social convention.
+- Langauge, in this picture, are like other rule-governed social structures: chess, legal system, codes of etiquette.
+- Things can shift over time, and are prone to change.
+
+### Chomsky
+- For Chomsky (1965), language is a psychological entity- it exists in the mind of the speaker and nowhere else.
+
+### Language Is Heirarchical
+
+### Recursion in Language
+- There is infinite use of finite means.
+- There are some rules of language where the input for one rule may generate an output where the output can be the input for another rule.
+
+### Verbal Behavior
+
+**The Behaviorist View**:
+- A child learns language through punishment and reward. 
+- The child is rewarded when they say the right things (fed food) and when they don't say the right thing, they are punished (not fed food what they want).
+- **The Issue**
+  - Children are still fed even when they don't say the right thing.
+  - Children do not actually correct their grammar when they are corrected.
+
+### Poverty of the Stimulus
+- The stimulus the learner is exposed to is not rich enough to account for the knowledge the learner acquires.
+
+### Eric Lenneberg
+
+Biologically Controlled Behaviors
+- The behavior emerges before it is necessary.
+- Its appearance is not the result of conscious decision.
+- Its emergence is not directly triggered by external events.
+- Direct teaching and intensive practice have relatively little effect on its emergence.
+- There is a regular sequence of "milestones" as the behavior develops.
+- There is likely a **critical period** for the acquisition of the behavior.
+
+### What happens when the Critical Period is Missed?
+
+#### The Tragedy of Genie Wiley
+- Genie was severely abused and missed out on the critical period for language.
