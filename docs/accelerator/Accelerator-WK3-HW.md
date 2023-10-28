@@ -72,3 +72,9 @@ MongoDB is a **non-relational database** that stores data in flexible, JSON-like
 #### Why is this great for us?
 
 As you can recall, Javascript uses **JSON** (Javascript Object Notation) to store data. This means that we are able to map our MongoDB documents to Javascript objects, making it easier to work with our data.
+
+---
+
+That is all for your brief introduction to databases. Please watch the following video and that will be all for your introduction to Databases:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0buKQHokLK8?si=cvaQgV4TsJqYCrwy&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
