@@ -75,6 +75,4 @@ As you can recall, Javascript uses **JSON** (Javascript Object Notation) to stor
 
 ---
 
-That is all for your brief introduction to databases. Please watch the following video and that will be all for your introduction to Databases:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0buKQHokLK8?si=qoR6O1dgltQ3igNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+That is all for your brief introduction to databases, see you in class next week!
