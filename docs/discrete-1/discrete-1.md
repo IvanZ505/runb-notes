@@ -72,6 +72,9 @@ Introduction to Discrete Structures 1
 			- [Geometric Sequence](#geometric-sequence)
 		- [Reoccurance Relations](#reoccurance-relations)
 			- [Proof by Induction](#proof-by-induction)
+		- [Strong Inductions](#strong-inductions)
+			- [Ordinary/weak induction](#ordinaryweak-induction)
+			- [Strong induction](#strong-induction)
 
 
 Propositional Logic
@@ -1321,3 +1324,59 @@ Show that n²-1 is divisible by 8 for all positive odd integers n:
 	(k+2)²-1 = k²+4k+4-1 = (k²-1)+4k+4 = 8m+4k+4 = 4(2m+k+1)
 		 k is odd, but k+1 is even.
 	Then, (k+2)²-1 is divisible by 8.
+
+Example:
+
+	Prove that 3 is a factor of n³ + 2n whenever n is a positive integer.
+
+	Step 1) Find some base cases
+	1³ + 2(1) = 3 which is divisible by 3.
+	(2)³ + 2(2) = 12 which is divisible by 3.
+	(3)³ + 2(3) = 33 which is divisible by 3.
+	Step 2) Proceed with your proof by induction
+
+	Base cases: P(1), P(2), P(3) are all true
+	Assume P(k) is true, then k³+2k = 3l
+
+	Then consider P(k+1) = (k+1)³+2(k+1) = k³+3k²+3k+1+2k+2
+	(Next, you want to group it in a way that you can use the assumption)
+	= (k³+2k)+3k²+3k+3
+	(From the previous assumption, you can replace k³+2k with 3l, then call 3k²+3k+3 as 3l₀, with l₀ = k²+k+1)
+	= 3l+3l₀ = 3(l+l₀)
+	Then, P(k+1) is true.
+
+	Then, by the principle of mathematical induction, P(n) is true for all n ∈ ℕ⁺.
+
+Example 2:
+
+	Prove that 2ⁿ > n² for all n > 4.
+
+	1) Base cases:
+		2⁵ > 5², n = 5 is true
+		2⁶ > 6², n = 6 is true
+		2⁷ > 7², n = 7 is true
+	2) Assumption:
+		P(n) is true for n > 4 such that P(n) = 2ⁿ > n²
+		Then, P(n+1) = 2ⁿ⁺¹ > (n+1)² for n > 4.
+	3) Proof:
+      	 P(n+1) = 2ⁿ * 2 > n² + 2n + 1
+		Next, you can assume that if 2ⁿ > n², then 2(2ⁿ) > 2(n²)
+		Then, 2(2ⁿ) > 2(n²) > n² + 2n + 1
+		Then, 2n² > n² + 2n + 1
+		2n² - n² - 2n - 1 > 0
+		n² - 2n - 1 > 0
+		(n² - 2n + 1) - 2 > 0
+		(n-1)² > 2
+		n > √2 + 1
+		Then, P(n) is true for all n > 4.
+	
+### Strong Inductions
+
+#### Ordinary/weak induction
+- Rule 1: P(0) (or any other base case)
+- Rule 2: P(n) → P(n+1)
+
+#### Strong induction
+- Rule 1: P(0) (or any other base case)
+- Rule 2: P(1),P(2), P(3),....P(n) → P(n+1)
+	
