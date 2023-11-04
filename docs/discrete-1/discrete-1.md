@@ -72,6 +72,12 @@ Introduction to Discrete Structures 1
 		- [Sequences are Just Functions](#sequences-are-just-functions)
 			- [Geometric Sequence](#geometric-sequence)
 		- [Reoccurance Relations](#reoccurance-relations)
+	- [Sum and Product of Sequences](#sum-and-product-of-sequences)
+		- [Summation Notation](#summation-notation)
+		- [Product Notation](#product-notation)
+		- [Factorial Notation](#factorial-notation)
+		- [Recursive Sequences](#recursive-sequences)
+			- [Finding a Explicit Formula from Recursive Sequence](#finding-a-explicit-formula-from-recursive-sequence)
 			- [Proof by Induction](#proof-by-induction)
 		- [Strong Inductions](#strong-inductions)
 			- [Ordinary/weak induction](#ordinaryweak-induction)
@@ -1320,6 +1326,71 @@ Applying Geometric sequences:
 - A reoccurance relation is a recursively defined sequence.
 
 **xₙ₊₁ = 0.5(xₙ + a/xₙ)** is a reoccurance relation.
+
+## Sum and Product of Sequences
+
+As it was said previously, a sequence is just some a₁, a₂, a₃, ... aₙ.
+
+Then, if we wanted to add up these numbers, we would have to do something like:
+
+- a₁ + a₂ + a₃ + ... + aₙ, which could go on for infinity.
+- However, what if we only wanted to add up the first 10 numbers?
+  - a₁ + a₂ + a₃ + ... + a₁₀
+- Now what if we wanted to add the first 1 million terms?
+
+**The issue with writing the sequence out is that it is not very efficient.**
+
+### Summation Notation
+
+> Involves going from an aₘ term to an aₙ term.\
+> Looks like: aₘ + aₘ₊₁ + ... + aₙ
+
+To make it shorthand:
+
+![Summation Notation](imgs/summation-notation.png)
+- Notice that the m is the lower bound (*starting point*) and the n is the upper bound (*finishing point*).
+- The `k` is the index of summation.
+- You are taking the ***Sum*** of the `aₖ`'s. 
+
+### Product Notation
+- Same exact concept as summation notation, but instead of adding, you are multiplying.
+- Looks like: aₘ * aₘ₊₁ * ... * aₙ
+
+![Product Notation](imgs/product-notation.png)
+
+### Factorial Notation
+- Factorial notation is a special case of product notation.
+- n! = n(n-1)(n-2)...(3)(2)(1)
+
+![Factorial Notation](imgs/factorial-notation.png) 
+
+### Recursive Sequences
+- These are sequences that are defined by a previous term in the sequence.
+- These recursive formulas are not unique. They can be defined in many different ways but return the exact same sequence.
+
+For example:
+
+	aₖ = aₖ₋₁ + 3, k > 1
+
+	can also be written as:
+	aₖ₋₃ = aₖ₋₃₋₁ + 3, k - 3 > 1
+
+
+#### Finding a Explicit Formula from Recursive Sequence
+
+Example:
+
+	aₖ = aₖ₋₁ + 3, k > 1 and a₁ = 1
+	
+	Then, you can write out the sequence:
+	a₁ = 1
+	a₂ = 1 + 3 = 4
+	a₃ = 1 + 3 + 3
+	a₄ = 1 + 3 + 3 + 3
+
+	So then, aₖ can be written as:
+	aₖ = 3(k-1) + 1 >> This is the explicit formula from the recursive.
+
 
 #### Proof by Induction
 

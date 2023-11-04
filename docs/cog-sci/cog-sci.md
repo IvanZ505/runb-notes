@@ -1092,11 +1092,11 @@ Photoreceptor Cells
 
 #### Bottom-Up Processing
 - Information flowing from the senses to perception.
+- Data driven, you have no idea what you are looking at and let your senses do the work.
 
 #### Top-Down Processing
 - Information flowing from world knowledge to perception.
-
-You know what things should look like so you can fill in the gaps.
+- You know what things should look like so you can fill in the gaps.
 
 
 #### Modal Completion
