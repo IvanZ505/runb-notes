@@ -69,6 +69,7 @@ Introduction to Discrete Structures 1
 	- [Sequences and Reoccurances](#sequences-and-reoccurances)
 		- [Sequences](#sequences)
 			- [Example of a Sequence](#example-of-a-sequence)
+		- [Sequences are Just Functions](#sequences-are-just-functions)
 			- [Geometric Sequence](#geometric-sequence)
 		- [Reoccurance Relations](#reoccurance-relations)
 			- [Proof by Induction](#proof-by-induction)
@@ -1285,10 +1286,22 @@ The formal definition of a function:
 - A sequence is a function from a subset of integers (usually ℕ or ℕ⁺) to a set S. We use the notation aₙ to denote the image of n. We can aₙ the nth term of the sequence.
 
 #### Example of a Sequence
+
+The sequence: bₖ = (-1)ᵏ(3k)
+
+	This would give you: {3, -6, 9, -12, ...}
+
 - The sequence of even integers is a function from ℕ⁺ to ℤ. The nth term of the sequence is 2n.
   - Represented as aₙ = 2n
 - aₙ = (-1)ⁿ → is called a oscillating sequence.
   - {1, -1, 1, -1, ...}
+
+### Sequences are Just Functions
+- If a sequence can basically just be described as some sort of formula, then you can think of the *n* or *k* terms as the domain of the function, and the *aₙ* or *bₖ* as the codomain of the function.
+- This means, it obeys the vertical line test.
+---
+> So, a sequence is a function where you take things from the positive integers, and going to some unspecified codomain.
+---
 
 #### Geometric Sequence
 - A geometric sequence is a sequence of the form aₙ = arⁿ⁻¹ where a and r are real numbers.
