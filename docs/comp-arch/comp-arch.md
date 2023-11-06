@@ -79,12 +79,21 @@ Taught By Kania Jay
 		- [Representation](#representation)
 			- [Normalized Form](#normalized-form)
 			- [Denormalized Form](#denormalized-form)
+	- [Computer Organization](#computer-organization)
+		- [Why is Instruction Set Architecture Important?](#why-is-instruction-set-architecture-important)
 		- [Computer Architecture (ISA) Classifications](#computer-architecture-isa-classifications)
 			- [CISC - Complex Instruction Set Computers](#cisc---complex-instruction-set-computers)
 			- [RISC - Reduced Instruction Set Computers](#risc---reduced-instruction-set-computers)
 			- [Is x86 CISC? How does it get speed?](#is-x86-cisc-how-does-it-get-speed)
 		- [Assembly/Machine Code View](#assemblymachine-code-view)
 			- [Programmer-Visible State](#programmer-visible-state)
+	- [Assembly](#assembly)
+		- [Assembly Instructions](#assembly-instructions)
+		- [Preview of Microarchitecture](#preview-of-microarchitecture)
+		- [C Code to Assembly](#c-code-to-assembly)
+		- [Assembly Characteristics: Operations](#assembly-characteristics-operations)
+		- [Assembly Practice](#assembly-practice)
+		- [Data Size and x86-64 Registers](#data-size-and-x86-64-registers)
 
 
 ---
@@ -941,6 +950,23 @@ Example:
 
 ![](imgs/special-cases.png)
 
+## Computer Organization
+![Layer Cake](imgs/layer-cake.png)
+
+### Why is Instruction Set Architecture Important?
+- It is the interface between hardware and low-level software.
+- Software is varied and can change.
+- However, hardware is standard, and fixed.
+  
+**ISA Can be Traced Back to the 1940's**
+
+Fred Brooks and the IBM 360:
+- IBM was selling computers with different capacities.
+- However, Fred Brooks had the brilliant idea to make the interface to the hardware is standardized so that hardware can be compile once and ran on all IBM machines.
+- That was how the IBM 360 ISA came about.
+
+---
+
 ### Computer Architecture (ISA) Classifications
 
 #### CISC - Complex Instruction Set Computers
@@ -949,6 +975,8 @@ Example:
 - versatile addressing modes
 - specialized instructions and registers implement complex tasks.
 - **NOT** optimized for speed - tend to be SLOW.
+
+> Secret: Inside the processor, the CISC instructions are broken down into more elementary instructions.
 
 #### RISC - Reduced Instruction Set Computers
 - Small set of simple isntructions targeting high speed implementation
@@ -984,3 +1012,75 @@ Example:
   - Byte-addressable array of bytes or words
   - Code and data segments
   - Stack to support procedures
+
+## Assembly
+
+Human readable machine code is very limited in what it can do. *There is not much control flow*.
+
+---
+
+**Choice of what to experiment with**
+
+MIPS (RISC-V), ARM, x86-64
+
+### Assembly Instructions
+- It's the bitstream representation of the instructions that tell the hardware what to do.
+- These instructions and operations are basically being described as *numbers* being codified into machine language.
+- It performs `fetch`, `decode`, `execute`, `memory`, `writeback`
+
+### Preview of Microarchitecture
+
+![Overview of Microarchitecture](imgs/microarch-overview.png)
+
+### C Code to Assembly
+- You can use the iLab to generate Assembly code from your original C code.
+- `gcc -S example.c`
+  - This generates an intermediate output.
+- Typically, you won't be expected to know how to write assembly code, but we study Assembly in order to understand how programs turn into instruction streams that are actually executable.
+
+### Assembly Characteristics: Operations
+
+- Performs arithmetic function on register or memory data.
+- Transfer data between memory and register
+  - Load data from memory into register
+  - Store register data into memory
+- Transfer control
+  - Tell the program to break away from its natural sequential progress of the code.
+  - Changes where the PC (Program Counter) points.
+
+### Assembly Practice
+
+Example:
+
+```C
+// This is the C code to swap two characters.
+void swap(long* a, long* b) {
+	long* t1 = *a;
+	long* t2 = *b;
+	*a = t1;
+	*b = t2;
+}
+```
+
+In assembly:
+
+```assembly
+swap_c:          		# This is a label, telling the hardware where the function starts.
+	movq (%rdi), %rax    # movb means to movq something from a source to a destination
+	movq (%rsi), %rdx	# The parenthesis tells the hardware it's a memory address, and you are deferencing it.
+	movq %rdx, (%rsi)
+	movq %rax, (%rdi)
+	ret     			# The ret tells the hardware the function is over
+
+```
+
+**Taking a closer look**
+![Alt text](imgs/understanding-swap.png)
+
+From Professor Huang's Lectures:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PjNcmzv9gAo?si=JhUXPV6vTsDdMoG0&amp;start=2229" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Data Size and x86-64 Registers
+![Assembly Syntax Mov](imgs/ass-move.png)
+
