@@ -94,6 +94,20 @@ Taught By Kania Jay
 		- [Assembly Characteristics: Operations](#assembly-characteristics-operations)
 		- [Assembly Practice](#assembly-practice)
 		- [Data Size and x86-64 Registers](#data-size-and-x86-64-registers)
+		- [Simple Memory Addressing Modes](#simple-memory-addressing-modes)
+		- [Complete Memory Addressing Modes](#complete-memory-addressing-modes)
+			- [Most General Form](#most-general-form)
+		- [Address Computation Instruction](#address-computation-instruction)
+			- [`leaq SRC, DST` (Load effective address)](#leaq-src-dst-load-effective-address)
+			- [Uses](#uses)
+		- [Some Arithmetic Operations](#some-arithmetic-operations)
+		- [Calling Convention: Argument Registers](#calling-convention-argument-registers)
+	- [Machine Level Programming II: Control](#machine-level-programming-ii-control)
+		- [Processor State (x86-64, Partial)](#processor-state-x86-64-partial)
+		- [Condition Codes (Implicit Setting)](#condition-codes-implicit-setting)
+		- [Condition Code (Explicit Setting: Compare)](#condition-code-explicit-setting-compare)
+		- [Condition Code (Explicit Setting: Test)](#condition-code-explicit-setting-test)
+		- [Reading Condition Codes](#reading-condition-codes)
 
 
 ---
@@ -1084,3 +1098,140 @@ From Professor Huang's Lectures:
 ### Data Size and x86-64 Registers
 ![Assembly Syntax Mov](imgs/ass-move.png)
 
+### Simple Memory Addressing Modes
+- **Normal** (R) Mem[Reg[R]]
+  - The Register R specifices the memory address.
+  - Almost like pointer deferencing in C.
+
+	movq (%rcx), %rax
+
+- **Displacement** D(R) Mem[Reg[R]+D]
+  - Register R specifies the start of memory Region
+  - Constant displacement D specifies offset.
+  - Like C Pointer arithmetics
+
+	movq 8(%rbp), %rdx
+	- Basically, *deference* the memory address of %rbp, add 8 to that memory address, and get the value at that new address.
+	- Then, move that memory to the %rdx register.
+
+
+### Complete Memory Addressing Modes
+
+#### Most General Form
+- D(Rb, Ri, S) Mem[Reg[Rb]+S*Reg[Ri] +D]
+  - D: Constant displacement, can be 0, 1, 2, or 4 bytes.
+  - Rb: Base register: Any of 16 integer registers.
+  - Ri: Index register: Any except for **rsp**
+  - S: Scale of 1, 2, 4, or 8
+  
+Ex: movq 4(%rdx, %rcx, 2), $rax
+		
+	So when it looks like this, the S (scaling factor is applied to the R2)
+	Then, add the memory address of R1 with the new R2, then add your final displacement to this value.
+
+	If %rdx contained 0x1000 and %rcx contained 0x0200:
+	4(0x1000 + (0x0200 * 2)) = 0x1404
+	0x1404 is the memory address you will look at.
+
+### Address Computation Instruction
+
+#### `leaq SRC, DST` (Load effective address)
+- SRC is address mode express
+- Set DST to address denoted by expression.
+
+#### Uses
+Computing addresses without a memory reference.
+- E.g. p = &x[i];
+
+Computing Arithmetic expressions of the form x+k*y
+- Where k = 1,2, 4, or 8
+
+Example of `leaq`:
+
+	leaq (x, x, 2), %rax
+	- This will become x + 2x = 3x, which is just multiplying your x value by 3.
+
+---
+### Some Arithmetic Operations
+
+**`addq SRC, DST` 	DST = DST + SRC (Add)**\
+**`subq SRC, DST` 	DST = DST - SRC (Subtract)**\
+**`imulq SRC, DST` 	DST = DST * SRC (Multiply)**\
+**`salq SRC, DST` 	DST = DST << SRC  (Shift left)**\
+**`sarq SRC, DST` 	DST = DST >> SR (Shift right)**\
+**`shr SRC, DST` 	DST = DST >> SRC  (Shift right)**\
+**`xorq SRC, DST` 	DST = DST ^ SRC  (XOR)**\
+**`andq SRC, DST` 	DST = DST & SRC (AND)**\
+**`orq SRC, DST` 	DST = DST | SRC (OR)**
+
+---
+
+### Calling Convention: Argument Registers
+- The caller uses registers to pass the first 6 arguments to the callee.
+- **RDI**:
+  - This register is typically used for the first argument or pointer argument. It's also used to return integer values from functions.
+- **RSI**:
+  - This register is typically used for the second argument or pointer argument. It's also used to return integer values from functions.
+- **RDX**:
+  - This register is typically used for the third argument or pointer argument. It's also used to return integer values from functions.
+- **RCX**:
+  - This register is typically used for the fourth argument or pointer argument. It's also used to return integer values from functions.
+- **R8 and R9**:
+  - Additional integers or pointer arguments are passed in R8 and R9 respectively.
+
+**Ex:**
+
+`int foo(int x, char c)`
+- x is passed in RDI
+- c is passed in RSI (This is passed in still because characters can be represented as integers.)
+
+---
+
+Note:
+- All remaining arguments are passed on to the stack in reerse order so that they can be popped off the stack in that order.
+  - For example: If we have an *7th* int and a *8th* int, we push the *8th* onto the stack first and then push the *7th* onto the stack. 
+  - This allows us to use the *7th* argument first.
+- The callee is responsible for preservin the value of registers `%rbp`, `%rbx`, and `%r12-r15`, as these registers are owned by the caller. Teh remaining registers are owned by the callee.
+- The callee places its return value in `%rax` and is responsible for cleaning up its local variable as well as for removing the return address from the stack.
+- The `call`, `enter`, `leave`, `ret` instructions make it easy to follow this calling convention.
+
+---
+
+## Machine Level Programming II: Control
+
+### Processor State (x86-64, Partial)
+- So we know that the *ALU* performs `+, -, *, /, %` operations.
+- In order to do these operations, it has a small memory called the *operand* memory.
+- TODO: ???
+
+### Condition Codes (Implicit Setting)
+- Single bit registers
+  - CF - Carry flag (For unsigned)
+  - SF - Sign flag (For signed)
+  - ZF - Zero flag
+  - OF - Overflow flag (For signed)
+- Implicitly set (think of it as a side effect) by arithmetic operations
+- This is **not** set by `leaq`
+
+### Condition Code (Explicit Setting: Compare)
+- Explicit Setting by Compare instruction
+  - `cmpq` Src2 , src1
+  - Computes src1 - src2 and sets condition codes accordingly.
+
+- CF set if carry out from most significant bit (unsigned comparisons)
+- ZF set if src1 = src2
+- SF set if (a-b) < 0 (signed comparisons)
+- OF set if two’s complement overflow (signed comparisons)
+
+### Condition Code (Explicit Setting: Test)
+- Explicit Setting by Test instruction
+  - `testq` src2, src1
+  - Computes src1 & src2 and is like computing Src1&Src2, but it does not store the result anywhere. (& is bitwise &)
+- Sets condition codes based on value of Src1 & Src2.
+- ZF set when Src1 & Src2 = 0
+- SF set when Src1 & Src2 < 0
+
+### Reading Condition Codes
+- Using SetX instructions:
+  - We can set low-order byte of destination to 0 or 1 based on combinations of condition codes.
+  - Does not alter remaining 7 bytes.
