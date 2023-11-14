@@ -7,16 +7,10 @@ Taught By Ryan Rhodes
 Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 
 ----
-
-## Table of Contents
+**Table of Contents**
 - [Cognitive Science](#cognitive-science)
-	- [Table of Contents](#table-of-contents)
 	- [What is Cognitive Science?](#what-is-cognitive-science)
-			- [ChatGPT Rules](#chatgpt-rules)
-			- [What is it REALLY?](#what-is-it-really)
-			- [The Intersections of 6 Fields:](#the-intersections-of-6-fields)
-		- [The Different Stages of Cog Sci (But science in General)](#the-different-stages-of-cog-sci-but-science-in-general)
-		- [Minds](#minds)
+	- [Foundations of Cognitive Science](#foundations-of-cognitive-science)
 		- [Multiple Realizability Thesis](#multiple-realizability-thesis)
 		- [Brain State vs. Mental state](#brain-state-vs-mental-state)
 		- [The *Mozart* of Cog Sci:](#the-mozart-of-cog-sci)
@@ -29,31 +23,34 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 			- [All mental Representations are:](#all-mental-representations-are)
 			- [These Mental Representations:](#these-mental-representations)
 		- [How Do you Experience Representation?](#how-do-you-experience-representation)
-			- [The Evolution of the two Beliefs](#the-evolution-of-the-two-beliefs)
-	- [Dualism](#dualism)
-		- [Platonic Dualism:](#platonic-dualism)
-		- [Substance Dualism (Rene Descartes):](#substance-dualism-rene-descartes)
+	- [History of the Mind](#history-of-the-mind)
+		- [The Evolution of the two Beliefs](#the-evolution-of-the-two-beliefs)
+		- [Dualism](#dualism)
+			- [Platonic Dualism:](#platonic-dualism)
+			- [Substance Dualism (Rene Descartes):](#substance-dualism-rene-descartes)
 			- [Conceivability Argument:](#conceivability-argument)
-		- [Problems with Dualism](#problems-with-dualism)
-		- [Property Dualism:](#property-dualism)
-	- [Monism](#monism)
-		- [Idealism:](#idealism)
-		- [Physicalism](#physicalism)
-		- [Reductionism](#reductionism)
+			- [Problems with Dualism](#problems-with-dualism)
+			- [Property Dualism:](#property-dualism)
+		- [Monism](#monism)
+			- [Idealism:](#idealism)
+			- [Physicalism](#physicalism)
+			- [Reductionism](#reductionism)
 			- [The human mind is a black box.](#the-human-mind-is-a-black-box)
 		- [Behaviorism](#behaviorism)
-		- [Functionalism](#functionalism)
+	- [Functionalism](#functionalism)
 		- [Timeline of the Cognitive Revolution](#timeline-of-the-cognitive-revolution)
 			- [E.C. Tolman's Rats](#ec-tolmans-rats)
 			- [How are the rats navigating the maze?](#how-are-the-rats-navigating-the-maze)
+	- [Computational Minds](#computational-minds)
 			- [Meat Machines](#meat-machines)
-		- [Computational Theory of Mind:](#computational-theory-of-mind)
+		- [Computational Theory of Mind](#computational-theory-of-mind)
 			- [Symbols](#symbols)
 		- [Andy Clark](#andy-clark)
 			- [Definitions of Computer](#definitions-of-computer)
 		- [Computations are a FORMAL system](#computations-are-a-formal-system)
 		- [The Halting Problem](#the-halting-problem)
 		- [Turing Machine](#turing-machine)
+	- [Artificial Minds](#artificial-minds)
 			- [Artificial Intelligence](#artificial-intelligence)
 		- [History of Artificial Intelligence](#history-of-artificial-intelligence)
 			- [The Frame Problem](#the-frame-problem)
@@ -70,7 +67,7 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 			- [Evaluating Connectionism](#evaluating-connectionism)
 		- [Language of thought](#language-of-thought)
 		- [The Great Debate](#the-great-debate-1)
-	- [Week 6: The Brain](#week-6-the-brain)
+	- [Mind and Brain](#mind-and-brain)
 		- [Structure of the Brain:](#structure-of-the-brain)
 		- [What's Going on in the Corpus Callosum??](#whats-going-on-in-the-corpus-callosum)
 			- [WADA Test](#wada-test)
@@ -86,7 +83,7 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 		- [MRI and fMRI (Magnetic Resonance Imaging and Functional MRI)](#mri-and-fmri-magnetic-resonance-imaging-and-functional-mri)
 			- [Functional MRI](#functional-mri)
 	- [Midterm](#midterm)
-	- [Language](#language)
+	- [The Language Instinct](#the-language-instinct)
 		- [Why language?](#why-language)
 		- [What is language?](#what-is-language)
 		- [Competence and Performance](#competence-and-performance)
@@ -114,7 +111,18 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 			- [Modal Completion](#modal-completion)
 			- [Color Constancy Effect](#color-constancy-effect)
 			- [Amodal Completion](#amodal-completion)
-
+	- [Origins of the Mind](#origins-of-the-mind)
+		- [Empiricism vs Nativism](#empiricism-vs-nativism)
+			- [Empiricism](#empiricism)
+			- [Nativisim](#nativisim)
+		- [What can babies do?](#what-can-babies-do)
+		- [What do babies look at?](#what-do-babies-look-at)
+		- [How to study babies?](#how-to-study-babies)
+			- [High Amplitude Sucking](#high-amplitude-sucking)
+			- [Head Turn Procedure](#head-turn-procedure)
+			- [Looking Time Measures](#looking-time-measures)
+			- [fNIRS (Functional Near-Infrared Spectroscopy)](#fnirs-functional-near-infrared-spectroscopy)
+		- [What do babies know?](#what-do-babies-know)
 
 ## What is Cognitive Science?
 
@@ -122,14 +130,14 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 - You need a set of cognitive laws in order to explain how it is that anything on this planet is capable of thinking.
 - Amended 9/29 : Cognitive Science looks into computational laws that govern our world, not physical or natural laws.
 
-#### ChatGPT Rules
+**ChatGPT Rules**
 - Create your own prompt
 - Share the prompt with the Prof
 - Evaluate the responses to the prompts
 
 ----
 
-#### What is it REALLY?
+**What is it REALLY?**
 
 Cognitive science is the *interdisciplinary* study of the mind (or minds) as an **information processor**.
 
@@ -137,7 +145,7 @@ Cognitive science is the *interdisciplinary* study of the mind (or minds) as an 
 - We think of the mind as more of a ***computer***.
 - We are here to **ask** questions.
 
-#### The Intersections of 6 Fields:
+**It is The Intersections of 6 Fields:**
 
 **Philosophy**:
 - Raises questions
@@ -171,7 +179,7 @@ Cognitive science is the *interdisciplinary* study of the mind (or minds) as an 
 - **Genetics**
 - **Sociology**
 
-### The Different Stages of Cog Sci (But science in General)
+**The Different Stages of Cog Sci**
 
 1. Theorizing
 2. Documenting
@@ -180,7 +188,7 @@ Cognitive science is the *interdisciplinary* study of the mind (or minds) as an 
 
 ---
 
-### Minds
+## Foundations of Cognitive Science
 
 What *is* a mind?
 
@@ -234,7 +242,7 @@ Models:
 - Specify structure and relationships within the complex system.
 
 
-**Algorithmic Level)** (The How level):
+**Algorithmic Level** (The How level):
 
 (Computer Science, Psychology)
 - What steps are taken to accomplish that goal?
@@ -367,13 +375,15 @@ Allow us to:
 
 - This Cartesian Theater has a **grounding problem**.
 
-#### The Evolution of the two Beliefs
+## History of the Mind
+
+### The Evolution of the two Beliefs
 
 ![Daulism to Monism](imgs/roadmap-beliefs.png)
 
-## Dualism
+### Dualism
 
-### Platonic Dualism:
+#### Platonic Dualism:
 
 - Theory of Forms
 - We are chained to the physical world where nothing is perfect.
@@ -381,7 +391,7 @@ Allow us to:
 
 ![Platonic Dualism](imgs/platonic-dualism.png)
 
-### Substance Dualism (Rene Descartes):
+#### Substance Dualism (Rene Descartes):
 
 - Minds and bodies are made of different substances (Like literally.)
 - He believed the mind was superior to the body.
@@ -404,7 +414,7 @@ Descartes came to this Substance Dualism through the:
 
 ---
 
-### Problems with Dualism
+#### Problems with Dualism
 
 **Dualism says what the mind is *not:***
 - The mind is *not* the brain.
@@ -415,7 +425,7 @@ Descartes came to this Substance Dualism through the:
 
 ---
 
-### Property Dualism:
+#### Property Dualism:
 
 **Biological Naturalism:**
 - Mental state is what the brain does.
@@ -433,9 +443,9 @@ Descartes came to this Substance Dualism through the:
 
 ---
 
-## Monism
+### Monism
 
-### Idealism:
+#### Idealism:
 
 - Everything in the universe is mentall or mentally-constructed.
 
@@ -445,7 +455,7 @@ Descartes came to this Substance Dualism through the:
 
 (This is the first stop of Monism because it describes the world as all just a illusion of your senses. It's all just mental states, and nothing is *real*)
 
-### Physicalism
+#### Physicalism
 
 - Everything in the universe is *physical*
 
@@ -462,7 +472,7 @@ Descartes came to this Substance Dualism through the:
 
 ---
 
-### Reductionism
+#### Reductionism
 
 "I do not deny that conscious mental states and events cause behavior, nor that they may be given functional characterizations. I deny only that this kind of thing exhausts their analysis." - **Thomas Nagel**
 
@@ -516,7 +526,7 @@ Descartes came to this Substance Dualism through the:
 
 ---
 
-### Functionalism
+## Functionalism
 
 (Mental states defined by functional profiles (computational levels))
 
@@ -585,11 +595,14 @@ Descartes came to this Substance Dualism through the:
 - Rats are not able to remember to always turn right.
 - If you move the food, they do not know where the food is.
 
+---
+
+## Computational Minds
 
 #### Meat Machines
 - The fact that it is meat does not matter, what matters is the machine.
 
-### Computational Theory of Mind:
+### Computational Theory of Mind
 - The brain is merely a meat machine.
 - The mental processes are computations.
 - A machine computes an algorithm: roughly an explicit, step-by-step procedure for answering some questions or solving some problem.
@@ -643,6 +656,8 @@ Descartes came to this Substance Dualism through the:
 **Computability (Church-Turing Thesis)**:
 - "No computational procedure will be considered as an algorithm unless it can be represented as a Turing Machine."
 - "A function is effectively calculable if its values can be found by some purely mechanical process."
+
+## Artificial Minds
 
 #### Artificial Intelligence
 - A Turing machine is a symbolic processor that can compute anything.
@@ -796,7 +811,7 @@ Descartes came to this Substance Dualism through the:
 	
 ---
 
-## Week 6: The Brain
+## Mind and Brain
 
 - Why do we study the brain?
 	- To understand the Brain
@@ -941,7 +956,7 @@ Data:
 
 ---
 
-## Language
+## The Language Instinct
 
 ### Why language?
 
@@ -1111,3 +1126,87 @@ Photoreceptor Cells
 #### Amodal Completion
 - The completion of a contour or edge that is occluded by another object.
 
+## Origins of the Mind
+
+### Empiricism vs Nativism
+
+#### Empiricism
+- "Let us then suppose the mind to be " - John Locke
+- Everything that can be learned is from getting input from the environment and using that input in certain ways.
+- At birth we are a blank slate.
+> There is an understanding and concept of learning.
+
+#### Nativisim
+- "We come to know wabout the world by the power of our **native** intelligence" - Descartes
+- We are boosted by existing knowledge about the world.
+
+---
+
+**Comparison**
+
+| Empiricism                                                                            | Nativism                                                                                                |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Mind starts with what the world looks like.                                           | Mind starts with some basic idea of how the world works.                                                |
+| Everything is learned exccept the simplest "sensations" and principle of association. | Some/many *innate* ideas built-in and different principles of learning built-in (like tools in a toolbox) |
+
+---
+
+> "The baby, assailed by eyes, ears, nose, skin, and entrails at once, feels it all as one great **blooming, buzzing confusion**" - William James
+
+![Neural Development](imgs/neural-development.png)
+
+- First, the baby's mind goes through synaptic growth where the amount of neurons and synapses increase.
+- Then, the baby's mind goes through synaptic pruning where the neurons that are not used are pruned away.
+
+---
+
+### What can babies do?
+> Before 5 months, no reaching\
+> Before 7 months, no locomotion *(being able to drag themselves or be able to move around more efficiently than before)*\
+> Before 9-10 months, no pointing, talking
+
+- However, they do observe, start learning and obesrving the world around them from birth.
+
+**Babies look and orient to objects and sounds!**
+
+---
+
+### What do babies look at?
+
+- Babies prefer stripes more than plain fields.
+- They prefer high contrast over low contrast.
+- Moving objects more than stationary arrays.
+- Spheres more than discs.
+- Pictures that relate to sounds they hear.
+- New or surprising things.
+
+---
+
+### How to study babies?
+
+#### High Amplitude Sucking
+- Measures rate of sucking action on a pacifier outfitted with a sensor.
+
+#### Head Turn Procedure
+- Measures how long a baby keeps their head turned to an auditory stimulus at the side.
+
+#### Looking Time Measures
+- Measuring duration and proportion of baby's looks (looking time) to stimuli.
+
+Also...
+
+#### fNIRS (Functional Near-Infrared Spectroscopy)
+- Measures brain activity using infrared lasers.
+- Laser shone through the head can be used to estimate blood flow in the brain.
+
+---
+
+### What do babies know?
+- Babies do not understand [amodal completion](#amodal-completion). (They do not have a bias.)
+- **Continuity and Occlusion**: Using movement cues, babies can perceive an occluded stick as a whole.
+- **Coherence**: Babies use motion cues to determine whether adjacent objects form a whole.
+- **Object Permanence**: babies know that objects continue to exist when they are out of sight.
+- **Physical and Psychological Causality**: Babies understand the concept of causality. They reason about agents(social beings) differently than they do about objects.
+- **Pre-social Behavior**: Babies understand and show spontaneous pro-social behavior.
+
+---
