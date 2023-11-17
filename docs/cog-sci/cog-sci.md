@@ -6,123 +6,7 @@ Taught By Ryan Rhodes
 
 Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 
-----
-**Table of Contents**
-- [Cognitive Science](#cognitive-science)
-	- [What is Cognitive Science?](#what-is-cognitive-science)
-	- [Foundations of Cognitive Science](#foundations-of-cognitive-science)
-		- [Multiple Realizability Thesis](#multiple-realizability-thesis)
-		- [Brain State vs. Mental state](#brain-state-vs-mental-state)
-		- [The *Mozart* of Cog Sci:](#the-mozart-of-cog-sci)
-			- [As Defined by David Marr, there are 3 Levels of Analysis:](#as-defined-by-david-marr-there-are-3-levels-of-analysis)
-		- [Levels of Analysis Case Study: Chess](#levels-of-analysis-case-study-chess)
-		- [Case study: Cash Register](#case-study-cash-register)
-		- [What's in your mind?](#whats-in-your-mind)
-		- [Representation Systems](#representation-systems)
-			- [Types of Mental Representations](#types-of-mental-representations)
-			- [All mental Representations are:](#all-mental-representations-are)
-			- [These Mental Representations:](#these-mental-representations)
-		- [How Do you Experience Representation?](#how-do-you-experience-representation)
-	- [History of the Mind](#history-of-the-mind)
-		- [The Evolution of the two Beliefs](#the-evolution-of-the-two-beliefs)
-		- [Dualism](#dualism)
-			- [Platonic Dualism:](#platonic-dualism)
-			- [Substance Dualism (Rene Descartes):](#substance-dualism-rene-descartes)
-			- [Conceivability Argument:](#conceivability-argument)
-			- [Problems with Dualism](#problems-with-dualism)
-			- [Property Dualism:](#property-dualism)
-		- [Monism](#monism)
-			- [Idealism:](#idealism)
-			- [Physicalism](#physicalism)
-			- [Reductionism](#reductionism)
-			- [The human mind is a black box.](#the-human-mind-is-a-black-box)
-		- [Behaviorism](#behaviorism)
-	- [Functionalism](#functionalism)
-		- [Timeline of the Cognitive Revolution](#timeline-of-the-cognitive-revolution)
-			- [E.C. Tolman's Rats](#ec-tolmans-rats)
-			- [How are the rats navigating the maze?](#how-are-the-rats-navigating-the-maze)
-	- [Computational Minds](#computational-minds)
-			- [Meat Machines](#meat-machines)
-		- [Computational Theory of Mind](#computational-theory-of-mind)
-			- [Symbols](#symbols)
-		- [Andy Clark](#andy-clark)
-			- [Definitions of Computer](#definitions-of-computer)
-		- [Computations are a FORMAL system](#computations-are-a-formal-system)
-		- [The Halting Problem](#the-halting-problem)
-		- [Turing Machine](#turing-machine)
-	- [Artificial Minds](#artificial-minds)
-			- [Artificial Intelligence](#artificial-intelligence)
-		- [History of Artificial Intelligence](#history-of-artificial-intelligence)
-			- [The Frame Problem](#the-frame-problem)
-		- [The Great Debate](#the-great-debate)
-			- [Reconstructing Cognition](#reconstructing-cognition)
-			- [Hebbian Learning](#hebbian-learning)
-			- [Mark I Perceptron](#mark-i-perceptron)
-			- [First AI Winter](#first-ai-winter)
-			- [In 1986...](#in-1986)
-		- [Three Types of Learning](#three-types-of-learning)
-			- [Unsupervised Learning](#unsupervised-learning)
-			- [Supervised Learning](#supervised-learning)
-			- [Reinforcement Learning](#reinforcement-learning)
-			- [Evaluating Connectionism](#evaluating-connectionism)
-		- [Language of thought](#language-of-thought)
-		- [The Great Debate](#the-great-debate-1)
-	- [Mind and Brain](#mind-and-brain)
-		- [Structure of the Brain:](#structure-of-the-brain)
-		- [What's Going on in the Corpus Callosum??](#whats-going-on-in-the-corpus-callosum)
-			- [WADA Test](#wada-test)
-			- [Contralateral organization](#contralateral-organization)
-			- [Right ear Advantage](#right-ear-advantage)
-			- [Double Dissociation](#double-dissociation)
-	- [Measuring Brain Activity](#measuring-brain-activity)
-		- [Electrophysiology](#electrophysiology)
-		- [Hemodynamics](#hemodynamics)
-		- [EEG (Electroencephalography)](#eeg-electroencephalography)
-			- [Event related potentials](#event-related-potentials)
-		- [PET (Positron Emission Tomography)](#pet-positron-emission-tomography)
-		- [MRI and fMRI (Magnetic Resonance Imaging and Functional MRI)](#mri-and-fmri-magnetic-resonance-imaging-and-functional-mri)
-			- [Functional MRI](#functional-mri)
-	- [Midterm](#midterm)
-	- [The Language Instinct](#the-language-instinct)
-		- [Why language?](#why-language)
-		- [What is language?](#what-is-language)
-		- [Competence and Performance](#competence-and-performance)
-		- [Core of Language](#core-of-language)
-			- [What do we do with Language?](#what-do-we-do-with-language)
-			- [Socially-Determined Conventions](#socially-determined-conventions)
-		- [Chomsky](#chomsky)
-		- [Language Is Heirarchical](#language-is-heirarchical)
-		- [Recursion in Language](#recursion-in-language)
-		- [Verbal Behavior](#verbal-behavior)
-		- [Poverty of the Stimulus](#poverty-of-the-stimulus)
-		- [Eric Lenneberg](#eric-lenneberg)
-		- [What happens when the Critical Period is Missed?](#what-happens-when-the-critical-period-is-missed)
-			- [The Tragedy of Genie Wiley](#the-tragedy-of-genie-wiley)
-		- [Home Sign](#home-sign)
-		- [Nicaraguan Sign Language](#nicaraguan-sign-language)
-	- [The Mind's Eye (Perception)](#the-minds-eye-perception)
-		- [How do we perceive?](#how-do-we-perceive)
-			- [Sight](#sight)
-			- [Blind Spots](#blind-spots)
-			- [Sensation](#sensation)
-		- [Processing](#processing)
-			- [Bottom-Up Processing](#bottom-up-processing)
-			- [Top-Down Processing](#top-down-processing)
-			- [Modal Completion](#modal-completion)
-			- [Color Constancy Effect](#color-constancy-effect)
-			- [Amodal Completion](#amodal-completion)
-	- [Origins of the Mind](#origins-of-the-mind)
-		- [Empiricism vs Nativism](#empiricism-vs-nativism)
-			- [Empiricism](#empiricism)
-			- [Nativisim](#nativisim)
-		- [What can babies do?](#what-can-babies-do)
-		- [What do babies look at?](#what-do-babies-look-at)
-		- [How to study babies?](#how-to-study-babies)
-			- [High Amplitude Sucking](#high-amplitude-sucking)
-			- [Head Turn Procedure](#head-turn-procedure)
-			- [Looking Time Measures](#looking-time-measures)
-			- [fNIRS (Functional Near-Infrared Spectroscopy)](#fnirs-functional-near-infrared-spectroscopy)
-		- [What do babies know?](#what-do-babies-know)
+---
 
 ## What is Cognitive Science?
 
@@ -610,7 +494,7 @@ Descartes came to this Substance Dualism through the:
 
 #### Symbols
 - Crucial for Turing computation
-- The mind contains symbols ($$$)
+- The mind contains symbols ($)
 - Symbols have two features at least:
 	- Formal properties: How the symbol is shaped
 	- Semantic properties: How the symbol represents the world.
@@ -1210,3 +1094,17 @@ Also...
 - **Pre-social Behavior**: Babies understand and show spontaneous pro-social behavior.
 
 ---
+
+### Learning in Babies
+- How do we know if baby's core knowledge is **innate** or **learned**?
+- Babies have mental models of the world and have expectations about how the world works. Experiments that break these expectations can be used to study learning in babies.
+- Domain specific learning: Learning about one domain does not transfer to another domain.
+
+#### Case Study: Language
+
+How do babies learn to speak???
+
+**What babies need to learn**:
+- Sounds
+- Syllables
+- Rhythms
