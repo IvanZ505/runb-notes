@@ -1,88 +1,6 @@
 <style>.markdown-body {font-family:"Times New Roman", Times, serif;}</style>
 
-Introduction to Discrete Structures 1
-===
-
-- [Introduction to Discrete Structures 1](#introduction-to-discrete-structures-1)
-	- [Propositional Logic](#propositional-logic)
-			- [Recitation 1](#recitation-1)
-	- [Applications of Propositions](#applications-of-propositions)
-		- [Biconditional Implications: If and only if](#biconditional-implications-if-and-only-if)
-			- [Examples:](#examples)
-			- [More complex example](#more-complex-example)
-			- [Even more examples](#even-more-examples)
-		- [Logic Gates](#logic-gates)
-			- [todo  finish this](#todo--finish-this)
-		- [Sensor network](#sensor-network)
-			- [Convert the following statements to logical propositions.](#convert-the-following-statements-to-logical-propositions)
-		- [De Morgan's Laws](#de-morgans-laws)
-		- [Quiz 1](#quiz-1)
-		- [Propositional Equivalences](#propositional-equivalences)
-		- [Logical Equivalence (≡)](#logical-equivalence-)
-			- [p =\> and ¬p v q are logically equivalent.](#p--and-p-v-q-are-logically-equivalent)
-			- [Find a logically equivalent implication to p v ¬q](#find-a-logically-equivalent-implication-to-p-v-q)
-			- [Show that p v ¬p =\> q and q are logically equivalent](#show-that-p-v-p--q-and-q-are-logically-equivalent)
-	- [Important MEMORIZE](#important-memorize)
-		- [Proving Propositional Equivalences using Rules](#proving-propositional-equivalences-using-rules)
-		- [Fermats Last Theorem](#fermats-last-theorem)
-	- [Predicates](#predicates)
-		- [What are Predicates and why do we Need them?](#what-are-predicates-and-why-do-we-need-them)
-			- [Propositional Functions](#propositional-functions)
-			- [Workshops for Predicates](#workshops-for-predicates)
-		- [Compound Expressions](#compound-expressions)
-	- [Quantifiers](#quantifiers)
-		- [The Uniqueness Quantifier (∃!)](#the-uniqueness-quantifier-)
-		- [DeMorgan's Law for Quantifiers](#demorgans-law-for-quantifiers)
-			- [¬∃xP(x) ≡ ∀x¬P(x)](#xpx--xpx)
-			- [¬∀xP(x) ≡ ∃x¬P(x)](#xpx--xpx-1)
-		- [Nested Quantifiers](#nested-quantifiers)
-			- [Every real number has an additive inverse...](#every-real-number-has-an-additive-inverse)
-			- [Example:](#example)
-			- [Example 2:](#example-2)
-			- [Translating Nested Quantifiers](#translating-nested-quantifiers)
-		- [Rules of Inference](#rules-of-inference)
-	- [Introduction to Proofs](#introduction-to-proofs)
-		- [What are proofs?](#what-are-proofs)
-			- [Lemmas](#lemmas)
-			- [Theorem](#theorem)
-			- [Corollary](#corollary)
-		- [Direct Proofs](#direct-proofs)
-			- [Example of Direct Proof:](#example-of-direct-proof)
-		- [Proof By contraposition](#proof-by-contraposition)
-			- [Example of Proof by Contraposition:](#example-of-proof-by-contraposition)
-		- [Proof By Contradiction](#proof-by-contradiction)
-	- [Sets](#sets)
-		- [Set as Mathematical Numbers](#set-as-mathematical-numbers)
-			- [Subset of Set](#subset-of-set)
-			- [Empty Set](#empty-set)
-			- [Set Equality](#set-equality)
-			- [Ordered Pairs](#ordered-pairs)
-		- [Cartesian product of Two Sets (Cross product)](#cartesian-product-of-two-sets-cross-product)
-			- [Relations](#relations)
-			- [Set Builder Notation vs Set Roster Notation](#set-builder-notation-vs-set-roster-notation)
-			- [Set Operations](#set-operations)
-		- [The Size and Cardinality of a Set](#the-size-and-cardinality-of-a-set)
-			- [Power Set of a Set](#power-set-of-a-set)
-		- [Proofs Involving Sets](#proofs-involving-sets)
-	- [Functions](#functions)
-			- [Properties of Functions](#properties-of-functions)
-	- [Sequences and Reoccurances](#sequences-and-reoccurances)
-		- [Sequences](#sequences)
-			- [Example of a Sequence](#example-of-a-sequence)
-		- [Sequences are Just Functions](#sequences-are-just-functions)
-			- [Geometric Sequence](#geometric-sequence)
-		- [Reoccurance Relations](#reoccurance-relations)
-	- [Sum and Product of Sequences](#sum-and-product-of-sequences)
-		- [Summation Notation](#summation-notation)
-		- [Product Notation](#product-notation)
-		- [Factorial Notation](#factorial-notation)
-		- [Recursive Sequences](#recursive-sequences)
-			- [Finding a Explicit Formula from Recursive Sequence](#finding-a-explicit-formula-from-recursive-sequence)
-			- [Proof by Induction](#proof-by-induction)
-		- [Strong Inductions](#strong-inductions)
-			- [Ordinary/weak induction](#ordinaryweak-induction)
-			- [Strong induction](#strong-induction)
-
+# Introduction to Discrete Structures 1
 
 Propositional Logic
 ---
@@ -1463,4 +1381,60 @@ Example 2:
 #### Strong induction
 - Rule 1: P(0) (or any other base case)
 - Rule 2: P(1),P(2), P(3),....P(n) → P(n+1)
-	
+
+## Language and Grammar
+
+### Motivations
+
+- What is a computer?
+	- A digital device that can compute some general purpose program.
+- What can be computed?
+- How can we compute it?
+- How much memory/time it takes?
+- These are fundamental questions that every computer scientist must be able to answer.
+
+#### Programmable?
+- Can we write a program to recognize all binary strings that end in `0`?
+	- Yes, this is probably very easy to do.
+- Can we write a program to see if a given binary file is indeed a Java program?
+	- Yes, but a bit harder to do.
+- Can we write a program to check if another program gets into a infinite loop?
+	- No, that is not possible.
+
+### Turing Machine
+
+> The Turing Machine is a mathematical abstraction of how we can compute things.
+
+It is simple, so we can prove things about what is computable.
+
+### Languages
+- All Languages contain syntax, or form of the sentence.
+- They all contain semantics or meanings.
+
+Languages are divided into two different types: **natural** and **formal**.
+- Formal language is specified by a well-defined set of rules of syntax.
+
+#### Production Rules of Languages
+- How can we determine whether a combination of words is a *valid* sentence of a formal language?
+- How can we generate the valid sentences of a formal language?
+
+---
+#### Vocabulary
+
+A *vocabulary* (or *alphabet*) `V` is a finite, nonempty set of elements called *symbols*. A *word* (or *sentence*) over `V` is a string of finite lengths of elements of `V`. The *empty string* or *null string*, denoted by $\lambda$ is the string containing no symbols. The set of all words over `V` is denoted by `V*`. A *language over V* is a subset of V*.
+
+#### Phase-Structure Grammar
+
+A *phase-structure grammar* `G=(V, T, S, P)` consists of a vocabulary `V`, a subset `T` of `V`, consisting of terminal symbols, a start symbol `S` from `V`, and a finite set of productions, `P`. The set `V-T` is denoted by `N`. Elements of `N` are called *nonterminal symbols*. Every production in `P` must contain at least one nonterminal symbol.
+
+---
+
+#### A Language
+
+Let `G = (V, T, S, P)` be a phrase-structure grammar. The *language generated by G* (or the language of `G`) is denoted by L(G), is the set of all strings of terminals that are derivable from the starting state `S`. In other words,
+
+$$L(G) = \{w \in T* | S \rightarrow w\} $$ 
+Example: Let G be the grammar with vocabulary `V = {S, 0, 1`, set of terminals `T = {0, 1}`, starting symbols S, and productions P = {S → 11S, S→ 0}. What is L(G) , the language of this grammar?
+
+	L(G) = {0, 110, 11110, 1111110, ...}
+	Essentially, this must be thought of as 

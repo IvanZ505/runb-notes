@@ -1108,3 +1108,12 @@ How do babies learn to speak???
 - Sounds
 - Syllables
 - Rhythms
+ 
+ **Sensitivity**
+- Babies start life with high sensitivity and then get locked in.
+- It's like what happens with neuron trimming where the unused sensitivity to syllables get trimmed away.
+
+#### Case Study: Counting
+- Babies learn to count at around 4-5 years old.
+- From 1-4, babies have issues with understanding the quantity that each of those words represent.
+- However, after 4, they are able to understand the quantity without issue.
