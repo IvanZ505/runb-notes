@@ -1589,3 +1589,32 @@ Example:
 - For any RE, there exists aa DFA that recognizes the same set of strings.
 
 ![](imgs/RE-to-DFA.png)
+
+---
+
+A *non-deterministic finite-state automaton* `M = (S, I, f, s₀, F)` consists of a set `S` of states, an input alphabet `I`, a transition `f` that assigns a set of states to each pair of state and input (so that `f : S x I → P(S)`), a starting state s₀, and a subset `F` of `S` consisting of the final states.
+
+- In simpler terms, this means that the NFA is able to map a single input into a state to a set of states.
+
+---
+
+Example: Building NFA (A * B | A)
+
+![](imgs/building-nfa.png)
+
+You can change a NFA to a DFA... In this case...
+
+![](imgs/dfa-to-nfa.png)
+
+---
+#### General Rules for Building NFAs
+
+**Regular-expression-matching NFA**
+- RE enclosed in parentheses.
+- One state per RE character (start = 0, accept = M)
+- Red *ε-transition* (change state, but don't scan text)
+- Black match transition (change state and scan to next char)
+- Accept if *any* sequence of transitions ends in accept state.
+
+---
+
