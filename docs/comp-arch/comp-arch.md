@@ -103,6 +103,7 @@ Taught By Kania Jay
 		- [Some Arithmetic Operations](#some-arithmetic-operations)
 		- [Calling Convention: Argument Registers](#calling-convention-argument-registers)
 	- [Machine Level Programming II: Control](#machine-level-programming-ii-control)
+		- [Control Flow](#control-flow)
 		- [Processor State (x86-64, Partial)](#processor-state-x86-64-partial)
 		- [Condition Codes (Implicit Setting)](#condition-codes-implicit-setting)
 		- [Condition Code (Explicit Setting: Compare)](#condition-code-explicit-setting-compare)
@@ -1199,12 +1200,18 @@ Note:
 
 ## Machine Level Programming II: Control
 
+### Control Flow
+- Control flow is a *change* in the sequential order of instructions.
+- This is done by changing the PC (Program Counter) to point to a different instruction. (*function calls pass control to the callee*)
+
 ### Processor State (x86-64, Partial)
 - So we know that the *ALU* performs `+, -, *, /, %` operations.
 - In order to do these operations, it has a small memory called the *operand* memory.
 - TODO: ???
 
 ### Condition Codes (Implicit Setting)
+
+![](imgs/condition-codes.png)
 - Single bit registers
   - CF - Carry flag (For unsigned)
   - SF - Sign flag (For signed)
@@ -1216,13 +1223,49 @@ Note:
 ### Condition Code (Explicit Setting: Compare)
 - Explicit Setting by Compare instruction
   - `cmpq` Src2 , src1
-  - Computes src1 - src2 and sets condition codes accordingly.
+  - Computes `src1 - src2` and sets condition codes accordingly.
 
-- CF set if carry out from most significant bit (unsigned comparisons)
-- ZF set if src1 = src2
-- SF set if (a-b) < 0 (signed comparisons)
-- OF set if two’s complement overflow (signed comparisons)
+**All the different cmp instructions for Assembly**
 
+![](imgs/diff-comp-instructions.png)
+
+- `CF` set if carry out from most significant bit (unsigned comparisons)
+- `ZF` set if src1 = src2
+- `SF` set if (a-b) < 0 (signed comparisons)
+- `OF` set if two’s complement overflow (signed comparisons)
+#### Testing for Equality
+
+![](imgs/test-for-equality.png)
+
+#### Example
+
+```C
+short below_ul (
+	unsigned long x,
+	unsigned long y
+) {
+	return x<y;
+}
+```
+
+In C code, this is just a comparison between x and y. When translated to Assembly...
+```ass
+below_ul:
+	xorl %eax, %eax
+	cmpq %rsi, %rdi
+	setb %al
+	ret
+```
+
+How does this code actually test if `x < y`?
+- It uses the condition codes...
+
+Here's how:
+
+> Pretend `x = 127` and `y = 128`
+> Then the `cmpq` operation compares by doing 127-128...
+> This gives -1, which sets the `CF` flag for unsigned values. (`CF = 1`)
+> Then, the CF flag gets returned.
 ### Condition Code (Explicit Setting: Test)
 - Explicit Setting by Test instruction
   - `testq` src2, src1
@@ -1236,5 +1279,54 @@ Note:
   - We can set low-order byte of destination to 0 or 1 based on combinations of condition codes.
   - Does not alter remaining 7 bytes.
 
+### Branch Instructions
 
-This is just a test
+ ![](imgs/branch-instructions.png)
+
+## Assembly: Loops, Switches, Functions
+
+- for loops, while loops and do-while loops do not actually exist in C, but are just using the same `goto` statement if statements use.
+
+The following is an example of the `goto` in C.
+![](imgs/loops-goto.png)
+
+Then, in Assembly...
+
+```assembly
+count_bits_do_while:
+	xorl %ecx, %ecx    # Init (int shift = 0;)
+	xorl %eax, %eax    # Init (unsigned long tally = 0;)
+
+.LOOP:
+	movq %rdi, %rdx    # number
+	shrq %cl, %rdx     # right shift (number>>shift)
+	incl %ecx          # shift++;
+	andl $1, %edx      # 0bl & number>>shift;
+	addq %rdx, %rax    # tally += 0bl & number>>shift
+	cmpl $64, %ecx     # shift<8*sizeof(unsigned long) (*** This will cmp based on the condition code outlined above. (return 0/1 which is passed to the next statement.))
+	jne .LOOP          # goto LOOP (if CF is set, stop, else, keep going)
+	ret                # return tally
+```
+
+---
+
+### Switch Statements in Assembly
+
+![](imgs/jump-table.png)
+- In Assembly, switch statements get compiled into something called a "jump table". The jump table will contain the *jump targets*, which is where the different code blocks will be contained.
+
+#### Example
+
+```C
+long switch_eg(long x, long y, long z) {
+	long w = 1;
+	switch (x) {
+	...
+	} return w;
+}
+```
+
+![](imgs/switch-in-ass.png)
+
+### Stacks in Assembly
+![](imgs/stack-push-and-pop.png)
