@@ -1330,3 +1330,34 @@ long switch_eg(long x, long y, long z) {
 
 ### Stacks in Assembly
 ![](imgs/stack-push-and-pop.png)
+
+### Register Saving Conventions
+
+- **When procedure `yoo` calls `who`**:
+	- `yoo` is the *caller*
+	- `who` is the callee
+- **Can registers be used for temporary storage?**
+- ![](imgs/yoo-who-reg-sav.png)
+
+	- Contents of register `%rdx` overwritten by `who`
+	- This could cause some trouble so we need to do something!
+		- Need some coordination.
+
+### x86-64/Linux Stack Frame
+- **Current stack frame** ("Top" to bottom)
+	- "Argument build": parameters for function about to call.
+	- Local variables if they can't be kept in registers
+	- saved register context
+	- old frame pointer (*optional*)
+- **caller stack frame**
+	- Return address
+		- Pushed by `call` instruction
+	- Arguments for this call
+
+![](imgs/linux-stack-frame.png)
+
+![](imgs/example-incr.png)
+
+---
+> Note: The register `%rax` is typically where the program looks for a return value.
+---
