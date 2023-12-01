@@ -25,7 +25,7 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 
 ## [The Mind's Eye (Perception)](../cog-sci/7-the-minds-eye)
 
-## [Origins of the Mind](../cog-sci/8-the-origins-of-minds)
+## [Origins of the Mind](../cog-sci/9-the-origins-of-minds)
 
-## [The Rational Mind](../cog-sci/9-the-rational-mind)
+## [The Rational Mind](../cog-sci/10-the-rational-mind)
 

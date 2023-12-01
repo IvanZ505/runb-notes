@@ -1,5 +1,5 @@
 
-# [Ch8: The Origin of Minds](../cog-sci/cog-sci)
+# [Ch9: The Origin of Minds](../cog-sci/cog-sci)
 
 ### Empiricism vs Nativism
 
