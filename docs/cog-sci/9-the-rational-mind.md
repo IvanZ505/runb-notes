@@ -60,3 +60,18 @@ For example: If it takes 5 machines 5 minutes to create 5 widgets, how long does
 **Gaze Heuristic** - The ability to coordinate the gaze angle with an object falling and you moving toward the object in order to arrive at the object at the correct time.
 
 ---
+
+### Logic
+
+![](imgs/logic.jpg)
+
+First, what is logic (not the rapper)??
+- Propositional logic is a way of representing ideas to test their validity.
+- All about da **form**, but not the content.
+
+#### What does Propositional Logic Contain?
+- Propositions and logical operators. 
+	- Propositions are true or false statements.
+- Logical operators be like (^, v, ¬, →)
+
+> For more on Propositions, go to [Discrete](../discrete-1/discrete-1#propositional-logic).

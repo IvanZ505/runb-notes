@@ -1,5 +1,5 @@
 
-# Ch3: Computational Minds
+# [Ch3: Computational Minds](../cog-sci/cog-sci)
 
 #### Meat Machines
 - The fact that it is meat does not matter, what matters is the machine.

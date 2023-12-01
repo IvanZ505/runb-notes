@@ -1,5 +1,5 @@
 
-# Ch4: Artificial Minds
+# [Ch4: Artificial Minds](../cog-sci/cog-sci)
 
 #### Artificial Intelligence
 - A Turing machine is a symbolic processor that can compute anything.

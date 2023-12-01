@@ -1,6 +1,6 @@
 <style>.markdown-body {font-family:"Times New Roman", Times, serif;}</style>
 
-# Midterm 1
+# [Midterm 1](../cog-sci/cog-sci)
 
 ## Key Terms
 
