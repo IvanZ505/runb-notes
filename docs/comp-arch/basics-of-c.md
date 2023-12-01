@@ -1,4 +1,4 @@
-# C Notes For Programming in C
+# [C Notes For Programming in C](../comp-arch/comp-arch)
 
 - [C Notes For Programming in C](#c-notes-for-programming-in-c)
     - [Data Types](#data-types)

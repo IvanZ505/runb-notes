@@ -1,5 +1,4 @@
-# Computer Architecture Midterm
-
+# [Computer Architecture Midterm](../comp-arch/comp-arch)
 
 ## Computer Overviews
 - There are two types of computers...
@@ -86,7 +85,7 @@ After preprocessing, the file has a `.i` extension.
 
 ### C Language Basics
 
-[See the C Language Basics](./c.md)
+[See the C Language Basics](basics-of-c.md)
 
 ## Data Representation in Memory
 
