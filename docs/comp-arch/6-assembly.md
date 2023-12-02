@@ -16,7 +16,7 @@ MIPS (RISC-V), ARM, x86-64
 
 ### Preview of Microarchitecture
 
-![Overview of Microarchitecture](imgs/microarch-overview.png)
+![Overview of Microarchitecture](imgs/actual/microarch-overview.png)
 
 ### C Code to Assembly
 - You can use the iLab to generate Assembly code from your original C code.
@@ -61,14 +61,14 @@ swap_c:          		# This is a label, telling the hardware where the function st
 ```
 
 **Taking a closer look**
-![Alt text](imgs/understanding-swap.png)
+![Alt text](imgs/actual/understanding-swap.png)
 
 From Professor Huang's Lectures:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PjNcmzv9gAo?si=JhUXPV6vTsDdMoG0&amp;start=2229" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Data Size and x86-64 Registers
-![Assembly Syntax Mov](imgs/ass-move.png)
+![Assembly Syntax Mov](imgs/actual/ass-move.png)
 
 ### Simple Memory Addressing Modes
 - **Normal** (R) Mem[Reg[R]]
@@ -182,7 +182,7 @@ Note:
 
 ### Condition Codes (Implicit Setting)
 
-![](imgs/condition-codes.png)
+![](imgs/actual/condition-codes.png)
 - Single bit registers
   - CF - Carry flag (For unsigned)
   - SF - Sign flag (For signed)
@@ -198,7 +198,7 @@ Note:
 
 **All the different cmp instructions for Assembly**
 
-![](imgs/diff-comp-instructions.png)
+![](imgs/actual/diff-comp-instructions.png)
 
 - `CF` set if carry out from most significant bit (unsigned comparisons)
 - `ZF` set if src1 = src2
@@ -206,7 +206,7 @@ Note:
 - `OF` set if two’s complement overflow (signed comparisons)
 #### Testing for Equality
 
-![](imgs/test-for-equality.png)
+![](imgs/actual/test-for-equality.png)
 
 #### Example
 
@@ -252,14 +252,14 @@ Here's how:
 
 ### Branch Instructions
 
- ![](imgs/branch-instructions.png)
+ ![](imgs/actual/branch-instructions.png)
 
 ## Assembly: Loops, Switches, Functions
 
 - for loops, while loops and do-while loops do not actually exist in C, but are just using the same `goto` statement if statements use.
 
 The following is an example of the `goto` in C.
-![](imgs/loops-goto.png)
+![](imgs/actual/loops-goto.png)
 
 Then, in Assembly...
 
@@ -283,7 +283,7 @@ count_bits_do_while:
 
 ### Switch Statements in Assembly
 
-![](imgs/jump-table.png)
+![](imgs/actual/jump-table.png)
 - In Assembly, switch statements get compiled into something called a "jump table". The jump table will contain the *jump targets*, which is where the different code blocks will be contained.
 
 #### Example
@@ -297,18 +297,93 @@ long switch_eg(long x, long y, long z) {
 }
 ```
 
-![](imgs/switch-in-ass.png)
+![](imgs/actual/switch-in-ass.png)
 
-### Stacks in Assembly
-![](imgs/stack-push-and-pop.png)
+## Procedures and Function Calls: Transferring Control
 
+---
+#### Stack Based Languages
+- **languages that support recursion**
+	- e.g. C, Pascal, Java
+	- Code must be *reentrant*, which means there can be multiple simultaneous instances of the same function.
+- Need some place to store state of each instantiation
+	- Args
+	- Local variables
+	- Return pointer
+- **Stack discipline**
+	- State for given instruction needed for limited time
+		- From when called to when returned
+	- Callee returns before caller does
+- Stack allocated in **frames**
+	- State for single procedure instantiation
+
+### Stack Frames
+
+![](imgs/actual/stack-frame.png)
+- **Contents**
+	- Return information
+	- Local storage (if needed)
+	- Temporary space (if needed)
+- **Management**
+	- Space allocated when enter procedure
+		- "*set-up code*" 
+		- Include push by `call` instruction
+	- Deallocate when `ret`
+		- "Finish" code
+		- Includes pop by `ret` instruction
+
+>  **Note**: The `%rsp` register is a special register that always points to the top of the stack.
+>  The `%rbp` register is optional, and points at where the stack frame ends.
+
+> Stack Frames Do **not** have to be the same size. It always depends on how many variables each function uses.
+
+### Stack Instructions: `push` and `pop`
+
+![](imgs/actual/stack-push-and-pop.png)
+- When we call the instruction `pushq %rax`
+	- We are telling the program to push the value in the `%rax` register onto the top of the stack. (*0x123*)
+	- The stack will now have *grown downwards*
+- When we call on `popq %rdx`
+	- We are telling the program to pop the value at the top of the stack, `%rsp` tells us where the stack is at, and then store that information in the `%rdx` register.
+
+> The **q** at the end of `pushq` and `popq` stands for *quadword*, which means it increments by 8-bytes, and decrements by 8-bytes.
+
+---
+
+### Procedures and Function Calls
+
+To create the abstraction of functions, we need to:
+- Transfer control to the function and back
+- Transfer data to function (parameters)
+- Transfer data from function (return type)
+
+> Each time there is a transfer of control, we can easily see how it works, but in Assembly requires an update of the instruction pointer.
+
+---
+#### CPU and Memory in Support of Procedures and Functions
+![](imgs/actual/cpu-mem-state-for-procedures-funcs.png)
+
+**States in the CPU**
+- The `%rip` register is that special instructions pointer, or "Program counter"
+- `%rsp` as stated before, is the stack pointer, which always points at the top of the stack.
+
+**Relevant States in the Memory**
+- The stack
+
+---
+#### Procedure for `call` and `ret`
+
+![](imgs/actual/call-ret.png)
+- When calling on a function, the `%rip` register will store the new address of the function that is trying to be run.
+- However, the previous address of the `%rip` register can't just be forgotten.
+	- So, that previous address gets stored onto the stack as the "bottom" of the stack frame.
 ### Register Saving Conventions
 
 - **When procedure `yoo` calls `who`**:
 	- `yoo` is the *caller*
 	- `who` is the callee
 - **Can registers be used for temporary storage?**
-- ![](imgs/yoo-who-reg-sav.png)
+- ![](imgs/actual/yoo-who-reg-sav.png)
 
 	- Contents of register `%rdx` overwritten by `who`
 	- This could cause some trouble so we need to do something!
@@ -325,10 +400,17 @@ long switch_eg(long x, long y, long z) {
 		- Pushed by `call` instruction
 	- Arguments for this call
 
-![](imgs/linux-stack-frame.png)
+![](imgs/actual/linux-stack-frame.png)
 
-![](imgs/example-incr.png)
+![](imgs/actual/example-incr.png)
 
 ---
 > Note: The register `%rax` is typically where the program looks for a return value.
+> For 32-bit systems, this will be the `%eax` register.
 ---
+![](imgs/actual/bomb-lab.png)
+
+![](imgs/actual/sscanf.png)
+
+---
+

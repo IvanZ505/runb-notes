@@ -1,6 +1,6 @@
 # [Computer Organization](../comp-arch/comp-arch)
 
-![Layer Cake](imgs/layer-cake.png)
+![Layer Cake](imgs/actual/layer-cake.png)
 
 ### Why is Instruction Set Architecture Important?
 - It is the interface between hardware and low-level software.
@@ -46,7 +46,7 @@ Fred Brooks and the IBM 360:
 
 ### Assembly/Machine Code View
 
-![Assembly overview](imgs/assembly-overview.png)
+![Assembly overview](imgs/actual/assembly-overview.png)
 
 #### Programmer-Visible State
 - **PC: Program Counter**

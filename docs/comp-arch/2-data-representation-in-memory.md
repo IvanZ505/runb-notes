@@ -14,7 +14,7 @@
 		
 ### Why use Bits and Binaries?
 
-![Logical Voltages](imgs/logical-voltages.png)
+![Logical Voltages](imgs/actual/logical-voltages.png)
 - Digital transistors operate in high and low voltage ranges.
 - Voltage Range dictates binary value on wire.
 	- High voltage range (e.g. 2.8V to 3.3V) is a logic 1.
@@ -333,7 +333,7 @@ TODO : FILL OUT
 - Big endian
   - Most significant bits stored first in memory.
 
-![Endianness](imgs/endianness.png)
+![Endianness](imgs/actual/endianness.png)
 
 #### Why does Endianness Matter?
 - The CPU is designed to work with whichever the system it has
@@ -347,7 +347,7 @@ TODO : FILL OUT
   - The primary purpose of a BOM is to help software correctly interpret and process the text data, especially when dealing with multi-byte character encodings like UTF-16, UTF-32.
 
 ### Basic Processor Organization
-![CPU Overview](imgs/cpu_overview.png)
+![CPU Overview](imgs/actual/cpu_overview.png)
 - Register file (active data)
 - Arithmetic Logic Unit (ALU)
   - Performs signed and unsigned arithmetic

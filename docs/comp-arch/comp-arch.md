@@ -35,3 +35,5 @@ Taught By Kania Jay
 ## [Computer Organization](../comp-arch/5-computer-organization)
 
 ## [Assembly](../comp-arch/6-assembly)
+
+## [Memory Hierarchy](../comp-arch/7-memory-hierarchy)

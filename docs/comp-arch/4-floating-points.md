@@ -13,7 +13,7 @@ So this will look something like this:
 	1 1 1 1 . 1 1 1 1
 
 **Weights**:
-![Alt text](imgs/fixed-point-weights.png)
+![Alt text](imgs/actual/fixed-point-weights.png)
 
 #### Limitations of Fixed-Point
 - Can only represent numbers of the form x/2ᵏ (Some power of 2)
@@ -48,7 +48,7 @@ So this will look something like this:
 - Due to the finiteness of data, we can not represent all real numbers.
 - That said, we have some options for precision of floating point numbers.
 
-![Single and Double Precision](imgs/fp-precision.png)
+![Single and Double Precision](imgs/actual/fp-precision.png)
 
 **Single Precision:**
 - Single precision is a `float` data type.
@@ -58,7 +58,7 @@ So this will look something like this:
 - 8 bytes and 64 bits long.
 - Offers more precision than single precision.
 
-![](imgs/single-vs-double-precision.png)
+![](imgs/actual/single-vs-double-precision.png)
 *As you can notice, most of the bits is dedicated to the fractional bit, which is what allows for greater precision.*
 
 ### IEEE 754 Number Line
@@ -66,7 +66,7 @@ So this will look something like this:
 - There are special *denormalized* values that allow for extreme precision (when trying to represent numbers extremely close to 0) as well as ones that can represent infinity.
   - There is a specific string of bits to represent positive and negative infinity.
 
-![](imgs/ieee754-numline.png)
+![](imgs/actual/ieee754-numline.png)
 
 ### Representation
 
@@ -87,7 +87,7 @@ So this will look something like this:
   - ***To sum it up***
     - `exp = E + Bias`
 
-![](imgs/bias-fp-normalized.png)
+![](imgs/actual/bias-fp-normalized.png)
 
 Example:
 
@@ -117,7 +117,7 @@ The rules here are slightly different, but there is still a bias.
 - ***To sum it up***
   - `E = 1 - Bias`
 
-![](imgs/denormalized-exp.png)
+![](imgs/actual/denormalized-exp.png)
 
 **Denormalized Frac Field**
 - Does not follow the same rules as normalized form.
@@ -136,4 +136,4 @@ Example:
 	What will be the exponent field no?
 	exp = E + bias = -7 + 127 = 120₁₀ = 01111000₂
 
-![](imgs/special-cases.png)
+![](imgs/actual/special-cases.png)

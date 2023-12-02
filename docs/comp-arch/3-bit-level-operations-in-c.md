@@ -72,7 +72,7 @@ Example 2:
 ---
 
 ### Unsigned Addition
-![Addition Discard](imgs/discard-carry.png)
+![Addition Discard](imgs/actual/discard-carry.png)
 - Operands: *w* bits
 - True Sum: *w+1* bits
 - Discard Carry: *w* bits
@@ -98,7 +98,7 @@ Example 2:
 #### VIsualizing Unsigned Addition
 - There is a wraparound or overflow. Once you go over 255, it will wrap back to 0.
 
-![Unsigned Overflow](imgs/unsigned-overflow.png)
+![Unsigned Overflow](imgs/actual/unsigned-overflow.png)
 
 ### Two's complement Addition
 - Operands: *w* bits
@@ -128,7 +128,7 @@ Example 2:
 	VALID in 8-bit signed range (-70 < -128)
 
 #### Visualizing Signed Addtion
-![Overflow Signed](imgs/overflow-signed.png)
+![Overflow Signed](imgs/actual/overflow-signed.png)
 
 ### Multiplication
 - Goal: Computing Product of *w*-bit operands x,y
@@ -140,15 +140,15 @@ Example 2:
     - Result range: x * y ≥ (–2ʷ⁻¹)*(2wʷ⁻¹-1) = –2²ʷ⁻² + 2ʷ⁻¹
   
 **Unsigned**
-![Unsigned Mult](imgs/unsigned-mult.png)
+![Unsigned Mult](imgs/actual/unsigned-mult.png)
 
 **Signed**
-![Signed Mult](imgs/signed-mult.png)
+![Signed Mult](imgs/actual/signed-mult.png)
 
 #### In Binary
 - It's like how you multiply normally. Each digit at a time.
   
-![True Binary Multiplication](imgs/true-bin-mult.png)
+![True Binary Multiplication](imgs/actual/true-bin-mult.png)
 
 ### Division
 

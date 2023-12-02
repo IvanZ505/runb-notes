@@ -1,4 +1,3 @@
-<style>.markdown-body {font-family:"Times New Roman", Times, serif;}</style>
 
 # Introduction to Discrete Structures 1
 

@@ -13,7 +13,7 @@ According to the Von Neumann Model, a computer consists of the following compone
 - An arithmetic unit (ALU)
 - A program control unit (PCU)
 
-![](imgs/vn-model.png)
+![](imgs/actual/vn-model.png)
 
 **Problems with the Von Neumann Model**
 - The Von Neumann Model is not scalable. The bus is a bottleneck for the system.
@@ -22,13 +22,13 @@ According to the Von Neumann Model, a computer consists of the following compone
 ### The Harvard Model
 - The Harvard Model corrects this problem by having separate buses for instructions and data.
 
-![](imgs/harvard-model.png)
+![](imgs/actual/harvard-model.png)
 
 ## C Programming
 
 ### Compilation Process Overview
 
-![](imgs/compilation-process.png)
+![](imgs/actual/compilation-process.png)
 
 **Preprocessing**
 - Comments in the source files are removed
@@ -57,7 +57,7 @@ After preprocessing, the file has a `.i` extension.
 
 ### Memory Layout
 
-![](imgs/memory-layout.png)
+![](imgs/actual/memory-layout.png)
 
 **Text Segment**
 - The text segment contains the machine code of the program in a read-only format for the CPU.
@@ -89,7 +89,7 @@ After preprocessing, the file has a `.i` extension.
 
 ## Data Representation in Memory
 
-![](imgs/memory-organization.png)
+![](imgs/actual/memory-organization.png)
 
 **Conceptually:** Memory is a large array of bytes, with each index being a memory address 1 byte apart.
 
@@ -103,7 +103,7 @@ After preprocessing, the file has a `.i` extension.
 - A bit is the smallest unit of data in a computer.
 - It's value can be either 0 or 1. That's it.
 
-![](imgs/bit-voltages.png)
+![](imgs/actual/bit-voltages.png)
 
 Voltage Range dictates Binary Value on wire
 - High voltage range (e.g. 2.8V to 3.3V) is a logic 1
@@ -166,7 +166,7 @@ Both of these are closer in size to decimal however, which one is superior???
   - Base-16 format uses the letters A-F to represent the values 10-15.
 - Decimal: 0₁₀ → 255₁₀
 
-![](imgs/Hex-to-Decimal-Table.jpg)
+![](imgs/actual/Hex-to-Decimal-Table.jpg)
 
 #### Converting From Binary to Hexadecimal
 - Easy, simply group the binary digits into groups of 4 and convert each group into a hexadecimal digit.
@@ -209,7 +209,7 @@ Both of these are closer in size to decimal however, which one is superior???
 ### Signed Integers:
 - For signed integers, half of the range is converted to negative. (Most significant bit represents the sign)
 
-![](imgs/signed-int-rep.png)
+![](imgs/actual/signed-int-rep.png)
 
 ### Ways to Represent Signed Integers
 
@@ -232,7 +232,7 @@ Both of these are closer in size to decimal however, which one is superior???
 - Given a representation of *n* bits, minimum value is always going to be: 1000...000₂ = -2ⁿ⁻¹ (Most significant bit is 1, rest are 0) **using 2's complement*
 - The max value is going to be: 0111.111₂ = 2ⁿ⁻¹-1 (Remember there's 1 less value because of 0)
 
-![](imgs/signed-range.png)
+![](imgs/actual/signed-range.png)
 
 ## String Representation
 
@@ -270,7 +270,7 @@ Both of these are closer in size to decimal however, which one is superior???
 - Memory is byte-addressable, which means that each byte has a unique address.
 
 There are two ways to store `unsigned X = 15398; // 0x00003C26`:
-![](imgs/endianness.png)
+![](imgs/actual/endianness.png)
 
 ---
 *Note to self:*
@@ -324,7 +324,7 @@ Bitwise operations with each:
 **Bit-level operations can be applied to any *integral* data type.**
 - `long`, `short`, `int`, `char`, `unsigned`, etc.
 
-![](imgs/bitwise-operators.png)
+![](imgs/actual/bitwise-operators.png)
 
 **Using bitwise negation to properly negate a integer**
 - In two's complement: `~x + 1 = -x`
@@ -369,7 +369,7 @@ Arithmetic Right Shift:
 
 ## Arithmetics
 
-![](imgs/unsigned-mult.png)
+![](imgs/actual/unsigned-mult.png)
 
 Signed Multiplication requires extension of the sign bit.
 
@@ -394,8 +394,8 @@ Example:
 
 `10011010₂ = -38₁₀`
 
-![Alt text](imgs/unsigned-division.png)
+![Alt text](imgs/actual/unsigned-division.png)
 
 Signed division requires biasing in order to round to the correct direction. 
 
-![](imgs/correct-signed-division.png)
+![](imgs/actual/correct-signed-division.png)
