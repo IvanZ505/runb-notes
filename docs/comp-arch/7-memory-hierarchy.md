@@ -64,3 +64,37 @@ Not that bus...
 
 ---
 
+### Disk Drives
+
+![](imgs/actual/disk-drive.png)
+
+#### Disk Geometry
+- Disks consist of **platters**, each with two surfaces. 
+- Each surface consists of concentric rings called **tracks**.
+- Each **track** consists of **sectors** separated by **gaps**.
+![](imgs/actual/disk-geometry.png)
+
+### Disk Capacity
+- **Capacity**: Maximum number of bits that can be stored.
+	- Vendors typically express capacity in units of GB (Gigabytes) where 1 GB = 10⁹ bytes.
+- **Capacity is usually determined by these factors**
+	- *Recording density* (bits/in): number of bits that can be squeezed into a 1 inch segment of a track.
+	- *Track Density* (tracks/in): number of tracks that can be squeezed into a 1 inch radial segment.
+	- *Areal Density* (bits/in²): Product of recording and track densities.
+
+### Recording Zones
+- Modern disks partition tracks into disjoint subsets called **recording zones**
+	- Each track in the zone has the same number of sectors, determined by the circumference of the innermost track. 
+	- Each zone has a different number of sectors/tracks, outer zones have more sectors/tracks than the inner zones.
+	- So, we use the **average** number of sectors/tracks when computing the capacity.
+
+### Disk Operation
+
+#### Single View
+
+![](imgs/actual/disk-operation-single.png)
+
+#### Multi-View
+
+![](imgs/actual/disk-operation-multi.png)
+
