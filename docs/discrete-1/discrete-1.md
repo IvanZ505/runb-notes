@@ -1617,3 +1617,21 @@ You can change a NFA to a DFA... In this case...
 
 ---
 
+## Relations
+- Relations are defined on a non-empty set A to no-empty set B such that the relation from A to B is a subset of Cartesian Product of A and B. 
+
+---
+
+### Properties of Relations
+
+**Reflexive Relations**: 
+
+**Transitive Relations:**
+
+---
+## Graphs
+- A graph(G) consists of set vertices (V) and set of edges (E) that represents a relation on those vertices.
+- Two types of graphs, directed and undirected.
+
+### Symmetric Closure
+- Given a relation R it is possible to extend R.
