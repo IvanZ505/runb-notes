@@ -98,3 +98,75 @@ Not that bus...
 
 ![](imgs/actual/disk-operation-multi.png)
 
+---
+
+## Locality
+- **Principle of Locality:** Programs tend to use data and instructions with addresses near or equal to those they have used recently.
+
+**Temporal Locality:**
+- Recently referenced items are likely to be referenced again in the near future.
+
+**Spatial Locality:**
+- Items with nearby addresses tend to be referenced close together in time.
+
+### Examples of Locali
+
+```C
+sum = 0;
+for(i=0;i<n;i++) {
+	sum+= a[i];
+}
+return sum;
+```
+
+- **Data references**
+	- Reference array elements in succession (stride-1 reference pattern). → *spatial locality*
+	- Reference variable `sum` each iteration. → *Temporal locality*
+- **Instruction references**
+	- Reference instructions in sequence. → *spatial locality*
+	- Cycle through loop repeatedly.  → *temporal locality*
+
+---
+## Memory Hierarchies
+
+- **Some fundamental and enduring properties of hardware and software:**
+	- Fast storage technologies cost more per byte, have less capacity, and require more power (*which generates more heat*)
+	- The gap between CPU and main memory speed is widening.
+	- Well-written programs tend to exhibit good locality.
+
+![](imgs/actual/memory-hierarchy.png)
+## Caches
+
+- **Cache** is a smaller, faster storage device that acts as a staging area for a subset of the data in a larger, slower device.
+- **Fundamental idea of memory hierarchy**:
+	- For each k, the faster, smaller, device at level k serves as a cache for the larger, slower deice working at level k+1.
+- **Why do memory hierarchies work?**
+	- Because of locality, programs tend to access the data at level k more often than they access the data at level k+1.
+	- This, the storage at level k+1 can be slower, and thus larger and cheaper per bit.
+- **Big idea:** The memory hierarchy creates a large pool of storage that costs as much as the cheap storage near the bottom, but that serves data to programs at the rate of the fast storage near the top.
+
+![](imgs/actual/cache.png)
+
+### Cache Miss
+- Data in Block b is needed...
+- However, Block b is **not** in the cache: *Miss!*
+- Block b is fetched from the memory.
+- Block b is stored in cache...
+	- **Placement policy:** determines where b goes
+	- **Replacement policy:** determines which block gets evicted (victim)
+
+### Cache Performance Metrics
+- **Miss rate**
+	- Fraction of memory references not found in cache (misses/accesses) = 1-hit rate
+	- Typical numbers (in percentages):
+		- 3-10% for L1
+		- Can be quite small (e.g. < 1%) for L2, depending on size, etc.
+- **Hit Time**
+	- - Time to deliver a line in the cache to the processor
+		- Includes time to determine whether the line is in the cache.
+	- Typical numbers
+		- 4 clock cycles for L1
+		- 10 clock cycles for L2
+- **Miss penalty**
+	- Additional time required because of a miss
+		- Typically between 50-200 cycles for main memory (Trends toward increasing.)
