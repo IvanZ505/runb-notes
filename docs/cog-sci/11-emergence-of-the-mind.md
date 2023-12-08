@@ -2,6 +2,18 @@
 
 ## Evolution
 
+> Humans are an evolved species, much like every other organism. 
+
+> This means that our mind are also an evolved structure or mechanism.
+
+### Variation
+- Within a population of an organism, traits will vary.
+- These variations are caused by **random mutations**.
+	- These mutations can either be good or bad.
+
+### Heritability
+- Offspring will inherit the traits of their parents.
+
 > We share our evolutionary tree with primates. What did we inherit from our common ancestor? What is new?
 
 ### Spandrels
@@ -21,11 +33,9 @@
 
 ### Case Study
 
-"There are two populations of Swainson's thrushes in Western Canada, each following a different migration route. Sometimes these two populations interact and interbreed, resulting in --"
+"There are two populations of Swainson's thrushes in Western Canada, each following a different migration route. Sometimes these two populations interact and interbreed, resulting in hybrid thrushes. **Which path will the hybrid thrushes take?**"
 
-```
-Rest is in the slides
-```
+![](imgs/swainsons-thrushes.png)
 
 ---
 
@@ -105,4 +115,80 @@ Why are humans so intelligent? Where did this come from?
 - Humans are highly social animals.
 
 ---
+
+## Human Species
+
+**Homo erectus**: (*2mya*)
+- Enhanced spatial and social cognition.
+- First human species to leave Africa.
+
+**Homo heidelbergensis**: (*1mya-500kya*)
+- Body decoration, depictive imagery, big-game hunting.
+- Brain size overlapped with homo sapiens.
+
+---
+
+### First art
+
+Löwenmensch (lion-man) figurine:
+	- Lion-headed person...
+	- Carved out of ivory, Europe, ~40kya.
+	- This is significant because they are taking something something that has never been seen in reality, but only existed in your imagination.
+	- **Requires working memory.**
+
+---
+
+### Neanderthals
+
+- Neanderthals were our evolutionary cousins in a sense.
+- Their common ancestor with the homo sapiens was the **homo heidelbergensis**.
+
+**Relative to modern homo sapiens:**
+- Brain larger by around 10%.
+- Larger occipital cortices.
+- Smaller olfactory bulbs
+- Narrower orbitofrontal cortices
+- Narrower temporal lobes.
+
+---
+
+Homo Sapien High Intelligence Might be Due to...
+- Higher Cortical neuron count
+- Humans have higher neuron packing densities in the cerebral cortex.
+
+---
+### Generalized Forager Model
+- Small groups that move around a lot.
+- Non-territorial and non-storing.
+- Fluidity groups (bands) and low population densities.
+- Egalitarian with low violence.
+
+### Problems with Looking at Hunter Gatherers
+- They have fully modern minds.
+- They may face different problems.
+- Seasonal variation in camp size; e.g. small and mobile in summer, large and settled in winter.
+- Some storage! (Storage for dried meat for months.)
+- Surrounded by non-hunter-gatherers.
+- Pushed by poor-quality habitats by agriculturalists.
+- Rich resource patches (e.g. coastal regions, caves) would have attracted higher population densities.
+
+## Reasoning Biases
+
+### Intellectualist vs Argumentative
+
+**Traditional "intellectualist" view**:
+- Value and typical role of reason is to allow the **lone** thinker to gain knowledge; this is wrong!
+
+**New argumentative theory**:
+- Reason evolved in social-argumentative context, to manipulate **others** through persuasion.
+
+**This explains reasoning biases.**
+
+---
+
+### Myside Bias
+- Class myside bias paradigm:
+	- Participants are asked to think about a controversial issue and come to a conclusion.
+	- When explaining the reason for their conclusion, people tend to be really good at coming up with reasons.
+	- However, they are not as good at coming up with reasons against their views.
 

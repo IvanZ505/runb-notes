@@ -30,3 +30,6 @@ Section Instructor: Preston Lennon (jpl214@ruccs.rutgers.edu)
 ## [The Rational Mind](../cog-sci/10-the-rational-mind)
 
 ## [Emergence of the Mind](../cog-sci/11-emergence-of-the-mind)
+
+## [Finals Review](../cog-sci/cog-sci-finals)
+

@@ -102,3 +102,7 @@ First, what is logic (not the rapper)??
 ### Computationally Intractable
 - impossible to calculate (like possible games of chess or possible routes of 25 stops)
 - Applies to the frame problem (how to computers deal with uncertainty and consequence?)
+
+### Cheater Detection
+- Evolution equipped us with a special cheater-detection module.
+- This module searches for information that could reveal whether a given individual has cheated in a specific social exchange.

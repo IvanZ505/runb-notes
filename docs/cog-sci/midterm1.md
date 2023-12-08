@@ -194,7 +194,7 @@ Anthropology:
 ![](imgs/tolman-rats-pt2.png)
 
 **Results**
-![](img/../imgs/toman-rats-pt2-results.png)
+![](imgs/toman-rats-pt2-results.png)
 
 **Why it matters** : At this time nobody could figure out how to observe an algorithm in the mind. This was a breakthrough as they just modelled out the algorithm that the rats were using.
 
