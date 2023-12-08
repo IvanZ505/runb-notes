@@ -147,6 +147,13 @@ return sum;
 
 ![](imgs/actual/cache.png)
 
+### Cache Hit
+
+![](imgs/joke/let-homies-nhit.jpg)
+- When the data in a certain block that the CPU is looking for is in the cache.
+- If it is in cache, its a **hit**.
+- The time it takes for the request to the cache and for cache to transfer block to CPU, that is the **hit time**.
+
 ### Cache Miss
 - Data in Block b is needed...
 - However, Block b is **not** in the cache: *Miss!*
@@ -155,6 +162,7 @@ return sum;
 	- **Placement policy:** determines where b goes
 	- **Replacement policy:** determines which block gets evicted (victim)
 
+---
 ### Cache Performance Metrics
 - **Miss rate**
 	- Fraction of memory references not found in cache (misses/accesses) = 1-hit rate
@@ -170,3 +178,88 @@ return sum;
 - **Miss penalty**
 	- Additional time required because of a miss
 		- Typically between 50-200 cycles for main memory (Trends toward increasing.)
+
+#### Think about those Numbers
+- **Huge difference between a hit or a miss**
+	- Could be 100x, if just L1 and main memory
+- **Would you believe 99% hit rate is twice as good as 97%?**
+	- Consider...
+		- Cache hit time: 1 cycle
+		- Cache miss time: 100 cycles
+	- Average access time: 
+		- 97% : 1 cycle + 0.03 * 100 = 4 cycles
+		- 99% : 1 cycle + 0.01 * 100 cycles = 2 cycles
+	- **This is why miss rate is used instead of "hit rate"**
+
+----
+
+### General Cache Concept
+- We are performing a **(%4)** operation on the block number and using that to determine which column in the cache to replace.
+
+![](imgs/actual/general-cache-concept.png)
+
+### Types of Cache Misses
+- **Cold miss**
+	- Cold misses occur because cache is empty
+- **Conflict miss**
+	- Most cache limit blocks at level k+1 to a small subset (sometimes a singleton) of the block positions at level k.
+		- E.g. Block i at level k+1 must be placed in block (i%4) at level k.
+	- Conflict misses occur when the level k cache is large enough, but multiple data objects all map to the same level k block.
+- **Capacity Miss**
+	- Occurs when the set of active cache blocks (working set) is larger than the cache.
+
+#### Cold Miss
+![](imgs/actual/cache-cold-miss.png)
+- Data in Block b is needed
+- Block b is not in cache: **miss!**
+- Block B is fetched from memory...
+
+#### Capacity Miss
+#### Conflict Miss
+![](imgs/actual/cache-conflict-miss.png)
+- Data in blocks that map to same location in cache.
+- Blocks can not be in cache at the same time.
+- You are not using all the blocks because requests keep mapping the same blocks in cache due to conflicts with **modulus.**
+
+---
+
+### Cache Organization
+
+**Block size: (B)** Unit of transfer between cache and memory
+- Given in bytes and always a power of 2 (e.g. 64B)
+- Blocks consist of adjacent bytes (differ in address by 1)
+	- Spatial locality: *only reason why caching works!*
+- **Offset field**
+	- Low-order log₂(B) = *b* bits of address tell you which byte within a block.
+		- (Address) % 2ⁿ = *n* lowest bits of address.
+	- (Address) modulo (# of bytes in a block.)
+
+> So, to figure out the block number to put a certain bit sequence in you would first calculate the offset, lop off the offset, and then the remaining bit pattern is your block pattern.
+
+![](imgs/actual/cache-formula.png)
+So...
+
+**Block number**: Calculable with what we said above.
+
+**Offset number:** Just subtract the block number from the size of the actual bit address.
+
+#### What's a cache block?
+![](imgs/actual/cache-block.png)
+- The cache block will store multiple bytes of memory on the same block.
+
+#### Example Question
+![](imgs/actual/example-question.png)
+
+Ans: **C**
+
+---
+
+### Cache Organization 2
+- **Cache Size (C): Amount of data that cache can store**
+	- Cache can only hold so much data (subset of next level)
+	- Given bytes (C) or number of blocks (lines (C/B)
+- **Where should data go in the cache?**
+	- We need a mapping from memory addresses to specific locations in the cache to make checking the cache for an address **fast.**
+- **What is the data structure that provides fast lookup?**
+	- Hash tables!!!!
+

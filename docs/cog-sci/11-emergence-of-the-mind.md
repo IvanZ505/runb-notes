@@ -192,3 +192,40 @@ Homo Sapien High Intelligence Might be Due to...
 	- When explaining the reason for their conclusion, people tend to be really good at coming up with reasons.
 	- However, they are not as good at coming up with reasons against their views.
 
+
+## Cumulative Culture
+
+### Ratchet Effect
+- Successive generations improve on works of previous generations.
+- Results in artifacts that are too sophisticated to be invented whole-cloth by any single community.
+- We are now reliant on cultural knowledge for survival.
+
+### Overimitation
+- Overimitation has been found in human adults.
+- People copy irrelevant actions:
+	- When they are alone
+	- After then think the experiment is over
+	- After they've been told not to copy irrelevant actions
+#### Experiment
+- Young wild-born chimpanzees and 3-4 year old children.
+- Observe person using tool to retrieve rewards from box.
+- Involves causally relevant and irrelevant actions.
+
+**Opaque condition**
+- Can't see which actions are relevant and irrelevant.
+
+**Clear condition**
+- Box clear so possible to distinguish irrelevant actions.
+
+#### Result
+
+**Chimps:**
+- Opaque box: reproduced both relevant and irrelevant actions.
+- Clear box: ignore irrelevant actions.
+
+**Humans:**
+- Opaque and clear: reproduced both relevant and irrelevant actions.
+
+------
+
+
