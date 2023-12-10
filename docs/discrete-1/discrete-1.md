@@ -1620,18 +1620,216 @@ You can change a NFA to a DFA... In this case...
 ## Relations
 - Relations are defined on a non-empty set A to no-empty set B such that the relation from A to B is a subset of Cartesian Product of A and B. 
 
+Ex: Let A = {1, 2, 3} and B = {a, b, c}. Then **R** (the relation between A and B) could be...
+
+R = {(1, a), (1, b), (2, b), (2, c), (3, a)}
+
+It is a subset, so it does not have to be **all** the elements of A x B.
+
+#### Matrix Representation of A relation
+
+- We are able to use a "boolean" table (*M*) where the rows are labeled with the elements of the first set (A in our case) and the columns are labeled with the elements of the second set (B). A in position *i, j* of the matrix means that the element *i* ϵ A is related to element *j* ϵ B. In the case of our example...
+![](imgs/relations-matrix.png)
+### Binary Relation on a Set
+- A binary relation on set A is a subset of **A x A**, or a relation from set A onto itself.
+
+Ex: If A = {1, 2, 3, 4}, then list the ordered pairs in set **R** if R = { a, b) | a divides b}.
+
+R = {1, 1), (1, 2), (1, 3), (1,4), (2, 2), (2, 4), (3, 3), (4, 4)}
+
+This is a *listing* of all elements in the relation.
+
 ---
 
 ### Properties of Relations
 
-**Reflexive Relations**: 
+**Reflexive Relations**: A relation *R* on *A* is reflexive ↔ (a, a) ϵ R ∀a ϵ A.
+- We can easily determine form the matrix representation of a relation if it is reflexive, since the main diagonal will contain only ones.
 
-**Transitive Relations:**
+**Irreflexive Relations**: A relation *R* on *A* is irreflexive ↔ (a, a) ∉ *R ∀a ∈ A*.
+- We can easily determine this from a relation if the main diagonal only contains 0.
+
+**Symmetric Relations**: A relation *R* on *A* is symmetric ↔ (a, b) →  (b, a) ∈ R, ∀a, b ∈ A.
+- We can easily determine from the matrix representation of a relation if it is symmetric since the matrix will always be equal to its transpose.... (`Mᵢⱼ = Mⱼᵢ ∀ᵢⱼ`)
+
+**Antisymmetric:** A relation *R* on *A* is antisymmetric ↔ (a, b) ∈ *R* ^ (b, a) ∈ R → a = b.
+- Notice that the contrapositive of the definition says that if a ≠ b (i.e. (*a,b*) are not on the main diagonal of the matrix representation of *R*), then (*a, b*) ∉ *R* v (b, a) ∉ *R*.
+- Soooo.... we can easily determine from a matrix representation if the relation is antisymmetric when Mᵢⱼ = 1 → Mⱼᵢ = 0.
+
+**Transitive Relations:** A relation *R* on *A* is transitive if (*a, b*) ∈ *R* ^ (*b, c*) ∈ *R* → (*a, c*) ∈ *R*.
+
+### Cardinality of Relations
+
+**Given a set *A*, how many relations on *A* can we have?**
+- Since `R ⊆ A x A`, then the total number of possible relations would be the power set of A x A, and since the cardinality of A x A is `|A|²`, we have that...
+
+**Number of relations = `2^(|A|²)`**
 
 ---
 ## Graphs
 - A graph(G) consists of set vertices (V) and set of edges (E) that represents a relation on those vertices.
 - Two types of graphs, directed and undirected.
 
-### Symmetric Closure
-- Given a relation R it is possible to extend R.
+### Closures
+
+#### Reflexive Closure
+- The *reflexive closure R′* of a relation *R* into a relation *R′* that is reflexive, by including missing pairs in the relation.
+
+**Definition of Reflexive Closure**
+- The *reflexive closure R′* of a relation *R* on *A* is a minimal reflexive relation such that *R* ⊆ *R′*
+- In other words, *R′* is a relation that:
+	- Contains *R*
+	- Is reflexive
+	- If we remove any pairs from it, it no longer satisfies the previous two conditions.
+#### Symmetric Closure
+- Given a relation R it is possible to extend R to create a symmetric relation *R′* that contains *R*.
+
+**Definition of Symmetric Closure**
+- The *symmetric closure R′* of a relation *R* on *A* is a minimal symmetric relation such that R ⊆ R′.
+- In other words, *R′* is a relation that:
+	- Contains *R*
+	- Is symmetric
+	- If we remove any pair from it, it no longer satisfies both 1) and 2).
+
+Example: 
+
+Let `R = {(a, b) | a < b}` be a relation on N.
+
+For it to be symmetric, we have to add the pair (*b, a*) whenever (a, b) ∈ *R*, so we end up with:
+
+*R′ = { (a, b) | a < b v a > b}*
+
+This is the **minimal set** that will result in a symmetrical relation.
+
+### Equivalence Relation
+
+An equivalence relation is a binary relation that satisfies the following three properties:
+- **Reflexivity**: For every element *x*, (*x, x*) ∈ R.
+- **Symmetry**
+- **Transitivity**
+
+Equivalence relations are often used to group together objects that are similar, or "equivalent", in some sense...
+
+### Equivalence Classes
+
+The set of all elements equivalent to an element a of *A* through the equivalence relation *R* is called an equivalence class of a, denoted as [*a*]ᵣ.
+
+### Partitions
+
+A partition of set *S* is a collection of disjoint non-empty subsets that have *S* as their union.
+## Boolean Algebra
+
+- Boolean algebra are rules for working with the Boolean numbers{0, 1}.
+- The operators on the boolean numbers:
+	- Boolean sum (+)
+	- Boolean Product (.)
+	- Complement (bar ~)
+
+### Boolean Expressions and Functions
+- Let `B = {0, 1}. Then, Bⁿ = {(x₁, x₂, x₃, ..., xₙ) | xᵢ ∈ B for 1 ≤ i ≤ n}` is the set of all possible n-tuples of 0s and 1s.
+
+- The variable `x` is called a *boolean variable* if it assumes values only from **B**. That is, if its possible values are 0 and 1. 
+	- A function that maps *Bⁿ to B* is called a *Boolean function of degree n*.
+
+---
+
+**Example**: The function `F(x, y) = x` from the set of ordered pairs of Boolean variables to the set {0, 1} is a Boolean function of degree `2`.
+
+---
+
+### Equality of Boolean Functions
+- Boolean functions *F* and *G* of *n*-variable (degree *n*) are equal ↔ F(b₁, b₂, ...., bₙ) = G(b₁, b₂, ...., bₙ) whenever (b₁, b₂, ...., bₙ) belong to B.
+
+### Complement of Boolean Function
+
+![](imgs/boolean-complement.png)
+
+### Boolean Sum and Boolean Product
+
+![](imgs/boolean-sum-and-product-of-functions.png)
+
+### Duality of Boolean Expressions
+
+The dual of a Boolean expression is obtained by interchanging `+` and `.` and interchanging **0 and 1**.
+
+Duality can be used to derive new theorems and simplify Boolean expressions. For example, De Morgan's Laws are duals of each other, and they allow you to simplify expressions involving **AND** and **OR** operations.
+
+### Function Completeness
+
+**Definition**: Every Boolean function can be represented using the Boolean operators `., +, and ‾`, we say that the set {`., +, ‾`} is *functionally complete.*
+
+---
+
+![](imgs/function-completeness.png)
+
+---
+
+### Logic Gates
+
+![](imgs/logic-gates-boolean.png)
+
+#### Boolean Circuits
+- These "circuit gates" act like actual gates, in a sense.
+	- There is a trigger that "opens" a gate periodically.
+	- The specified operation (AND, OR, NOT,...) then happens
+
+In modern computers, these gates open/close a few trillion times a second, giving us GHz chips.
+
+---
+
+## Orderings
+
+### Partially Ordered Set
+- A partially ordered set (poset), is a fundamental concept in mathematics and computer science.
+- Let S be a set, and let ≤ be a binary relation on S. The pair (S, ≤) is a partially ordered set (poset) if the relation ≤ satisfies the following properties for all elements a, b, and c in S:
+	- **Reflexivity**: For every *a* in *S*, *a ≤ a*.
+	- **Antisymmetry**: If *a ≤ b* and *b ≤ a*, then a must equal b.
+	- **Transitivity**: If *≤ b* and *b ≤ c*, then *a ≤ c*.
+
+A poset represents a set of elements with a notion of "ordering" or precedence" that need not be total, meaning **not all elements need to be comparable.**
+
+### Totally Ordered Sets
+
+A totally ordered set is a set of elements that can be compared to each other using a binary relation that is reflexive,  antisymmetric, and transitive. The binary relation is typically denoted by ≤, and it is defined as follows: 
+
+- Reflexive: For all elements x in the set, x ≤ x.  
+- Antisymmetric: For all elements x and y in the set, if x ≤ y and y ≤ x, then x = y.  
+- Transitive: For all elements x, y, and z in the set, if x ≤ y and y ≤ z, then x ≤ z.  
+
+A totally ordered set is a set where every element can be compared to every other element.
+
+A **totally ordered** set is a set
+- where every element can be compared to every other element
+- The comparison always results in one of three outcomes: = or < or >.
+
+### Well Ordered Set
+
+A well-ordered set
+- totally ordered set in which every non-empty subset has a least element.  
+- for every non-empty subset S of a well-ordered set, there exists an element x in S such that for all y in S, x ≤ y.  
+
+Well-ordered sets are a generalization of totally ordered sets, which only require that every pair of elements can be compared. Well-ordered sets are also a stricter condition than chains, which only require that every subset has a lower bound.  
+
+Well-ordered sets are often used to define ordinal numbers, which are a way of labeling objects with a unique "order". For example, the natural numbers can be defined as the set of all well-ordered sets with a least element.  
+Here are some examples of **well-ordered sets**:  
+- The set of natural numbers (1, 2, 3, ...)  
+- The set of positive even integers (2, 4, 6, ...)  
+- The set of all finite strings of digits (0, 1, 2, ...)  
+
+Here are some examples of sets that are not well-ordered:  
+- The set of all integers (positive, negative, and zero)
+- The set of all rational numbers (fractions)
+
+---
+### Well Ordering Principle
+
+The Well-Ordering Principle is a fundamental concept in set theory and mathematical logic. It states that every non-empty subset of the set of natural numbers (positive integers) has a least element. In other words, for any non-  empty set of natural numbers, there is always a smallest (or least) element in that set.  
+
+Mathematically, the Well-Ordering Principle can be stated as follows:  
+
+"For any non-empty set S of natural numbers, there exists an element x in S such that for all y in S, x is less than or equal to y."  
+
+This principle is a crucial foundation for many mathematical proofs and is often used to establish the existence of  minimum elements or to show that certain mathematical structures are well-behaved.  
+
+The Well-Ordering Principle is closely related to the principle of mathematical induction, which is a powerful proof technique used to establish properties for all natural numbers. In fact, mathematical induction is often used to prove statements that rely on the Well-Ordering Principle.
+
