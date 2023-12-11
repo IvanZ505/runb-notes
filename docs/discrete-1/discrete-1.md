@@ -1833,3 +1833,175 @@ This principle is a crucial foundation for many mathematical proofs and is often
 
 The Well-Ordering Principle is closely related to the principle of mathematical induction, which is a powerful proof technique used to establish properties for all natural numbers. In fact, mathematical induction is often used to prove statements that rely on the Well-Ordering Principle.
 
+---
+
+## Number Theory
+
+**Introduction:** Number theory is the mathematics devoted to the study of the set of integers and their properties.
+
+![](imgs/Types-Of-Numbers-image-7.webp)
+
+Number theory plays a crucial role in a very important branch of computer security called **cryptography**.
+
+#### Applications of Number Theory
+- Public Private Key encryption:
+	- Public-private key encryption allows most of our online transactions to remain secure. This concept is based on number theory and difficulty of factoring large numbers.
+
+### Mathematics of Finite Sets
+
+#### Divisibility of Integers
+
+![](imgs/gojo.gif)
+
+- If **a** and **b** are integers with **a** ≠ 0,
+	- the phrase "a divides b" means that *there exists some c* such that b = a * c.
+- **Notation**: The notation for the phrase "a divides b" is `a | b`.
+
+**Lemmas**
+1. If `a | b` and `a | c`, then `a | (b+c)`
+2. If `a | b`, then  `a | b * c` for all integers c.
+3. if `a | b` and `b | c`, then `a | c`.
+#### Division of Linear Combinations
+- If **a, b, and c** are integers, where **a** ≠ 0, such that `a | b` and `a | c`, then `c| (mb + nc)` for any integers m and n.
+
+**Proof**
+
+>Since we have `𝑎|𝑏` and `𝑎|𝑐`, then by Lemma 2, it holds that `𝑎|𝑚𝑏` and `𝑎|𝑛𝑐` for integers 𝑚, 𝑛.  
+> Since we thus have 𝑎`|𝑚𝑏` and `𝑎|𝑛𝑐`, it holds by Lemma 1 that `𝑎|𝑚𝑏 + 𝑛𝑐`
+
+#### The Division Algorithm
+
+Let `a` be an integer and `d` is a positive integer. Then there are unique integers `q` and `r` such that `0 ≤ r < d` such that `a = dq + r`.
+
+**Example:** Given a = 21 and d = 5, find q and r.
+
+	21 = 5q + r
+	q must be 4 and r must be 1 since r must be less than d, which is 5.
+	This leaves you with only the choice of number 4 in order to be q, which when multplied with your d gives you 20.
+	add your r, which is 1 and you get your a.
+
+#### Relative Primality
+
+Integers that have no prime factors in general are called relative prime.
+
+If `a` and `b` have no common factors, then *gcd*(a, b) = 1.
+
+#### The Set `Zₘ`
+- Let `m` be a positive integer.
+- Let `Zₘ` be the set of all non-negative integers less than `m`.
+- That is, Zₘ = {0, 1, 2, 3, ..., m-1}
+
+#### Modular Arithmetic
+
+Let `a = b%m`
+- a is the remained when b is divided by m.
+
+> **Reflexive:** a ≡ a % m
+> **Symmetry**: If `a ≡ b mod m`, then `b ≡ a mod m`.
+> **Transitivity:** if `a ≡ b mod m` and `b ≡ c mod m`, then `a ≡ c mod m`
+
+**Additive Inverse:**
+- For any *a*, there exists a *b* such that `a + b = 0 (mod m)`.
+- In this case, the *b* is the additive inverse of *a*.
+
+**Multiplicative Inverse:**
+- For any 𝑎 relatively prime to 𝑚 where `gcd(𝑎, 𝑚) = 1`, there exists a 𝑏 such that `𝑎𝑏 = 1 (𝑚𝑜𝑑 𝑚)`  
+- In this case, the b is called the multiplicative inverse of a and vice versa.
+
+**Lemma**
+> *kk⁻¹* = 1 % m
+
+---
+
+### Congruence
+
+#### Mathematics of Finite Sets
+
+> If `a` and `b` are integers and `m` is a positive integer, then `a` is *congruent to b modulo m* if `m` divides `a-b`. We use the notation `a≡b(mod m)` to indicate that `a` is congruent to `b modulo m`.
+
+𝑎 ≡ 𝑏 𝑚𝑜𝑑 𝑚 is equivalent to 𝑎 − 𝑏 = 𝑘𝑛 for some 𝑘 ∈ ℕ  
+
+If 𝑎 ≡ 𝑏 (𝑚𝑜𝑑 𝑛) and c ≡ 𝑑 (𝑚𝑜𝑑 𝑛), then 𝑎𝑐 ≡ 𝑏𝑑 (𝑚𝑜𝑑 𝑛)
+
+**Congruent Class**: The congruent class of an integer `a`, denoted [a] is defined as
+
+	[a] = { b in Z | a is congruent to b}
+
+---
+
+> Congruence classes *partition* the integers, so numbers that belong to the same congruence class, when being modulo-ed, can be replacements.
+
+Ex:
+
+	14¹⁵ % 5 = 4¹⁵ % 5 = 4
+
+This is because `14` and `4` are both in the same congruence class... Look below to see...
+
+---
+
+**Example**
+
+	[5]₂ = {5, 3, 7, 9,...}
+
+Find the congruent classes of the following (m=5)?
+
+	[1] = {1, 6, 11, 16,...}
+	[4] = {..., -6, -1, 4, 9, 14, ...}
+	(Negative numbers works too!)
+### Fundamental Theorem of Arithmetic
+
+#### Theorem 1
+- Every integer greater than 1 can be written uniquely as a prime or a product of primes written in the order of non-decreasing size.
+	- a.k.a **Prime factorization is unique**
+- If *n* is a composite integer, then *n* has a prime divisor less than or equal to *sqrt(n)*.
+
+#### Theorem 2
+- If *n* is a composite integer, then *n* has no prime divisors greater than *sqrt(n)*.
+	- When trying to check whether a number is prime or not, all you need to do is check all the numbers less than the *sqrt* of the number.
+
+---
+
+### Distribution of Primes
+
+> **There are infinitely many prime numbers**
+
+#### Prime Number Theorem
+- The number of primes not exceeding *n* is approximately $$n/ln(n)$$
+
+#### Conjecture
+- Every *even number* > 4 can be written as a sum of two prime numbers.
+	- This is only a conjecture, and no one has proved it at this point.
+- Every *odd integer* > 5 is the sum of three prime numbers.
+- **Twin Prime Conjecture**: There are infinitely many twin primes (3 and 5, 11 and 13, etc...)
+- **Cousin Prime Conjecture**: p and p+4 are primes.
+
+### Euclidean Algorithm
+
+#### GCD and LCM
+- **GCD** - largest number that divides a and b.
+- **LCM** - smallest positive integer that is divisible by a and b.
+
+The Euclidean Algorithm is a way to find the GCD and LCM easily...
+
+![](imgs/euclidean-algo.png)
+
+#### GCD is a Linear Combination
+- If `a` and `b` are positive integers, the `gcd(a,b)` can be written as `gcd(a,b) = am + bn` for some integers `m` and `n`.
+
+> **Note**: Multiples of GCD are linear combinations of a and b.
+
+### RSA Algorithm
+
+#### How it works
+- The **receiver** has both a private key, which they guard closely, and a public key, which they distribute as widely as possible.
+- **A sender** wishing to transmit a secret message to the receiver encrypts their message using the receiver's widely-distributed public key.
+- **The receiver** can then decrypt the received message using their closely-held private key.
+
+The algorithm  
+1. Generate two distinct primes p and q (200+ digits long)  
+2. Define `n = pq ` 
+3. Let e be in `[1 n )` such that `gcd(e, (p-1)(q-1)) = 1`  
+4. Compute d in `[1 n)` such that `de = 1 (mod (p-1)(q-1))`  
+5. The private key pair is `(d, n)`  
+6. The public key pair is `(e, n)`
+
