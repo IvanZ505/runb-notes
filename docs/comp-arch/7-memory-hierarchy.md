@@ -100,7 +100,7 @@ Not that bus...
 
 ---
 
-## Locality
+### Locality
 - **Principle of Locality:** Programs tend to use data and instructions with addresses near or equal to those they have used recently.
 
 **Temporal Locality:**
@@ -230,7 +230,7 @@ return sum;
 - Blocks consist of adjacent bytes (differ in address by 1)
 	- Spatial locality: *only reason why caching works!*
 - **Offset field**
-	- Low-order log₂(B) = *b* bits of address tell you which byte within a block.
+	- Low-order **log₂(B)** = *b* bits of address tell you which byte within a block.
 		- (Address) % 2ⁿ = *n* lowest bits of address.
 	- (Address) modulo (# of bytes in a block.)
 
@@ -262,4 +262,113 @@ Ans: **C**
 	- We need a mapping from memory addresses to specific locations in the cache to make checking the cache for an address **fast.**
 - **What is the data structure that provides fast lookup?**
 	- Hash tables!!!!
+
+### Hashing Memory Addresses for Cache
+![](imgs/actual/hashing-addresses.png)
+
+**Puzzle**:
+
+	Starting off with empty cache.
+	Fetch Address 10 (Miss!)
+	Fetch Address 11 (Hit!)
+	Fetch Address 12 (Miss!)
+
+> In this situation, fetching address 10 results in a [**cold miss**](#Types-of -Cache-Misses). This fetches the block containing address 10 from the memory and puts it on the cache. 
+> Then, Address 11 was a hit, meaning that address 11 is in the same block as address 10. 
+> However, Address 12 results in a miss, meaning address 12 is not in the same block as address 11 and 12.
+
+---
+### Tag Differentiate Blocks in Same Index
+
+![](imgs/actual/tag-bits.png)
+
+---
+
+### Checking for a Requested Address
+
+- **CPU sends address request for chunk of data**
+	- Address and requested data are not the same thing!
+	- Ex: Your friend ≠ their phone number...
+- **TIO Address breakdown**
+
+![](imgs/actual/tio-addr-breakdown.png)
+
+**Example**
+
+![](imgs/actual/tio-ex.png)
+
+	Calculate Offset bit: log₂(Block size) = log₂(2) = 1 (Offset bit size)
+	Calculate index bits size: # of bits it takes to store addresses of your cache size: 4 blocks in cache, so 2 bits to store that address.
+	Tag: Remaining bits... 4-3 = 1... 1 bit tag.
+
+	T: 1
+	I: 2
+	O: 1
+
+	So, the address 13 would be stored at 1101, or at block 6, which would have an index of 10 and a tag of 1.
+
+---
+
+## Types of Caches
+
+### Direct-Mapped Cache
+
+![](imgs/actual/direct-mapped-cache.png)
+
+- Direct mapped cache is just the TIO formatted cache that we have been looking at earlier.
+
+#### Problem with Direct-Mapped Cache
+- What will happen when we have to access the following... 2, 6, 2, , ....
+- Both of those will map to index `10` in the cache, which results in [conflict misses](#types-of-cache-misses)...
+- The rest of the cache goes *unused!*
+
+### Associativity **IMPORTANT!!!**
+- What if we could store data in any place in the cache?
+	- More complicated hardware = more power consumed, slower.
+- So, we combine associativity and direct-mapping:
+	- Each address maps to exactly one *set*
+	- Each set can store block in more than one *way*
+
+![](imgs/actual/associativity.png)
+
+> Basically, think of the cache as being split into different arrays that use linear probing to take the blocks in memory that would map to the same cache address and be able to fit more of them in one single "set."
+
+### Set Associative Cache Replacement
+
+- Any empty block in the correct set may be used for storing data.
+- if there are no empty blocks, which one should we replace?
+
+![](imgs/actual/set-associative-cache.png)
+
+- In a 2-way or greater, **We must replace something, but what?**
+	- Cache typically use something close to **Least recently used (LCU)**
+	- It kicks out the block that was least recently used.
+
+## General Cache Organization
+
+![](imgs/cache-organization.png)
+
+- The cache contains a valid bit at the beginning of each set.
+	- Because even when the cache is "empty", it could just contain a bunch of garbage values.
+	- To differentiate, the CPU sets a valid bit to keep track of which is what.
+
+### Writing Data
+
+- **Multiple copies of data exists**
+	- L1, L2, L3, Main memory, disk
+	- It must keep some form of consistency when writing data.
+- There is also a **write-hit** and **write-miss**
+
+#### Write Hit
+- **Write-through** (write immediately to memory)
+- **Write-back** (defer writing to memory until replacement of line)
+	- Need a dirty bit (line different from memory or not)
+
+#### Write Miss
+- Write-allocate (load into cache, update line in cache)  
+	- Good if more writes to the location follow  
+- No-write-allocate (writes straight to memory, does not load into cache)  
+- **Typical**  
+	- Write-through + No-write-allocate
+	- **write-back** + **write-allocate**
 
