@@ -9,8 +9,8 @@
 - At birth we are a blank slate.
 > There is an understanding and concept of learning.
 
-#### Nativisim
-- "We come to know wabout the world by the power of our **native** intelligence" - Descartes
+#### Nativism
+- "We come to know about the world by the power of our **native** intelligence" - Descartes
 - We are boosted by existing knowledge about the world.
 
 ---

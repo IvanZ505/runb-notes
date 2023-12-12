@@ -65,7 +65,7 @@ There are 7 essential features to language:
 ### Chomsky
 - For Chomsky (1965), language is a psychological entity- it exists in the mind of the speaker and nowhere else.
 
-### Language Is Heirarchical
+### Language Is Hierarchical
 
 ### Recursion in Language
 - There is infinite use of finite means.
