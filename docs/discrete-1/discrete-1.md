@@ -2005,3 +2005,5 @@ The algorithm
 5. The private key pair is `(d, n)`  
 6. The public key pair is `(e, n)`
 
+[Finals Review](../discrete-1/discrete1-finals)
+

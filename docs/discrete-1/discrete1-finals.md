@@ -1,6 +1,29 @@
-# Discrete 1 Midterm
+# Discrete Structures I: Finals Review
 
-## Foundations
+## Finals Notes
+
+**DECEMBER 20TH, 2023 FROM 8-11PM**
+
+### Exam Breakdown
+
+- **30%** - Multiple choice questions from before the midterm, including topics such as **Foundations of Logic and Proofs**, **Sets, Functions and Sequences**, and **Induction**.
+- **70%** - Will be on everything after the midterm, including **Modeling Computations**, **Boolean Functions**, **Number Theory**, and **Relations**. **Also includes Induction!!!**
+
+### What is Allow
+- One cheat sheet, double sided...
+- Nothing else :(
+
+### Important Topics (TAs showed)
+- Prepositions, axioms, quantifiers, compound propositions, truth tables, Russell's paradox
+- Cardinality, equivalence relations, partitions, countable and uncountable  sets
+- 1-1 and onto functions, domain and range
+- **Induction**
+- **Grammar** (4 Types of grammar)
+
+
+---
+
+## Foundations of Logic and Proofs
 
 ### Propositional Logic
 - **Axioms:** Statements that are assumed to be true.
@@ -10,6 +33,7 @@
 ### Logical Connectives
 
 (In order of precedence)
+
 | Name          | Symbol | Meaning        |
 | ------------- | ------ | -------------- |
 | Negation      | ¬      | Not            |
@@ -36,8 +60,6 @@
 - **Logical Equivalence:** Two compound propositions are logically equivalent if they have the same truth values for all possible truth values of their propositional variables.
 
 ![Logical Equivalences](imgs/logical-equivalences.png)
-
-## Predicates and Quantifiers
 
 ### Predicates
 - A predicate is a proposition whose truth depends on the value of one or more variables.
@@ -71,47 +93,50 @@
 #### Rules of Inference
 ![](imgs/rules-of-inference.png)
 
-Example:
 
-Show that the premise "A studnet in this class has not read the book," and "Everyone in this class passed the first exam" imply the conclusion "Someone who passed the first exam has not read the book."
+## Sets, Functions and Sequences
 
-    Let C(x) be that x is in the class.
-    Let P(x) be the statement x has read the book.
-    Let Q(x) be that x has passed the first exam.
+## Induction
 
-    Premise:
-    ∃x(C(x) ^ ¬P(x)), ∀x(C(x) → Q(x))
+## Modeling Computations
 
-    Steps                   Reasoning
-    1. ∃x(C(x) ^ ¬P(x))     Premise
-    2. C(a) ^ ¬P(x)         Existential instantiation from (1)
-    3. C(a)                 Simplification
-    4. ∀x(C(x)→Q(x))        Premise
-    5. C(a) → Q(a)          Universal instantiation
+### Grammar
 
-Example:
+There are **4 types of grammar**:
+- **Type 0: Unrestricted (Turing Machines)**
+	- Know how to make a symbol table
+- Type 1: Context Sensitive
+- **Context-free Grammar**
+	- S → ASA, A→SA... blah blah blah... that thing
+- FSA
 
-    Prove that if n is an integer and n² is odd, then n is odd.
+#### Phase-Structure Grammar
 
-    1. Assume the negation of the implication, that is, n is even.
-    2. That means n = 2k
-    3. Then, (2k)²=4k²= 2(2k²), which is a multiple of 2, which fulfills the negation of p.
+A *phase-structure grammar* `G=(V, T, S, P)` consists of a vocabulary `V`, a subset `T` of `V`, consisting of terminal symbols, a start symbol `S` from `V`, and a finite set of productions, `P`. The set `V-T` is denoted by `N`. Elements of `N` are called *nonterminal symbols*. Every production in `P` must contain at least one nonterminal symbol.
 
-Example:
+**Example:** Construct a phase structure grammar {0ⁿ1²ⁿ | n ≥ 0}
 
-    Prove that √2 is irrational.
+	V = {0 ,1}
+	T = {0 ,1}
+	S = {S}
+	P = {S → 0S11 | λ}
 
-    Assume that √2 is rational, that is √2 = a/b where b ≠ 0 and a & b have no common factors.
-    This means 2 = a²/b², 2b² = a², which means that a² is even, meaning that a is even.
-    This means a = 2k for some k (defn. of even)
-    2b² 4k², which also means b is even.
-    However, if they are both even, then that means they have another common factor (2).
-    This means √2 is irrational.
+### Regular Expressions
+- (\*) → 0 or more repetitions of the letter preceding.
+- ( | ) → OR sign
+
+**Example:** Create a Regex expression that accepts all octal numbers that are divisible by 8.
+
+	(1-7)\*0
+
+### DFA, NFA
+- NFAs are usually for your head because it is really hard for a computer to work through all the different possible paths.
+
+### Turing Machines
 
 
-## Sets, Functions, Sequences
+## Boolean Functions
 
-### Set
+## Number Theory
 
-
-## Algorithms
+## Relations
