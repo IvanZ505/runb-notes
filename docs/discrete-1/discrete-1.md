@@ -126,6 +126,7 @@ Is the following set of statements consistent?
 	Statement 1: p ^ q
 	Statement 2: p v ¬q 
 	Statement 3: ¬q 
+
 | p   | q   | p^q | p v ¬q | ¬q  |
 | --- | --- | --- | ------ | --- |
 | T   | T   | T   | T      | F   |

@@ -6,7 +6,7 @@
 
 ### Exam Breakdown
 
-- **30%** - Multiple choice questions from before the midterm, including topics such as **Foundations of Logic and Proofs**, **Sets, Functions and Sequences**, and **Induction**.
+- **30%** - Multiple choice questions from before the midterm, including topics such as **Foundations of Logic and Proofs**, **Sets, Functions and Sequences**.
 - **70%** - Will be on everything after the midterm, including **Modeling Computations**, **Boolean Functions**, **Number Theory**, and **Relations**. **Also includes Induction!!!**
 
 ### What is Allow
@@ -96,7 +96,57 @@
 
 ## Sets, Functions and Sequences
 
+### Sets
+
+> A set is just a list of numbers grouped together. **A smaller list** of this set that still contains the set is called a **proper subset** of the set. Otherwise, any set that is smaller than, or equal to, the original set can still be considered a **subset** of the set.
+
+#### Ordered Pairs
+- An ordered pair is a pair of objects in a specific order.
+- For example:
+  - `(1, 2)` is an ordered pair.
+  - `(2, 1)` is a different ordered pair.
+
+**Combining the two:**
+
+- You can have a set of ordered pairs as such: A = {(1,2), (2,3), (3,4)}
+
+#### Cartesian Product
+- The cartesian product of two sets, denoted by `A x B` is the set of all ordered pair combinations between the two sets.
+
+**Example:**
+
+	A = {(1, 2, 3, 4} and B = {9, 8, 7, 6}
+	Then, A x B = {(1,9), (1,8), (1,7), (1,6), (2,9), (2,8), ...}
+
+#### Set Builder Notation vs Set Roster Notation
+- Set roster notation is a way to describe a set by listing the elements of the set. `{0, 2, 4, ...}` -> The ... means that the set goes on forever.
+- Set builder notation is a way to describe a set by listing the properties that its members must satisfy.
+- For example, the set of all even integers can be described as `{x | x = 2k for some k ∈ ℤ}`.
+
+#### Set Operations
+- Unions (⋃) : Is basically a massive "or" sign. It's the set of all elements that are in either set.
+- Intersection (⋂) : Is basically a massive "and" sign. It's the set of all elements that are in both sets.
+
+![Set Operations](imgs/set-operations-venn-diagrams.png)
+
+### The Size and Cardinality of a Set
+
+**For any set**:
+- The set can be finite (n number of elements)
+- Countably infinite (it can be ennumerated) : ℕ, ℕ⁺, ℤ, ℚ
+- Uncountably infinite (it can not be ennumerated) : ℝ, ℝ⁺, ℝ-ℚ (set of Irrational numbers)
+
 ## Induction
+
+Mathematical induction requires multiple steps as a proof. 
+
+1. Establishing a single case of the proof working using numbers. (**base case**)
+2. Then establish that case as a *abstract variable* `k`.
+3. Next, prove that `k+1` holds true. If this holds true, then by mathematical induction, your proof is true.
+
+**Differences between Strong and Weak Induction**
+- The steps above only work for **weak induction.**
+- For strong induction, you establish that every single case from the base case to `k` is true. Then, you can use this to prove `k+1`.
 
 ## Modeling Computations
 
@@ -136,6 +186,33 @@ A *phase-structure grammar* `G=(V, T, S, P)` consists of a vocabulary `V`, a sub
 
 
 ## Boolean Functions
+
+Boolean Operators:
+- Boolean sum (+)
+
+| +   | 0   | 1   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 1   | 1   | 1   |
+- Boolean Product (.)
+
+| .   | 0   | 1   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 1   | 0   | 1   |
+- Complement (bar ~)
+
+| ~   | 0   | 1   |
+| --- | --- | --- |
+|     | 1   | 0   |
+
+### Boolean Expressions and Functions
+
+- Let `B = {0, 1}. Then, Bⁿ = {(x₁, x₂, x₃, ..., xₙ) | xᵢ ∈ B for 1 ≤ i ≤ n}` is the set of all possible n-tuples of 0s and 1s.
+    
+- The variable `x` is called a _boolean variable_ if it assumes values only from **B**. That is, if its possible values are 0 and 1.
+    
+    - A function that maps _Bⁿ to B_ is called a _Boolean function of degree n_.
 
 ## Number Theory
 
