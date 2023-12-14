@@ -216,4 +216,33 @@ Boolean Operators:
 
 ## Number Theory
 
+Number theory is the mathematics devoted to the study of the set of integers and their properties.
+
+### Divisiblity Of Integers
+
+Divisbility is noted by `a | b` which means that `a` divides `b`. This means that `b = ak` for some integer `k`.
+
+Additive Inverse:
+
+- For any a, there exists a b such that a + b = 0 (mod m).
+- In this case, the b is the additive inverse of a.
+
+Multiplicative Inverse:
+
+- For any 𝑎 relatively prime to 𝑚 where gcd(𝑎, 𝑚) = 1, there exists a 𝑏 such that 𝑎𝑏 = 1 (𝑚𝑜𝑑 𝑚)
+- In this case, the b is called the multiplicative inverse of a and vice versa.
+
+
+### Congruence Classes
+
+Let `a` and `b` be integers and `m` a positive integer. We say that `a` is congruent to `b` modulo `m` if `m | (a-b)`. We write `a ≡ b (mod m)`.
+
+This means, `a` and `b` have the same remainder when divided by `m`.
+
+> This can be used to find the modulus of an extremely large number!
+
+**Example**:
+
+    (8)⁸ % 7 = (1)⁸ % 7 = 1
+
 ## Relations
