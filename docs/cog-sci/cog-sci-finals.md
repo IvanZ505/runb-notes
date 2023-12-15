@@ -20,16 +20,64 @@
 ## Terms to Know
 
 ### Module 7
-- **Design features**
-- **Competence and performance**
-- **Mental grammar**
-- **Recursion**
-- **Universal Grammar**
-- **Critical Period**
+- **Design features**: [See Below ↓](#Features-Of-Language)
+- **Competence and performance**: *Competence* is knowing what to say. (Mental grammar). *Performance* is how you express it by coordinating your mental grammar with linguistic knowledge.
+- **Mental grammar**: Every person has their own mental grammar. This mental grammar is unique to them alone, and telling them language is wrong is like telling them their morals are wrong. *It is correct to them!*
+- **Recursion**: "*Infinite use of finite means.*" [Read more below ↓](#recursion).
+- **Universal Grammar**: Some parts of mental grammar are innate. Certain grammatical structures and rules are innate across all languages. *Universal grammar* + *linguistic input* = *Fluent speaker*
+- **Critical Period**: A period of time in a baby's development that is crucial to the development of a certain skill. (*Ex: Genie Wiley, severely abused and missed out on this critical period for language development.*)
 
 ### Module 8
-- **Retina**
-- **Rods and cones**
+- **Retina**: The light sensitive layer of tissue at the back of your eyeballs. It converts the light received through the eye's lens into electrical signals that the brain can interpret.
+- **Rods and cones**: These are the *two* types of receptors in the retina that detect the light.
+	- **Cones** are more numerous near the central region of vision and gives us *high res*. 
+	- **Rods** are further away in the peripheral areas of the eye. 
+		- *Rods only provide monochrome color information and are more sensitive at lower light levels, which causes colors to look washed out at night.*
+- **Transduction**: The process of converting from one signal to another.
+- **Prosopagnosia**: (Me like fr...) *Face blindness*. People can only recognize parts of the face rather than the entire face.
+- **Blindsight**: If you damage your occipital lobe, you get a blindspot in your vision. Sensation and transduction are still happening. However, [perception](#module-8:-the-mind's-eye) is not happening. 
+- **Parallel Processing**: Checking all items by representing them visually. Time does not increase even when set increases. In [Feature Integration Theory](#feature-integration-theory) this is usually when there is just 1 unique feature.
+- **Serial Processing**: Sequential search. *There is two types*: Exhaustive and self-terminating.
+	- Our brain uses exhaustive search algorithm. *How do we know?* When told to remember something that was not actually shown to them, they would take the same amount of time as it took them to find something that was in the set.
+
+### Module 9
+- **Sensory Memory**: Used for initial processing. *Unfiltered, large capacity and short durations*.
+	- Helps us to encode information in mental representations for each modality.
+- **Working Memory**: (a.k.a short-term memory) Used for accessing and manipulating information. *Some filtering, but very selective as the brain must decide which ones are most important.*
+	- Short duration and small capacity
+	- Rehearsal allows it to pass to long term.
+- **Long-term Memory**: Storing information for later access. *Large capacity and long duration*
+	- Typically organized by type of information rather than modality.
+- **Recoding**: The process of encoding individual chunks of information into a higher-order chunk in order to help us commit memory into the long term.
+- **Decay**: Information typically decays in 1-2 mins (short term) unless there is rehearsal. 
+- **Rehearsal**: *Two types of rehearsals*
+	- *Repetitive Rehearsal*: Repeating the same thing over and over in short term memory to commit it to long term memory
+		- *Elaborative Rehearsal*: Connecting something in short term memory to something that is already in long-term memory.
+- **Redintegration**: One memory is the cue to triggering another memory.
+- **Pseudo-memory**: False memory you believe to be true.
+- **Memory Schemas**:
+
+### Module 10
+- **Empiricism**: The idea that cognitive abilities in babies are all developed from after birth. *Everything* is learned except the simplest of "sensations" and principles of *association*.
+- **Nativism**: Belief that cognitive abilities are inherent and all babies are born with their cognitive functions.
+- **Babbling**: *First steps toward language acquisition*. During the babbling phase, babies are able to vocalize any combination of syllables. As they test out these combinations, they slowly get locked in.
+- **Speech rhythm**: Stress times, syllable times, mora times. Babies need to learn this as well.
+- **Subitizing number system**: Distinguish from 1-3 objects. Typically, this is extremely fast and automatic. (*Used in language to count the number of subjects*) [How it relates to babies](#subitizing-number-system)
+- **Approximate number system**: Approximation of larger number of items by ratios.
+
+### Module 11
+- **Heuristics**: *Rules of thumb*. Things that are generally true. In Cognitive science, these are typically thought of as *Cognitive shortcuts*. There are many different types. [See Heuristics ↓](#heuristics)
+- **Gambler's Fallacy**: The misconception of chance, that since a certain odd has not hit for a long period of time, that there is a higher chance of it hitting the next time.
+- **Bounded rationality**: We are *semi-rational* beings. This means we are only rational enough to get by. This is an evolutionary trick for us to make decisions quickly, even if they are not the most accurate, in order to help us **maximize efficiency.**
+- **Frame problem**: *Consistency and Consequence checking are computationally intractable*, meaning it is virtually impossible to keep track of all the different possibilities. This relates to the **framing problem** we spoke about back in [Artificial Minds](../cog-sci/4-artificial-minds#the-frame-problem)
+- **Wason Selection task**: Famous task to test people's understandings of propositional statements. *Series of 4 cards and you have to decide which to flip based on a [implication](../discrete-1/discrete-1#implications)*
+
+### Module 12
+- **Selection**: 
+- **Environment of Evolutionary Adaptation (EEA)**: These were traits that made survival easier in the environment that would help pass the *selectional filter*.
+- **Cursorial Hunting**: Running an animal to death. *Sweat glands and bipedalism made this viable*
+- **Eusocial**: High social beings. 
+- **Theory of mind**: The ability to model other minds. (Putting yourself in someone's shoes) [See below ↓](#theory-of-mind)
 
 ## Module 7: The Language Instinct
 
@@ -64,9 +112,10 @@
 ### Recursion
 - *Infinite use of finite means*
 - You can keep on generating new sentences for **infinity**.
+	- Ex: Bob's friend has an apple. → Bob's friend's friend has an apple. → Bob's friend's friend's friend has an apple.
 
 ---
-## Module 7: The Mind's Eye
+## Module 8: The Mind's Eye
 - **Important**: *difference between sensation and perception*
 	- Sensation: Sensation is the raw detection of the stimulus. There is no understanding here of what the stimulus is.
 	- Perception: Having some kind of understanding about the stimulus is perception.
@@ -102,7 +151,7 @@
 
 ---
 
-## Module 8: Memory
+## Module 9: Memory
 
 - **Important**: Might be asked to describe an algorithm for how you remember things that appear.
 	- *Working memory*, *serial search*, *parallel search*
@@ -126,6 +175,16 @@
 
 ### Heuristics
 
+#### Representative
+
+- The probability that one thing originates from another is thought of as higher if they are similar or associated with one another.
+- **Example**: We would more easily associate someone who is neat and organized as being a librarian rather than a pilot or a athlete.
+
+#### Availability
+
+- The easier it is to come up with examples of a something in our mind, the more likely we think that it is to happen. 
+- **Example**: Plane crashes are so infrequent but because we see it on the news so often, we think of it as happening more often than they actually do.
+
 #### Anchoring
 
 ![](imgs/anchoring-bias.png)
@@ -138,6 +197,15 @@
 ---
 ## Module 11: Emergence of The Mind
 
+### Spandrels
+
+- Unexplainable and useless traits that do not have any specific evolutionary benefits but were just side affects from evolution. *By-product of something else favored by the environment.*
+- *Language* may be an example of a spandrel. *Noam Chomsky argued that it was the result of an increased brain size and increasing complexity.*
+
+### Massive Modularity
+- The brains were individual modules that evolved independent of one another.
+- Each of the modules can not update themselves with information from another. This is things like the *Color Constancy Effect* are able to work.
+
 ### Eusociality
 - Humans are highly social (eusocial) animals.
 
@@ -149,6 +217,7 @@
 - We all model the outside world via mental representations.
 - We also model the internal mental states of other human beings.
 	- *Ability to theorize what other minds want to do
+- **Other animals also have theory of mind** *Blue jays*
 
 ---
 

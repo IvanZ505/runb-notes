@@ -1,4 +1,5 @@
 # [Ch10: The Rational Mind](../cog-sci/cog-sci)
+
 ### Dual Systems Processing Model
 
 - **System 1: Quick Decisions**
@@ -13,6 +14,7 @@
 ---
 For example: If it takes 5 machines 5 minutes to create 5 widgets, how long does it take 100 machines to make 100 widgets?
 - Your system 1 will try to tell you that the answer should be 100 minutes, even though it really isn't. It is only after deliberating the question will you find that the answer is actually 5 minutes.
+
 ---
 
 **Heuristics** - Rules of thumb. They are cognitive shortcuts. Judgement Heuristics Help us reduce complexed calculations.

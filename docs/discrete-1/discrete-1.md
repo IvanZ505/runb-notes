@@ -138,7 +138,7 @@ Not consistent.
 
 ---
 
-**Implications**:
+#### Implications
 - An implication is a compound proposition using propositions, p and q, stated as if p then q or p implies q.
 - p is called the premise or sufficient condition for q.
 - q is called the conclusion for necessary condition : p.

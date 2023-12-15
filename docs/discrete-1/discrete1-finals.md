@@ -218,7 +218,7 @@ Boolean Operators:
 
 Number theory is the mathematics devoted to the study of the set of integers and their properties.
 
-### Divisiblity Of Integers
+### Divisibility Of Integers
 
 Divisbility is noted by `a | b` which means that `a` divides `b`. This means that `b = ak` for some integer `k`.
 
@@ -246,3 +246,19 @@ This means, `a` and `b` have the same remainder when divided by `m`.
     (8)⁸ % 7 = (1)⁸ % 7 = 1
 
 ## Relations
+
+Relations are defined on a *non-empty set* **A** to *non-empty set* **B** such that the relation from **A** to **B** is a subset of Cartesian Product of **A** and **B**.
+
+#### Matrix Representation of A relation
+
+- We are able to use a “boolean” table (_M_) where the rows are labeled with the elements of the first set (A in our case) and the columns are labeled with the elements of the second set (B). A in position _i, j_ of the matrix means that the element _i_ ϵ A is related to element _j_ ϵ B. In the case of our example… 
+
+![](imgs/relations-matrix.png)
+
+#### Cardinality of Relations
+
+The cardinality of a relationship is total number of possible relations is defined as the **power set** of the **cartesian product**. 
+
+> *Hint:* The cartesian product results in a cardinality of |A| \* |B|
+> Then, the power-set of that has a cardinality of 2ⁿ.
+
