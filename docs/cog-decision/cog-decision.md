@@ -32,5 +32,5 @@ Psychology Building)
 
 ---
 
-## Cognitive Architecture
+## [Cognitive Architecture](../cog-decision/cognitive-architecture)
 
