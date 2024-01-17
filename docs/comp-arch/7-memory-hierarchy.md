@@ -275,7 +275,7 @@ Ans: **C**
 
 > In this situation, fetching address 10 results in a [**cold miss**](#Types-of -Cache-Misses). This fetches the block containing address 10 from the memory and puts it on the cache. 
 > Then, Address 11 was a hit, meaning that address 11 is in the same block as address 10. 
-> However, Address 12 results in a miss, meaning address 12 is not in the same block as address 11 and 12.
+> However, Address 12 results in a miss, meaning address 12 is not in the same block as address 11 and 10.
 
 ---
 ### Tag Differentiate Blocks in Same Index

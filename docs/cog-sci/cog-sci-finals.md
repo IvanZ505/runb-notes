@@ -58,8 +58,8 @@
 - **Memory Schemas**:
 
 ### Module 10
-- **Empiricism**: The idea that cognitive abilities in babies are all developed from after birth. *Everything* is learned except the simplest of "sensations" and principles of *association*.
-- **Nativism**: Belief that cognitive abilities are inherent and all babies are born with their cognitive functions.
+- **Empiricism**: The idea that cognitive abilities in babies are all developed from after birth. *Everything* is learned except the simplest of "sensations" and principles of *association*. [See Below ↓](#empiricism)
+- **Nativism**: Belief that cognitive abilities are inherent and all babies are born with their cognitive functions. [See Below ↓](#nativism)
 - **Babbling**: *First steps toward language acquisition*. During the babbling phase, babies are able to vocalize any combination of syllables. As they test out these combinations, they slowly get locked in.
 - **Speech rhythm**: Stress times, syllable times, mora times. Babies need to learn this as well.
 - **Subitizing number system**: Distinguish from 1-3 objects. Typically, this is extremely fast and automatic. (*Used in language to count the number of subjects*) [How it relates to babies](#subitizing-number-system)
@@ -144,7 +144,7 @@
 - Nothing pops out
 
 **Step 2**: Focused Attention
-- Slower, effortful, attentive
+	- Slower, effortful, attentive
 - More than one feature that is different, takes a lot longer and is harder.
 
 **Step 3:** Object recognition
@@ -157,21 +157,72 @@
 	- *Working memory*, *serial search*, *parallel search*
 	- *Self-terminating search*, *exhaustive search* (we use exhaustive search)
 
+#### Selective Attention
+- When the brain decides what is important enough to process in working memory.
+
+### Three Types of LTM
+
+#### Episodic
+- Memory of past experiences
+- Declarative memory (easy to describe)
+
+#### Semantics
+- Memory of general facts and knowledge
+- Declarative memory
+
+#### Procedural
+- Memory of how to do certain tasks
+- Non-declarative memory
+
+---
+### Pseudo-memory
+
+Why do we have it?
+
+> Because of a concept called **Reconstruction**... Or the idea that when access a memory we are reconstructing and so it *changes* in a small way.
+>  Reconstruction uses **memory schemas** to fill in the gaps in our memory.
+
 #### Negative Trials
 - Proved that we use exhaustive search.
 
 ---
-## Module 9: The Origins of the Mind
+## Module 10: The Origins of the Mind
 
 - **Important**: What do babies know right away, and what do they need to learn.
 - **Empiricism vs Nativism**
+
+### Empiricism vs Nativism
+
+#### Empiricism
+- Everything that can be learned is from getting input from the environment and using that input in certain ways.
+- At birth we are a blank slate.
+
+#### Nativism
+
+- “We come to know about the world by the power of our **native** intelligence” - Descartes
+- We are boosted by existing knowledge about the world.
+
+---
+#### Synaptic Pruning
+- Synaptic pruning is the second phase of a baby's neural development process.
+- They first go through a process of *synaptic growth*, where the number of neurons that they possess increase.
+- Then, they go through a phase of *synaptic pruning* which reduces the number of neurons they possess if they do not actively use it.
+
+---
+### Core Knowledge
+
+Babies possess **core knowledge** of several different things. This core knowledge can be described as a "*set of fundamental cognitive systems/mechanism upon which we build and develop new cognitive abilities.*"
+- These *systems* are usually the knowledge of **places, objects, numbers, agents, and social beings.**
 
 ### Subitizing Number System
 - **Babies have an innate sense of numbers**
 - Although babies can not express in words the number system, however, they have an innate ability to sense quantities between 0-4.
 
+#### Cardinal Principle
+- The idea that if you are referring to "one, two, three pigs", are you saying there is 3 pigs.
+
 ---
-## Module 10: The Rational Mind
+## Module 11: The Rational Mind
 
 ### Heuristics
 
@@ -191,11 +242,19 @@
 
 - If you give someone an initial number, people tend to *anchor* onto that number and it influences them in their answers.
 
+#### Recognition
+- If you are able to recognize a certain name or feature more, you are more likely to choose that option.
+
+### Epistemic and Practical Rationality
+- Epistemic : Beliefs (Consistent and accurate beliefs)
+- Practical : Desires (Consistent and accurate beliefs)
+- Relates to the "money pumps"
+
 ### Dunning-Kruger Effect
 - Confidence is (*mildly*) inversely correlated with actual knowledge.
 
 ---
-## Module 11: Emergence of The Mind
+## Module 12: Emergence of The Mind
 
 ### Spandrels
 
@@ -219,6 +278,10 @@
 	- *Ability to theorize what other minds want to do
 - **Other animals also have theory of mind** *Blue jays*
 
+#### Evolution of Intelligence
+- The argument is between whether cultural/social intelligence or general/physical intelligence came first.
+- If one did, then that implies that the other was just a spandrel.
+
 ---
 
 - You are not born with theory of mind.
@@ -238,3 +301,5 @@
 #### Theory-Theory
 - Logical inferences
 - Abstract theory of how people behave
+
+### EQ
