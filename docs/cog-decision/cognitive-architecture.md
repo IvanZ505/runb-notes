@@ -1,10 +1,27 @@
 # Cognitive Architecture
 
 ## Introduction
+
+**Descriptive Claims:**
+- Claims about what *is* the case.
+- E.g. What people actually decide. What are the psychological processes leading to the decisions are. (Most students don't cheat on exams.) Paul *thinks*
+
+**Normative Claims:**
+- Claims that *ought* to be the case.
+- E.g. You shouldn't cheat on exams. Paul *should*
+
+**Replication Studies**
+- Before people who did replications of classic studies and quoted multiple times were not rewarded because they wouldn't get any advancements in their career from it.
+- However, people then began realizing that these classical theories and experiments actually didn't replicate.
+
+---
+
 - Review some of the different kinds of research questions that are examined in the field of judgement and decision making, and considering how the field may be pertinent to your own life in a variety of ways.
 - Compare two of the major empirical approaches to studying and understanding everyday judgement and decision-making - the cognitive illusions approach and the fast-and-frugal approach.
 - Consider arguments for and against whether dual-process models of reasoning can serve as an organizing framework for the field.
 - Understood and compared three major types of decision-making models (i.e., descriptive, normative, and prescriptive), and how each type of model has distinct but important goals, and how they relate to one another.
+
+## Dual Processing Model
 
 ### Key Terms
 
@@ -78,6 +95,7 @@ These two processes are commonly referred two as **systems**, or, *more recently
 ---
 #### Cognitive Reflection Test (CRT)
 - Designed to detect individual differences in the use of System 1 vs System 2 processing.
+- Introduced as a measure of the disposition to reflect on a question and resist reporting the first response that comes to mind.
 - So many people had completed that test that they had to develop a second, alternative questionnaire to measure the same thing.
 
 ---
@@ -112,3 +130,4 @@ These terms help to acknowledge that they reflect different  kinds of processing
 	- Working memory distinction!
 	- Type 1 processing includes automatic processing and processing done by habit.
 	- Type 2 processing includes reflections and can be carried out in detachment from reality. (Hypothetical thinking, Thinking about the future)
+

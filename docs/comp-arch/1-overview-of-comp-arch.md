@@ -83,6 +83,8 @@ Fetch --> Decode --> Execute
 - The linker then links the machine code with the libraries and other code.
 - After the linking, the executable is created.
 
+![](imgs/actual/compilation-process.png)
+
 ### Preprocessing Phase
 - First phase that takes the source code as input.
   - Includes the header files and replaces the macros with the actual code.
