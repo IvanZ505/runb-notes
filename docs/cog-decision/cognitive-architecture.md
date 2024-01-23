@@ -1,4 +1,6 @@
-# Cognitive Architecture
+# [Cognitive Architecture](cog-decision)
+
+Paul's PN: 6943696560
 
 ## Introduction
 
@@ -117,10 +119,28 @@ Suggested the terms:
 
 #### Type 2 Processing
 - Deliberate, slow, conscious
+- Perform reasoning and correct mistaken intuiutions.
+- Imagine future possibilities
+- Aide with complex verbal communication.
+- Learn new skills
 - **Only type 2 is** tied to our working memory
 - Instead of System 2
 
+
 These terms help to acknowledge that they reflect different  kinds of processing rather than entire systems of processing.
+
+**Problems:** Does Type 2 processing tend to *correct* Type 1 judgements? Perhaps it might *rationalize* Type 1 answers or confabulate reasons?
+
+---
+
+### Cluster Problem
+- Do attributes on each side (Type 1 or Type 2 Processes) *always* go together?
+- Are some more fundamental than others.
+
+---
+*In the early days of the Dual-Processing model:*
+
+- (Sloman) focused on the *style* of processing: Type 1 → associative, hence quick. Type 2 → Rule-based, hence slow.
 
 ---
 ### Evans and Stranovich (2013)
@@ -130,4 +150,124 @@ These terms help to acknowledge that they reflect different  kinds of processing
 	- Working memory distinction!
 	- Type 1 processing includes automatic processing and processing done by habit.
 	- Type 2 processing includes reflections and can be carried out in detachment from reality. (Hypothetical thinking, Thinking about the future)
+
+> For more information on [memory](../cog-sci/8-memory).
+
+---
+
+During the first half of the 20th century:
+
+- Behaviorist movement in psychology.
+- Conscious and unconscious states were rejected.
+
+During the latter half of the 20th century:
+
+- More of an emphasis on mental states.
+
+### The New Unconscious
+- Aka "cognitive unconscious" / "adaptive unconscious"
+- States unconscious are inherently inaccessible.
+- They have not been repressed.
+- They are not recoverable in therapy.
+- The unconscious is efficient and sophisticated.
+- It is like a sophisticated piece of software that runs in the background.
+
+## Working Memory
+
+### Baddeley and Hitch Working Memory Model
+
+1. The **central executive** (attentional controller.)
+2. The **phonological loop** (verbal and auditory ifnromation)
+3. The **visuospatial sketchpad** (visual and spatial information)
+
+**Baddeley (2000) added:**
+
+4. **Episodic buffer** (memory store and integration of information from phonological loop and visuospatial sketchpad)
+
+### Central Executive
+
+Four primary functions of the central executive:
+
+1. Focusing attention
+2. Dividing attention
+3. Switching between tasks
+4. Interfacing with long-term memory.
+
+### Phonological Loop
+
+Comprised of 2 things:
+
+1. Phonological store: A short-term sound-based store of speech and other sounds, that fades within a few seconds.
+2. Articulatory rehearsal process: An articulatory loop that maintains information in the store (inhibits decay) by either vocal or subvocal rehearsal.
+
+### Working Memory Capacity
+- Attention appears to be necessary for consciousness.
+- Baars (1988) suggests that conscious states are a subset of the contents of working memory.
+- Mental states are conscious only when they are in the spotlight of attention and hence being "globally broadcast" to multiple cognitive systems.
+	- By focusing our attention on something, we allow other cognitive systems to take heed of the thing as well.
+- Conscious attention in working memory may use the same mechanism as perceptual attention.
+- It has been suggested that attention biases sensory processing by enhancing the sensitivity of selected ground of neurons and suppressing the activity of others.
+
+---
+#### Problems
+
+1. Do all the tasks above engaging working memory to some extent?
+
+**Potential response from Evans (2019)**: "While Type 1 processes do not require the resources of working memory or controlled attention for their operation (or they would be Type 2) they do post their products into working memory in a way that many autonomous processes of the brain do not. Specifically, they bring to mind judgements or candidate responses of some kind accompanied by a feeling of confidence or rightness in that judgement, as proposed by Valerie Thompson and colleagues."
+
+2. "**Dichotomizing variables**"
+
+- Some of the attributes seem to fall at two ends of a continuous spectrum.
+- On what basis can we dichotomize them?
+- Who says where the distinction is?
+	- There is a spectrum between no effort and effort. **Where do we draw the line???**
+
+3. Interaction
+
+- How do Type 2 Processes know how to switch on???
+- Potential answers **below**
+
+### Interaction Models
+
+#### Parallel-Competitive Models
+- Both Type 1 and Type 2 processes are engaged from start.
+- Type 1 processes are faster so output a response before the slower Ttype 2 processes can complete.
+- Additional Type 2 processing may occur if the two types of processing output conflicting responses.
+
+#### Default-Interventionist (Serial) Models
+- Type 11 but not Type 2 processes are engaged at the start
+- Type 2 processes output a response
+- If the response is *suspect*, Type 2 processing may occur.
+
+---
+> What is "*suspect*"?
+> Fluency of an intuitive answer. The feeling of rightness.
+
+---
+#### De Neys (2012 Model)
+- Multiple Type 1 processes might operate and yield conflicting answers.
+- If they conflict, Type 2 processes are engaged.
+- This is sometimes called a "hybrid" model.
+
+---
+
+### More Problems
+
+4. Undiagnostic evidence
+
+What evidence is there for dual-process theories vs one-process theories?
+
+Take a task with an intuitive incorrect answer. **Reaction times show that incorrect answers are quicker**
+
+- Cognitive load manipulations: Number of correct responses drop.
+
+> Problem: These findings may also be explained by positing that there is one kind of process ("unimodels"), but the *degree* of processing drops.
+
+- The attributes come on a spectrum and when you get a cognitive load manipulation, you are just affecting the *degree* of the processing, but not just engaging a different process altogether.
+
+---
+
+## Limitations of Conscious Thought
+
+Poster Ratings: A → 7, B → 8, C → 7, D → 9, E → 9
 
