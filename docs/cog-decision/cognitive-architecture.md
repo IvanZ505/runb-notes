@@ -25,6 +25,8 @@ Paul's PN: 6943696560
 
 ## Dual Processing Model
 
+![](imgs/actual/qualities-of-dual-processes.png)
+
 ### Key Terms
 
 - Personal Decisions - Making choices that *are* essentially under our own control.
@@ -270,4 +272,151 @@ Take a task with an intuitive incorrect answer. **Reaction times show that incor
 ## Limitations of Conscious Thought
 
 Poster Ratings: A → 7, B → 8, C → 7, D → 9, E → 9
+
+### Introspection
+
+Popular metaphor:
+
+- The mind is a dark and mysterious place.
+- Introspection is a flashlight that brings to attention thoughts, feelings, and cognitive processes that are normally hidden.
+- Through introspection we can engage in an archaeological excavation of our minds, to better understand ourselves.
+	- **However**, these digs are incomplete, as one can never uncover all there is to know about the past.
+
+### Nisbett and Wilson (1977)
+- We seem to have no direct awareness of processes such as perception and memory.
+
+To show this...
+
+#### Study 1: Two String Problem
+- Two cords hung from ceiling.
+- Task: Tie them together.
+- However, holding one, you can not reach the other (even using the objects to extend your arm).
+- Room contains objects such as clamps, pliers, etc...
+
+#### Study 2: Word Associations
+
+1. Memorize word pairs, e.g. (ocean - moon)
+2. Later, perform a word association task, e.g. "Name a detergent" (target response = "tide")
+
+**Semantic cueing** doubled the frequency of target responses, from 10% to 20%.
+
+#### Conclusions
+- People often not accurate about effects of stimuli on their response.
+- They rely not on a memory of the process via introspection but a theory about the causal connection between stimuli and response.
+- Reports are correct when the causal theory is incidentally correct.
+- The theory may be cultural, psychological, or empirical.
+- **"We tell more than we can know."**
+
+#### Study 3: Order Effects
+- Four identical pairs of stockings placed in store display table from left to right.
+- When asked which was the best, the right one was over chosen.
+- However, none of them listed position as a reason, but that they **chose based on color or softness.**
+
+### Self Knowledge
+- People often have difficulty verbalizing exactly why they feel the way they do.
+
+According to Wilson:
+- People do not have access to all the causes of their feelings.
+- The reasons that come to mind are ones that are accessible in memory and seem plausible, relative to cultural or personal theories that can be wrong or, at best, incomplete.
+- **Its not always advantageous to make decisions vigilantly.**
+
+## Benefits of Unconscious Thought
+
+### Unconscious Thought Theory (NO EVIDENCE TO SUPPORT)
+
+1. **Unconscious-Thought Principle**
+
+**Conscious Thought**: Task is focus of conscious attention.
+
+**Unconscious Thought**: Deliberation without attention, when the task is *not* the focus of conscious attention.
+
+E.g. Put aside major decisions for a few days ["An Incubation period"], and then, at a later moment, you suddenly realize your answer.
+
+2. **Capacity Principle**
+
+**Conscious thought**: has a low capacity that can only take into account a *subset* of the information. (Magic Number 7+-2)
+
+**Unconscious Thought**: Much higher capacity.
+
+3. **The Bottom-Up-Versus-Top-Down Principle**
+
+**Conscious thought**: Guided by expectancies and schemas, prejudgment, biased. (*Jumps to conclusions*)
+
+**Unconscious Thought**: Slowly integrates information to form a summary judgment.
+
+4. **The Weighting Principle**
+
+**Conscious Thought**: Often leads to suboptimal weighting because attention is drawn to features that are accessible, plausible, and easy to verbalize.
+
+**Unconscious thought**: Weights the relative importance of multiple attributes.
+
+5. **The Rule Principle**
+
+**Conscious Thought**: Follows a strict set of rules and is precise. (*Can do math*)
+
+**Unconscious Thought**: Cannot follow rules and gives rough estimates. (*Can not do math*)
+
+6. **Convergence-Versus-Divergence Principle**
+
+**Conscious Thought**: Focused and convergent.
+
+**Unconscious Thought**: More divergent (creative?)
+
+---
+
+### The Deliberation Without Attention Hypothesis
+
+**Conscious Thought**: Good when things are simple, and becomes worse as the complexity of the decision problem increases (from capacity principle)
+
+**Unconscious Thought**: Always good; the quality of decisions is independent from the complexity of the problems (from top-down-versus-bottom-up principle and weighting principles)
+
+**Prediction**: Unconscious thought will lead to better choices than conscious thought under complex circumstances.
+
+---
+
+![](imgs/actual/conditions-decisions.png)
+
+2 Problems Arise from this 2 Condition Approach:
+
+1. Perhaps conscious thought *decreases* decision quality.
+
+- Effort and time dedicated to conscious thought might hinder recall of the decision-relevant information.
+- Might focus on information that happens to be salient, etc...
+- Participants might form a quick and accurate impression of the information, but participants who are asked to "think carefully" subsequently take this instruction to indicate that they should *rethink* their initial impression.
+
+**Solution**: Have a third condition in which people choose immediately.
+
+![](imgs/actual/three-conditions-decision.png)
+2. Distraction might be beneficial without unconscious thought.
+
+- Allows for participants to have a fresh look at the information.
+
+**Solution:** Add a "*mere distraction*" condition.
+
+Distraction condition: After receiving the decision-relative information, participants are told before the distraction task that they have to make a decision later on.
+
+Mere distraction condition: After receiving the decision-relative information, participants are told before the distraction task that they will not have to make a decision later on.
+
+---
+
+**Rationale:**
+
+- In both conditions, there is no conscious thought about the decision (which might decrease decision quality).  
+- In both conditions, there is distraction (which may increase decision quality).  
+- The difference is that in one condition, participants have goal to make decision.
+
+---
+
+![](imgs/actual/four-conditions-decision.png)
+
+### Problems With The Researchers
+
+1. Ecological Validity
+
+- Most research is with students making hypothetical choices.
+- Doctors and medical students had to provide a diagnosis for 6 simple and 6 complex clinical cases.
+- **Doctors**: Simple cases showed no differences, Complexed ones: Did better in conscious thought condition.
+- **Students**: Simple cases showed that the unconscious thought did better. *Complex cases showed no significant differences*
+2. Replicability
+	1. Not reporting experiments that did not show the desired results.
 

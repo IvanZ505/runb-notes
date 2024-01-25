@@ -65,7 +65,7 @@ This is denoted by `n(A)` or `|A|`
 
 The **empty set** is the set with *no elements*. (The cardinality of the empty set is 0)
 
-The **empty set is denoted by ϕ**
+The **empty set is denoted by ϕ** and is always a subset of another set.
 
 ### Subset
 
@@ -78,4 +78,78 @@ The symbol for a subset is `⊆` for a subset that is equal to.
 An **ordered pair (a, b)** is a pair of numbers where the order matters.
 
 Ex: (1, 3) ≠ (3, 1)
+
+### Power Set
+
+The **power set** of A, `P(A)`, is the set of all subsets of A.
+
+	A = {-1, 0, 5}
+	P(A) = {{-1}, ,{0}, {5}, {-1, 0}, {0, 5}, {-1, 5}, A, ϕ}
+
+#### Cardinality of Power Set
+
+**Theorem**: If `n(A) = i, then `n(P(A)) = 2ⁱ`
+
+> This means that if the cardinality of A is 3, then the cardinality of P(A) is 8.
+
+---
+
+### Venn Diagram
+
+The Venn diagram is how you geometrically represent a set. The outer box represents the universal set, denoted by `U`. The circles inside represent the different sets.
+
+### Set Operations
+
+**Base Sets A and B**:
+
+![](imgs/set-operations-1.png)
+
+#### Complement set
+
+`A' = A^c = {x | x ∈ U but x ∉ A}`
+
+![](imgs/set-operations-complement.png)
+#### Union
+
+`A ∪ B = {x | x ∈ A OR x ∈ B}`
+
+![](imgs/set-operations-union.png)
+#### Intersection
+
+`A ∩ B = {x | x ∈ A AND x ∈ B}`
+
+![](imgs/set-operations-intersection.png)
+
+#### Difference
+
+`A - B = {x | x ∈ A but x ∉ B}`
+
+#### Cartesian Product
+
+`A x B = {(x, y) | x ∈ A, y ∈ B}`
+
+> **Note:** `A x B` ≠ `B x A`
+
+	A = {-1, 0, 5}, B = {-1,  2} **Find cartesian product**
+	AxB = {(-1, -1), (-1, 2), (0, -1), (0, 2), (5, -1), (5, 2)}
+
+**Theorem:** If `n(A)=k` and `n(B)=m`, then the cartesian product will have a cardinality of `k*m`
+
+---
+
+#### Practice
+
+	Let U = {a, b, c, d, e, f, g}, X = {a, c, e, g}, Y = {a, b, c}, Z = {b, c, d, e ,f}
+	X' = {b, d, f} Y' = {d, e, f, g}
+	X' ∩ Y' = {d, f}
+
+	(Y ∩ X')' ∪ Z' = {a, c, d, e, f, g}
+
+---
+
+#### DeMorgan's Laws For Sets
+- For any set `A` and `B` where `A,B ⊆ U,`
+	- `(A∪B)' = A' U B'` and `(A ∪ B)' = A' ∪ B'`
+
+---
 

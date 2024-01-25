@@ -209,3 +209,153 @@ p = &i;       // p is now going to point to the location in the address of i.
 // This then changes the value of i as well!
 ```
 
+## Declarations and Definitions
+- **Declaration** says what something is, but does not create it.
+	- e.g. A **function prototype** declares that a function exists
+
+```C
+int compare(double, double);
+extern int some_global;    // Says there is a variable of this type, but I didnt make it. (Like external)
+```
+
+- **Definitions** create the thing being described. (Every definition is an implicit declaration1)
+	- e.g. function definition, global variable definition.
+
+> A given program can *declare* the same thing many times, but it **must** be defined exactly once.
+
+---
+
+When do we need a explicit declaration?
+
+	1) I might want to refer to something defined in another source file...
+	2) We want to reference something defined later in the same source file
+		- Maybe we want to organize code in some way.
+		- Maybe we have mutual recursion. (One function calls another function, which calls the other function. **This needs explicit declarations**) 
+
+## Header Files
+
+- A header file is a C source file containing **declarations**
+	- Header files usually end in `.h`
+		- `<stdio.h>, <stlib.h>, <unistd.h>`
+
+> Header files should contain **only** declarations, function prototypes, extern variables (but globals are often bad style), and type declarations.
+> Typically, a header file will be included into multiple .c files.
+
+```C
+#include "myheader.h" // Look for the header file in the current directory
+#include <standardheader.h> // Look for something in the *include* path list.
+```
+
+**Do not include your definitions in your `.h` file**
+
+Instead, the usual convention is that:
+
+- For each `source.c` you would have a `source.h`
+
+For example, a project may have:
+
+- `main.c`
+- `queue.h`
+- `queue.c`
+
+> We should expect both `.c` files to include `queue.h`
+
+## Preprocessor
+
+- The C preprocessor is a separate program that runs through your source code and makes changes prior to compilation.
+- The `#include` directive literally includes the contents of the specific file.
+	- All declarations in the included header file becomes part of the source file after preprocessing.
+
+> The lines that begin with `#` are preprocessor directives.
+
+`#define MACRO "hello"`
+
+- After this line in the source, the preprocessor will replace all **MACRO** tokens with "hello"
+- macros can also have parameters
+
+```C
+
+#define SQUARE(X) X * X
+
+y = SQUARE(x);
+// This equals...
+y = x * x;
+
+y = SQUARE(a+b);
+// And this equals
+y = a + b * a + b;
+```
+
+`#undefine MACRO` - Just undefines it lol
+
+- Subsequent uses of this token will not be replaced
+- Allows us to define the macro again, if we want to.
+
+### Conditional Processing
+
+```C
+#ifdef SOME_MACRO
+
+	...code...
+
+#else 
+
+	...code...
+
+#endif
+
+```
+
+- Useful if we want to have slightly different versions of a program or library defined in the same file.
+
+**Related is**
+
+```C
+#ifndef SOME_MACRO    // If not defined.
+...
+#endif
+
+// and...
+
+#if SOME_MACRO < 5    // Ex: Like checking Versions of stuff
+...
+#endif
+```
+
+### GOOD USES FOR MACROS
+- Enable and disable debugging without having to modify our source code. Look below.
+
+```C
+#ifndef DEBUG    // If DEBUG is not defined
+#define DEBUG 0  // Then, define DEBUG as 0 automatically
+#endif
+
+if(DEBUG) printf("the value of x is %d\n", x);
+```
+
+Then, by using `gcc -DDEBUG`, you can define DEBUG as 1. (`gcc -DDEBUG=2` tells the preprocessor to define DEBUG as 2.)
+
+> The option `-e` tells GCC to preprocess your code and then **stop**.
+
+## Memory Objects
+
+- All data is in memory.
+- An object is a place in memory to store data.
+- Every variable is associated with an object.
+	- The compiler keeps track of which object goes with each variable.
+- Some objects contain smaller objects (e.g. arrays and structs contains smaller objects)
+
+> In order to make use of an object, we need to know its location (**pointers**) and we need to know its type.
+
+However, we can create objects that are not associated with a variable. This is the `malloc()` command.
+
+`malloc()` - **Dynamic Allocation**
+
+- A static analysis can not tell us how many times we will call `malloc()` of what arguments we will give it (in general).
+
+- How do we know how many bytes to request?
+	- Types (like `int`)  do not have one specific size across all architectures. Instead, we use a special C operator called **sizeof()** in order to learn the size of the data type we want.
+- What kind of pointer does `malloc()` return?
+	- `void *malloc(size_t)` void pointer gets returned. `void` pointers do not have a specified type.
+
+> You can typecast the pointer `int *array = (int *) malloc(arraysize + sizeof(int))`
