@@ -84,7 +84,7 @@ Ex: (1, 3) ≠ (3, 1)
 The **power set** of A, `P(A)`, is the set of all subsets of A.
 
 	A = {-1, 0, 5}
-	P(A) = {{-1}, ,{0}, {5}, {-1, 0}, {0, 5}, {-1, 5}, A, ϕ}
+	P(A) = { {-1}, ,{0}, {5}, {-1, 0}, {0, 5}, {-1, 5}, A, ϕ}
 
 #### Cardinality of Power Set
 
@@ -149,7 +149,7 @@ The Venn diagram is how you geometrically represent a set. The outer box represe
 
 #### DeMorgan's Laws For Sets
 - For any set `A` and `B` where `A,B ⊆ U,`
-	- `(A∪B)' = A' U B'` and `(A ∪ B)' = A' ∪ B'`
+	- `(A∪B)' = A' ∩ B'` and `(A ∩ B)' = A' ∪ B'`
 
 ---
 
