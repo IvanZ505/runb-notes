@@ -1309,6 +1309,7 @@ Example:
 	So then, aₖ can be written as:
 	aₖ = 3(k-1) + 1 >> This is the explicit formula from the recursive.
 
+## [Midterm Review](discrete1-midterm1)
 
 #### Proof by Induction
 

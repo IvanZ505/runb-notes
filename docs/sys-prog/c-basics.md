@@ -359,3 +359,178 @@ However, we can create objects that are not associated with a variable. This is 
 	- `void *malloc(size_t)` void pointer gets returned. `void` pointers do not have a specified type.
 
 > You can typecast the pointer `int *array = (int *) malloc(arraysize + sizeof(int))`
+
+## Types of Objects
+
+Three categories of objects
+
+#### Static objects
+- Global variables
+- string literals
+- code
+- These static objects exist the entire time the program runs:
+- **They are neither created nor destroyed**
+
+#### Stack objects
+- local variables
+- Tied to the execution of a particular function
+- other information about functions used by the runtime
+- **Created when the call begins and destroyed when the call ends**
+
+#### Heap Objects
+- Created by calls to `malloc()`
+- **Destroyed by calls to `free()`**
+- Heap objects are user declared and **not associated with a variable**.
+- This could be "*garbage*" if not properly deallocated.
+- The size of a heap object can be decided at run-time.
+
+### Addressing Objects
+
+> Any object can be referred to indirectly, using a pointer, but only static and stack objects can be referred to directly.
+> Heap objects can only be referred to with a pointer.
+
+- In order to properly use an object, we need to know its address and its type.
+- The compiler tracks the type and location of the variables.
+
+#### For Indirect References
+- The value of the pointer says its address.
+- The type of the pointer indicates the type of object
+
+## Pointers
+- A typed address (**Note:** Type is only known during compilation)
+
+> **Special pointer `NULL`**
+> `NULL` represents "no address" and attempting to deference `NULL` will cause a memory error
+
+### Void Pointers
+
+`(void *)`
+
+- These are "*untyped*" pointers
+- All we can do with these are
+	- Compare for equality
+	- Cast to some other pointer type
+		- (It is your responsibility to make sure the type you cast to is reasonable!)
+	- Use with various functions
+
+### Arrays vs Array Objects
+
+When we declare an array variable, we must specify the dimensions
+
+`int a[20];    // a directly refers to an array object`
+
+- `a` by itself is effectively a pointer...
+	- Meaning that `*a = 5;` is the same as `a[5] = 5;`
+- We can not reassign `a` to refer to a different array.
+- We can make pointers point to arrays.
+	- We can still use array indexing with the pointer that points to the array!
+
+```C
+int *p = a;
+	// p is a pointer variable
+	// It initially holds the address of a
+p[1] = 20;
+	// Also the same as *(p+1) = 20
+	// Also the same as *(a+1) = 20
+	```
+
+> Why would we ever index using pointer arithmetics?
+>> Pointer arithmetics defined: *If p points to something, p+1 points to the "next thing" in memory*
+>> The actual address we get depends on the type of `p`. Ex: `int` ptr will point 4-bytes past the original point of `p`
+>> Only valid with pointers into an array, where the indexing leaves us within the array.
+>> Otherwise, memory error.
+
+This sort of indexing is only defined when:
+
+- The pointer points to an array
+- The index is within the bounds of the array.
+
+`p = &a[5];`
+
+- Now `p[0]` refers to the same int as `a[5]` since we passed the memory address of `a[5]` to the pointer.
+- Now, `p[1]` is the same as `a[6]`
+- `p[-1]` is the same as `a[4]`
+
+### Pointer vs Array Variables
+- Array variables always point to a specific array
+	- Pointer variables can be changed at any time
+- Pointer variables store their address at run-time
+	- Array variables have a fixed address.
+
+> `&a` is the exact same thing as `a`
+
+## The Heap
+- Use `malloc()` to create objects in the heap
+
+`void *malloc(size_t);`
+
+- Returns a void pointer to a heap object of the size (*in bytes*) we want.
+	- Or, can return `NULL` if it can't get enough space.
+- We do not need to explicitly cast the `malloc-ed` object into the correct pointer type, as it can be done implicity.
+	- However, you can declare it for "protection"
+
+```C
+int n = get_dimension_from_user();
+int *p = malloc(n * sizeof(int));
+```
+
+> If `malloc` succeeded, we can treat the returned object like we treat any other array.
+>> `p[10] = p[5] + 1;`
+
+### Deallocating
+
+`void free(void *)`
+
+The `free()` function deallocates an object on the heap.
+
+- Free can only be used with addresses returned by `malloc()`
+
+> This means that you only need to deallocate the heap objects that you yourself had allocated. Otherwise, you get left with garbage.
+
+```C
+
+int *p, *q;
+
+p = malloc(20 * sizeof(int));
+
+q = p;
+```
+
+	In the above scenario, what do we need to deallocate the array?
+	1. free(p)
+	2. free(q)
+	3. free(p); free(q);
+
+	1 and 2 both deallocate the array, bc they both hold the same pointer
+	3 is wrong, (double freeing) once you have freed the first one, the second one is no longer allocated on the stack.
+
+	Also wrong: free(p+10);
+	p+10 points to a valid int object, but it isn't the object allocated by malloc()
+### Data Structures on the Heap
+#### Best way to make a Stack
+
+```C
+struct node {
+	data_t payload;
+	struct node *next;
+};
+
+struct node *head = NULL;
+
+void push(data_t item) {
+	struct node *new = malloc(sizeof(struct node));    // Need to use malloc to create new node
+	// (*new).payload = item;     // Or you can use the arrows (new->payload = item;)
+	new->payload = item;
+	new->next = head;
+	head = new;
+};
+
+int pop(data_t *dest) {
+	if(head == null) return 0;
+
+	struct node *temp = head;
+	if(dest) *dest = head->payload;
+	head = head->next;
+	free(temp);
+}
+```
