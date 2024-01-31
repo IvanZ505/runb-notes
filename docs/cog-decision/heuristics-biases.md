@@ -116,3 +116,5 @@ This led to a famous (among JDM professors!) 2006 paper by Craig Fox called “T
 - Respondents who had been asked for 10 critical comments subsequently rated the course more favorably than respondents who had been asked for 2 critical comments.
 
 ## Representative Heuristics
+
+---

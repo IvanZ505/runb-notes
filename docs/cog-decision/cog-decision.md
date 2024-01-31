@@ -35,3 +35,5 @@ Psychology Building)
 ## [Cognitive Architecture](../cog-decision/cognitive-architecture)
 
 ## [Heuristics and Biases](heuristics-biases)
+
+## [Probability](probabililty)
