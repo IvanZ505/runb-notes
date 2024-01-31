@@ -534,3 +534,101 @@ int pop(data_t *dest) {
 	free(temp);
 }
 ```
+
+## Generic Memory Operations
+
+### Case Study: Sorting an Array
+
+`void sort_ints(int *array, int length);`
+
+`void sort_chars(char *array, int length);`
+
+What is the difference between these?
+
+- Comparison function
+- Size of the data units
+
+**What do we need to write a generic sorting function?**
+
+- Some way to pass an array without restricting its type (*hint hint: `void`*)
+- Some way to specify how to compare items (*hint hint: `function pointer`*)
+	- `return_type (*compare) (arg1_type, arg2_type, ....)`
+
+So... it looks something like...
+
+```C
+int (*compare) (void*, void*)
+```
+
+- However, we also need a way to copy the memory to the new address! There is a way to do that!!!
+
+`memcpy()` - Copies a specific number of bytes from one location to another.
+
+> There are **NO** safety checks in `memcpy()`, meaning we must ensure that the source and destination objects are large enough (and that they are allocated)
+>> The memory spaces can not overlap at all!
+
+```C
+
+void *memcpy(void *dest, void *src, size_t size);
+// Copies size nummber of bytes from src to dest
+// returns dest
+```
+
+Example: a and b are both arrays of 20 ints.
+
+```C
+b = a; // Nope!
+memcpy(b, a, sizeof(int) * 20); // Yes!
+```
+
+`memmove()` - Copies a specific number of bytes from one location to another (location may overlap)
+
+```C
+void *memmove(void *dest, void *src, size_t size);
+```
+
+#### Put it all together
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void sort(void *array, size_t array_length, size_t item_size, int (*comparison_function) (void *, void *)) {
+// This sorting algorithm will take in a pointer to a void array, and a pointer to a function that takes in two void pointers.
+	char *base = array;
+	// Need to malloc some temperorary space for the swap
+	void *temp = malloc(esize);
+	for(int i = 0; i < alength; i++) {
+		for(int j = 1; j < alength; j++){
+			char *prev = base + (j-1)* esize;
+			char *this = base + j * esize;
+			if(compare(prev, this) > 0){
+				// swap the two elements
+				
+				memcpy(temp, this, esize);
+				memcpy(this, prev, esize);
+				memcpy(prev, temp, esize);
+				}
+			}
+		}
+	free(temp);
+}
+
+int compare_ints(void *x, void *y) {
+	return *(int *) x - *(int *) y;
+}
+
+#define ALEN 5
+
+int main(int argc, char **argv) {
+	int A[] = {-5, 29, 45, 3, -5};
+
+	sort(A, ALEN, sizeof(int), compare_ints);
+	for(int i = 0; i < ALEN; i++) {
+		printf(" %d", A[i]);
+	}
+	return EXIT_SUCCESS;
+}
+```
+

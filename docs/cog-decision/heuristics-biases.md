@@ -115,6 +115,58 @@ This led to a famous (among JDM professors!) 2006 paper by Craig Fox called “T
 - Students completed a midcourse evaluation form in which they were asked to list either 2 ways in which the course could be improved (a relatively easy task) or 10 ways in which the course could be improved (a relatively difficult task).
 - Respondents who had been asked for 10 critical comments subsequently rated the course more favorably than respondents who had been asked for 2 critical comments.
 
-## Representative Heuristics
+> Studies show that it is typically the *number* of examples that come to mind that matter.
 
 ---
+
+### Law of Small Numbers
+
+**Law of Large Numbers**
+
+- Large samples will be representative of the population from which they are drawn.
+- For example, proportions of heads after *n* flips of a fair coin will almost surely converge to 0.5 as *n* approaches infinity.
+
+**Law of Small Numbers**
+
+- Law of large numbers is (incorrectly) applied to small numbers, e.g. six flips of a coin.
+
+---
+## Representative Heuristics
+
+- When A is judged more probable than B whenever A appears more representative than B.
+
+**What is *representativeness*?**
+
+- How similar an example is to members of its class.
+- How similar a sequence is to what we think randomness is like.
+
+### Tom Problem
+
+- **Base Rate Condition**
+	- Considering all the percentages of students enrolled in 9 different fields.
+	- Then another group of participants were told some things about "Tom's" personalities.
+	- Two conditions: **Similarity condition** and **Prediction condition**
+		- Rank how similar Tom is to prototypical student of each area.
+		- Predict the likelihood that Tom is now a graduate student in each of these fields.
+	- **Question:** Are judgments of the likelihood that Tom is student in a field predicted by perceived base-rates or similarities?
+	- **Results:** Similarity, not base rates, correlated positively with predictions.
+	- **Conclusions:** People display "base rate neglect" and instead use the representativeness heuristic.
+
+> Variations yielding same results.
+> The *problem* is not that we are relying on the representative heuristic. However, the problem is that we **fail** to take into account *other* information that is relevant.
+
+### Linda Problem
+
+- Participants were told some facts about Linda. (31, single, outspoken, bright, majored in philosophy, deeply concerned with discrimination)
+- Divided into 3 groups for naive, informed and sophisticated group
+- Ranking 8 statements found that more people ranked **conjunctive** statements as higher than just independent statements by themselves.
+	- This is even though the chance for a conjunctive statement being true is **ALWAYS** less than the chance for 1 statement being true.
+
+---
+
+## Gambler's Fallacy
+
+> For more on Gambler's Fallacy, [read here](../cog-sci/10-the-rational-mind#Gambler's-Fallacy) and [here](probability#Gambler's-Fallacy).
+
+---
+
