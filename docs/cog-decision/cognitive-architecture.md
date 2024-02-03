@@ -179,7 +179,7 @@ During the latter half of the 20th century:
 ### Baddeley and Hitch Working Memory Model
 
 1. The **central executive** (attentional controller.)
-2. The **phonological loop** (verbal and auditory ifnromation)
+2. The **phonological loop** (verbal and auditory information)
 3. The **visuospatial sketchpad** (visual and spatial information)
 
 **Baddeley (2000) added:**

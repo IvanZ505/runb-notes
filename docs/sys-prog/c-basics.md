@@ -560,33 +560,7 @@ So... it looks something like...
 int (*compare) (void*, void*)
 ```
 
-- However, we also need a way to copy the memory to the new address! There is a way to do that!!!
-
-`memcpy()` - Copies a specific number of bytes from one location to another.
-
-> There are **NO** safety checks in `memcpy()`, meaning we must ensure that the source and destination objects are large enough (and that they are allocated)
->> The memory spaces can not overlap at all!
-
-```C
-
-void *memcpy(void *dest, void *src, size_t size);
-// Copies size nummber of bytes from src to dest
-// returns dest
-```
-
-Example: a and b are both arrays of 20 ints.
-
-```C
-b = a; // Nope!
-memcpy(b, a, sizeof(int) * 20); // Yes!
-```
-
-`memmove()` - Copies a specific number of bytes from one location to another (location may overlap)
-
-```C
-void *memmove(void *dest, void *src, size_t size);
-```
-
+- However, we also need a way to copy the memory to the new address! There is a way to do that!!! (There are [multiple](#copying-memory))
 #### Put it all together
 
 ```C
@@ -632,3 +606,76 @@ int main(int argc, char **argv) {
 }
 ```
 
+---
+
+## Copying Memory
+
+### `memcpy()`
+
+`memcpy()` - Copies a specific number of bytes from one location to another.
+
+> There are **NO** safety checks in `memcpy()`, meaning we must ensure that the source and destination objects are large enough (and that they are allocated)
+>> The memory spaces can not overlap at all!
+
+```C
+
+void *memcpy(void *dest, void *src, size_t size);
+// Copies size nummber of bytes from src to dest
+// returns dest
+```
+
+Example: a and b are both arrays of 20 ints.
+
+```C
+b = a; // Nope!
+memcpy(b, a, sizeof(int) * 20); // Yes!
+```
+
+### `memmove()`
+
+`memmove()` - Copies a specific number of bytes from one location to another (location may overlap)
+
+```C
+void *memmove(void *dest, void *src, size_t size);
+```
+
+### `strcpy()`
+
+`strcpy()` - Copies a string from one place to another
+
+- Must make sure that the source contains a string (with a terminator)
+- And we need to make sure the destination is large enough.
+- **Never going to be faster than `memcpy()`**
+	- So, just use `memcpy()` if you know the length of the string.
+
+```C
+char *strcpy(char *dest, char *src);
+// Note that no size is provided
+// This is because strcpy() copies from the source until it finds a terminator
+```
+
+### `strncpy()`
+
+`strncpy()` - copies up to n bytes from a location to another.
+
+- Copies a string, or the first n bytes.
+	- If it stops before the end of the string, it doesn't write a terminator...
+
+```C
+char *strncpy(char *dest, char *src, size_t n);
+```
+
+### `strcat()`
+
+`strcat()` - Concatenates one string to the end of another string
+
+- `src` will be copied to `dest` starting at the terminator in `dest`.
+- `dest` must have a terminator and enough space...
+- Annoyingly, `strcat()` always reads through `dest`, so repeatedly copying to a `dest` is quadratic time. *use pointers and `memcpy()`*
+
+```C
+char *strcat(char *dest, char *src);
+char *strncat(char *dest, char *src, size_t n);
+```
+
+### `memset()`

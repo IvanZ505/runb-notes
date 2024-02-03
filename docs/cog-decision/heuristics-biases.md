@@ -166,7 +166,7 @@ This led to a famous (among JDM professors!) 2006 paper by Craig Fox called “T
 
 ## Gambler's Fallacy
 
-> For more on Gambler's Fallacy, [read here](../cog-sci/10-the-rational-mind#Gambler's-Fallacy) and [here](probability#Gambler's-Fallacy).
+> For more on Gambler's Fallacy, [read here](../cog-sci/10-the-rational-mind#gamblers-fallacy) and [here](probability#gamblers-fallacy).
 
 ---
 

@@ -36,4 +36,4 @@ Psychology Building)
 
 ## [Heuristics and Biases](heuristics-biases)
 
-## [Probability](probabililty)
+## [Probability](probability)
