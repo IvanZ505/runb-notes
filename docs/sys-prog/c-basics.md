@@ -360,6 +360,10 @@ However, we can create objects that are not associated with a variable. This is 
 
 > You can typecast the pointer `int *array = (int *) malloc(arraysize + sizeof(int))`
 
+`realloc()` - **Dynamic Reallocation**
+
+- It can chop things off the end or reassign space that is larger depending on the request.
+- If there is space around the object, it will just make the memory object bigger. If it is too big, it will allocate a new memory object.
 ## Types of Objects
 
 Three categories of objects
@@ -679,3 +683,92 @@ char *strncat(char *dest, char *src, size_t n);
 ```
 
 ### `memset()`
+
+## Creating a ArrayList in C
+
+An array that we can expand or contract.
+
+- What sort of operations do we need to support?
+	- Push
+	- Pop
+	- Indexing
+	- **Initialization**
+	- **Destruction**
+- We also need the data structure itself
+	- An array
+	- Number of elements in the list
+	- Size of the array
+
+> **Central Idea**: We add elements to the array until it is full. When it is full, we replace the array with a bigger one.
+
+**Project Layout**:
+
+- Text.c → test driver (a client of ArrayList)
+- Arraylist.c → implementation of our function
+- Arraylist.h → type definition and function prototypes
+
+```C
+// Arraylist.h
+// Defining our type definitons and function prototypes
+
+typedef struct {
+	int *data;
+	unsigned length;
+	unsigned capacity;
+} arralist_t;
+
+void a1_init(arraylist_t *, unsigned);
+void a1_destroy(arraylist_t *);
+
+unsigned a1_length(arraylist_t *);
+
+void a1_push(arraylist_t *, int);
+void a1_pop(arraylist_t *, int *);
+
+```
+
+```C
+// Arraylist.c
+// Import our arraylist.h so we have the function types.
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "arraylist.h"      // Here it is
+
+void a1_init(arraylist_t *L, unsigned size) {
+	L->data = malloc(size * sizeof(int));
+	L->length = 0;
+	L->capacity = size;
+}
+
+void a1_destroy(arraylist_t *L) {
+	free(L->data);
+}
+
+unsigned a1_length(arraylist_t *L) {
+	return L->length;
+}
+
+void a1_push(arraylist_t *L) {
+	if(L->length == L->capacity) {
+		// make array bigger
+		// There is something that can make objects bigger (realloc!!!!)
+		if(L->length == L->capacity) {
+			L->capacity *= 2;
+			L->data = realloc(L->data, L->capacity*sizeof(int));
+		}
+	}
+
+	L->data[L->length] = item;
+	L->length++;
+}
+
+unsigned a1_pop(arraylist_t *L) {
+	if(L->length == 0) return 0;
+
+	L->length--;
+	*dest = L->data[L->length];
+
+	return 1;
+}
+```

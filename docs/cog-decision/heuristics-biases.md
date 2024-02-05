@@ -170,3 +170,47 @@ This led to a famous (among JDM professors!) 2006 paper by Craig Fox called “T
 
 ---
 
+## Stereotyping
+
+- First you perceive a category.
+- The perceived category then activates stereotypes of the category.
+- Infer the individual has stereotypical characteristics.
+
+> Stereotyping goes from categorization to characteristics via a generic.
+
+For example:
+
+- "Loyalists are stupid."
+- "Loyalists have shaved heads."
+
+### Subtyping
+
+- When you rule out someone from a stereotype because they don't have the stereotypical properties.
+	- "Well he doesn't have a shaved head so he's not *really* a loyalist."
+- This leads to the extremism of the stereotyped group.
+
+### Representativeness in Relation to Stereotypes
+
+**The representative heuristic** goes from characteristics to categorization via similarity to a perceived exemplar.
+
+For example:
+
+- You have a shaved head.
+- You are similar to the exemplar of a loyalist.
+- You're likely a loyalist.
+
+**This is judgment based on likelihood, which is representative heuristic.**
+
+Whereas stereotyping would be:
+
+- You have a shaved head, so you are a loyalist.
+
+---
+
+## Anchoring and Adjustment
+- Tendency to estimate by starting at an initial value (the anchor), assessing whether it is too low or too high, and gradually adjusting it by mentally moving from the anchor.
+- **Rationale**: When you lack knowledge, it is good for an estimate.
+- **Problems**: You may anchor on to irrelevant information.
+
+### Contrast Principle
+- "Automobile dealers use the contrast principle by waiting until the price of the car has been negotiated before suggesting one option after another. In the wake of a man-thousand-dollar deal, a couple hundred..."
