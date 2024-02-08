@@ -772,3 +772,106 @@ unsigned a1_pop(arraylist_t *L) {
 	return 1;
 }
 ```
+
+## `make`
+
+- make is used to manage compiling our projects  
+- we use a "makefile" to describe how to create certain files  
+
+```C
+<file to create>: <list of dependencies>
+	<commands to create the file>
+```
+
+- commands must be indented with a single tab character -- no spaces!  
+
+**Example:**
+
+	arraylist.o: arraylist.c arraylist.h  
+		gcc -c -Wall arraylist.c  
+	test.o: test.c arraylist.h  
+		gcc -c -Wall test.c  
+	test: test.o arraylist.o  
+		gcc test.o arraylist.o -o test  
+
+When make is called with no arguments, it will use the first recipe in the makefile  
+
+- You can also provide one or more specific targets to make  
+- When make tries to create a target, it checks:  
+1. does a file by this name exist?  
+2. are all the dependencies (if any) up to date?  
+3. if the file exists and is older than any of its dependencies, execute the recipe
+
+### More Advanced `make`
+- We can have variables in a makefile 
+- To create a variable, write  
+
+		VAR_NAME = some text
+
+- To use a variable, write `$(VAR_NAME)`
+
+#### Two commonly used variables that make can use  
+- CC - C compiler  
+- CFLAGS - options to give to C compiler  
+- make uses these to create X.o files from X.c files, if no rule is given 
+
+#### Sample `makefile`
+```makefile
+CC = gcc
+CFLAGS = -Wall -fsanitize=address -std=c99 -O2  
+
+test: test.o arraylist.o  
+	$(CC) $(CFLAGS) test.o arraylist.o -o test  
+
+arraylist.o: arraylist.c arraylist.h  
+	$(CC) $(CFLAGS) -c -Wall arraylist.c  
+
+test.o: test.c arraylist.h  
+	$(CC) $(CFLAGS) -c -Wall test.c  
+
+clean:  
+	rm *.o test  
+```
+
+> If we remove the rules for arraylist.o and test.o, make will use its default rule for .o files 
+
+
+### Generalized Recipes
+
+**When make executes a recipe, it defines a few additional variables**  
+- `$@` - the name of the target we are creating  
+- `$^` - the list of dependencies for the current target  
+- `$<` - the first dependency of the current target  
+
+> Using these allows us to avoid repeating ourselves 
+
+```makefile
+
+test: test.o arraylist.o  
+	$(CC) $(CFLAGS) $^ -o $@
+// we can use % to create recipe patterns  
+%.o: %.c  
+	$(CC) $(CFLAGS) -c $< -o $@
+```
+
+- This says how to create any file ending in .o using a file ending with .h  
+- If we provide a specific recipe, make will use that even if a wildcard recipe exists  
+
+**We can use rules with no commands to indicate additional dependencies**  
+- `arraylist.o: arraylist.h`
+- `test.o: arraylist.h`
+- `arraylist.o test.o: arraylist.h`
+
+## Alignments
+
+- Primitive data types are at addresses that are multiples of their length.
+	- Simplifies reading memory.
+	- Prevents partial overlap
+- How does `malloc` ensure alignment?
+	- It has no way to distinguish an array of ints from an array of double
+	- It always gives the maximum alignment for the software.
+
+> **Suggestion**: Instead of using memory directly, cast it to a `char` pointer
+>> `#define heap ((char *)memory)`
+> **Reminder**: We can cast pointers at any time
+

@@ -132,3 +132,24 @@ $$P(A|B) = \frac{P(A) * P(B|A)}{P(B)}$$
 
 $$P(h|e) = \frac{P(h).P(e|h)}{P(e)}$$
 
+- `P(h|e)` is the **posterior probability** of hypothesis **h**. It is the probability of **h** after considering the evidence **e**.
+- `P(h)` is the prior probability of the hypothesis h. It is the probability of h before considering the evidence e.
+- `P(e|h)` is the likelihood probability of the evidence **e** on the assumption that the hypothesis **h** is true.
+- `P(e)` is the probability of the evidence **e**. It is the probability of **e** in the absence of any assumption about the truth of **h**.
+
+`P(e|h)` states how likely the evidence **e** is considered to be when the truth of the hypothesis **h** is not assumed.
+
+- If the evidence is considered extremely likely whether we assume a hypothesis or not, the hypothesis is not highly supported if the evidence is confirmed.
+- If the evidence is considered very unlikely unless the hypothesis is assumed, then the hypothesis can be considered highly confirmed.
+
+**Example:**
+
+- Suppose a new theory of gravitation predicts that heavy objects fall to the ground.
+- This would not be highly confirmed by the observation of the fall of a stone since the stone would be expected to fall even when we do not assume the truth of the new theory.
+- However, if the new theory were to predict some small variation of gravity with temperature, then if it is highly supported by the discovery of such evidence, since gaining that evidence would be considered unlikely when we do not assume the truth of the new theory.
+
+It is also a theorem that:
+
+`P(e) = P(e|h) * P(h) + P (e | not h) * P(not h)`
+
+- This is dividing the probability of the evidence being true into two **mutually exclusive** quadrants. *the hypothesis can't be both true and not true.*

@@ -178,7 +178,7 @@ The set of all possible outcomes `S` .
 
 > When you multiply all the choices for each option together to get your total number of possible outcomes.
 
-**Official Definition:** When a task consists of *k* ...
+**Official Definition:** When a task consists of *k* tasks, each with a possible outcome of nₖ, the total possible outcomes is `n₁ ✕ n₂✕ n₃ ✕ ... ✕ nₖ`
 
 #### Practice
 
@@ -212,6 +212,8 @@ Evaluate the following without a calculator:
 
 $$\frac{5!}{9!} = \frac{5!}{9 * 8 * 7 * 6 * 5!} = \frac{1}{9 * 8 * 7 * 6}$$
 
+> `0!` is going to equal 1. This is the agreement otherwise everything else is going to become 0.
+
 ---
 
 #### Practice
@@ -235,4 +237,45 @@ MI 10.2
 	However, we must also consider that the 3 men can also swap with one another. Their swaps have 3! permutations.
 	This means, in total, we have 5! ✕ 3!
 
-#HW 62c
+### Arrangement of `n` objects Containing Lookalikes
+
+- The number of **distinguishable arranements** of *n* objects, where one or more subsets consist of look-alikes (say `n₁` are of one kind, `n₂` are of another kind, ... and `nₖ` are of yet another kind), is given by:
+
+$$\frac{n!}{n₁!*n₂!*...*nₖ!}$$
+
+**Example**
+
+	Determine the number of distinguishable arrangements of the letters in each word.
+	ATTRACT (n = 7)
+	The problem with this question is:
+	- If you swap the First T with the Second T, you still have the same word.
+	- Same thing happens if you swap the first A with the second A.
+	Solution:
+	Put the number of letters that repeat on the bottom using the distinguishable arragenements definiton.
+	n = 7 → 2 As, 3 Ts, 1R, 1C
+	This means our distinguishable arrangements would be:
+
+$$\frac{7!}{3!*2!*1!*1!}$$
+
+---
+
+### Combination Permutation
+
+The number of **permutations**, or *arrangements*, of *n* distinct things taken *r* at a time, where `r ≤ n`, can be calculated as follows.
+
+
+$$_nP_r=\frac{n!}{(n-r)!}$$
+> Whenever we want to count how many ways we want to pick *r* items out of *n* items.
+
+---
+
+The number of **combinations**, or *subsets*, of *n* distinct things taken r at a time, where `r ≤ n`, can be calculated as follows.
+
+$$_nC_{r}=\frac{_nP_r}{r!}=\frac{n!}{r!(n-r)!}$$
+
+#### When to Use Permutations vs Combinations
+
+![](imgs/perms-vs-combs.png)
+
+---
+

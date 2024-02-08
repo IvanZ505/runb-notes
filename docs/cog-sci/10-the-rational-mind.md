@@ -37,6 +37,8 @@ For example: If it takes 5 machines 5 minutes to create 5 widgets, how long does
 - If there is a deviation in the chance, there will be a deviation in the other direction to even out.
 - However, the issue is, every time a coin is flipped its 50/50 for heads or tails.
 
+> Check out [Cog Decision: Probability](../cog-decision/probability#gamblers-fallacy) or [Cog Decision: Heuristics and Biases](../cog-decision/heuristics-biases#gamblers-fallacy).
+
 ---
 
 **Availability Heuristics** - How people access the probability of something by how easily they are able to think of.
@@ -45,8 +47,12 @@ For example: If it takes 5 machines 5 minutes to create 5 widgets, how long does
 	- If you thought more words start with *k*, you are wrong. The only reason you would think that is because it is a lot harder for us to think of those words in our memory, and its much easier to think of words that start with *k*.
 - Ex: Plane crashes are so infrequent but because we see it on the news so often, we think of it as happening more often than they actually do.
 
+> [See here](../cog-decision/heuristics-biases#the-availability-heuristic) for more information.
+
 **Anchoring Heuristics** - Not really a rational underlying assumption. We are adjusting our estimates based on a initial estimate and a number range.
 - Ex: When first asking "`Is a german car more or less expensive than $100,000?`" and then asking "`Is a german car more or less expensive than $20,000?`", the estimate is more likely to be closer to $100,000 when it should have no effect on the actual estimate.
+
+> [See here](../cog-decision/heuristics-biases#anchoring-and-adjustment) for more information.
 
 ---
 

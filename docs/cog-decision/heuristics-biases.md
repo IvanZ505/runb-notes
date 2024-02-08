@@ -1,4 +1,4 @@
-# Heuristics and Biases
+# [Heuristics and Biases](../cog-decision/cog-decision)
 
 ## Objectives
 - The battle of the JDM Superpowers: Cognitive illusions vs fast and frugal
@@ -166,6 +166,8 @@ This led to a famous (among JDM professors!) 2006 paper by Craig Fox called “T
 
 ## Gambler's Fallacy
 
+#gamblers-fallacy
+
 > For more on Gambler's Fallacy, [read here](../cog-sci/10-the-rational-mind#gamblers-fallacy) and [here](probability#gamblers-fallacy).
 
 ---
@@ -212,5 +214,99 @@ Whereas stereotyping would be:
 - **Rationale**: When you lack knowledge, it is good for an estimate.
 - **Problems**: You may anchor on to irrelevant information.
 
+---
 ### Contrast Principle
-- "Automobile dealers use the contrast principle by waiting until the price of the car has been negotiated before suggesting one option after another. In the wake of a man-thousand-dollar deal, a couple hundred..."
+- "Automobile dealers use the contrast principle by waiting until the price of the car has been negotiated before suggesting one option after another. In the wake of a man-thousand-dollar deal, a couple hundred extra dollars for a nicety such as an upgraded sound system seems almost trivial in comparison. The same will be true of the added expense of accessories, such as tinted windows, better tires, or special trim, that the dealer might suggest in sequence. The trick is to bring up the options independently of one another so that each small price will seem petty when compared to the already determined much larger price."
+- The contract principle provides some sort of anchoring affect as well by making the overpriced houses look more like a bargain by comparison to the contrasts.
+
+---
+
+### Selective Accessibility
+
+- Anchor provided → the anchor will bring examples to mind which would cause a selectivity bias.
+
+#### Example of Selective Accessibility?
+
+- Guess the height of building in New York.
+- Given a small anchor.
+- Anchor renders more accessible memories of smaller buildings.
+- So, you underestimate the height of the building.
+### Insufficient Adjustment
+
+- Self-generated anchor → they do not sufficiently adjust.
+
+**Why is there insufficient adjustment?**
+
+- People do not have the relevant information.
+- Adjustment requires attention and there may be added cognitive load in unfamiliar situations.
+- Individual differences regarding effortful thinking.
+
+> Cognitive Load: The amount of information you have to process at the same time. **DPT** will say that heavy cognitive load causes heavy usage of the working memory.
+
+## Primacy Effect
+
+**How do we quickly form impressions of others?**
+
+- We know some characteristics.
+- Order in which we know them is irrelevant.
+
+### Solomon Asch
+
+---
+#### Intelligent-First Condition
+
+- (From good to bad)
+- This person is "intelligent, industrious, impulsive, critical, stubborn, envious."
+
+#### Envious-first condition
+
+- (Goes from good to bad)
+
+---
+
+Also asked whether or not people would have a number of other characteristics.
+
+Participants in the intelligent-first condition were more likely to endorse positive characteristics.
+
+> He called these the "primacy effects" in impression formation.
+
+### Asch's Explanation
+
+- Later characteristics listed are *interpreted* in light of the former characteristics.
+- Former characteristics act as the *background* information that the later ones are interpreted on.
+
+---
+
+## Attribute Substitution
+
+- “Judgment is mediated by a heuristic when an individual assesses a specified target attribute of a judgment object by substituting another property of that object – the heuristic attribute – which comes more readily to mind”
+- A heuristic is influencing a judgment when people try to answer a hard question by answering an easier one.
+
+---
+
+**Why does attribute substitution occur? Why did it evolve?**  
+
+Perhaps substitute attribute is relevant and “good enough”.  
+
+- Do I believe in climate change?
+	- Do I trust people who say that climate change exists? 
+- Will the project be completed on time?
+	- Is the project currently on time?
+- Am I satisfied with my relationship?
+	- What is my mood right now?
+
+---
+### Representativeness heuristic (Attribute Substitution)
+- Replace difficult probability judgment with easier similarity judgment.  
+
+### Availability heuristic   (Attribute Substitution)
+- Replace difficult probability judgment with easier judgment about how easily instances come to mind.  
+
+### Anchoring-and-adjustment  (Attribute Substitution)
+- Involves no attribute substitution!  
+- Involves making a particular value of the attribute being judged seem more possible.
+- Here judgment is influenced by temporarily raising the accessibility of a particular *value* of the target attribute.
+- Also note that Kahneman thinks that anchoring-and-adjustment has both a type 1 and type 2 form. The adjustment can be deliberate, consciously considering reasons to adjust from the anchor.
+
+---
+
