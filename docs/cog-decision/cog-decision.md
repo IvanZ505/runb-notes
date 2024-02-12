@@ -37,3 +37,6 @@ Psychology Building)
 ## [Heuristics and Biases](heuristics-biases)
 
 ## [Probability](probability)
+
+## [Learning and Prediction](../cog-decision/learning-prediction)
+
