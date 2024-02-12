@@ -44,6 +44,42 @@
             }
           },
           {
+            "id": "2c617790c7fd2f72",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/c-basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cda653a4548174a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/project1-my-little-malloc.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "781678f0711beb70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/comp-arch/3-bit-level-operations-in-c.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "7d6bcf3f5af7d3d8",
             "type": "leaf",
             "state": {
@@ -178,7 +214,7 @@
             }
           },
           {
-            "id": "289b0bdd17a1e6ca",
+            "id": "5bc1da854e0229d2",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -207,17 +243,25 @@
   },
   "active": "18585b27d6bbb011",
   "lastOpenFiles": [
+    "docs/discrete-2/imgs/practice-10-4.png",
+    "docs/discrete-2/imgs/pascals-triangle.png",
+    "obsidian-vault/Untitled.canvas",
+    "docs/discrete-2/discrete-2.md",
+    "obsidian-vault/what-i-want.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/project1-my-little-malloc.md",
+    "docs/comp-arch/3-bit-level-operations-in-c.md",
+    "docs/comp-arch/basics-of-c.md",
+    "docs/cog-decision/heuristics-biases.md",
+    "docs/sys-prog/sys-prog.md",
+    "README.md",
+    "docs/harddrive-wipe.md",
     "obsidian-vault",
     "docs/discrete-2/imgs/perms-vs-combs.png",
     "docs/cog-decision/probability.md",
-    "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/sys-prog.md",
-    "docs/sys-prog/c-basics.md",
     "docs/cog-sci/10-the-rational-mind.md",
-    "docs/cog-decision/heuristics-biases.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/readings.md",
     "docs/discrete-2/imgs/A-probability-tree-indicating-the-16-possible-outcomes-of-a-sequence-of-four-coin-tosses.png",
     "docs/comp-arch/comp-arch.md",
@@ -228,7 +272,6 @@
     "docs/cog-sci/11-emergence-of-the-mind.md",
     "docs/intro-cs/recitations/recitation.md",
     "docs/intro-cs/cs111.md",
-    "docs/harddrive-wipe.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
@@ -238,21 +281,15 @@
     "docs/cog-decision/imgs/actual/four-conditions-decision.png",
     "docs/cog-decision/imgs/actual/three-conditions-decision.png",
     "docs/cog-decision/imgs/actual/conditions-decisions.png",
-    "docs/cog-decision/imgs/actual/qualities-of-dual-processes.png",
     "docs/cog-sci/8-memory.md",
-    "docs/cog-sci/7-the-minds-eye.md",
-    "docs/cog-sci/cog-sci-finals.md",
     "docs/discrete-2/imgs",
     "docs/discrete-2",
-    "docs/comp-arch/0-what-is-a-computer.md",
-    "docs/comp-arch/basics-of-c.md",
     "docs/sys-prog/imgs",
     "docs/sys-prog",
     "docs/cog-decision/imgs/joke",
     "docs/cog-decision/imgs/actual",
     "docs/cog-decision/imgs",
     "docs/cog-decision",
-    "docs/comp-arch/imgs/joke",
-    "docs/comp-arch/imgs/actual"
+    "docs/comp-arch/imgs/joke"
   ]
 }

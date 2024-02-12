@@ -277,5 +277,101 @@ $$_nC_{r}=\frac{_nP_r}{r!}=\frac{n!}{r!(n-r)!}$$
 
 ![](imgs/perms-vs-combs.png)
 
+**Example**
+
+- In how many different ways can you choose 5 diamonds?
+	- `₁₆C₅`
+- In how many ways can you choose 5 black cards?
+	- `₂₆C₅`
+- In the lottery, you select 5 distinct numbers from 1-47 and one MEGA number from 1-27. How many different sets of 6 numbers can you select. **Lottery numbers are always selection!!!**
+	- Multiple task problem, `₄₇C₅ ✕ 27`
+- How many of the possible 5-card hands from a standard 52-card deck will consist of the following cards?
+	- four clubs and one non-club: `₁₃C₅ ✕ 39`
+	- two red cards, two clubs, and a spade: `₂₆C₂ ✕ ₂₆C₂ ✕ 13 (or ₁₃C₁)`
+
 ---
 
+### Grouping `n` Elements
+
+To divide *n* elements into *k* groups of *n₁*, *n₂*, *n₃*, ..., *nₖ* (**All Different Sizes**, if an *n₁*): 
+
+$$_{n}C_{n₁}*(_{n-n₁}C_n₂)*...$$
+
+To divide *n* elements into *k* groups at size *r*:
+
+$$\frac{_nC_{r}*(_{n-r}C_r)*...}{k!}$$
+
+---
+
+### Pascal's Triangle
+
+![](imgs/pascals-triangle.png)
+
+	(a+b) = a + b
+	(a+b)² = a²+2ab + b²
+
+So, the for `a¹⁹`:
+
+- `(a+b)¹⁹ = ₁₉C₀a¹⁹ + ₁₉C₁a¹⁸b + ₁₉C₂a¹⁷b² + ... + ₁₉C₀b¹⁹`
+
+---
+### Counting Problems Involving "NOT" and "OR"
+
+**Number of Outcomes**: Getting Head **OR** Rolling an even number:
+
+	A = Getting H
+	B = Getting even num
+	This question can be defined as: n(A ∪ B)
+	n(A∪B) = n(A) + n(B) - n(A∩B)
+	S = {(H,1), (H,2), (H,3), (H,4),..., (H,6), (T,1), (T, 2), ..., (T,6)}
+	A = {(H,1), (H,2), ..., (H,6)}
+	B = {(H,2), (H,4), (H,6), (T,2), (T,4), (T,6)}
+#### How to Solve
+
+1. Define our set
+2. Step 2, draw / list the sample space (so you know the *total* outcomes) **S**
+3. List elements in each set and find its cardinality
+4. Use the formula to find the value
+
+---
+
+#### Practice for "OR"
+
+- If a single card is drawn from deck, how many different ways can we draw a heart or a ten.
+	- A - Heart, B - 10
+	- n(A) = 13 (13 hearts in the deck),  n(B) = 4 (there are 4 tens in the deck)
+	- n(A∩B) = 1, there is 1 ten that is heart.
+	- n(A∪B) = n(A) + n(B) - n(A∩B) = 13 + 4 - 1 = **16**
+- An ace or a red card.
+	- A - Ace, B - Red card
+	- n(A) = 4, n(B) = 26
+	- n(A∩B) = 2
+	- n(A∪B) = n(A) + n(B) - n(A∩B) = 4 + 26 - 2
+
+![](imgs/practice-10-4.png)
+
+- How many ways can we have a woman or a Democrat man
+	- A - Woman, B - Democrat Man
+	- n(A) = 9, n(B) = 8
+	-  n(A∩B) = 0
+	- n(A∪B) = n(A) + n(B) - n(A∩B) = 9 + 8
+
+---
+
+**Number of Outcomes**: Tossing a coin 3 times and getting no heads. (*Same as:* Getting Tails on all 3 tosses)
+
+	Draw out sample space. (I can't draw here rip)
+	Let A be Getting Heads.
+	A' = Not getting heads.
+	n(A') = n(S) - n(A) = 8 - 7 = 1
+
+#### Practice for "NOT"
+
+- If you toss seven fair coins, in how many ways can you obtain at least two head. (**two or more heads**)
+	- n(S) = 2⁷
+	- Trying to show 2 or more is like n(2H ∪ 3H ∪ 4H ...)
+	- **Instead**, go the other route and figure out the outcomes where you get no heads or 1 head.
+		- A - No heads, B - 1 head
+	- A ∪ B = n(A) + n(B) = 1 + 7 = 8
+	- Then, just find the complement of that.
+		- 2⁷ - 8

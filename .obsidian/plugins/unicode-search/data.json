@@ -5,10 +5,118 @@
   },
   "data": [
     {
+      "char": "∪",
+      "name": "union",
+      "useCount": 14,
+      "lastUsed": 1707749211550
+    },
+    {
+      "char": "⁷",
+      "name": "superscript seven",
+      "useCount": 3,
+      "lastUsed": 1707749237637
+    },
+    {
+      "char": "∩",
+      "name": "intersection",
+      "useCount": 10,
+      "lastUsed": 1707747673775
+    },
+    {
+      "char": "⁹",
+      "name": "superscript nine",
+      "useCount": 5,
+      "lastUsed": 1707745976392
+    },
+    {
+      "char": "¹",
+      "name": "superscript one",
+      "useCount": 12,
+      "lastUsed": 1707745974282
+    },
+    {
+      "char": "²",
+      "name": "superscript two",
+      "useCount": 10,
+      "lastUsed": 1707745958298
+    },
+    {
+      "char": "₂",
+      "name": "subscript two",
+      "useCount": 23,
+      "lastUsed": 1707745939321
+    },
+    {
+      "char": "⁸",
+      "name": "superscript eight",
+      "useCount": 2,
+      "lastUsed": 1707745923742
+    },
+    {
+      "char": "₁",
+      "name": "subscript one",
+      "useCount": 17,
+      "lastUsed": 1707745909917
+    },
+    {
+      "char": "₀",
+      "name": "subscript zero",
+      "useCount": 6,
+      "lastUsed": 1707745869780
+    },
+    {
+      "char": "₉",
+      "name": "subscript nine",
+      "useCount": 2,
+      "lastUsed": 1707745863049
+    },
+    {
+      "char": "ₖ",
+      "name": "latin subscript small letter k",
+      "useCount": 5,
+      "lastUsed": 1707403479973
+    },
+    {
+      "char": "₃",
+      "name": "subscript three",
+      "useCount": 5,
+      "lastUsed": 1707403464299
+    },
+    {
+      "char": "✕",
+      "name": "multiplication x",
+      "useCount": 33,
+      "lastUsed": 1707403188426
+    },
+    {
+      "char": "₆",
+      "name": "subscript six",
+      "useCount": 4,
+      "lastUsed": 1707403174673
+    },
+    {
+      "char": "₅",
+      "name": "subscript five",
+      "useCount": 4,
+      "lastUsed": 1707403083002
+    },
+    {
+      "char": "₇",
+      "name": "subscript seven",
+      "useCount": 1,
+      "lastUsed": 1707402461542
+    },
+    {
+      "char": "₄",
+      "name": "subscript four",
+      "useCount": 1,
+      "lastUsed": 1707402458343
+    },
+    {
       "char": "ₙ",
       "name": "latin subscript small letter n",
-      "useCount": 3,
-      "lastUsed": 1707400138653
+      "useCount": 4,
+      "lastUsed": 1707402188271
     },
     {
       "char": "≤",
@@ -23,36 +131,6 @@
       "lastUsed": 1707399839436
     },
     {
-      "char": "ₖ",
-      "name": "latin subscript small letter k",
-      "useCount": 4,
-      "lastUsed": 1707399654948
-    },
-    {
-      "char": "✕",
-      "name": "multiplication x",
-      "useCount": 29,
-      "lastUsed": 1707399639688
-    },
-    {
-      "char": "₂",
-      "name": "subscript two",
-      "useCount": 15,
-      "lastUsed": 1707399634021
-    },
-    {
-      "char": "₁",
-      "name": "subscript one",
-      "useCount": 8,
-      "lastUsed": 1707399622497
-    },
-    {
-      "char": "₃",
-      "name": "subscript three",
-      "useCount": 2,
-      "lastUsed": 1707399393244
-    },
-    {
       "char": "⁵",
       "name": "superscript five",
       "useCount": 3,
@@ -63,18 +141,6 @@
       "name": "space",
       "useCount": 1,
       "lastUsed": 1706501348972
-    },
-    {
-      "char": "∪",
-      "name": "union",
-      "useCount": 6,
-      "lastUsed": 1706501265183
-    },
-    {
-      "char": "∩",
-      "name": "intersection",
-      "useCount": 5,
-      "lastUsed": 1706501259840
     },
     {
       "char": "⊆",
@@ -209,18 +275,6 @@
       "lastUsed": 1703182647714
     },
     {
-      "char": "²",
-      "name": "superscript two",
-      "useCount": 6,
-      "lastUsed": 1703182642411
-    },
-    {
-      "char": "¹",
-      "name": "superscript one",
-      "useCount": 6,
-      "lastUsed": 1703182639207
-    },
-    {
       "char": "⁻",
       "name": "superscript minus",
       "useCount": 6,
@@ -237,12 +291,6 @@
       "name": "superscript three",
       "useCount": 1,
       "lastUsed": 1703180928588
-    },
-    {
-      "char": "⁸",
-      "name": "superscript eight",
-      "useCount": 1,
-      "lastUsed": 1703180362083
     },
     {
       "char": "⌄",
@@ -341,18 +389,6 @@
       "lastUsed": 1702150298208
     },
     {
-      "char": "⁹",
-      "name": "superscript nine",
-      "useCount": 1,
-      "lastUsed": 1701549308869
-    },
-    {
-      "char": "₉",
-      "name": "subscript nine",
-      "useCount": 1,
-      "lastUsed": 1701549298365
-    },
-    {
       "char": "¬",
       "name": "not sign",
       "useCount": 1,
@@ -369,12 +405,6 @@
       "name": "greek small letter epsilon",
       "useCount": 1,
       "lastUsed": 1700410890685
-    },
-    {
-      "char": "₀",
-      "name": "subscript zero",
-      "useCount": 5,
-      "lastUsed": 1700410059042
     },
     {
       "char": "¢",
@@ -50495,14 +50525,6 @@
       "name": "subscript equals sign"
     },
     {
-      "char": "₅",
-      "name": "subscript five"
-    },
-    {
-      "char": "₄",
-      "name": "subscript four"
-    },
-    {
       "char": "₍",
       "name": "subscript left parenthesis"
     },
@@ -50517,14 +50539,6 @@
     {
       "char": "₎",
       "name": "subscript right parenthesis"
-    },
-    {
-      "char": "₇",
-      "name": "subscript seven"
-    },
-    {
-      "char": "₆",
-      "name": "subscript six"
     },
     {
       "char": "⥹",
@@ -50881,10 +50895,6 @@
     {
       "char": "⁾",
       "name": "superscript right parenthesis"
-    },
-    {
-      "char": "⁷",
-      "name": "superscript seven"
     },
     {
       "char": "⥻",
