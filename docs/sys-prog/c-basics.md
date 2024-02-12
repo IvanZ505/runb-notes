@@ -818,7 +818,7 @@ When make is called with no arguments, it will use the first recipe in the makef
 #### Sample `makefile`
 ```makefile
 CC = gcc
-CFLAGS = -Wall -fsanitize=address -std=c99 -O2  
+CFLAGS = -Wall -fsanitize=address -std=c99 -O2
 
 test: test.o arraylist.o  
 	$(CC) $(CFLAGS) test.o arraylist.o -o test  
