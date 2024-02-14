@@ -115,3 +115,37 @@ Found that when the description of the event was stripped of potential causes of
 - In reverse hindsight bias, people's likelihood estimates of the actual outcome after the fact are even lower than estimates given by people who did not know the outcome at all.
 - Occurs for very surprising events; if sense making is successful then hindsight bias occurs; if plausible causal models point to a different outcome, then reverse hindsight bias occurs.
 
+## Outcome Bias
+
+- Tendency, when judging the quality of a decision, to take the outcome into account in a way that is **irrelevant**.
+- E.g. Decisions evaluated more favorably due to a positive outcome even if the outcome is by chance.
+- *Underplays* the uncertainty of the situation.
+- **Ex:** A physician decides to do a bypass operation where 8% of people do not survive, but which could increase life expectancy.
+
+> **Outcome bias** may work in tandem with hindsight bias, making you think something was riskier than it was.
+
+- Hence, you make think that the physician made a bad decision.
+- **Decision makers who might have their decisions scrutinized may be reluctant to take nay risks, given hindsight bias and outcome bias.**
+
+### Baron and Hershey's Study (1988)
+
+> This one has been replicated.
+
+#### Setup
+
+- 692 participants via Mturk.
+- **All told:**
+	- A 55-year-old man had a heart condition.
+	- He had to stop working because of chest pain.
+	- He enjoyed his work and did not want to stop.
+	- His pain also interfered with other things, such as travel and recreation.
+	- A type of bypass operation would relieve his pain and increase his life expectancy from age 65 to age 70.
+	- However, 8% of the people who have this operation die from the operation itself.
+- **Task**: Evaluate the decision to go ahead with the operation.
+- **Manipulations**: Told either the physician or the patient made the decision. Told either the outcome, either success or failure.
+- *4 categories*, decision quality (correct or not), perceived outcome importance, perceived responsibility, perceived norms.
+
+#### Results
+- Decisions resulting in positive outcomes were evaluated as higher quality (M = 1.78) compared to those resulting in negative outcomes. (M = 0.68)
+- Only 6% of participants thought outcomes are important when evaluating decision quality; **outcome bias may be unconscious.**
+

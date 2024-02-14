@@ -1,7 +1,7 @@
 {
   "accentColor": "#573c96",
   "monospaceFontFamily": "JetBrains Mono Light",
-  "textFontFamily": "Times New Roman",
+  "textFontFamily": "JetBrains Mono",
   "interfaceFontFamily": "JetBrains Mono",
   "cssTheme": "Shiba Inu",
   "translucency": false,
