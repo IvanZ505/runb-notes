@@ -375,3 +375,71 @@ So, the for `a¹⁹`:
 	- A ∪ B = n(A) + n(B) = 1 + 7 = 8
 	- Then, just find the complement of that.
 		- 2⁷ - 8
+
+## Probability
+
+
+### Experiment
+- An experiment is a process that results in an outcome that cannot be predicted in advance with uncertainty.
+
+### Sample Space
+- The set of all possible outcomes of the experiment are called the *sample space* for the experiment.
+- Ex: For tossing a coin, the sample space is `S = { Heads, Tails }`.
+
+### Event
+- The subset of a sample space is called an event.
+- The probability of some event `A` occurring is the cardinality of `A` over the cardinality of the sample space.
+
+$$P(A) = \frac{n(A)}{n(S)}$$
+
+- The probability of any event occurring must always be between 0 and 1. (As denoted by `0 ≤ P(A) ≤ 1`)
+- `P(A) = 1` if `A = S`
+- P(A) = 0 if `A = ∅`
+
+#### Mutually Exclusive
+- The events `A` and `B` are said to be mutually exclusive if they have no outcomes in common.
+
+### Examples
+
+- Toss a coin 3 times, what are the chances of getting 2 heads.
+
+		First, find cardinality of the sample space. n(S) = 2³ = 8
+		Next, define your A. (Let A be getting 2 heads.)
+		Next, find the cardinality of A. (A = 3)
+		P(A) = n(A)/n(S) = 3/8
+
+- Toss a coin and roll a dice, what's the chance of getting head or an even number?
+
+		First, find the cardinality of the sample space. n(S) = 2 * 6 = 12
+		Next, define A. (Let A be a Head) A = {(H,1), (H,2), ... , (H,6)}
+		Define B since we have B. (Let B be getting a even number) 
+		B = {(H,2), (H,4), (H,6), (T,2), (T,4), (T,6)}
+		A = 6, B = 6. Find A ∪ B... A ∪ B = 9.
+		P(A ∪ B) = n(A ∪ B)/n(S) = 9/12
+
+---
+
+### The Axiom of Probability
+
+1. Let *S* be the sample space. Then, P(S) = 1.
+2. Let any event `A`, `0 ≤ P(A) ≤ 1`
+3. If A and B are mutually exclusive events, then P(A ∪ B) = P(A) + P(B).  
+More generally, if A1, A2, . . . are mutually exclusive events, then  
+P(A1 ∪ A2 ∪ · · ·) = P(A1) + P(A2) + · · *([Addition Rule](../cog-decision/probability#addition-rule))*
+
+### Probability of NOT Problems
+
+- The sample space `S` is just `A ∪ A'`
+
+$$n(S) = \frac{n(A) + n(A')}{n(S)}$$
+
+- So, `1 = P(A) + P(A')`
+
+#### Example
+
+- Toss a coin 8 times, what's the chance to get 5 heads.
+
+		n(S) = 2⁸
+		Let A be getting 5 heads. n(A) = ₈C₅
+		P(A) = (₈C₅)/2⁸
+		

@@ -43,6 +43,8 @@
 
 `P((H₁ & H₂) v )`
 
+> For info on mutual exclusivity, see [Discrete 2](../discrete-2/discrete-2#mutually-exclusive).
+
 ---
 
 ### Example

@@ -20,7 +20,31 @@
             }
           },
           {
-            "id": "409c7e6afae48a7b",
+            "id": "efd05aa3ada7df09",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/c-basics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "17dd209eb4216645",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/project1-my-little-malloc.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "894809f7af2c1b3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -43,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -73,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mutually",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,8 +115,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -104,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/sys-prog/project1-my-little-malloc.md"
               }
             }
           }
@@ -112,8 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5,
-    "collapsed": true
+    "width": 206.5
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -129,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/project1-my-little-malloc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/project1-my-little-malloc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,16 +222,16 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "4a1ae62e7a462398",
+  "active": "17dd209eb4216645",
   "lastOpenFiles": [
+    "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/project1-my-little-malloc.md",
     "docs/cog-decision/probability.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/sys-prog/sys-prog.md",
     "docs/cog-decision/cog-decision.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/sys-prog/files.md",
-    "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/c-basics.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/cog-decision/heuristics-biases.md",
     "docs/comp-arch/3-bit-level-operations-in-c.md",

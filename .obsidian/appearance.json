@@ -5,6 +5,6 @@
   "interfaceFontFamily": "JetBrains Mono",
   "cssTheme": "Maple",
   "translucency": false,
-  "baseFontSize": 14,
-  "theme": "obsidian"
+  "baseFontSize": 13,
+  "theme": "moonstone"
 }
