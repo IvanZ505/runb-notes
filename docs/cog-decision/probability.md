@@ -150,6 +150,6 @@ $$P(h|e) = \frac{P(h).P(e|h)}{P(e)}$$
 
 It is also a theorem that:
 
-`P(e) = P(e|h) * P(h) + P (e | not h) * P(not h)`
+`P(e) = P(e|h) * P(h) + P (e | ¬ h) * P(¬ h)`
 
 - This is dividing the probability of the evidence being true into two **mutually exclusive** quadrants. *the hypothesis can't be both true and not true.*

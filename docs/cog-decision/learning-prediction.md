@@ -149,3 +149,20 @@ Found that when the description of the event was stripped of potential causes of
 - Decisions resulting in positive outcomes were evaluated as higher quality (M = 1.78) compared to those resulting in negative outcomes. (M = 0.68)
 - Only 6% of participants thought outcomes are important when evaluating decision quality; **outcome bias may be unconscious.**
 
+### Related Phenoms
+- Good decisions rated better than bad decisions were rated bad.
+- Bad decisions rated as less important than their good decisions.
+
+## Avoiding Hindsight Bias
+
+- Making a note of your decisions, knowing what you went into the decision knowing and why you made the decision.
+- This gives you *feedback* which will allow you to **check yourself**.
+
+## Premortem
+- Harnessing the power of hindsight  bias.
+- We often fail to consider negative outcomes.
+- A premortem harasses "prospective hindsight."
+	- You're facing an important decision.
+
+> *Imagine* that you had the wrong solution, and then picture yourself a year later and figure out, with the benefit of hindsight, where it all went wrong.
+

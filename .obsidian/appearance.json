@@ -1,9 +1,9 @@
 {
-  "accentColor": "#573c96",
+  "accentColor": "#e96dc2",
   "monospaceFontFamily": "JetBrains Mono Light",
   "textFontFamily": "JetBrains Mono",
   "interfaceFontFamily": "JetBrains Mono",
-  "cssTheme": "Shiba Inu",
+  "cssTheme": "Maple",
   "translucency": false,
   "baseFontSize": 14,
   "theme": "obsidian"

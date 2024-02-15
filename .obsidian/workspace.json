@@ -32,18 +32,6 @@
             }
           },
           {
-            "id": "b5714d9980cabcc6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/discrete-2/discrete-2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7d05f2032f665e34",
             "type": "leaf",
             "state": {
@@ -55,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +90,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -116,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -141,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,26 +189,27 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "mermaid-tools:Open Mermaid Toolbar": false
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "7d05f2032f665e34",
+  "active": "4a1ae62e7a462398",
   "lastOpenFiles": [
-    "docs/sys-prog/files.md",
+    "docs/cog-decision/probability.md",
+    "docs/cog-decision/learning-prediction.md",
     "docs/sys-prog/sys-prog.md",
+    "docs/cog-decision/cog-decision.md",
+    "docs/discrete-2/discrete-2.md",
+    "docs/sys-prog/files.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/c-basics.md",
-    "docs/discrete-2/discrete-2.md",
-    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
-    "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/heuristics-biases.md",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
     "docs/discrete-2/imgs/practice-10-4.png",
@@ -232,7 +221,6 @@
     "docs/harddrive-wipe.md",
     "obsidian-vault",
     "docs/discrete-2/imgs/perms-vs-combs.png",
-    "docs/cog-decision/probability.md",
     "docs/cog-sci/10-the-rational-mind.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/readings.md",

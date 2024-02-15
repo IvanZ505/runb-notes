@@ -39,4 +39,3 @@ Psychology Building)
 ## [Probability](probability)
 
 ## [Learning and Prediction](../cog-decision/learning-prediction)
-
