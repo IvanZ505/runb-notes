@@ -159,10 +159,100 @@ Found that when the description of the event was stripped of potential causes of
 - This gives you *feedback* which will allow you to **check yourself**.
 
 ## Premortem
-- Harnessing the power of hindsight  bias.
+- Harnessing the power of hindsight bias.
 - We often fail to consider negative outcomes.
 - A premortem harasses "prospective hindsight."
 	- You're facing an important decision.
 
 > *Imagine* that you had the wrong solution, and then picture yourself a year later and figure out, with the benefit of hindsight, where it all went wrong.
+
+## Risk Analysis and Prediction
+
+**Objectives:**
+
+- How presentation of statistical information can distort risk percceptions.
+- How best to predict the future.
+- Decision support systems and AI.
+
+### Absolute Risk
+
+**Situation:** In 1995, the UK Committee on Safety of Medicines issued a warning about 3rd-gen oral contraceptive pills on rare occasions producing bloodclots in the veins of the legs. This information was passed on in letters to 190,000 GPs, Pharmacists, etc...
+
+- This announcement led to 13,000 additional abortions (These abortions have a higher rate of potentially fatal blood clots (2x Higher) than taking the pill)
+
+### Risk Analysis
+
+- Decisions under **risk**
+	- Probability of future events is measurable.
+	- Should I travel by car or plane? There are relevant statistics; used by insurance companies.
+- Decisions under **uncertainty/ignorance**
+	- Probability of future events is indefinite or incalculable.
+	- Should I build a nuclear bunker; no relevant stats.
+
+### Dread Risk
+- Low probability events that give people a feeling of dread and have catastrophic potential and will result in fatalities.
+- Lacking statistical knowledge, people use emotions as a guide to action, and tend to err on the side of safety, high dread is taken to indicate high risk.
+
+> Example: Deciding not to get a flu shot but also deciding not to live near a nuclear power plant.
+>> And yet, 47.5% of adults have gotten a flu shot in the past 12 months.
+>> Influenza Deaths: 608 
+>> Influenza and Pneumonia Deaths: 41,917 
+
+**This tendency to try and avoid dread risk may lead to riskier behaviors!**
+
+> Example: Avoiding transport systems targeted in terrorist attacks. (9/11 or Berlin Train)
+
+#### Problem with Studies of Dread Risk and Terror
+
+- Fewer scheduled flights / train trips?
+	- 2005 London underground bombing killed 52.
+	- Passenger journeys fell by an average of 8.3% for the 4 months following the attacks - an overall reduction of 22.5 million journeys.
+	- **82% of journey reductions** cannot be attributed to supply-side factors...
+
+#### Gigerenzer's Explanation for Dread Risk Avoidance
+
+1. Human minds are prepared to learn the association between dread risk and avoidance behavior in one trial; for our evolutionary **ancestors**, living in small bands of hunter-gatherers, the loss of many members at one point of time could bring the group beyond a critical threshold that threatened their survival.
+2. Lack of proper **information** about risks; e.g. few people are aware that the probability of losing one's life is about the same for driving 12 miles by car as for a nonstop fight.
+3. People fear terrorist attacks because they have no **control**, whereas people *believe* in control while driving.
+
+*If we give people more statistical information about risks, will they become better decision makers?*
+
+**Gigerenzer**: Not necessarily...
+
+We should present the information in terms of absolute risk and not relative risks and natural frequencies and not conditional probabilities.
+
+### Framing Risk
+
+**Statistical information can be presented in different formats:**  
+
+- “Elevated risk”  
+- “8 times higher risk than the average person of your age”  
+- “less than 1% chance”  
+- “1 in 125 chance”  
+
+> *All technically true.* But understood differently and produce different affective responses.
+
+*Looking back at the blood clots study*...
+
+- Instead of saying twofold, which is relative to the rates before, (**1 in 7000**) Gigerenzer says it should be said in absolutes, (**2 in 7000 vs 1 in 7000**)
+
+> *If given a relative risk*, always ask what the original rate is and calculate that rate with respect to an easily understandable number.
+
+### Natural Frequencies
+
+- In real life, we see examples of people, not percentages.
+- So, we are better at using frequencies than percentages.
+- "**Natural frequencies**" refer to the same reference class of observations: "eight people" (with a positive mammogram and cancer) and "99 people" (with a positive mammogram and no breast cancer) both refer to the same class of 1000 people.
+- **Yet**, few physicians are trained to convert percentages to natural frequencies.
+
+#### Another Factor (Dual Processing??)
+- Given that science has reached a consensus on global warming, why have so few governments addressed it?
+- Weber's proposal is that most lay people learn about it in terms of statistics (processed by System 2).
+- But, System 1 reasoning motivates actions.
+
+### Akerlof et al (2012)
+- Global warming study on whether people have *personally* experienced global warming.
+	- Those who felt they had estimated greater risk than those who didn't feel they had.
+	- They controlled for political affiliation, demographics, personal beliefs, etc.
+	- Personal experiences were supported by actual climate data recorded by the U.S. National Oceanic and Atmospheric Administration.
 

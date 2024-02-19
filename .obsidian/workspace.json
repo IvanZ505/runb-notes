@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/c-basics.md",
+                "file": "docs/cog-decision/learning-prediction.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -79,7 +80,7 @@
       {
         "id": "dd725ed084bbdbd7",
         "type": "tabs",
-        "dimension": 58.6436170212766,
+        "dimension": 55.85106382978723,
         "children": [
           {
             "id": "18585b27d6bbb011",
@@ -97,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#todo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,13 +115,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
         "type": "tabs",
-        "dimension": 41.3563829787234,
+        "dimension": 44.148936170212764,
         "children": [
           {
             "id": "6c5daaeaf46de986",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/probability.md"
               }
             }
           }
@@ -136,7 +136,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 206.5,
+    "collapsed": true
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -152,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/probability.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/probability.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,13 +223,14 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "d2d1eac1d36d98e7",
+  "active": "894809f7af2c1b3b",
   "lastOpenFiles": [
-    "docs/cog-decision/probability.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/c-basics.md",
+    "docs/cog-decision/probability.md",
     "docs/cog-decision/learning-prediction.md",
+    "docs/cog-decision/cognitive-architecture.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/sys-prog/sys-prog.md",
     "docs/cog-decision/cog-decision.md",
     "docs/sys-prog/files.md",
@@ -245,7 +247,6 @@
     "obsidian-vault",
     "docs/discrete-2/imgs/perms-vs-combs.png",
     "docs/cog-sci/10-the-rational-mind.md",
-    "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/readings.md",
     "docs/discrete-2/imgs/A-probability-tree-indicating-the-16-possible-outcomes-of-a-sequence-of-four-coin-tosses.png",
     "docs/comp-arch/comp-arch.md",
