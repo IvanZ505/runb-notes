@@ -396,8 +396,14 @@ $$P(A) = \frac{n(A)}{n(S)}$$
 - `P(A) = 1` if `A = S`
 - P(A) = 0 if `A = ∅`
 
-#### Mutually Exclusive
+## Mutually Exclusive
 - The events `A` and `B` are said to be mutually exclusive if they have no outcomes in common.
+	- Or in set terms, `∀x,y x∈A, x∉B y∈B, y∉A`
+- In mutually exclusive events, the probabilities can be added together in the *addition rule.*
+
+### The Addition Rule
+
+If *A* and *B* are mutually exclusive events, then `P(A∪B) = P(A) + P(B)`. This rule can be generalized to cover the case where *A* and *B* are not mutually exclusive.
 
 ### Examples
 
@@ -442,4 +448,58 @@ $$n(S) = \frac{n(A) + n(A')}{n(S)}$$
 		n(S) = 2⁸
 		Let A be getting 5 heads. n(A) = ₈C₅
 		P(A) = (₈C₅)/2⁸
-		
+
+---
+
+**More practice**
+
+Six hundred paving stones were examined for cracks, and 15 were found to be cracked. The same 600 stones were examined for discoloration and 27 were found to be discolored. A total of 562 stones were neither. One of these 600 stones was selected at random.
+
+	a. Find the prboability that it is cracked, discolored , or both. P(A ∪ B)
+	n(A) = 15, n(B) = 27, n(A∪B) = 38
+	P(A∪B) = 38/600
+	b. Find the probability that it is both cracked and discolored. P(A∩B)
+	n(A) + n(B) - n(A∩B) = n(A∩B) = 15 + 27 - 38 = 4
+	P(A∩B) = 4/600
+	c. Find the probability that it is cracked but not discolored.
+	n(A) = 15, n(A∩B) = 4
+	P(A∩B') = 15-4/600
+
+### Conditional Probability
+- Finding the probability of an event `A`, knowing that the event `B` has already occurred. 
+
+**Formal Definition:** Let `A` and `B` be events with `P(B) ≠ 0`. The conditional probability of `A` *given* `B` is:
+
+$$P(A|B) = \frac{P(A ∩ B)}{P(B)}$$
+
+#### Example
+- Toss a coin 3 times, given that we get 2 heads, what is the chance that we got heads on our second toss?
+	- P(B) = probability of getting 2 heads. 3
+	- P(A|B) = P(A∩B)/P(B) = n(A∩B)/n(B) = 2/3
+
+### Independence
+- Two events `A` and `B` are **independent** if the probability of each event remains the same whether or not the pother occurs.
+	- *In symbols*: If P(A) ≠ 0 and P(B) ≠ 0, then `A` and `B` are independent if `P(B|A)=P(B)`, or equivalently, `P(A|B)=P(A)`.
+- That means, neither event has an impact on the other.
+
+### More Practice
+- Of people that bought new vehicle, 12% bought hybrid vehicle, 5% bought hybrid truck. Given that a person bought a hybrid vehicle, what is the probability that it was a truck.
+	- 5/12 (TODO: Find out why)
+
+- A system contains 2 components A and B that need to function for the system to work. The probability that component A fails is 0.08 and that B fails is 0.05. They operate independently. What is the probability that the system will work?
+	- A' = 0.92, B' = 0.95
+	- P(System functions) = P(A functions and B functions) = P(A'∩B')
+	- Since they are independent, 0.92 ✕ 0.95 = **0.874**
+
+#todo go to mathematical ideas book, they have good stuff on conditional probability
+
+## Bayes Theorem
+
+- You know you are using **Bayes Theorem**, if you are given P(B|A) and are asked to find P(A|B).
+
+Because we are given P(A|B)... $$P(B|A) = \frac{P(A∩B)}{P(A)}, P(A∩B) = P(A|B)*P(A)$$
+
+Then, plug it into P(A|B)... $$P(A|B) = \frac{P(A∩B)}{P(B)}= \frac{P(A|B)*P(A)}{P(B)}$$
+**This is the basics of Bayes Theorem**
+
+#todo draw a chart for bayes theorem and try the questions

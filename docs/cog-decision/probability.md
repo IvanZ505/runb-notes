@@ -73,6 +73,8 @@ This is an example of the *Gambler's Fallacy*, which is the misconstruing of cha
 ### Conditional Probability
 - Most authors use the vertical stroke `"|"` for "conditional on". For example, "P(A|B)". 
 
+> [Discrete 2 Section on Conditional Probability](../discrete-2/discrete-2#conditional-probability)
+
 The probability of A conditional on B is by definition equal to the probability of A and B, divided by the probability of B:
 
 `P(A|B) = P(A and B)/P(B)`
