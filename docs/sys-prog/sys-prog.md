@@ -16,6 +16,11 @@ Taught by: David Menendez (davemm@cs.rutgers.edu)
 > Multithreading (Creating threads, pthreads)
 > Network Communications (Sockets)
 
+#### Late Assignment Submission
+- Each day late, your score is reduced by 10 points.
+- The late penalty will never reduce your score below 60.
+
+
 ---
 
 ## [C Basics](c-basics)

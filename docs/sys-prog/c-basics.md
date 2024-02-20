@@ -225,6 +225,19 @@ extern int some_global;    // Says there is a variable of this type, but I didnt
 
 ---
 
+### Ternary Operators
+
+`condition1 ? code1 : code2`
+
+- This basically functions like an if, then, else statement. If the condition is true, do the thing in code 1, otherwise, do the thing in code 2.
+- This can be used to declare variables.
+
+**Example:**
+
+`char *fname = argc > 1 ? argv[1] : "test.txt";`
+
+---
+
 When do we need a explicit declaration?
 
 	1) I might want to refer to something defined in another source file...

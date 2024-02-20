@@ -157,3 +157,4 @@ It is also a theorem that:
 `P(e) = P(e|h) * P(h) + P (e | ¬ h) * P(¬ h)`
 
 - This is dividing the probability of the evidence being true into two **mutually exclusive** quadrants. *the hypothesis can't be both true and not true.*
+

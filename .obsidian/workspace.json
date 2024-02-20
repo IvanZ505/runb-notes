@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/probability.md",
+                "file": "docs/sys-prog/c-basics.md",
                 "mode": "source",
                 "source": false
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/probability.md"
+                "file": "docs/sys-prog/c-basics.md"
               }
             }
           }
@@ -136,8 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5,
-    "collapsed": true
+    "width": 206.5
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -153,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/probability.md",
+                "file": "docs/sys-prog/c-basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/probability.md",
+                "file": "docs/sys-prog/c-basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,15 +224,16 @@
   },
   "active": "894809f7af2c1b3b",
   "lastOpenFiles": [
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/files.md",
     "docs/sys-prog/project1-my-little-malloc.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/Untitled.md",
     "docs/cog-decision/probability.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/cognitive-architecture.md",
-    "docs/sys-prog/c-basics.md",
     "docs/discrete-2/discrete-2.md",
-    "docs/sys-prog/sys-prog.md",
     "docs/cog-decision/cog-decision.md",
-    "docs/sys-prog/files.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/cog-decision/heuristics-biases.md",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
@@ -257,7 +257,6 @@
     "docs/cog-sci/11-emergence-of-the-mind.md",
     "docs/intro-cs/recitations/recitation.md",
     "docs/intro-cs/cs111.md",
-    "docs/comp-arch/1-overview-of-comp-arch.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",

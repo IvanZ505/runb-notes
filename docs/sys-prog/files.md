@@ -91,3 +91,29 @@ size_t bytes  // number of bytes in the buffer (Always returns less than this)
 // Returns 0 at end of file
 // returns -1 on error
 ```
+
+#todo copy all the notes from previous lecture I missed.
+
+## Reading Files
+
+`open()` - Opens a file for reading and/or writing
+
+- This returns a file number (File Descriptor)
+
+- `read()` - Obtains the data from a file and writes it to memory
+- `write()` - obtains data from memory and writes it to a file.
+	- Read and write are system calls, so there is an overhead.
+		- We use large buffers to amortize this cost.
+- When we call read, we have to specify how much data to read (in bytes)
+- If we are reading a binary file, the format may indicate how many bytes to read.
+
+> For text data, the units of the data we are interested in are variable length: Lines, words, etc...
+
+#### General Idea
+- Pick a buffer size, read that many bytes, go through the buffer and look for units.
+
+**Issues:**
+
+- Buffer may contain a partial unit.
+- Unit may be bigger than the buffer.
+
