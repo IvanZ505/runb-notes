@@ -470,7 +470,7 @@ Six hundred paving stones were examined for cracks, and 15 were found to be crac
 
 **Formal Definition:** Let `A` and `B` be events with `P(B) ≠ 0`. The conditional probability of `A` *given* `B` is:
 
-$$P(A|B) = \frac{P(A ∩ B)}{P(B)}$$
+$$P(A|B) = \frac{P(A ∩ B)}{P(B)} = \frac{P(A and B)}{P(A)}$$
 
 #### Example
 - Toss a coin 3 times, given that we get 2 heads, what is the chance that we got heads on our second toss?
@@ -495,11 +495,75 @@ $$P(A|B) = \frac{P(A ∩ B)}{P(B)}$$
 
 ## Bayes Theorem
 
-- You know you are using **Bayes Theorem**, if you are given P(B|A) and are asked to find P(A|B).
+- You know you are using [**Bayes Theorem**](../cog-decision/probability#bayes-theorem), if you are given P(B|A) and are asked to find P(A|B).
 
 Because we are given P(A|B)... $$P(B|A) = \frac{P(A∩B)}{P(A)}, P(A∩B) = P(A|B)*P(A)$$
 
-Then, plug it into P(A|B)... $$P(A|B) = \frac{P(A∩B)}{P(B)}= \frac{P(A|B)*P(A)}{P(B)}$$
+Then, plug it into P(A|B)... $$P(B|A) = \frac{P(A∩B)}{P(B)}= \frac{P(A|B)*P(A)}{P(B)}$$
 **This is the basics of Bayes Theorem**
 
 #todo draw a chart for bayes theorem and try the questions
+
+---
+
+### Practice Problems
+
+47. Find the probability that the first card is a jack and the second card is a face card. (No replacement)
+
+		A - Jack card
+		B - Face card
+		P(A ∩ B) = P(A) * P(B | A) (Since it is asking "and" it is A∩B)
+		P(A) = n(A)/n(S) = 12/52
+		P(B | A) = n(B-1)/n(S-1) = 11/51
+		4/52 * 11/51
+
+46. No face cards.
+
+		A - No face card on first draw
+		B - No face card on second draw
+		P(A ∩ B) = P(A) * P(B | A)
+		P(A) = n(A)/n(S) = 40/52
+		P(B | A) = 39/51
+		P(A ∩ B) = 40/52 * 39/51
+
+67. 3 men, 3 women are getting interview. Probability of all women get interview first.
+
+		A = woman go first, B = woman go second, C = Woman go third
+		P(A and B and C) = P(A) * P(B | A) * P(C | (A and B)) = 3/6 * 2/5 * 1/4
+
+---
+
+## Odds
+
+- If all outcomes in a sample space are equally likely, `a` of them are favorable to the event `E`, and the remaining outcomes are unfavorable to `E`, then the **odds in favor of `E`** are *a to b*, and the **odds against `E`** are *b to a*.
+	- Ex: # of girls to # of boys in the class is 2 to 5. (2+5 is our sample space)
+	- `P(Girl) = 2/7`
+	- The odds against Girls are going to be 5 to 2.
+
+**More Examples:**
+
+- 30% chance to have rain. (A)
+	- This means there's a 70% chance of no rain. (A')
+	- So, the odds in favor of A is going to be 30 to 70, or 3 to 7. (*3 is favorable, 7 is not*)
+	- Odds against A will be 7 to 3.
+
+---
+
+## Bayes Theorem Cont.
+
+### Bayes' Rule
+
+**Special Case:** Let A and B be events with P(A) ≠ 0, P(¬A) ≠ 0, and P(B) ≠ 0. Then... $$P(A|B) = \frac{P(B|A)*P(A)}{P(B|A)*P(A) + P(B|¬A)*P(¬A)}$$
+
+Example Practice:
+
+	P(D) = 0.005
+	P(+ | D) = 0.99
+	P(+ | ¬D) = 0.01
+	P(D | +) = (P(+|D) * P(D))/(P(+|D) * P(D) + P(+ | ¬D) * P(¬D)) = (0.99 * 0.005)/(0.99 * 0.005 + 0.01 * 0.995)
+
+Another One: 2.25 Math Ideas
+
+	P(S) = 0.45, P(M) = 0.35, P(L) = 0.2
+	P(F | S) = 0.1, P(F | M) = 0.12, P(F | L) = 0.15
+	P(F) = P(F|S) * P(S) + P(F | M) * P(M) + P(F | L) * P(L) = 0.45 * 0.1 + 0.35 * 0.12 + 0.2 * 0.15

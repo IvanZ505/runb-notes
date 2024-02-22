@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
+                "file": "docs/cog-decision/probability.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/project1-my-little-malloc.md",
+                "file": "docs/cog-decision/midterm-review.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/sys-prog/c-basics.md"
+                "file": "docs/cog-decision/learning-prediction.md"
               }
             }
           }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/c-basics.md",
+                "file": "docs/cog-decision/learning-prediction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/c-basics.md",
+                "file": "docs/cog-decision/learning-prediction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,17 +222,18 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "894809f7af2c1b3b",
+  "active": "7d05f2032f665e34",
   "lastOpenFiles": [
-    "docs/sys-prog/sys-prog.md",
-    "docs/sys-prog/files.md",
-    "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/c-basics.md",
-    "docs/sys-prog/Untitled.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/probability.md",
     "docs/cog-decision/learning-prediction.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/cog-decision/midterm-review.md",
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/project1-my-little-malloc.md",
+    "docs/sys-prog/files.md",
+    "docs/sys-prog/Untitled.md",
     "docs/cog-decision/cognitive-architecture.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/cog-decision/heuristics-biases.md",
@@ -256,7 +257,6 @@
     "docs/data-structures/cs112.md",
     "docs/cog-sci/11-emergence-of-the-mind.md",
     "docs/intro-cs/recitations/recitation.md",
-    "docs/intro-cs/cs111.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",
