@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4a1ae62e7a462398",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/discrete-2/discrete-2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "efd05aa3ada7df09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/cog-decision/probability.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "17dd209eb4216645",
             "type": "leaf",
             "state": {
@@ -44,31 +20,30 @@
             }
           },
           {
-            "id": "894809f7af2c1b3b",
+            "id": "393d27849fe3aa35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/c-basics.md",
+                "file": "docs/cog-sci/cog-sci-finals.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7d05f2032f665e34",
+            "id": "cad149fa0ee45d71",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
+                "file": "docs/cog-decision/cognitive-architecture.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "episodic",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -128,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md"
+                "file": "docs/cog-decision/midterm-review.md"
               }
             }
           }
@@ -152,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
+                "file": "docs/cog-decision/midterm-review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
+                "file": "docs/cog-decision/midterm-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,18 +197,22 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "7d05f2032f665e34",
+  "active": "17dd209eb4216645",
   "lastOpenFiles": [
-    "docs/discrete-2/discrete-2.md",
-    "docs/cog-decision/probability.md",
-    "docs/cog-decision/learning-prediction.md",
-    "docs/sys-prog/c-basics.md",
+    "docs/cog-decision/cognitive-architecture.md",
+    "docs/cog-sci/cog-sci-finals.md",
     "docs/cog-decision/midterm-review.md",
+    "().md",
+    "docs/cog-sci/8-memory.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/cog-decision/probability.md",
+    "docs/discrete-2/discrete-2.md",
+    "docs/cog-decision/imgs/actual/memory-model.png",
+    "docs/sys-prog/Untitled.md",
+    "docs/cog-decision/learning-prediction.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/files.md",
-    "docs/sys-prog/Untitled.md",
-    "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/cog-decision/heuristics-biases.md",
@@ -254,15 +233,11 @@
     "docs/discrete-1/discrete1-midterm1.md",
     "docs/discrete-1/discrete-1.md",
     "docs/data-structures/midterm2.md",
-    "docs/data-structures/cs112.md",
-    "docs/cog-sci/11-emergence-of-the-mind.md",
-    "docs/intro-cs/recitations/recitation.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",
     "docs/discrete-2/imgs/set-operations-complement.png",
     "docs/discrete-2/imgs/set-operations-1.png",
-    "docs/cog-decision/imgs/actual/four-conditions-decision.png",
     "docs/discrete-2/imgs",
     "docs/discrete-2",
     "docs/sys-prog/imgs",
