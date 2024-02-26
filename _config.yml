@@ -29,7 +29,7 @@ url: "https://ivanz505.github.io/runb-notes/" # the base hostname & protocol for
 
 # Build settings
 theme: minima
-markdown: kramdown
+markdown: GFM
 plugins:
   - jekyll-feed
   
