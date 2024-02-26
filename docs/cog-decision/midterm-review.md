@@ -78,6 +78,16 @@ In it, there are 2 qualitatively distinct kinds of processes:
 - Working memory is limited capacity and slow.
 - Working memory is correlated with conscious.
 
+## Unimodels Theory
+- **Gigerenzer**
+- There are misalignments in Dual Processing Theory.
+	- Skilled activities can be both *unconscious* and *intentional*.
+	- Stereotyping can be both *unintentional* and *controllable*.
+
+##### In Unimodel
+- Both intuitive and deliberative judgments are rule-based and the same rules can underlie both.
+- Deliberative judgments not generally more accurate than intuitive judgments.
+
 ## Memory (M-WM Model)
 
 > M-WM stands for **multicomponent working-memory model**
@@ -239,4 +249,184 @@ Newell & Rakow (2011) reviewed 16 experimental studies from two labs, across a r
 
 - A lot of the work before 2010 was not replicable.
 - There is a spreadsheet of which ones have been replicated and which have not.
+
+## Heuristics
+
+##### Definitions
+
+There are two different definitions for a heuristic. 
+
+**Tversky and Kahneman**: A "quick and easy", cognitive rule of thumb.
+
+**Kahneman and Frederick**: Substitution of a question with an easier question to answer. "Assess a specific target attribute of a judgment object by substituting another property of that object."
+
+##### Approaches
+
+###### Fast and Frugal / Adaptive Toolbox
+- How heuristics lead to best balances between maximizing accuracy and minimizing costs like cognitive processing and time.
+- **Gigerenzer and his buddies**
+
+###### Cognitive Illusions
+- How heuristics can go wrong, and how it can *systematically* go wrong.
+- **Tversky and Kahneman**
+
+### Availability Heuristic
+- Estimating the probability of events occuring based on how readily examples of the events come to mind.
+- *Note:* You can bring examples to mind through **memory** or through **imagining** the events.
+
+#### Availability by Number or Speed?
+- Does **ease/speed** of the example coming to mind matter more than then **number** of examples?
+	- Found that generally, the number of examples mattered more.
+- **Famous JDM Study**: Professor Elo inflation. (By soliciting *more* criticism, you get a BETTER rating. *2 critiques vs 10 critiques*)
+
+### Representative Heuristic
+- A is judged more probable than B whenever A appears more representative than B.
+
+##### Representativeness
+- A measure of how *similar* an example is to members of its class.
+
+#### Tom Problem
+- Similarities of traits with an associated major correlated positively with predictions.
+- Most people *ignored* the base-rate (aka **Base rate neglect**)
+- **Variations still produced the same result**
+	- Variations done: Personality was written when Tom was a lot younger or that its not useful/ Participants were given the base rates instead of guessing.
+
+#### Linda Problem
+- Demonstrated that besides base rate neglect, people also commit **conjunction fallacies** when given similarities of representativeness.
+- Most people (88%) rated probabilities of conjunctive (&) statements to be higher than just singular statements. (**impossible**)
+
+##### Variations
+- **Direct-subtle tests** - Rates conjuncts and conjunctions in a list of multiple.
+- **Direct-transparent tests** - Each participant rates conjunct and conjunctions and relation is highlighted.
+- **Indirect** - Some participants rated conjunct, others rate conjunction.
+
+> [!Note: On translation to another language, some paraphrased "probability" as "applicability". If that occurs, there is no fallacy.]
+
+#### Representativeness and Stereotyping
+- Representativeness heuristic associates perceived characteristics with similar conceptions of a category.
+- The perceived notion of those categories then lead to activation of the stereotypes of the categories.
+
+### Anchoring Heuristic
+- Tendency to estimate by starting from an initial value (the anchor), assessing whether it is too low or too high, and gradually adjusting it by mentally moving the anchor.
+
+> *Note:* Sometimes not considered a heuristic because it does not involve attribute substitution, as per Kahneman and Frederick's second definition of Heuristics.
+
+##### Examples
+- Judges would be given a prosecutor demand which they were told was random.
+	- The sentencing for a higher prosecutor demand was harsher than the one for a lower prosecutor demand. (But still in between the harsh and lenient one.)
+	- Effect still held even when the prosecutor demand was literally determined by **throwing dice.**
+- Real estate students were influenced by the anchors across 4 different estimations.
+- Sale prices for houses with extreme anchors were much higher than more moderate anchors.
+
+#### Contrasting Principle
+- Affects the way we see the difference between two things that are presented with one another.
+- If the second item is fairly different from the first, we tend to see it as being more different than it actually is.
+
+##### Example
+- Real estate agents with a few unappealing houses in the listing priced at inflated prices.
+- They were not meant to be sold, but only shown to customers to make the genuine properties in the inventory look better.
+
+### Primacy Effects
+- From a common sense view, we know some characteristics and the order we know them is irrelevant.
+- However, it was found that the order we learned specific characteristics had a huge effect on our perceptions of a person.
+- We typically interpret the later responses in the light of the earlier ones.
+	- They act as background knowledge.
+
+## Hindsight Bias
+- Cognitive illusion that you "knew all along."
+- Formally: Judgments of the probability of a specific outcome shift upwards once the outcome has been achieved. (*No conscious awareness of change*)
+
+##### Creeping Determinism
+- Tendency to judge that the outcome was relatively inevitable.
+
+### Fischhoff's Methods
+
+#### Memory Paradigm
+- "Clearest demonstration of hindsight bias"
+- People's recollections of their original likelihood ratings shifted after the fact to be closer to what they now believe to be the actual outcome.
+- Gave higher probabilities than they actually had for events that they thought had happened.
+- **Experiment:** President Nixon meeting Chairman Mao, people asked for probability of outcomes before trip and asked to recall their predictions after.
+
+##### Limitations of Memory Paradigm
+- Cannot be used for events that people did not judge in foresight.
+
+#### Hypothetical Paradigm
+- People given the actual outcome before would subsequently give a probability closer to that outcome than people who did not know the outcome.
+- **Experiment:** British and Gurkhas battle and predict the likelihood of several alternative outcomes. Another group is asked to rate the likelihood of the same outcomes as if they did not know the actual outcome.
+
+### Studies Demonstrating Hindsight Bias
+- Amazon Mechanical Turk study with Americans asked to rate possible outcomes for 2 different events.
+	- Participants perceived outcomes to be more probable once informed of the actual outcome, demonstrating hindsight bias.
+
+### Theories of Hindsight Bias
+- Split into *motivational theories* and *cognitive theories*.
+
+#### Motivational Theories
+- We demonstrate hindsight bias because we do not want to be wrong, or we want to be *less* wrong.
+- We have the need to feel as though we are in control of important events.
+
+#### Cognitive Theories
+- These theories tend to be more accidental.
+- Further split into *memory accounts* and *causal model accounts*.
+
+##### Memory Accounts
+- Memory accounts focus on the [memory paradigm](#memory-paradigm).
+- Retrieving information from memory involves [reconstruction](../cog-sci/8-memory#reconstruction)
+- There are two models.
+
+###### SARA
+- "Selective activation, reconstruction, anchoring"
+- Thinking of Nelson Mandela activates images of him with white hair, leading to anchoring on older answers.
+
+###### RAFT
+- "Reconstruction after feedback with take the best"
+
+##### Causal Model
+- When told outcomes, we reconstruct and try to create probable model that caused the events.
+- Would help to explain [creeping determinism](#creeping-determinism).
+
+##### Hutus Experiment
+- People told highly causal information, ("Hutus trained and were more disciplined"), vs people told low causally relevant info.
+- Found that likelihood rating for the high causal information group was almost 10% higher than the low.
+	- **In line with Causal model theory predictions**
+- When altered for just telling the outcome, there was not reliable difference.
+	- *This means:* Just knowing outcome is not enough to elicit hindsight bias in hypothetical paradigm.
+
+###### Conclusion
+- People find it difficult to re-enact their own past states of knowledge.
+- The knowledge that we now have reliably impacts our recollection of past knowledge.
+
+### Reverse Hindsight Bias
+- After learning of the results, people believe that they "never would have seen it coming."
+	- *Even if all the warning signs were there*
+- Occurs for very surprising events.
+
+## Outcome Bias
+- Tendency to take the outcome into account in a way that is irrelevant to the quality of the decision.
+- **Underplays the uncertainty at the time of decision.**
+	- May lead to retention of bad strategies that were successful by chance or abandoning good strategies that were not successful by chance.
+
+### Physician Study
+- Dude with chest pain that interfered with his life and a suggested bypass surgery that could relieve pain and increase life expectancy. However, 8% of people die from it.
+
+#### Manipulations
+- **Patient** or **Physician** chose to proceed with operation.
+- The operation either **succeeded** or **failed**.
+
+#### Results
+- Decisions resulting in positive outcomes were evaluated as higher quality vs those resulting in negative outcomes.
+- **However,** only 6% of participants thought outcomes are important when evaluating decision quality, suggesting that outcome bias may be **unconscious**.
+
+### NBA Study
+- Coaches were more likely to chance strategies after a narrow defeat than a narrow win when it should be around the same likelihood.
+
+### Trading Agent Study
+- Agents helped trade for you, and you were given points that could be exchanged for money.
+- Those who gave a rewards to the agent after the trade occurred exhibited outcome bias, giving more rewards for favorable trades, and less for unfavorable.
+
+**Problems with this study:** May seem socially inappropriate not to reward an agent after a good result.
+
+#### Variation
+- Asked questions on satisfaction instead of rewarding.
+- **Outcome:** Favorable outcomes have a strong positive effect, while unfavorable ones have a more modest negative effect on decision-making process.
 

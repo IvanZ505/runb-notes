@@ -75,7 +75,7 @@ LTM concepts…
 
 Von Restorff effect = we remember things that seem noteworthy
 
-Reconstruction…
+### Reconstruction
 
 - Every time we access a memory, we reconstruct it, so it’s being changed in small ways
 - Reconstruction is heavily based on culture and a basic schema (prototype), which we use to fill in the details
