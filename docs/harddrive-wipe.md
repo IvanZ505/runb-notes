@@ -1,7 +1,5 @@
 # Your Guide to Nuking a Computer's Hard Drive
 
-**By:** Your local IT Guy
-
 ---
 
 ***Note:*** Please remember to only wipe the PC if it has been a month since we received it back!

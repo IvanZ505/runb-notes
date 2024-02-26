@@ -13,22 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "393d27849fe3aa35",
+            "id": "c8f61fcb6b6db89b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/cog-sci/cog-sci-finals.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -73,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "episodic",
+                "query": "absolute risk",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -127,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +166,7 @@
             }
           },
           {
-            "id": "5418438499a51acd",
+            "id": "c893a480284f4f58",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -178,7 +174,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -199,23 +195,24 @@
   },
   "active": "17dd209eb4216645",
   "lastOpenFiles": [
+    "docs/discrete-2/discrete-2.md",
+    "docs/harddrive-wipe.md",
+    "docs/cog-decision/learning-prediction.md",
+    "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-sci/cog-sci-finals.md",
-    "docs/cog-decision/midterm-review.md",
+    "docs/cog-decision/probability.md",
+    "docs/cog-decision/heuristics-biases.md",
     "().md",
     "docs/cog-sci/8-memory.md",
     "docs/sys-prog/c-basics.md",
-    "docs/cog-decision/probability.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/imgs/actual/memory-model.png",
     "docs/sys-prog/Untitled.md",
-    "docs/cog-decision/learning-prediction.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/files.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
-    "docs/cog-decision/heuristics-biases.md",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
     "docs/discrete-2/imgs/practice-10-4.png",
     "docs/discrete-2/imgs/pascals-triangle.png",
@@ -223,7 +220,6 @@
     "obsidian-vault/what-i-want.md",
     "docs/comp-arch/basics-of-c.md",
     "README.md",
-    "docs/harddrive-wipe.md",
     "obsidian-vault",
     "docs/discrete-2/imgs/perms-vs-combs.png",
     "docs/cog-sci/10-the-rational-mind.md",

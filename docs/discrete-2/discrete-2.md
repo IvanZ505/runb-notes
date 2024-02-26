@@ -567,3 +567,83 @@ Another One: 2.25 Math Ideas
 	P(S) = 0.45, P(M) = 0.35, P(L) = 0.2
 	P(F | S) = 0.1, P(F | M) = 0.12, P(F | L) = 0.15
 	P(F) = P(F|S) * P(S) + P(F | M) * P(M) + P(F | L) * P(L) = 0.45 * 0.1 + 0.35 * 0.12 + 0.2 * 0.15
+
+Page 85 (William Navidi)
+
+### Random Variable
+- A function that assigns a numerical value to each outcome in a sample space.
+
+> In real life, the probabilities of things that should be set, such as tossing a coin, are actually slightly skewed. (Not exactly 50/50) However, the more you toss, the more that total probability should approach 0.5.
+
+#### Discrete Random Variable
+- The domain of these are the discrete set of numbers.
+- *Discrete*: There is a gap between every set of numbers.
+	- Counting numbers, natural numbers
+
+> **Formal Definition:** A random variable is **discrete** if its possible values form a discrete set. This  means that if the possible values are arranged in order... (William Navidi)
+
+#### Continuous Random Variable
+- The domain of these are a continuous set of numbers.
+- *Continuous*: There is no gap between the numbers.
+	- Real numbers
+
+#### Example
+- Toss a coin 10 times. X: # of heads.
+	- Your X can get a value from 0-10. ← This is a random variable.
+
+### Probability Mass Function
+- The **probability mass function** of a discrete random variable `X` is the function `p(x)=P(X = x)`. The probability mass function is sometimes called the **probability distribution**.
+
+Find the probability mass function of the number of heads when tossing a coin 3 times.
+
+	Let X: # of heads, This means X can take the values of {0, 1, ,2, 3}
+	So, to find the probability mass function, calculate the probalities for each of the random variables.
+	P(X=0) = 1/8, P(X=1) = 3/8, P(X=2) = 3/8, P(X=3) = 1/8
+	Then, draw it into a table.
+
+| x   | P(X=x) |     |
+| :-- | :----- | --- |
+| 0   | 1/8    |     |
+| 1   | 3/8    |     |
+| 2   | 3/8    |     |
+| 3   | 1/8    |     |
+
+$$\sum_{x=0}^{S}P(X=x_{i})=1$$
+
+---
+
+For questions like "*probability of more than 2 heads...*"
+
+- Using the PMF, P(X ≥ 2) = P(X=2) + P(X=3) + ...
+
+For questions like "*probability of less than 2 heads...*"
+
+- P(X ≤ 2) = P(X=2) + P(X=1) + P(X=0)
+
+---
+
+#### Summary
+
+Let X be a discrete random variable. Then...
+
+- The probability mass function of `X` is the function `p(X) = P(X=x)`
+- The cumulative distribution function of X is the function `F(X)=P(X≤x)`
+- $F(x)=\sum_{t≤x}p(t)=\sum_{t≤x}P(X=t)$
+- ??? Navidi book
+
+---
+
+##### Practice
+
+Computer chips often contains surface imperfections. The PMF of the number of defects X is presented in the following table.
+
+| x    | 0   | 1   | 2    | 3   | 4    |     |
+| :--- | :-- | :-- | :--- | :-- | :--- | --- |
+| p(X) | 0.4 | 0.3 | 0.15 | 0.1 | 0.05 |     |
+
+1. Find P(X≤2)
+	- P(X=0) + P(X=1) + P(X=2) = 0.85
+2. Find P(X>1)
+	- P(X>1) = 1 - P(X≤1) = 1 - 0.7 = 0.3
+
+William Navidi Book 112 #7 #todo try it
