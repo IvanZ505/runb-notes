@@ -231,8 +231,9 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "d2d1eac1d36d98e7",
+  "active": "1830d0722d9a3aa6",
   "lastOpenFiles": [
+    "docs/CNAME",
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/heuristics-biases.md",
@@ -266,7 +267,6 @@
     "docs/cog-decision/readings.md",
     "docs/discrete-2/imgs/A-probability-tree-indicating-the-16-possible-outcomes-of-a-sequence-of-four-coin-tosses.png",
     "docs/comp-arch/comp-arch.md",
-    "docs/discrete-1/discrete1-midterm1.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",
