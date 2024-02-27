@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md",
+                "file": "docs/sys-prog/the-shell.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a80eecb5501a8ce0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/the-shell.md",
                 "mode": "source",
                 "source": false
               }
@@ -51,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md"
+                "file": "docs/sys-prog/the-shell.md"
               }
             }
           }
@@ -135,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/midterm-review.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,10 +218,14 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "622001e2a0563be0",
+  "active": "a80eecb5501a8ce0",
   "lastOpenFiles": [
-    "docs/cog-decision/heuristics-biases.md",
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/project-2-dictionary.md",
+    "docs/sys-prog/the-shell.md",
+    "docs/sys-prog/files.md",
     "docs/cog-decision/midterm-review.md",
+    "docs/cog-decision/heuristics-biases.md",
     "docs/cog-sci/8-memory.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/discrete-2/discrete-2.md",
@@ -219,10 +236,7 @@
     "().md",
     "docs/sys-prog/c-basics.md",
     "docs/cog-decision/imgs/actual/memory-model.png",
-    "docs/sys-prog/Untitled.md",
-    "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/files.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
@@ -240,7 +254,6 @@
     "docs/comp-arch/comp-arch.md",
     "docs/discrete-1/discrete1-midterm1.md",
     "docs/discrete-1/discrete-1.md",
-    "docs/data-structures/midterm2.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",

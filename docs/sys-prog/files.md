@@ -117,3 +117,128 @@ size_t bytes  // number of bytes in the buffer (Always returns less than this)
 - Buffer may contain a partial unit.
 - Unit may be bigger than the buffer.
 
+## Directories
+- Directories are a special file that contains directory entries.
+- Each *directory entry* has at minimum:
+	- The "name" of a file. (What we use to specify the file we want)
+	- An *inode* identifier. (How the system specifies the file it wants)
+- Every directory has two special entries
+	- `.` - Every directory contains a reference to the directory itself.
+	- `..` - Refers to the parent directory. (Except for the root directory, which loops to itself)
+- The number of times a directory is linked is *at least 2* times `.` and `..`.
+	- If there are subdirectories, then it is linked 2 + the number of subdirectories it contains.
+
+> The unix command `ls` skips files starting with a `.`, unless you do `ls -a`
+
+### Open a Directory File
+- `open()` can open a directory file and see what bytes make up the directory file.
+- `opendir()` - can open the directory without knowing the specifics of the directory format.
+	- Convenient way to iterate through directory entries.
+
+`DIR *opendir(char* path);`
+
+- This opens the specified directory and returns a handle on failure, returns NULL and sets `errno`.
+- **Errors:** It could fail for multiple reasons such as permission denied, directory not existing, etc...
+
+`struct dirent *readdir(DIR *handle);`
+
+- `readdir()` returns the next entry in the directory.
+- returns NULL if we have read all the entries.
+
+> `readdir()` returns entries in no particular order. (possibly the order that entries are stored in the directory file)
+
+The struct `dirent` contains at least these fields:
+
+- `int_t d_ino;    // i-node identifier`
+- `char d_name[];  // File name (null terminating string)`
+
+> This pointer we get is only valid until the next call to `readdir()` or a call to `closedir()`.
+
+### Closing a Directory
+
+`int closedir(DIR *handle);`
+
+- Closes the specified open directory.
+- **Error**: returns -1 and sets errno to failure
+
+#### Example of Directory Reading
+
+```C
+// Reading a directory program
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <dirent.h>
+
+void scan_dir(char *path) {
+	DIR *handle = opendir(path);
+	if(!handle) {
+		perror(path);
+		return;
+	}
+
+	struct dirent *de;
+
+	// Keep checking until it returns false (You are setting it)
+	while((de = readdir(handle))) {
+		printf("%d, %s\n", de->d_ino, de->d_name);
+	}
+}
+
+int main(int argc, char **arv) {
+	if(argc < 2) {
+		printf("please specify a directory\n");
+		return EXIT_FAILURE;
+	}
+	scan_dir(argv[1]);
+	return EXIT_SUCCESS;
+}
+```
+
+### Stats
+
+`int stats(char *path, struct stat *data);`
+
+- On success, fills out the specific struct with info about the file.
+- On failure, returns -1 and sets errno.
+
+`struct stat` - contains the information about the file itself.
+
+- `dev_t st_dev;     // id of the device containing the file (disk)`
+- `int_t st_ino;    // inode identifier for the file`
+- `mode_t st_mode;  // mode iniformation (permissions, etc)`
+	- This is how you look up mode information.
+
+> stat, instead of returning a struct to us, just fills out a struct for us. (So, you can use a local variable or use a malloc-ed one) *we can chose whether to use memory*
+
+> Another thing to know is that the `stat` struct does NOT contain the name of the file.
+
+##### Modes
+- Using modes, we can learn things about the file including
+	- Permissions
+	- File type
+- `S_ISREG(m)` - true for regular files
+- `S_ISDIR(m)` - directories
+- `S_ISLNK(m)` - symbolic links
+
+```C
+
+struct stat sbuf;
+
+int r = stat(pathname, &buf);
+if(r<0) {...}
+
+if(S_ISREG(buf.st_mode)) {
+...
+// Is a regular file
+}
+else if (S_ISDIR(buf.st_mode)) {
+...
+// Is a directory
+} else {...}
+```
+
+> `access()` - Just tells you if you have access to a file
+
+> References: `man 2 stat`, `man 7 inode`
+
