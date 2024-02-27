@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
+                "file": "docs/cog-decision/midterm-review.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/cognitive-architecture.md",
+                "file": "obsidian-vault/things-i-wanna-do.md",
                 "mode": "source",
                 "source": false
               }
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/sys-prog/the-shell.md"
+                "file": "docs/cog-decision/midterm-review.md"
               }
             }
           }
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
+                "file": "docs/cog-decision/midterm-review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
+                "file": "docs/cog-decision/midterm-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,24 +220,25 @@
   },
   "active": "a80eecb5501a8ce0",
   "lastOpenFiles": [
+    "obsidian-vault/things-i-wanna-do.md",
+    "docs/cog-decision/midterm-review.md",
+    "docs/cog-decision/cog-decision.md",
+    "docs/cog-decision/learning-prediction.md",
+    "docs/cog-decision/cognitive-architecture.md",
+    "docs/sys-prog/the-shell.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project-2-dictionary.md",
-    "docs/sys-prog/the-shell.md",
     "docs/sys-prog/files.md",
-    "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/heuristics-biases.md",
     "docs/cog-sci/8-memory.md",
-    "docs/cog-decision/cognitive-architecture.md",
     "docs/discrete-2/discrete-2.md",
     "docs/harddrive-wipe.md",
-    "docs/cog-decision/learning-prediction.md",
     "docs/cog-sci/cog-sci-finals.md",
     "docs/cog-decision/probability.md",
     "().md",
     "docs/sys-prog/c-basics.md",
     "docs/cog-decision/imgs/actual/memory-model.png",
     "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
     "docs/discrete-2/imgs/practice-10-4.png",
@@ -253,7 +254,6 @@
     "docs/discrete-2/imgs/A-probability-tree-indicating-the-16-possible-outcomes-of-a-sequence-of-four-coin-tosses.png",
     "docs/comp-arch/comp-arch.md",
     "docs/discrete-1/discrete1-midterm1.md",
-    "docs/discrete-1/discrete-1.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",

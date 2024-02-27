@@ -430,3 +430,74 @@ There are two different definitions for a heuristic.
 - Asked questions on satisfaction instead of rewarding.
 - **Outcome:** Favorable outcomes have a strong positive effect, while unfavorable ones have a more modest negative effect on decision-making process.
 
+## Risk Analysis
+
+#### Decisions Under **Risk**
+- Probability of future events is measurable.
+- Should I travel by car or plane? (Relevant stats)
+
+#### Decisions Under **Uncertainty / Ignorance**
+- Probability of future events is indefinite or incalculable.
+- Should I build a nuclear bunker; no relevant statistics.
+
+### Dread Risk
+- Low probability events that give people a feeling of dread as the low risk brings high potential for harm.
+- Lacking in correct statistical information, people instead use their emotions to drive their decision making and err on the side of safety. *High dread is taken to indicate high risk.*
+- Sometimes this can actually lead to *riskier* activities.
+	- **Studies:** After 9/11, national air miles decreased and more people drove. (More people died from traffic fatalities too)
+
+#### Gigerenzer's Explanation
+- **Evolution**: We evolved to avoid behaviors that could lead to the loss of many members of a tribe.
+- **Lack of info**: People don't know the statistics of driving to flying.
+- **Control**: People fear terrorist attacks because they have no control over it.
+
+> He also believed we should present information in terms of **absolute risks** and **natural frequencies** instead of *relative risks* and *conditional probabilities*.
+
+### Absolute Risk
+- "Two in 7000 versus one in 7000."
+- Absolute risk gives you a clear picture as to the original rates.
+
+#### Natural Frequencies
+- Humans were evolved to use natural frequencies.
+- These *natural frequencies* are the actual occurrences within the same reference class of observation, say 100 people.
+
+### Relative Risk
+- "Twofold increase."
+- Relative risk frames the risk as *ratios* to be compared with other groups.
+
+### Facilitating Risk Analysis
+- When framed in terms of relative risks, a very low percentage of people got the answer to the breast cancer question.
+- When framed in terms of absolute risk, almost half got the question correct.
+
+## Prediction
+- Predictions are divided into **clinical intuition** and **statistical prediction**.
+
+### Clinical Intuition
+- People with experience and expertise in the domain make intuitive predictions for individual cases.
+
+### Statistical Prediction
+- Predictions about a particular case are made solely on the basis of empirical evidence and/or a statistical comparison to data drawn from a large sample.
+
+### Affective Forecasting
+- Predicting how a possible future event would make you feel.
+
+#### Kahneman and Snell (1992)
+- Measured how accurately people were able to predict how they would feel about a scenario beforehand.
+- **Result:** People's liking of their experience were almost an exact reversal of their actual liking of the experience.
+- **Analysis:** We are good at predicting whether future events will cause positive versus negative feelings overall but are not so good at predicting how *long* we will feel that way and *how intensely*.
+
+---
+
+### Impact Bias
+- Tendency to exaggerate the **impact** of future feelings and emotions.
+- Overestimating how *intensely* and how *long* a future event will make us feel a certain way.
+- People are disproportionately motivated to make events happen if they believe they will feel positively towards it.
+
+### Emotional evanescence  
+• Intensity of emotion fades over time.  
+### Focalism  
+- Overestimating how much an event (the focal event) would affect their feelings while underestimating how much other circumstances would affect them.
+- Fail to consider that the focal event is one of many that will determine their future affective state. 
+
+### Rationalization
+- We underestimate our ability to rationalize failure and misfortune.

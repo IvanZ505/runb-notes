@@ -39,3 +39,6 @@ Psychology Building)
 ## [Probability](probability)
 
 ## [Learning and Prediction](../cog-decision/learning-prediction)
+
+## [Midterm Review](midterm-review)
+
