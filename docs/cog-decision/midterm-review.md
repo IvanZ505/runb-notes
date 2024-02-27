@@ -501,3 +501,23 @@ There are two different definitions for a heuristic.
 
 ### Rationalization
 - We underestimate our ability to rationalize failure and misfortune.
+
+---
+
+## Important People
+
+### Kahneman
+- Dual Processing Theorist
+- Approached JDM from a "cognitive illusions" view. (**Tversky did too**)
+- Kahneman and **Tversky** came up with the "rule of thumb" definition for heuristic before Kahneman latter added on with Frederick that it involved "attribute substitution"
+- Research on affective forecasting.
+
+### Gigerenzer
+- Unimodel theorist
+- Approached JDM from a "adaptive toolbox" view. (Fast and frugal)
+- Gigerenzer advocated for representing info in natural frequencies.
+
+### Fischhoff
+- Tested the two paradigms for hindsight bias, the memory and hypothetical paradigms.
+- Many experiments on British and Gurks, Hutus, SARA, RAFT processing etc.
+
