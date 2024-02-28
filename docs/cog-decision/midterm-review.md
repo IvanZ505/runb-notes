@@ -357,7 +357,7 @@ There are two different definitions for a heuristic.
 ### Studies Demonstrating Hindsight Bias
 - Amazon Mechanical Turk study with Americans asked to rate possible outcomes for 2 different events.
 	- Participants perceived outcomes to be more probable once informed of the actual outcome, demonstrating hindsight bias.
-
+ 
 ### Theories of Hindsight Bias
 - Split into *motivational theories* and *cognitive theories*.
 

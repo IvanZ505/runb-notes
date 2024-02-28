@@ -43,6 +43,80 @@
 - Not buffered
 - *Lower-level*: These exist on every Unix system
 
+#### Open
+
+```C
+#include <fcntl.h>  
+int open(char *pathname, int flags);  
+int open(char *pathname, int flags, mode_t mode);   // pathname: indicates where a file is located in the file system
+```
+
+- A name by itself (no slashes) refers to a file in the working directory.
+- A path with slashes indicates directory containment
+	- `foo/bar/baz/quux` indicates `quux` inside `baz` inside `bar` inside `foo` inside the working directory.
+- A path that begins with a slash is **absolute**: it starts from the filesystem root  
+special directory entries:
+	- `..` - The parent of the directory  
+	- `.` - The directory itself  
+	- `../foo` - means foo in the parent directory of the working directory  
+- *Flags*: bitmap indicating how we intend to use the file
+	- `O_RDONLY` - open file for reading
+	- `O_WRONLY` - open file for writing
+	- `O_RDRW` - open file for reading and writing.
+- *Additional flags* (combine using |)
+	- `O_CREAT` - create the file if it does not exist (must provide mode)
+	- `O_TRUNC` - truncate file (set its length to 0) if it exists
+	- `O_EXCL` - fail if the file already exists
+	- `O_APPEND` - start writing from the end of the file
+	- `O_NONBLOCK` - open file in "non-blocking" mode (doesn't matter much for files on disk)
+
+> The `open()` function from POSIX will open a file if successful, return -1 and sets **errno** if unsuccessful.
+
+## errno
+- Errno is a global variable that stores a number describing the last error that occurred. (from a function that will set errno)
+- *Not every function will set errno* (Check documentation)
+- The library defines constants for important error reasons.
+	- `EACCESS` - Don't have the permissions to view the file.
+	- `EEXIST` - The file already exists.
+	- Etc...
+
+> Instead of looking at it directly, we use `perror()` or `stderror()`.
+
+```C
+// prints an error message incorporating msg and describing the current value of errno  
+void perror(char *msg);  
+int fd = open(filename, flags);  
+if (fd == -1) {  
+	perror(filename);  
+	abort();  
+}  
+
+// returns a string describing the given error code
+char *strerror(int error_code); 
+```
+
+## File Permissions
+- A file mode is a traditional Unix way to indicate who has what sort of access to a file.
+- *When accessing a file with `O_CREAT`, you must specify the file mode (assess permissions)!*
+
+### Three categories of users  
+- u - the owner of a file (every file is owned by some user)  
+- g - the group of a file (every file has access for some group)  
+- o - everyone else  
+
+### Three forms of access  
+- r - read access  
+- w - write access  
+- x - execute access (needed to run programs or read directories)
+
+> To change the mode of a file, use `chmod <permissions_code> <files...>`
+
+- `chmod -w some_file` -- disable write permission
+- `chmod +r some_file` -- enable read permission
+- `chmod o-r some_file` -- disable write permissions for others
+
+> You can also use three octal digits to describe permission settings.
+
 ## File Descriptor
 
 - A number that identifies an open file.
@@ -106,6 +180,22 @@ size_t bytes  // number of bytes in the buffer (Always returns less than this)
 		- We use large buffers to amortize this cost.
 - When we call read, we have to specify how much data to read (in bytes)
 - If we are reading a binary file, the format may indicate how many bytes to read.
+
+```C
+fd = open(data_file, O_RDONLY);  
+if (fd < 0) { .... }  
+
+int n;  
+int *p;  
+int bytes;  
+
+bytes = read(fd, &n, sizeof(int));  
+if (bytes < sizeof(int)) { ... }  
+
+p = (int *) malloc(n * sizeof(int));  
+bytes = read(fd, p, n * sizeof(int));  
+if (bytes < n * sizeof(int)) { ... }
+```
 
 > For text data, the units of the data we are interested in are variable length: Lines, words, etc...
 
