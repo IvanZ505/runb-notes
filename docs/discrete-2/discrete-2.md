@@ -628,6 +628,7 @@ Let X be a discrete random variable. Then...
 
 - The probability mass function of `X` is the function `p(X) = P(X=x)`
 - The cumulative distribution function of X is the function `F(X)=P(X≤x)`
+	- The sum of the Probability mass function up to and including the value of x.
 - $F(x)=\sum_{t≤x}p(t)=\sum_{t≤x}P(X=t)$
 - ??? Navidi book
 
@@ -647,3 +648,79 @@ Computer chips often contains surface imperfections. The PMF of the number of de
 	- P(X>1) = 1 - P(X≤1) = 1 - 0.7 = 0.3
 
 William Navidi Book 112 #7 #todo try it
+
+## Expected Value
+
+Let `X` be a discrete random variable with probability mass function given by `p(x) = P(X = x)`. The mean of `X` is given by:
+
+$$\mu_{x}= \sum_{x}x*P(X=x)$$
+where the sum is over all possible values of X.
+
+- The mean of `X` is sometimes called the expectation, or *expected value* of `X` and may be denoted as `E(X)` or by μ.
+
+> **This can also be referred to:** A long term average of Discrete Random Variable `X`.
+
+- This is typically used in gambling to show that when gambling, when you gamble a lot, you will always lose money.
+
+> **Problem Solving For E(X)**:
+
+- Define the sample space
+- Define the Random variable.
+- Determine the values of the random variable.
+- Find the probability mass function for each.
+- Substitute all values in E(x) formula.
+
+##### Example
+
+Find the expected number of boys for a three child family. Assume girls and boys are equally likely.
+
+	n(S) = 2⁸
+	Let X = # of boys
+	X = 0,1,2,3
+	x|P(X)
+	0|1/8
+	1|3/8
+	2|3/8
+	3|1/8
+	E(X) = 0(1/8) + 1(3/8) + 2(3/8) + 3(1/8) = 1.5
+
+A player pays $3 to play the following game. he tosses three fair coins and receives back "payoffs" of $1 if he tosses no heads, $2 for one head, $3 for two heads, and $4 for three heads. Find the player's expected net winnings for this game.
+
+	n(S) = 2⁸
+	What I pay: (Loss value) -$3
+	What I earn: Whatever I get back from the coin toss.
+	Let X = The net winning value
+	X = 0, 1, 2, 3
+	x|P(X=x)
+	-$2|1/8
+	-$1|3/8
+	+$0|3/8
+	+$1|1/8
+	E(X) = -2(1/8) + -1(3/8) + 0(3/8) + 1(1/8) = -4/8 = -$0.5
+
+> **Note**: Define your Random variable as whatever the question is asking, in this case, *net earnings*, but use the P(X) from the heads or tails that corresponds.
+
+### Variance
+
+Let X be a discrete random variable with probability mass function `p(x) = P(X=x)`. Then...
+
+- The variance in `X` is given by:
+$$\sigma_{x}^{2}=\sum\limits_{x}(x-μ_x)^2P(X=x)$$
+- An alternate formula is given by:
+$$\sigma_{x}^{2}=\sum\limits_{x}x^{2}P(X=x)-μ_{x}^{2}$$
+- Then, you can simplify it even more using expected value...
+	- Since, $E(x)= \sum_{x}x*P(X=x)$, then, $E(x^2)= \sum_{x}x^{2}*P(X=x)$...
+- So the equation can just become:
+$$\sigma_{x}^{2}=E(x^{2})-E(x)^2$$
+
+##### Example
+
+Rolling single fair dice. Even number means u receive as much money as there are spots up, odd means you pay that amount.
+
+	Find the epxected net winnings of this game.
+	n(S) = 6
+	Let x be the net winnings.
+	x | P(X=x)
+
+A certain game involves tossing 3 fair coins, and it pays 10¢ for 3 heads, 5¢ for 2 heads, and 3¢ for 1 head. Is 5¢ a fair price to pay to play this game? That is, does the 5¢ cost to play make the game fair?
+
