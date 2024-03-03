@@ -21,38 +21,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/files.md",
+                "file": "docs/misc/sql-notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b328abea6b26b911",
+            "id": "d9dcdcbab2806ed9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c995838a3541681e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tversky",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/misc/sql-notes.md"
               }
             }
           }
@@ -136,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/misc/sql-notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/misc/sql-notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,26 +194,32 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "c995838a3541681e",
+  "active": "ac428133dd4b2db0",
   "lastOpenFiles": [
-    "docs/sys-prog/files.md",
-    "docs/discrete-2/discrete-2.md",
+    "Untitled 1.md",
+    "docs/misc/sql-notes.md",
+    "Untitled.md",
+    "docs/intro-infotech/iti103.md",
     "docs/sys-prog/the-shell.md",
+    "docs/sys-prog/files.md",
+    "README.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/systems-midterm.md",
+    "docs/sys-prog/sys-prog.md",
+    "docs/cog-decision/cog-decision.md",
+    "docs/cog-decision/midterm-review.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/heuristics-biases.md",
     "docs/cog-decision/learning-prediction.md",
-    "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/probability.md",
     "docs/cog-sci/cog-sci-finals.md",
-    "docs/cog-decision/cog-decision.md",
     "docs/CNAME",
     "obsidian-vault/things-i-wanna-do.md",
-    "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project-2-dictionary.md",
     "docs/cog-sci/8-memory.md",
-    "docs/harddrive-wipe.md",
+    "docs/misc/harddrive-wipe.md",
     "().md",
-    "docs/sys-prog/c-basics.md",
     "docs/cog-decision/imgs/actual/memory-model.png",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
@@ -234,14 +228,9 @@
     "docs/discrete-2/imgs/pascals-triangle.png",
     "obsidian-vault/Untitled.canvas",
     "obsidian-vault/what-i-want.md",
-    "docs/comp-arch/basics-of-c.md",
-    "README.md",
     "obsidian-vault",
     "docs/discrete-2/imgs/perms-vs-combs.png",
-    "docs/cog-sci/10-the-rational-mind.md",
-    "docs/cog-decision/readings.md",
     "docs/discrete-2/imgs/A-probability-tree-indicating-the-16-possible-outcomes-of-a-sequence-of-four-coin-tosses.png",
-    "docs/comp-arch/comp-arch.md",
     "Untitled.canvas",
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",

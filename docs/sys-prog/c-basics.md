@@ -127,16 +127,16 @@ Now I can say: `enum direction heading = north;`
 - Structs are used to bundle multiple values, possibly of different types.
 
 ```C
-	struct person {
-		int age;
-		int id;
-	}
+struct person {
+	int age;
+	int id;
+}
 
-	struct person Bill;
-	Bill.age = 20;
-	Bill.id = 283392;
+struct person Bill;
+Bill.age = 20;
+Bill.id = 283392;
 
-	struct person Bob = {99, 1};
+struct person Bob = {99, 1};
 ```
 - Structs can contain other structs
 - Structs can also contain fields of any data type.
@@ -149,10 +149,10 @@ Now I can say: `enum direction heading = north;`
 - Allows us to declare variables that could have different types.
 
 ```C
-	union intorfloat {
-		int i;
-		float f;
-	}
+union intorfloat {
+	int i;
+	float f;
+}
 ```
 - The declaration *may* resemble a struct, but only **one** element is present at a time.
 - There exists enough space to store the largest data type.
