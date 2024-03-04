@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/misc/sql-notes.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/misc/sql-notes.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/misc/sql-notes.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/misc/sql-notes.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,8 +196,8 @@
   },
   "active": "ac428133dd4b2db0",
   "lastOpenFiles": [
-    "Untitled 1.md",
     "docs/misc/sql-notes.md",
+    "Untitled 1.md",
     "Untitled.md",
     "docs/intro-infotech/iti103.md",
     "docs/sys-prog/the-shell.md",

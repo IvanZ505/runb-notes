@@ -712,6 +712,7 @@ $$\sigma_{x}^{2}=\sum\limits_{x}x^{2}P(X=x)-μ_{x}^{2}$$
 	- Since, $E(x)= \sum_{x}x*P(X=x)$, then, $E(x^2)= \sum_{x}x^{2}*P(X=x)$...
 - So the equation can just become:
 $$\sigma_{x}^{2}=E(x^{2})-E(x)^2$$
+	- **Note**: When squaring the E(x²), you only need to multiply the probability by the x², as shown by the summation in the alternate formula.
 
 ##### Example
 
@@ -724,3 +725,99 @@ Rolling single fair dice. Even number means u receive as much money as there are
 
 A certain game involves tossing 3 fair coins, and it pays 10¢ for 3 heads, 5¢ for 2 heads, and 3¢ for 1 head. Is 5¢ a fair price to pay to play this game? That is, does the 5¢ cost to play make the game fair?
 
+The probability distribution of random variable X is given as: $P(X =x) = {k(2-x)^{2} ,0}$. Find E(X) and find σ²(x).
+
+| -2  | 16k |     |
+| :-- | :-- | --- |
+| -1  | 9k  |     |
+| 0   | 4k  |     |
+| 1   | k   |     |
+| 2   | 0   |     |
+
+	16k + 9k + 4k +k= 1
+	k = 1/30
+	E(X) = -2(16/30) + -1(9/30) + 0(4/30) + 1(1/30)
+	σ²(X) = E(x²) - E(x)²
+
+### Properties of E(x) and σ²(x)
+- It is like average, expected over a long time.
+- The E(c), where c is a constant = c.
+- E(cx) = c(E(x)), since the E(c) is constant.
+- E(cx+b) = cE(x) + b
+- σ²(c) = 0, since there would be *no variance* for a constant.
+- σ²(cx) = c²σ²(x)
+- σ²(cx+b) = c²σ²(x)
+
+### Standard Deviation
+- For any random variable `x`, the Standard deviation of `x` = $\sqrt{\sigma^{2}_{x}}$.
+
+## Commonly Used Distributions
+- You can use this method for problems with sample spaces with mutually exclusive outcomes.
+- In all of these distributions, we consider **p: Probability of success**, and **q: Probability of failure**, where `q = 1-p`.
+
+### Bernoulli Distribution
+- Used when **number of distributions** = 1. (When you go over it once, *repetition = 1*)
+- For any Bernoulli trial, we define a random variable `X` as follows:
+	- If the experiment results in success, then X = 1, Otherwise X = 0. It follows that X is a discrete random variable, with probability mass function `p(x)` defined by:
+		- `p(0) = P(X=0) = 1-p = q`
+		- `p(1) = P(X=1) = p`
+
+#### Steps to Solve
+1. Make sure you know the sample space.
+2. Define the discrete random variable.
+3. Determine values for the DRV (x)
+4. Calculate the probability mass function of p(X = x)
+
+> `x~Bernoulli(p)` - Where `~` means "follows" and `p` is the probability of success.
+
+##### Example
+
+Roll a dice, find the probability of finding of getting 6, write the distribution.
+
+	# of repetition = 1
+	X = # of times getting 6
+	0 - Not getting 6,  1 - Got 6
+	p(0) = p(X = 0) = 1-p = 1-1/6 = 5/6
+	p(1) = p(X = 1) = p = 1/6
+
+> So, you can say that `X~Bernoulli(1/6)`
+
+#### Mean and Variance of a Bernoulli Random Variable
+
+**If X~Bernoulli(p), then**
+
+- `μx = p`
+- `σ²(x) = p(1-p)`
+
+### The Binomial Distribution
+- The **Binomial Distribution** is the repetition of `n` *independent* Bernoulli Distributions, where probability of success (`p`) and probability of failure (`q`)
+- If DRV (X) has a binomial distribution, or follows binomial distribution, we write it as `X~Bin(n,p)` - where `n` is the number of repetitions, and `p` is the probability of success.
+- **Note:** Your `x` value in a binomial distribution will be between `0` and `n`.
+
+> $p(X) = P(X=x) = _{n}C_{x}p^{x}q^{n-x}$
+
+##### Examples
+
+Repeating it 55 times, I want the probability of getting 17 heads.
+
+	X~Bin(55, 1/2) -> First, write out that it follows binomial distribution.
+	X = number of heads
+	X = 17
+	p(x=17) = ₅₅C₁₇ * p¹⁷ * p⁵⁵⁻¹⁷ = ₅₅C₁₇ * (1/2)¹⁷ * (1/2)⁵⁵⁻¹⁷
+
+A large industrial firm allows a discount on any invoice that is paid of 30 days. Of all invoices, 10% receive the discount. In a company audit, 12 invoices are sampled at random. What is the probability that fewer than 4 of the 12 sampled invoices receive the discount?
+
+	n = 12 (invoices sampled)
+	p = 1/10 (Probability of success)
+	X = number of invoices that receive the discount
+	X < 4
+	X~Bin(12, 1/10)
+	They are asking: P(X < 4) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3)
+	Then, just plug in formula for each of them:
+	P(X < 4) = 12C0 * (1/10)^()
+	#todo finish this
+
+#### Mean and Variance of Binomial
+
+If `X~Bin(n,p)`, then the mean and variance of `X` are given by:
+- μx =
