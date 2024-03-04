@@ -28,6 +28,18 @@
             }
           },
           {
+            "id": "9f06f27cabff62cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/cog-decision/choosing-resources.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "d9dcdcbab2806ed9",
             "type": "leaf",
             "state": {
@@ -40,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -100,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/choosing-resources.md"
               }
             }
           }
@@ -108,7 +120,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -124,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/choosing-resources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/choosing-resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,24 +207,25 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "ac428133dd4b2db0",
+  "active": "9f06f27cabff62cc",
   "lastOpenFiles": [
+    "docs/cog-decision/cog-decision.md",
+    "docs/cog-decision/choosing-resources.md",
+    "docs/discrete-2/discrete-2.md",
+    "docs/cog-decision/cognitive-architecture.md",
+    "docs/cog-decision/midterm-review.md",
+    "docs/sys-prog/files.md",
     "docs/misc/sql-notes.md",
     "Untitled 1.md",
     "Untitled.md",
     "docs/intro-infotech/iti103.md",
     "docs/sys-prog/the-shell.md",
-    "docs/sys-prog/files.md",
     "README.md",
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/sys-prog/sys-prog.md",
-    "docs/cog-decision/cog-decision.md",
-    "docs/cog-decision/midterm-review.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/heuristics-biases.md",
     "docs/cog-decision/learning-prediction.md",
-    "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/probability.md",
     "docs/cog-sci/cog-sci-finals.md",
     "docs/CNAME",
@@ -227,7 +241,6 @@
     "docs/discrete-2/imgs/practice-10-4.png",
     "docs/discrete-2/imgs/pascals-triangle.png",
     "obsidian-vault/Untitled.canvas",
-    "obsidian-vault/what-i-want.md",
     "obsidian-vault",
     "docs/discrete-2/imgs/perms-vs-combs.png",
     "docs/discrete-2/imgs/A-probability-tree-indicating-the-16-possible-outcomes-of-a-sequence-of-four-coin-tosses.png",

@@ -42,3 +42,5 @@ Psychology Building)
 
 ## [Midterm Review](midterm-review)
 
+## [Choosing Resources](choosing-resources)
+
