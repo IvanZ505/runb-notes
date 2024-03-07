@@ -28,54 +28,6 @@
             }
           },
           {
-            "id": "9f06f27cabff62cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eae60ef3cee04c50",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/files.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e9eea78053b5b06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/systems-midterm.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0efbc3494a970032",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/c-basics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b65ffd18e51ce770",
             "type": "leaf",
             "state": {
@@ -99,8 +51,7 @@
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,16 +110,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/sys-prog/c-basics.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -184,7 +134,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/c-basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +150,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/c-basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -254,15 +202,15 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "0efbc3494a970032",
+  "active": "c8f61fcb6b6db89b",
   "lastOpenFiles": [
-    "docs/comp-arch/1-overview-of-comp-arch.md",
-    "docs/sys-prog/c-basics.md",
+    "docs/discrete-2/discrete-2.md",
+    "docs/cog-decision/choosing-resources.md",
     "docs/sys-prog/files.md",
     "docs/sys-prog/systems-midterm.md",
-    "docs/cog-decision/choosing-resources.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/comp-arch/1-overview-of-comp-arch.md",
     "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/comp-arch/4-floating-points.md",
     "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",

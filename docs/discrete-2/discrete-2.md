@@ -821,3 +821,79 @@ A large industrial firm allows a discount on any invoice that is paid of 30 days
 
 If `X~Bin(n,p)`, then the mean and variance of `X` are given by:
 - μx =
+
+### Poisson Distribution
+
+- `n ⤳ ∞` and `p ⤳ 0` such that `n*p < 5` with `n*p=λ`, you use **Poisson Distribution**, if it's 5 or above, use binomial.
+
+> Note: We use binomial for repetitions, however, we use Poisson where there is a given p-value that is small. 
+
+**If X~Poisson(λ)** (X follows a Poisson Distribution), then, the **P(X=x) =** $e^{-λ}\frac{λ^{x}}{x!}$.
+
+Hence, `μₓ=λ` and `σₓ²=λ`.
+
+#### Rate Problems
+- If they give you mean or rate, that is just Poisson, because `μₓ=λ`, and there is no way to use Binomial, because you do NOT know the `n` value or `p` values.
+
+##### Summary
+
+**Let λ** denote the mean number of events that occur in one unit of time or space. **Let X** denote the events that are observed to occur in *t* units of time or space.
+
+- Then, if `X~Poisson(λt)`, λ is estimated with λ^ ?? #todo fill in
+- This also means that if the unit of time changes, say from 1 to 1.5, you will multiply your old lambda with the new time to get the new lambda.
+
+##### Example
+
+- Particles are suspended din a liquid medium at a concentration of 6 particles per mL. A large volume of the suspension is thoroughly agitated, and then 3 mL are withdrawn. What is the probability that exactly 15 particles are withdrawn?
+
+- 5) A data center contains 1000 computer servers. Each server has probability 0.003 of failing on a given day.
+
+a) What is the probability that exactly two servers fail?
+
+	n = 1000, p = 0.003, X = # of servers failing 
+	⤷ n*p = 1000*0.003 = 3 < 5, so we use Poisson with λ=3
+	Then, we can say that X~Poisson(3)
+	P(X=2) = e⁻³(3²/2!)
+	
+b) What is the probability that fewer than 998 function?
+
+	P(X > 2) = 1 - P(X <= 2)
+	P(X > 2) = 1 - P(X=0) + P(X=1) + P(X=2) =  1- e⁻³(3⁰/0!) + e⁻³(3¹/1!) +  e⁻³(3²/2!)
+
+c) What is the mean number of servers that fail?
+d) What is the standard deviation of the number
+
+- The number of hits on a certain website occur with a mean rate of 4 per minute.
+
+a) What is the probability that 5 messages are received in a given minute?
+
+	μₓ= 4 per minute= λ
+	X = # of messages received per minute
+	X~Poisson(4)
+	P(X=5) = e⁻⁴(4⁵/5!)
+
+b) What is the probability that 9 messages are received in 1.5 minutes?
+
+	μₓ= 4 per minute= λ
+	Y = # of messages received in 1.5 minutes
+	Here, the t-value has changed to 1.5 from 1, meaning my new lambda is λ=1.5*4 = 6
+	Y~Poisson(6)
+	P(Y=9) = e⁻⁶(6⁹/9!)
+
+c) What is the probability that fewer than 3 messages are received in a period of 30 seconds?
+
+	λ = 4 per minute
+	Z = # of messages per 30 seconds
+	This means that t=0.5, and my new lambda is λ = 0.5*4 = 2
+	Z~Poisson(2)
+	P(X<3) = P(X=0) + P(X=1) + P(X=2) = e⁻²(2⁰/0!) + e⁻²(2¹/1!) + e⁻²(2²/2!)
+
+#todo do every problem of william navidi book
+
+---
+
+### Uncertainty
+- We are not going over uncertainty in this class. (No hat symbol)
+
+---
+
