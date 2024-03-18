@@ -94,7 +94,8 @@ First, what is logic (not the rapper)??
 > Some people believe that evolution selects for practical rationality, not epistemic. However, others believe both are necessary for survival.
 
 ---
-- *"money pumps"* - A pattern of intransitive or cyclic preferences causing a decision maker to be willing to pay repeated amounts of money to have these preferences satisfied without gaining any benefit.
+###### Money pump
+-*"money pumps"* - A pattern of intransitive or cyclic preferences causing a decision maker to be willing to pay repeated amounts of money to have these preferences satisfied without gaining any benefit.
 	- Ex: The marketplace sells only apples and oranges. An apple and an orange cost a dollar each. **Bob** has $2. Bob prefers *an orange over that 1 dollar*, but *apples over an orange*, and *$1 over the apple*. However, the market has only orange left, and there is someone fighting with Bob for that orange. So, Bob buys the orange for `$1.10`. Then, someone willingly trades Bob a apple for that orange, and because *Bob prefers apples to oranges, he accepts*. Then, someone comes along and wants to buy the apple for a dollar. Because Bob prefers *$1 over an apple* he also accepts.
 		- What is Bob, *aside from an idiot*? Ans: A money pump.
 

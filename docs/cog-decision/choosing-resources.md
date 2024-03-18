@@ -133,3 +133,75 @@ Each of the 22 interventions significantly increased vaccination rates relative 
 
 > Evidence found that ownership language boosted appointment. (Dai et. al (2021))
 
+### Mental Accounting
+- Decisions about how we spend resources are influenced by where we think the resources come from.
+- People mentally divide their wealth into:
+	- Current income (paychecks, bonuses)
+	- Current assets (savings, large windfalls)
+	- Future wealth (retirement savings, future income)
+- We are more likely to spend current income.
+
+##### Study
+- Studies in Japan found that an annual salary increase (current income) is more likely to be spent than an annual bonus (current assets), even if they are the same amount.
+- It was found that the proportion of the money spent rather than saved was:
+	- 0.437 for bonus income
+	- 0.685 for nonbonus income.
+- Perhaps it is better to move funds allocated for salary increases to routine bonuses to encourage employee saving.
+
+## Sunk Costs
+- When resources have already been spent:
+	- Sunk costs should not factor into decisions about the future, but do.
+	- We tend to make decisions based on past costs rather than based on whether or not the current and future costs will outweigh the benefits.
+
+#### Susceptible
+- Older children and adults tend to be more susceptible than younger children to the influence of sunk costs.
+
+> Possible explanations: older children and adults have been socialized to follow the rule "Don't waste", whereas younger children have not yet been socialized to follow this rule.
+
+
+#### Time vs Money
+- People are used to keep track of money and thinking of it as a valuable commodity, but they aren't necessarily used to doing so for time.
+- Soman (2001) had participants imagined that they had worked 15 hours for a theatre ticket and 5 hours for a rock concert ticket, and that they thought they would enjoy the rock concert more.
+- People would choose the one that they thought they would enjoy more, even if they still spent the time already.
+
+> Perhaps people do not account for money and time in the same way. Maybe focusing on time spent leads people to focus on emotional meaning and wellbeing. (Lee et al. 2015)
+
+## Expected Utility Theory
+- In expected utility theory:
+	- The decision maker can state a preference for one of two outcomes, or that they are equally preferred.
+	- The decision maker's preferences are transitive (consistently ranked-order): if A is preferred to B, and B is preferred to C, then A is preferred to C.
+
+> If this does not follow, then you are a [money pump](../cog-sci/10-the-rational-mind#money-pump).
+
+- We can express any given person's preferences numerically and call it the utility.
+- We can calculate the expected utility of any gamble by taking each possible outcome of that gamble.
+- Check out [Expected value](../discrete-2/discrete-2#expected-value)
+
+### Symbols
+- X ~ Y -> The agent (person) is indifferent between X and Y.
+- X ≻ Y -> The agent (person) strictly prefers X over Y.
+- X ≽ Y -> Weakly prefers X over Y.
+
+### Gamba
+- Gambles represent the fact that the consequences of choices are never certain.
+
+![](imgs/joke/plinko1.webp)
+
+### Framing
+- Problems with expected utility theory:
+	- Framing influences preferences between choices even when the choices are equivalent in expected value.
+
+#### Framing Effects
+- **Principle of Invariance:** The way in which choices are framed *shouldn't* matter.
+	- However, framing *does* influence preferences between choices even when the choices are equivalent in expected value.
+	- Framing in terms of *gain* leads people to be *risk-averse*
+	- Framing in terms of *loss* leads people to be *risk-seeking*
+
+##### Gain Framing
+- Sure gain of $240 vs 25% chance to gain $1000 and a 75% chance to gain nothing.
+	- People tended to prefer the sure gain of $240.
+
+##### Loss Framing
+- Sure loss of $750 vs 25% chance to lose $1000 and a 25% chance to lose nothing.
+	- Now, people tended to prefer the chance.
+

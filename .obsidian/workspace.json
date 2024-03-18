@@ -40,31 +40,19 @@
             }
           },
           {
-            "id": "b65ffd18e51ce770",
+            "id": "84ddc9c56b2d2291",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/comp-arch/1-overview-of-comp-arch.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e53abdd4724ec1ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/the-shell.md",
+                "file": "docs/cog-decision/choosing-resources.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -94,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "strcp",
+                "query": "expected value",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +99,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -124,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/choosing-resources.md"
               }
             }
           }
@@ -148,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/choosing-resources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/choosing-resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -218,19 +207,22 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "ac428133dd4b2db0",
+  "active": "84ddc9c56b2d2291",
   "lastOpenFiles": [
-    "docs/sys-prog/files.md",
     "docs/discrete-2/discrete-2.md",
-    "docs/sys-prog/c-basics.md",
-    "docs/sys-prog/project-2-dictionary.md",
     "docs/cog-decision/choosing-resources.md",
-    "docs/sys-prog/systems-midterm.md",
+    "docs/cog-sci/10-the-rational-mind.md",
+    "docs/cog-decision/modeling-reality.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
+    "docs/cog-decision/imgs/joke/plinko1.webp",
+    "docs/sys-prog/project-2-dictionary.md",
+    "docs/sys-prog/the-shell.md",
+    "docs/sys-prog/files.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/systems-midterm.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/comp-arch/4-floating-points.md",
     "docs/sys-prog/multitasking.md",
-    "docs/sys-prog/the-shell.md",
     "README.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
@@ -245,8 +237,6 @@
     "docs/cog-decision/probability.md",
     "docs/cog-sci/cog-sci-finals.md",
     "docs/CNAME",
-    "obsidian-vault/things-i-wanna-do.md",
-    "docs/cog-sci/8-memory.md",
     "docs/cog-decision/imgs/actual/memory-model.png",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
     "docs/discrete-2/imgs/practice-10-4.png",
@@ -259,7 +249,6 @@
     "docs/discrete-2/imgs/set-operations-intersection.png",
     "docs/discrete-2/imgs/set-operations-union.png",
     "docs/discrete-2/imgs/set-operations-complement.png",
-    "docs/discrete-2/imgs/set-operations-1.png",
     "docs/discrete-2/imgs",
     "docs/discrete-2",
     "docs/sys-prog/imgs",
