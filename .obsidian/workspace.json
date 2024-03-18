@@ -16,6 +16,18 @@
             }
           },
           {
+            "id": "dae205c8aabe8306",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/files.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ac428133dd4b2db0",
             "type": "leaf",
             "state": {
@@ -51,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -81,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "PID",
+                "query": "strcp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,15 +123,16 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/discrete-2/discrete-2.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -134,6 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,6 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,20 +218,20 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "c8f61fcb6b6db89b",
+  "active": "ac428133dd4b2db0",
   "lastOpenFiles": [
-    "docs/discrete-2/discrete-2.md",
-    "docs/cog-decision/choosing-resources.md",
     "docs/sys-prog/files.md",
-    "docs/sys-prog/systems-midterm.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/project-2-dictionary.md",
+    "docs/cog-decision/choosing-resources.md",
+    "docs/sys-prog/systems-midterm.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/comp-arch/4-floating-points.md",
     "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",
     "README.md",
-    "docs/sys-prog/project-2-dictionary.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/midterm-review.md",

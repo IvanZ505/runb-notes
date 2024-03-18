@@ -484,14 +484,12 @@ $$P(A|B) = \frac{P(A ∩ B)}{P(B)} = \frac{P(A and B)}{P(A)}$$
 
 ### More Practice
 - Of people that bought new vehicle, 12% bought hybrid vehicle, 5% bought hybrid truck. Given that a person bought a hybrid vehicle, what is the probability that it was a truck.
-	- 5/12 (TODO: Find out why)
+	- 5/12
 
 - A system contains 2 components A and B that need to function for the system to work. The probability that component A fails is 0.08 and that B fails is 0.05. They operate independently. What is the probability that the system will work?
 	- A' = 0.92, B' = 0.95
 	- P(System functions) = P(A functions and B functions) = P(A'∩B')
 	- Since they are independent, 0.92 ✕ 0.95 = **0.874**
-
-#todo go to mathematical ideas book, they have good stuff on conditional probability
 
 ## Bayes Theorem
 
@@ -888,6 +886,30 @@ c) What is the probability that fewer than 3 messages are received in a period o
 	Z~Poisson(2)
 	P(X<3) = P(X=0) + P(X=1) + P(X=2) = e⁻²(2⁰/0!) + e⁻²(2¹/1!) + e⁻²(2²/2!)
 
+- The number of houses sold by an agent have a mean of 2.5 houses per week. 
+
+a) Find the probability that in the next 4 weeks, the estate agent sells exactly 4 houses. More than 6.
+
+	X = Number of houses sold per week
+	X~Poisson(10)
+	μₓ = λ = 2.5
+	X₁ = number of houses sold per 4 weeks
+	4μₓ = λ = 4(2.5) = 10
+
+- P(X=4) = $e^{-λ}\frac{λ^{x}}{x!}$ = $e^{-10}\frac{10^{4}}{4!}$
+
+More than 6:
+
+	P(X>6) = 1-P(X≤6) = 1-P(0,1,2,3,4,5,6)
+
+- P(X>6) = $1-\sum\limits_{x=0}^{6}e^{-10}*\frac{10^x}{x!}$ = A
+
+b) The agent monitors the house sales in periods of 4 weeks. Find the probability that in the next 12 of those 4 weeks periods, there are exactly 7 4 week periods in which more than 6 houses are sold.
+
+	Y = # of 4 weeks with more than 6 houses sold
+	X~Binomial(12,A)     # it is binomial because we are finding chance of success v failure.
+	P(Y=7) = ₁₂C₇A⁷(1-A)⁵
+
 #todo do every problem of william navidi book
 
 ---
@@ -897,3 +919,89 @@ c) What is the probability that fewer than 3 messages are received in a period o
 
 ---
 
+#todo quiz on binomial poissant distribution thursday, quiz next monday on rest of the distributions
+
+### Geometric Distribution
+- In previous distributions, we always knew the number of trials.
+- However, in *Geometric Distribution*, or negative binomial distribution, you DON'T know your `n`.
+- Asking for number of trials up to and *including* first trial that results in success.
+
+Let X be a discrete random variable s.t. X=# of trials up to and including 1st result.
+
+Then, you can write that `X~Geom(p)`, where `p` = probability of success.
+
+You can also write that `P(X=x) = p*q^(x-1)` If you know how many trials till you finally succeed.
+
+> Clue: If the problem asks "*Up to and including blah blah for first blah...*", you **know** that you are using Geometric.
+
+#### Mean and Variance
+
+If X~Geom(p), then:
+
+- $μₓ=\frac{1}{p}$
+- $σ_{x}^{2}=\frac{1-p}{p^2}$
+
+### Negative Binomial Distribution
+- Just like geometric distribution, you do not know your number of trials.
+- However, *negative binomial distribution* calculates how many trials you need to get `r` number of successes.
+- If a discrete random variable `X` follows Negative Binomial Distribution, you write that `X~NB(r,p)`. -> p is the chance of success.
+
+If `X~NB(r,p)`, then the probability mass function of `X` is:
+
+$$p(X) = P(X=x) =
+\begin{cases} 
+      _{x-1}C_{r-1}p^{r}(1-p)^{x-r} & x=r,r+1,... \\
+      0 & otherwise
+   \end{cases}$$
+
+#### Mean and Variance
+
+If `X~NB(r,p)`, then the mean and variance is:
+
+- μₓ = r/p
+- $σ_{x}^{2}=\frac{r(1-p)}{p^2}$
+
+---
+
+##### Example
+
+William Navidi book, pg. ___ q8
+
+- A process that fills packages is stopped whenever a package is detected who's weight falls outside the specification. Assume that each package has a 0.01 probability of failing and that the weights of the packages are independent.
+
+a) Find the mean number of packages that will be filled before the it is stopped.
+
+	X = # of packages filled before it is stopped.
+	X~Geom(0.01)
+	μₓ = 1/p = 1/0.01
+
+b) Find the variance in the number of packages that will be filled before the process is stopped.
+
+$σ_{x}^{2}=\frac{1-0.01}{0.01^2}$
+
+c) Assume that the process will not be stopped until 4 packages that fail are detected. Find the mean and variance in the number of packages that will be filled before the process is stopped.
+
+	Y = number of packages filled up to and including 4 that fail.
+	Y~NB(4, 0.01)
+	μₓ = r/p = 4/0.01
+
+---
+
+### We skip Multinomial Distribution
+
+### Hypergeometric Distribution
+- Hypergeometric is legit just the two step problems we have already been doing.
+- There is formal formula lol.
+
+If `X~H(N, R, n)`, the probability mass function of X is:
+
+$$p(X) = P(X=x) = \begin{cases} 
+  \frac{_RC_{x} * _{N-R}C_{n-x}}{_NC_n} & max(0, R+n-N) \leq x \leq min(n, R) \\ \\
+
+ 0 & otherwise\\
+\end{cases}$$
+
+#### Mean and Variance
+
+- $\mu_{x}=nR/N$
+- $\sigma_{x}^{2}=n(R/N)(1-R/N)(N-n/N-1)$
