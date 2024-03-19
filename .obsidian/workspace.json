@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "expected value",
+                "query": "processes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md"
+                "file": "docs/sys-prog/the-shell.md"
               }
             }
           }
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -209,8 +209,9 @@
   },
   "active": "84ddc9c56b2d2291",
   "lastOpenFiles": [
-    "docs/discrete-2/discrete-2.md",
+    "docs/sys-prog/multitasking.md",
     "docs/cog-decision/choosing-resources.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/cog-sci/10-the-rational-mind.md",
     "docs/cog-decision/modeling-reality.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
@@ -222,7 +223,6 @@
     "docs/sys-prog/systems-midterm.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/comp-arch/4-floating-points.md",
-    "docs/sys-prog/multitasking.md",
     "README.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",

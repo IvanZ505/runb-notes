@@ -41,6 +41,7 @@ A **task** refers to the execution of a program.
 
 ## Process
 - A process is a *task*, with its own **virtual memory space**.
+- Process groups are groups of one or more processes.
 
 How to make a process?
 

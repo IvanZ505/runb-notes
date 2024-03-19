@@ -95,9 +95,15 @@ The Shell wildcards will only match files in the current subdirectory. To match 
 ### Process Group
 - A collection of one or more processes. This process group created by a shell is a "job".
 - Running a single program starts a job.
+	- The shell tracks the process groups it creates and assigns them job numbers.
 - All processes in a pipeline are part of the same job.
 
 > They can be in the foreground or the background.
+
+**However, keep in mind that only *one* process group is in the "foreground"**
+
+- This means it receives input from the terminal.
+- Notably, ^C and ^Z signal every process in the foreground group.
 
 #### Session
 - A session is a set of process groups.
