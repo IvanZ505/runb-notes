@@ -1,3 +1,5 @@
+{% include math.html %}
+
 # Intro to Discrete Structures 2
 
 Instructor: Dr. Samaneh G. Hamidi (sg1538@cs.rutgers.edu)
