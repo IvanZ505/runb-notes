@@ -208,6 +208,8 @@
   },
   "active": "ac428133dd4b2db0",
   "lastOpenFiles": [
+    "docs/_includes/math.html",
+    "docs/_includes",
     "_includes/math.html",
     "_includes",
     "docs/discrete-2/discrete-2.md",
@@ -253,8 +255,6 @@
     "docs/discrete-2",
     "docs/sys-prog/imgs",
     "docs/sys-prog",
-    "docs/cog-decision/imgs/joke",
-    "docs/cog-decision/imgs/actual",
-    "docs/cog-decision/imgs"
+    "docs/cog-decision/imgs/joke"
   ]
 }
