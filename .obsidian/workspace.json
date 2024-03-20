@@ -50,6 +50,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "634db223144692b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/discrete-2/discrete-2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 2
@@ -208,20 +220,20 @@
   },
   "active": "ac428133dd4b2db0",
   "lastOpenFiles": [
+    "docs/cog-decision/modeling-reality.md",
+    "docs/cog-decision/choosing-resources.md",
+    "docs/sys-prog/files.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/_includes/math.html",
     "docs/_includes",
     "_includes/math.html",
     "_includes",
-    "docs/discrete-2/discrete-2.md",
     "docs/sys-prog/the-shell.md",
     "docs/sys-prog/multitasking.md",
-    "docs/cog-decision/choosing-resources.md",
     "docs/cog-sci/10-the-rational-mind.md",
-    "docs/cog-decision/modeling-reality.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
     "docs/cog-decision/imgs/joke/plinko1.webp",
     "docs/sys-prog/project-2-dictionary.md",
-    "docs/sys-prog/files.md",
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/sys-prog/project1-my-little-malloc.md",
@@ -254,7 +266,6 @@
     "docs/discrete-2/imgs",
     "docs/discrete-2",
     "docs/sys-prog/imgs",
-    "docs/sys-prog",
-    "docs/cog-decision/imgs/joke"
+    "docs/sys-prog"
   ]
 }

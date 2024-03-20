@@ -173,6 +173,11 @@ Each of the 22 interventions significantly increased vaccination rates relative 
 
 > If this does not follow, then you are a [money pump](../cog-sci/10-the-rational-mind#money-pump).
 
+**Expected Value/Utilty**:
+
+- When we make decisions, there are often conflicts between the desirability and probability of our options.
+- When choosing a career, there may be tradeoffs in the likelihood and amounts of success in a field.
+
 - We can express any given person's preferences numerically and call it the utility.
 - We can calculate the expected utility of any gamble by taking each possible outcome of that gamble.
 - Check out [Expected value](../discrete-2/discrete-2#expected-value)
@@ -204,4 +209,21 @@ Each of the 22 interventions significantly increased vaccination rates relative 
 ##### Loss Framing
 - Sure loss of $750 vs 25% chance to lose $1000 and a 25% chance to lose nothing.
 	- Now, people tended to prefer the chance.
+
+### Risk Aversion
+- Risk aversion is *demonstrated* when people refuse to play a fair gamble.
+- A fair gamble has an expected value of zero, for example, tossing a fair coin for the following deal: Heads you lose $1,000, tails you win $1,000.
+	- Expected value of this gamble is 0.
+
+### Prospect Theory
+- Prospect theory accounts for the **reference dependence** of people's choice under uncertainty.
+
+
+**Prospect Theory** agrees with Expected Utility theory that choices involve maximizing expectations.
+
+- However, must account for the fact that in actual decision-making evaluations of utilities and probabilities of outcomes are subject to cognitive ...
+
+#### Choice Stages
+- Framing phase: People *simplify* the prospects to make decisions less complex. (e.g. ignore very small probabilities)
+- Valuation phase: The overall value (V) ...
 
