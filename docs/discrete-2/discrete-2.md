@@ -398,7 +398,7 @@ $$P(A) = \frac{n(A)}{n(S)}$$
 - `P(A) = 1` if `A = S`
 - P(A) = 0 if `A = ∅`
 
-## Mutually Exclusive
+### Mutually Exclusive
 - The events `A` and `B` are said to be mutually exclusive if they have no outcomes in common.
 	- Or in set terms, `∀x,y x∈A, x∉B y∈B, y∉A`
 - In mutually exclusive events, the probabilities can be added together in the *addition rule.*
@@ -820,7 +820,8 @@ A large industrial firm allows a discount on any invoice that is paid of 30 days
 #### Mean and Variance of Binomial
 
 If `X~Bin(n,p)`, then the mean and variance of `X` are given by:
-- μx =
+- $\sigma_x=np$
+- $\sigma_{x}^{2}=npq$
 
 ### Poisson Distribution
 
@@ -921,7 +922,7 @@ b) The agent monitors the house sales in periods of 4 weeks. Find the probabilit
 
 ---
 
-#todo quiz on binomial poissant distribution thursday, quiz next monday on rest of the distributions
+#todo quiz on binomial poisson distribution thursday, quiz next monday on rest of the distributions
 
 ### Geometric Distribution
 - In previous distributions, we always knew the number of trials.
@@ -1007,3 +1008,44 @@ $$p(X) = P(X=x) = \begin{cases}
 
 - $\mu_{x}=nR/N$
 - $\sigma_{x}^{2}=n(R/N)(1-R/N)(N-n/N-1)$
+
+### Examples
+
+9. W.N. pg.241: A lot of parts contains 500 items, 100 of which are defective. Suppose that 20 items are selected at random. Let X be the number of selected items that are defective.
+
+Find P(X=5)
+
+	X~H(500, 100, 20)
+
+13. Ten items are to be sampled from a lot of 60. If more than one is defective, the lot will be rejected. Find the probability that the lot will be rejected in each of the following cases.
+
+a. The number of defective items in the lot is 5.
+
+	X = # of defective items pulled out
+	X~H(60, 5, 10)
+	P(X>1) = 1 - P(X=0) - P(X=1) = 1 - (5C0*55C5/60C10) - (5C1*55C9/60C10)
+
+b. The number of defective items in the lot is 10.
+
+	X~H(60, 10 , 10)
+
+99. Justin is playing an alien shooter online. It is a game where you battle against randomly drawn opponents where reward of a battle is a game ticket. The probability of Justin winning a battle is thought to be `0.4`.
+
+a. Calculate the probability of Justin winning his first battle on his third attempt.
+
+	X = # of games up to and including first battle
+	X~Geo(0.4)
+	P(X = 3) = 0.4*0.6^2
+
+b. Winning his first battle after his third attempt.
+
+P(X > 3) = (First 3 games must be losing) $0.6^{3}$ * 1 (After that, it is 100%, since he can keep playing) 
+
+c. In alien shooter, when you collect 7 game tickets, you can upgrade your spaceship. Justin has already collected 2 game tickets from the previous days play. He starts playing today hoping to upgrade his spaceship. Find the probability he will have to have 10 battles by the time he is able to upgrade his spaceship.
+
+	Y = # of battles up to and including his 5th win.
+	Y~NB(5, 0.4)
+	P(Y=10) = 9C4*0.4^5*0.6^5
+
+## Graphs
+

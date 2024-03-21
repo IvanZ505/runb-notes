@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -218,12 +218,12 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "ac428133dd4b2db0",
+  "active": "634db223144692b4",
   "lastOpenFiles": [
-    "docs/cog-decision/modeling-reality.md",
     "docs/cog-decision/choosing-resources.md",
-    "docs/sys-prog/files.md",
     "docs/discrete-2/discrete-2.md",
+    "docs/cog-decision/modeling-reality.md",
+    "docs/sys-prog/files.md",
     "docs/_includes/math.html",
     "docs/_includes",
     "_includes/math.html",
