@@ -21,19 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/files.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ac428133dd4b2db0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/cog-decision/choosing-resources.md",
+                "file": "docs/sys-prog/multithreading.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/sys-prog/multithreading.md"
               }
             }
           }
@@ -148,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/multithreading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/multithreading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +179,7 @@
             }
           },
           {
-            "id": "c893a480284f4f58",
+            "id": "1a6deec7397c7bff",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -218,17 +206,19 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "634db223144692b4",
+  "active": "dae205c8aabe8306",
   "lastOpenFiles": [
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/multithreading.md",
+    "docs/sys-prog/files.md",
+    "docs/cog-decision/modeling-reality.md",
+    "docs/sys-prog/the-shell.md",
     "docs/cog-decision/choosing-resources.md",
     "docs/discrete-2/discrete-2.md",
-    "docs/cog-decision/modeling-reality.md",
-    "docs/sys-prog/files.md",
     "docs/_includes/math.html",
     "docs/_includes",
     "_includes/math.html",
     "_includes",
-    "docs/sys-prog/the-shell.md",
     "docs/sys-prog/multitasking.md",
     "docs/cog-sci/10-the-rational-mind.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
@@ -246,7 +236,6 @@
     "Untitled 1.md",
     "Untitled.md",
     "docs/intro-infotech/iti103.md",
-    "docs/sys-prog/sys-prog.md",
     "docs/cog-decision/heuristics-biases.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/probability.md",
