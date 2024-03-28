@@ -684,7 +684,7 @@ Find the expected number of boys for a three child family. Assume girls and boys
 	3|1/8
 	E(X) = 0(1/8) + 1(3/8) + 2(3/8) + 3(1/8) = 1.5
 
-A player pays $3 to play the following game. he tosses three fair coins and receives back "payoffs" of $1 if he tosses no heads, $2 for one head, $3 for two heads, and $4 for three heads. Find the player's expected net winnings for this game.
+A player pays `$3` to play the following game. he tosses three fair coins and receives back "payoffs" of `$1` if he tosses no heads, `$2` for one head, `$3` for two heads, and `$4` for three heads. Find the player's expected net winnings for this game.
 
 	n(S) = 2⁸
 	What I pay: (Loss value) -$3
@@ -995,6 +995,7 @@ c) Assume that the process will not be stopped until 4 packages that fail are de
 ### Hypergeometric Distribution
 - Hypergeometric is legit just the two step problems we have already been doing.
 - There is formal formula lol.
+- **Hypergeometric Distributions do not have repeatable trials**
 
 If `X~H(N, R, n)`, the probability mass function of X is:
 
