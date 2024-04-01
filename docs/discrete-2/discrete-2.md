@@ -1108,5 +1108,5 @@ c. In alien shooter, when you collect 7 game tickets, you can upgrade your space
 
 ### Complementary Graph
 - A **complementary graph** $\bar{G}$ of a simple graph `G` has the same vertices as G. Two vertices are adjacent in $\bar{G}$ if and only if they are not adjacent in G.
-
+- The **combination** of the complementary graph and the simple graph should give you a **complete graph**.
 

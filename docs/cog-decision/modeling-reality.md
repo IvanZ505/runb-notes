@@ -38,3 +38,25 @@
 	- Distractions (car towed, run out of restaurants)
 - When presented with stories, script violations (especially obstacles and distractions) are remembered better than script-consistent components.
 
+## Hypothesis Testing
+- Originally called a "*bias towards verification*"
+- Wason did not claim that participants desire to show that the rule was true.
+- This would be odd, since the rule is abstract and arbitrarily chosen.
+- Instead, he claimed that participants rely on a positive test strategy to examine whether the rule is true.
+
+### Positive Test Strategy
+- Examine instances in which the property or event is expected to occur (to see if it does occur)
+- Examine instances in which it is known to have occurred (to see if the hypothesized conditions prevail)
+
+> It is a positive test strategy if **they are only looking for** positive test strategies.
+
+### Karl Popper
+- According to Adler's theory: Human actions are motivated by feelings of inferiority.
+- Now consider the following case: A man is standing on the bank and the instant a child falls into the river nearby. The man leaps into the river in an attempt to save the child.
+	- Adler can use the theory to explain this by saying: the man needed to overcome his feeling of inferiority by demonstrating that he was brave.
+	- Now, if he did not jump, Adler can also use this theory to offer the explanation: The man had a feeling of inferiority that led him to think he is not the kind of person who could do something heroic like saving a child.
+
+- Popper noted that by making a testable prediction, the general theory of relativity was put at risk.
+- Popper drew the moral that genuine scientific theories are falsifiable.
+- Theories are not derived by induction. They are tentative conjectures that attempt to solve problems.
+
