@@ -1050,3 +1050,63 @@ c. In alien shooter, when you collect 7 game tickets, you can upgrade your space
 
 ## Graphs
 
+- **Graphs** are discrete structures consisting of vertices and edges that connect these vertices.
+- There are different kinds of graphs, depending on whether edges have directions, whether multiple edges can connect to the same pair of vertices, and whether loops are allowed.
+
+> Non-empty set of vertices and edges that are *connecting* two vertices. (We call graphs the variable `G`)
+
+- Typically, you call the first graph `G`, and following graphs `H`, `I`,... and so forth.
+- We reserve `G₁`, `G₂`, ... for *subgraphs*.
+
+> A graph, `G`, with a set of vertices `V` and edges `E`, denotes as: `G:(V,E)`, where, `V = {V₁, V₂, ..., Vₙ}` and `E = {E₁, E₂, ..., Eₙ}`.
+
+### Graph Terminology
+
+![](imgs/graph-terminology.png)
+
+- We have the following terminologies:
+	- Two vertices, `V₁` and `V₂` are *end vertices* of edge e₁, **if and only if**, they are connected to an edge.
+	- Edges that have the **same end vertices** are called *parallel*.
+	- Any edge that connects a vertex to itself is called a *loop*.
+	- A graph without **any parallel edges or loops** are called *simple graphs*.
+	- A graph with **no vertices** is a *null graph*. (we don't usually use this, and it is contradicting the original definition)
+	- A graph with **only one vertex** is a *trivial graph*.
+	- Edges are *adjacent* if they share a **common end vertex**.
+		- However, edges that are *parallel* can not be *adjacent*.
+	- Two vertices, `U` and `V` are called *adjacent* if they are connected by an edge.
+	- The *degree* of a vertex, written as `d(V)` is the total number of edges with `V` as an end vertex. (**By convention, we count loops twice.**)
+	- A *pendant vertex* is a vertex with `d(V) = 1`.
+		- Any *edge* with a *pendent vertex* as a end point is a *pendant edge*.
+	- An *isolated* vertex is a vertex whose `d(V) = 0`.
+
+##### Practice
+
+3. Find the number of vertices, the number of edges, and the degree of each vertex in the given undirected graph:
+
+- 9 vertices: 2 *isolated vertices* (*f, d*), no pendant vertices. 12 edges:
+	- `d(a) = 3`, `d(b) = 2`, `d(c) = 4`, `d(d) = 0`, `d(e) = 6`, `d(f) = 0`, `d(g) = 4`, `d(h) = 2`, `d(i) = 3`
+
+---
+
+### Terminology Cont.
+- The **minimum degree** of the vertices in a graph `G` is denoted as `δ(G)` and the **max degree** is `Δ(G)`.
+- A sequence, `d₁, d₂, ...` is considered *graphic* if it is the degree sequence of a simple graph.
+	- In a simple graph, the **maximum** degree of a graph with `n` vertices is `n-1`.
+	- Ex: `5,4,3,2,1,0`: 6 vertices, 15 edges. (*edges is odd, already failed not graphic*, *The maximum degree is 5, meaning one vertex would be connected to every other vertex, but there is a vertex with degree 0, so it is **not** graphic*)
+	- Ex: `2,2,2,2,2,2`: 6 vertices, 12 edges. (*nothing you can use to say it is not graphic*, draw it)
+		- It is a graph.
+	- Ex: `5,5,4,3,2,1`: (*not graphic because the minimum degree should be 2*)
+
+### The Handshaking Theorem
+- Let `G = (V, E)` be an undirected graph with `m` edges.
+- Then: $2m=\sum\limits_{v{\in}V}d(V_i)$, where `m` is the number of edges.
+
+### Complete Graphs
+- A **complete graph** on `n` vertices, denoted by `Kₙ`, is a *simple graph* that contains exactly one edge between each pair of distinct vertices. (The maximum number of edges possible for the simple graph)
+
+![](imgs/4.015-3.svg)
+
+### Complementary Graph
+- A **complementary graph** $\bar{G}$ of a simple graph `G` has the same vertices as G. Two vertices are adjacent in $\bar{G}$ if and only if they are not adjacent in G.
+
+
