@@ -169,3 +169,47 @@ unlock(&m);
 - There is **nothing** stopping us from accessing a shared data structure without first getting exclusive access (except our own good sense)
 	- **Supply your own discipline**
 
+### Thread-safe Queue
+- For *safety*, ensure only one thread accesses the queue at a time.
+
+**mutex** - abstraction used to coordinate access to a resource.
+
+- "locked" - one thread has access
+- "unlocked" - no thread has access
+
+> Only the thread that locked the mutex can unlock it.
+
+
+#### Operations of a Thread-safe Queue
+- **Enqueue**
+- **Dequeue**
+	- This can't work if the queue is empty.
+		- *if it is empty*, we might want to dequeue to block until another thread enqueues.
+
+#### Producers vs Consumers
+- A Consumer thread will dequeue (block because nothing is in there)
+	- Wait for read_ready
+- A Producer thread will then enqueue (signal read_ready)
+- Consumer thread will unblock and dequeue. This will finally dequeue, and once it does, queue is empty again, so it will wait once more.
+
+> Not very good, the number produced and consumed needs to be the same.
+
+- Ideally, we want a way to indicate whether the producers are stopped and to close the queue.
+
+### Condition Variables
+- A *condition variable* is something offered by Pthread that allows threads to *block* until some condition is met.
+	- Indicated by another thread saying the condition is met
+
+```C
+pthread_cond_t
+
+int pthread_cond_init(pthread_cond_t *cv, pthread_condattr_t *attrs);
+int pthread_cond_destroy(pthread_cond_t *cv);
+
+int pthread_cond_wait(pthread_cond_t *cv, pthread_mutex+t *lock);
+int pthread_cond_signal(pthread_cond_t *cv);
+```
+
+#### Condition Broadcasting
+- Wakes up every thread that is waiting for this condition and signals to all of them that the condition has been met.
+- `pthread_cond_broadcast(pthread_cond_t *cv);`

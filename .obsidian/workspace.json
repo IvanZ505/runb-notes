@@ -28,6 +28,18 @@
             }
           },
           {
+            "id": "0b2d6184b2ba5fbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/multithreading.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "4d2f04c12aa9eb66",
             "type": "leaf",
             "state": {
@@ -52,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -112,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md"
+                "file": "docs/sys-prog/multithreading.md"
               }
             }
           }
@@ -120,8 +132,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -137,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md",
+                "file": "docs/sys-prog/multithreading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md",
+                "file": "docs/sys-prog/multithreading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,8 +218,11 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2b0aae71a7cbc884",
+  "active": "0b2d6184b2ba5fbe",
   "lastOpenFiles": [
+    "docs/sys-prog/multitasking.md",
+    "docs/sys-prog/the-shell.md",
+    "docs/cog-decision/modeling-reality.md",
     "docs/discrete-2/discrete-2.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
@@ -218,20 +232,17 @@
     "docs/discrete-2/imgs/CompleteGraphs_801.svg",
     "docs/discrete-2/imgs/Pasted image 20240401085145.png",
     "docs/discrete-2/imgs/graph-terminology.png",
-    "docs/sys-prog/the-shell.md",
     "docs/cog-sci/10-the-rational-mind.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project-2-dictionary.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/files.md",
-    "docs/cog-decision/modeling-reality.md",
     "docs/cog-decision/choosing-resources.md",
     "docs/_includes/math.html",
     "docs/_includes",
     "_includes/math.html",
     "_includes",
-    "docs/sys-prog/multitasking.md",
     "docs/comp-arch/1-overview-of-comp-arch.md",
     "docs/cog-decision/imgs/joke/plinko1.webp",
     "docs/sys-prog/c-basics.md",
