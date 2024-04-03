@@ -60,3 +60,34 @@
 - Popper drew the moral that genuine scientific theories are falsifiable.
 - Theories are not derived by induction. They are tentative conjectures that attempt to solve problems.
 
+### Forensics
+- Mayfield case where someone was falsely convicted of bombing Madrid trains.
+- When the Spanish police identified a different match for the fingerprint, the FBI also agreed with them, and started to identify things that were not actually there.
+
+### Medicine
+- In trying to make a diagnosis, clinicians may first formulate a rough preliminary evaluation and then search in a confirmatory manner for the features that would support that diagnosis.
+- Study with medical interns and physicians at 3 psychiatric hospitals.
+
+#### What they did
+- A case vignette was presented to the subjects:
+	- Mr L (64 yrs old) is delievered to your clinic by the EMS. He seems to be heavily sedated and the physician's referral note states "suspicion of overdose on sleeping pills."
+	- By the next day, Mr L is now fully alert and tells you that he is usually a fun and happy person, but recently has been on the brink of tears.
+	- Mr L is neat in appearance and well kempt but seems quite dejected.
+- They could ask for 12 more pieces of information that would help confirm either depression or alzheimers.
+
+### Reason Based Choice
+- When people have weak or conflicting intuitions, they tend to make the decision for which it is easiest to find reasons- the decisions that they can best justify.
+
+#### Myside bias
+- A tendency to find arguments that defend one's position or refuting a position one disagrees with.
+
+**Biased assimilation** of evidence:
+
+- Remember strengths of confirming evidence but weaknesses of disconfirming evidence.
+- Biased assimilation can lead to **polarization**.
+- Through biased assimilation even...
+
+#### Magical Contagion Effect
+- Objects can acquire the "essence" of a source through physical contact with that source.
+- Sometimes described as a contagion heuristic: 'once in contact, always in contact'.
+
