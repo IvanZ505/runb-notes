@@ -33,18 +33,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/multithreading.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4d2f04c12aa9eb66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "docs/discrete-2/discrete-2.md",
                 "mode": "source",
                 "source": false
@@ -64,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -124,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -148,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +179,7 @@
             }
           },
           {
-            "id": "1a6deec7397c7bff",
+            "id": "916bd0596823f52a",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -218,18 +206,21 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2b0aae71a7cbc884",
+  "active": "0b2d6184b2ba5fbe",
   "lastOpenFiles": [
+    "docs/discrete-2/imgs/complete-graph.svg",
+    "docs/discrete-2/discrete-2.md",
+    "docs/discrete-2/imgs/WheelGraphs_1001.svg",
+    "docs/discrete-2/imgs/cycle-graph.png",
+    "docs/discrete-2/imgs/complement_of_graph.jpg",
+    "docs/cog-decision/modeling-reality.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",
-    "docs/cog-decision/modeling-reality.md",
-    "docs/discrete-2/discrete-2.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
     "__plugin",
-    "docs/discrete-2/imgs/4.015-3.svg",
     "docs/discrete-2/imgs/CompleteGraphs_801.svg",
     "docs/discrete-2/imgs/Pasted image 20240401085145.png",
     "docs/discrete-2/imgs/graph-terminology.png",
@@ -261,11 +252,8 @@
     "docs/CNAME",
     "docs/cog-decision/imgs/actual/memory-model.png",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",
-    "docs/discrete-2/imgs/practice-10-4.png",
-    "docs/discrete-2/imgs/pascals-triangle.png",
     "obsidian-vault/Untitled.canvas",
     "obsidian-vault",
-    "docs/discrete-2/imgs/perms-vs-combs.png",
     "Untitled.canvas"
   ]
 }

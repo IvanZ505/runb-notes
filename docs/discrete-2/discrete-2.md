@@ -1101,12 +1101,65 @@ c. In alien shooter, when you collect 7 game tickets, you can upgrade your space
 - Let `G = (V, E)` be an undirected graph with `m` edges.
 - Then: $2m=\sum\limits_{v{\in}V}d(V_i)$, where `m` is the number of edges.
 
+> An *undirected graph* containing **must** contain and even number of odd degrees. (*Because otherwise, the entire sequence will be odd...*)
+
 ### Complete Graphs
 - A **complete graph** on `n` vertices, denoted by `Kₙ`, is a *simple graph* that contains exactly one edge between each pair of distinct vertices. (The maximum number of edges possible for the simple graph)
 
-![](imgs/4.015-3.svg)
+![](imgs/complete-graph.svg)
 
 ### Complementary Graph
 - A **complementary graph** $\bar{G}$ of a simple graph `G` has the same vertices as G. Two vertices are adjacent in $\bar{G}$ if and only if they are not adjacent in G.
 - The **combination** of the complementary graph and the simple graph should give you a **complete graph**.
 
+![](imgs/complement_of_graph.jpg)
+
+### Cycle Graph
+- A **cycle graph** $C_{n}, n>=3$ consists of *n* vertices `v₁, v₂, ...` and edges of *d(vₙ) = 2* for all vertices.
+
+![](imgs/cycle-graph.png)
+
+### Wheel Graph
+- A wheel graph ($W_{n}$) is created when we add an additional vertex to a cycle graph for `n≽3`, and connect this new vertex to each of the *n* vertices of the cycle graph by new edges.
+
+![](imgs/WheelGraphs_1001.svg)
+
+##### Practice
+
+35) how many vertices and how many edges do these graphs have?
+
+b) $C_{n}$ : Edges = n edges, Vertices: n vertices
+
+c) $W_{n}$ : Edges = 2n edges, Vertices: n+1 vertices
+
+59) Describe: $\bar{C_{n}}$, 
+
+### Bipartite Graphs
+- A *simple graph* is called **bipartite** if it's vertices set can be divided into two subsets such that every edge in the graph connects a vertex in one subset to a vertex in another.
+- Partition it such that:
+	- V = V₁ ∪ V₂
+	- Every edge "e" connects a vertex from V₁ to V₂.
+- A **complete bipartite graph** with $n(V_{1})=n \& n(V_{2})=m$ is denoted as $K_{n,m}$.
+
+#### Simple Bipartite
+- A *simple bipartite graph* is called a **complete bipartite** graph if it includes all possible edges between vertices in V₁ and vertices in V₂.
+
+#### Theorem
+
+...
+
+##### Practice
+
+28) Suppose a new company has five employees: Zamora, Agraharam, Smith, Chou, and Macintyre. Each employee will assume one of six responsibilities: planning, publicity, sales, marketing, development.... (Mathematical ideas book, 665)
+
+a) Model the capabilities of these employees using a bipartite graph.
+
+Z -> Pl, S, I, M
+A -> Pl, D
+S -> Pu, S, I
+C -> Pl, S, I
+M -> Pl, Pu, S, I
+
+### Subgraphs
+- A **subgraph** of $G=(V,E)$ is $G_{i}(V_{i}, E_{i})$ **if and only if** Vᵢ ⊆ V and Eᵢ ⊆ E.
+- Each edge in Gᵢ has the same endpoint as in G.
