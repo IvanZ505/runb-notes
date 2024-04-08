@@ -1142,11 +1142,12 @@ c) $W_{n}$ : Edges = 2n edges, Vertices: n+1 vertices
 - A **complete bipartite graph** with $n(V_{1})=n \& n(V_{2})=m$ is denoted as $K_{n,m}$.
 
 #### Simple Bipartite
-- A *simple bipartite graph* is called a **complete bipartite** graph if it includes all possible edges between vertices in V₁ and vertices in V₂.
+- A *simple bipartite graph* `G` is called a **complete bipartite** graph if it includes all possible edges between vertices in V₁ and vertices in V₂. (*so that no edge in G connects either two vertices in V₁ or two vertices in V₂*).
+- When this condition holds, we call the pair (V₁, V₂) a *bipartition* of the vertex set *V* of *G*.
 
 #### Theorem
 
-...
+- A simple graph is bipartite if and only if it is possible to assign one of two different colors to each vertex of the graph so that no two adjacent vertices are assigned to the same color.
 
 ##### Practice
 

@@ -120,7 +120,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5
+    "width": 363.5,
+    "collapsed": true
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -208,12 +209,12 @@
   },
   "active": "0b2d6184b2ba5fbe",
   "lastOpenFiles": [
-    "docs/discrete-2/imgs/complete-graph.svg",
+    "docs/cog-decision/modeling-reality.md",
     "docs/discrete-2/discrete-2.md",
+    "docs/discrete-2/imgs/complete-graph.svg",
     "docs/discrete-2/imgs/WheelGraphs_1001.svg",
     "docs/discrete-2/imgs/cycle-graph.png",
     "docs/discrete-2/imgs/complement_of_graph.jpg",
-    "docs/cog-decision/modeling-reality.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",
