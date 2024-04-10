@@ -120,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -209,8 +208,9 @@
   },
   "active": "2b0aae71a7cbc884",
   "lastOpenFiles": [
-    "docs/sys-prog/multithreading.md",
+    "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/society-and-groups.md",
+    "docs/sys-prog/multithreading.md",
     "docs/cog-decision/modeling-reality.md",
     "docs/sys-prog/final-exam.md",
     "docs/sys-prog/the-shell.md",
@@ -243,7 +243,6 @@
     "docs/sys-prog/systems-midterm.md",
     "docs/comp-arch/4-floating-points.md",
     "README.md",
-    "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/midterm-review.md",
     "docs/misc/sql-notes.md",

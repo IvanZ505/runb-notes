@@ -44,3 +44,6 @@ Psychology Building)
 
 ## [Choosing Resources](choosing-resources)
 
+## [Modeling Reality](modeling-reality)
+
+## [Society and Groups](society-and-groups)
