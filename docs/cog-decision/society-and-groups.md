@@ -38,4 +38,9 @@
 - Wason's 4-card selection task started it off.
 
 - In individual conditions, when given the correct solution and asked to justify it, 49% either argued that it was incorrect or indicated that they did not know why you would turn those cards.
-- 
+
+### Surowiecki's 3 Conditions for Wise Crowds
+1. **Aggregation**: There is an effective way to turn private judgments into a colelctive decision (e.g. via voting systems)
+2. **Cognitive** Diversity: Each person thinks about the issue in a different way or has access to different information (e.g. via sociological diversity).
+3. **Independence**: People's opinions are not determined by the opinions of those around them.
+

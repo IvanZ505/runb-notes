@@ -1165,3 +1165,46 @@ M -> Pl, Pu, S, I
 - A **subgraph** of $G=(V,E)$ is $G_{i}(V_{i}, E_{i})$ **if and only if** Vᵢ ⊆ V and Eᵢ ⊆ E.
 - Each edge in Gᵢ has the same endpoint as in G.
 
+## Graphs 10.4
+
+> **Remark:** There is considerable variation in terminologies concerning the follow concepts: *walks*, *trails*, *paths*, *circuits*. \
+> When listing out the *vertex sequence*, for a simple graph, there is no need to list out the edges as there is at maximum 1 edge connecting each vertex to another vertex.
+
+**To illustrate the concepts, we use this example graph.**
+
+![](imgs/example-graph.png)
+
+### Walks
+- Walks are the most fundamental concept for traversal of a graph.
+
+> In a *graph*, `G(V,E)`, a **walk** is a finite sequence of vertices and edges that get from one *initial vertex* to a *terminal vertex*. \
+> A **walk** always starts and ends at a vertex.
+
+*Example:* $v_{1}e_{1}v_{2}e_{2}v_{3}e_{3}v_{4}$ is considered a *path*.
+
+#### Closed Walk
+- A closed walk is a walk that has the same *initial* and *terminal* vertices.
+
+*Example:* $v_{1}e_{1}v_{2}e_{7}v_{5}e_{9}v_{1}$ would be considered a *closed walk*, as the **endpoints** are the same.
+
+### Trail
+- A *walk* with 1 restriction on it is a trail.
+
+> In a *graph*, `G(V,E)`, a **trail** is a *walk* where none of the *edges* are repeated.
+
+*Example:* $v_{1}e_{1}v_{2}e_{7}v_{5}e_{9}v_{1}$ would also be considered a *trail*. **However,** $v_{1}e_{1}v_{2}e_{2}v_{3}e_{2}v_{2}$ would **not** be considered a trail.
+
+### Path
+- A *walk* with 2 restrictions on it is a path.
+
+> In a *graph*, `G(V,E)`, a **path** is a *walk* where there are **no repeated vertices or edges**, except for the *initial* and *terminal* vertex.
+
+*Example:* $v_{1}e_{1}v_{2}e_{2}v_{3}e_{3}v_{4}$ would also be considered a *path*.
+
+#### Circuit / Closed Path
+
+- Notice how there is the exception for *initial* and *terminal* vertices...
+	- This is because a *path* with a repetition of the *initial* and *terminal* vertices is a *closed* path, a.k.a. a **circuit**.
+- *Note:* A graph without any circuits is called **circuit-less**.
+
+*Example:* $v_{1}e_{9}v_{5}e_{8}v_{1}$ would be considered a *circuit*.
