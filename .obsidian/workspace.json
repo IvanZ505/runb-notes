@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/final-exam.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,14 +45,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/modeling-reality.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -112,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/society-and-groups.md"
               }
             }
           }
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,17 +207,19 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "0b2d6184b2ba5fbe",
+  "active": "2b0aae71a7cbc884",
   "lastOpenFiles": [
+    "docs/sys-prog/multithreading.md",
+    "docs/cog-decision/society-and-groups.md",
     "docs/cog-decision/modeling-reality.md",
+    "docs/sys-prog/final-exam.md",
+    "docs/sys-prog/the-shell.md",
     "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/complete-graph.svg",
     "docs/discrete-2/imgs/WheelGraphs_1001.svg",
     "docs/discrete-2/imgs/cycle-graph.png",
     "docs/discrete-2/imgs/complement_of_graph.jpg",
-    "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
-    "docs/sys-prog/the-shell.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
@@ -249,7 +251,6 @@
     "Untitled.md",
     "docs/intro-infotech/iti103.md",
     "docs/cog-decision/heuristics-biases.md",
-    "docs/cog-decision/learning-prediction.md",
     "docs/CNAME",
     "docs/cog-decision/imgs/actual/memory-model.png",
     "docs/cog-decision/imgs/actual/theories-of-hindsight-bias.png",

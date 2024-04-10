@@ -213,3 +213,16 @@ int pthread_cond_signal(pthread_cond_t *cv);
 #### Condition Broadcasting
 - Wakes up every thread that is waiting for this condition and signals to all of them that the condition has been met.
 - `pthread_cond_broadcast(pthread_cond_t *cv);`
+
+### Starvation
+
+**Starvation** occurs when a thread is waiting for a resource, but other threads prevent it from acquiring the resource.
+
+- Ex: Multiple threads can be getting read locks in overlapping finite time periods. A thread waiting for write access may wait indefinitely.
+- *What are the chances of that happening?*
+	- We don't want to rely on chance though...
+
+#### Solutions
+- One possible solution: enforce turn-taking.
+	- e.g. don't allow threads to get read access if a thread is waiting to get write access.
+- 

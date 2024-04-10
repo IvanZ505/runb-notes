@@ -1164,3 +1164,4 @@ M -> Pl, Pu, S, I
 ### Subgraphs
 - A **subgraph** of $G=(V,E)$ is $G_{i}(V_{i}, E_{i})$ **if and only if** Vᵢ ⊆ V and Eᵢ ⊆ E.
 - Each edge in Gᵢ has the same endpoint as in G.
+
