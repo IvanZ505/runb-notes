@@ -1,10 +1,10 @@
 {
-  "accentColor": "#e96dc2",
+  "accentColor": "",
   "monospaceFontFamily": "JetBrains Mono Light",
   "textFontFamily": "JetBrains Mono",
   "interfaceFontFamily": "JetBrains Mono",
-  "cssTheme": "Maple",
+  "cssTheme": "Blue Topaz",
   "translucency": false,
   "baseFontSize": 13,
-  "theme": "moonstone"
+  "theme": "obsidian"
 }
