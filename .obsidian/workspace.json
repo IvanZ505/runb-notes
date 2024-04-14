@@ -194,10 +194,13 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2b0aae71a7cbc884",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
-    "docs/sys-prog/the-shell.md",
+    "docs/discrete-2/imgs/cut-vertices-edgefs.png",
+    "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/discrete-2.md",
+    "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
+    "docs/sys-prog/the-shell.md",
     "Untitled.md",
     "docs/discrete-2/imgs/example-graph.png",
     "docs/cog-decision/society-and-groups.md",
@@ -228,7 +231,6 @@
     "_includes/math.html",
     "_includes",
     "docs/comp-arch/1-overview-of-comp-arch.md",
-    "docs/cog-decision/imgs/joke/plinko1.webp",
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/comp-arch/4-floating-points.md",
@@ -239,7 +241,6 @@
     "Untitled 1.md",
     "docs/intro-infotech/iti103.md",
     "docs/CNAME",
-    "docs/cog-decision/imgs/actual/memory-model.png",
     "obsidian-vault/Untitled.canvas",
     "obsidian-vault",
     "Untitled.canvas"

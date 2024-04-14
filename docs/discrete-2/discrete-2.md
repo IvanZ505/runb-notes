@@ -1211,3 +1211,64 @@ M -> Pl, Pu, S, I
 - *Note:* A graph without any circuits is called **circuit-less**.
 
 *Example:* $v_{1}e_{9}v_{5}e_{8}v_{1}$ would be considered a *circuit*.
+
+### Theorems
+
+**Theorem 1:** A graph is *circuit less* when there is **no loops** and **at most** one *path* between every two vertex.
+
+**Theorem 2:** Any graph that contains a *odd length cycle* is **not** bipartite.
+
+**Theorem 3:** A graph is **connected** if all the vertices are connected.
+
+- This means that there is at *least* one walk between every pair of vertices.
+
+> Disconnected graphs have at least *two components*. Each component by itself is "*connected*."
+
+![](imgs/con-vs-discon-graph.png)
+
+### Cuts
+
+> **Cuts** are used to *disconnect* a connected graph.\
+> This involves the removal of a vertex (*cut vertex*) or an edge (*cut edge*).
+
+- A *vertex* or *edge* is called a *cut vertex or edge* of its removal will increase the number of components in the graph `G`.
+
+![](imgs/cut-vertices-edgefs.png)
+
+##### Example
+- In the above example, vertices `0` and `2` can be considered cut vertex.
+- In the example above, there are **no** cut edges.
+
+## Euler and Hamilton
+
+### Euler Walk & Circuit
+- A *Euler walk* is one that uses every edge at exactly **once**.
+- It was inspired by the famous puzzle with the bridges.
+
+#### Euler Circuit
+- A *Euler circuit* is a *closed walk* that uses each edge **exactly once**.
+
+> A *connected graph* is then called a *Euler graph* if it contains a Euler circuit.
+
+#### Theorems
+
+**Theorem 1:** A connected graph `G` contains a *Euler walk* if and only if it has exactly **two** of it's vertices have *odd degrees*. 
+
+- **Ex:** The degree sequence `5,2,2,2,2,1` contains a Euler Walk.
+
+**Theorem 2:** A connected graph `G` has a *Euler circuit* if and only if all vertices have *even degrees*.
+
+- **Ex:** C₅ is a Euler circuit, but not a Euler walk. (*Deg. of each vertices in C₅ is 4.*)
+
+### Hamiltonian Path and Circuit
+- A *Hamiltonian path* is a ***path*** which contains every *vertex* exactly *once*.
+- A *Hamiltonian circuit* is a ***circuit*** which uses every *vertex* exactly *once*.
+
+> **Note:** The theorems for Hamiltonian paths and circuits are very *unreliable*. If the conditions are satisfied, there *might* be a Hamiltonian circuit. (*might*)
+
+#### Theorems
+
+**Theorem 1:** If `G` is a simple graph of `n` vertices with `n ≥ 5` and `d(u) + d(v) ≥ n`, where `u` and `v` are not adjacent vertices, then `G` has a *Hamiltonian circuit*.
+
+**Theorem 2:** `d(u) + d(v) ≥ n-1` where `u` and `v` are not adjacent, `G` has a *Hamiltonian path*.
+
