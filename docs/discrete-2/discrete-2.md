@@ -1226,6 +1226,9 @@ M -> Pl, Pu, S, I
 
 ![](imgs/con-vs-discon-graph.png)
 
+**Theorem 4:** A *walk* starting at `u` and ending at `v` is known as a `u-v` walk.
+
+- `u` and `v` are connected if there is a `u-v` walk in the graph. (`u` and `v` are vertices)
 ### Cuts
 
 > **Cuts** are used to *disconnect* a connected graph.\
@@ -1272,3 +1275,19 @@ M -> Pl, Pu, S, I
 
 **Theorem 2:** `d(u) + d(v) ≥ n-1` where `u` and `v` are not adjacent, `G` has a *Hamiltonian path*.
 
+## Shortest Path Problems
+
+> First things first: A **weighted graph** is a *graph or network* in which **weights** are assigned to to each of the edges. (Usually in the form of a number)
+
+- Shortest path problems involve finding the shortest path between 2 vertices.
+- There are two algorithms for finding the shortest path: *Dijkstra's Algorithm* and *Floyd-Warshall's Algorithm*.
+	- *Dijkstra's only works on positive weights.*
+
+### Dijkstra's Algorithm
+
+**Dijkstra's Algorithm** is used to find the shortest path by *repeatedly selecting* the nearest unvisited vertex and *calculating* the distance.
+
+#### Steps
+
+1. Mark *initial* vertex with distance 0. Designate this as the **current.**
+2. Find *all vertices* leading to current.
