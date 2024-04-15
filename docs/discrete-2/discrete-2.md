@@ -1271,7 +1271,7 @@ M -> Pl, Pu, S, I
 
 #### Theorems
 
-**Theorem 1:** If `G` is a simple graph of `n` vertices with `n ≥ 5` and `d(u) + d(v) ≥ n`, where `u` and `v` are not adjacent vertices, then `G` has a *Hamiltonian circuit*.
+**Theorem 1:** If `G` is a simple graph of `n` vertices with `n ≥ 3` and `d(u) + d(v) ≥ n`, where `u` and `v` are not adjacent vertices, then `G` has a *Hamiltonian circuit*.
 
 **Theorem 2:** `d(u) + d(v) ≥ n-1` where `u` and `v` are not adjacent, `G` has a *Hamiltonian path*.
 

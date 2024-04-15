@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "processes",
+                "query": "linda",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -194,11 +195,13 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "18585b27d6bbb011",
+  "active": "2b0aae71a7cbc884",
   "lastOpenFiles": [
+    "docs/cog-decision/midterm-review.md",
+    "docs/cog-decision/heuristics-biases.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
-    "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
     "docs/sys-prog/the-shell.md",
     "Untitled.md",
@@ -219,7 +222,6 @@
     "__plugin",
     "docs/discrete-2/imgs/CompleteGraphs_801.svg",
     "docs/discrete-2/imgs/Pasted image 20240401085145.png",
-    "docs/discrete-2/imgs/graph-terminology.png",
     "docs/cog-sci/10-the-rational-mind.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project-2-dictionary.md",
@@ -236,7 +238,6 @@
     "docs/comp-arch/4-floating-points.md",
     "README.md",
     "docs/cog-decision/cognitive-architecture.md",
-    "docs/cog-decision/midterm-review.md",
     "docs/misc/sql-notes.md",
     "Untitled 1.md",
     "docs/intro-infotech/iti103.md",
