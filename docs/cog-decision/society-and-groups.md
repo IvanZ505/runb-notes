@@ -40,7 +40,59 @@
 - In individual conditions, when given the correct solution and asked to justify it, 49% either argued that it was incorrect or indicated that they did not know why you would turn those cards.
 
 ### Surowiecki's 3 Conditions for Wise Crowds
-1. **Aggregation**: There is an effective way to turn private judgments into a colelctive decision (e.g. via voting systems)
+1. **Aggregation**: There is an effective way to turn private judgments into a collective decision (e.g. via voting systems)
 2. **Cognitive** Diversity: Each person thinks about the issue in a different way or has access to different information (e.g. via sociological diversity).
 3. **Independence**: People's opinions are not determined by the opinions of those around them.
+
+## Social Decision Making
+- In decision making, people often need to consider not only their own preferences, but also their expectations about others' preferences, and how others will behave.
+- Game theory studies decisions in strategic interactions, where the outcome depends on what other people do.
+
+### Basic Concepts
+
+**Analytical Game Theory**:
+
+- How people *should* behave (normative theory)
+- To "solve" a game is to find the strategies rational players would choose.
+- Like expected utility theory, has also been used to model and predict behavior.
+
+**Behavioral Game Theory**:
+
+- HOw people *actually* behave in strategic interactions.
+
+### Prisoner's Dilemma
+- Suppose you and another prisoner are held in separate cells, for two joint offences.
+- You are told there is not enough evidence to convict you both of the serious offense, unless one of you confesses.
+- If you both confess, you each get 10 years.
+- If one of you confesses, that person will get 1 year and the other will get 20 years.
+- If neither of you confess, you will get 2 years each for the less serious crime.
+
+> What is the rational thing to do? *Confess or not confess?*
+### The Nash Equilibrium
+- A set of strategies such that any given player cannot achieve a better outcome by a unilateral *change of decision*.
+	- (ie.) each player can't improve on their strategy, given that the other players stick with their strategies.
+- In the *prisoner's dilemma*, there is only one Nash Equilibrium, "both confessing".
+
+> "Every player has *no regrets*, given what they know."
+
+***Special Case:*** *Dominant strategy equilibrium* - each player cannot improve on strategy, no matter which strategies the other players play.
+
+- When presented with *prisoner's dilemma*, people tend to defect less than game theory predicts.
+	- About *one-third* of people cooperate.
+
+#### The Dilemma is
+- **Noncooperative** - Can't form binding agreements.
+- **Static / simultaneous-strategy** - Don't know what the other person has done.
+- **Symmetric** - Everyone faces same strategies and outcomes - identities of players can be switched.
+- **Nonzero-sum** - You needn't win exactly what the other person loses.
+- **Finite** - ends after a finite series of moves.
+- **Non-iterated** - played only ones.
+
+### Zero-sum Game
+- In a *zero-sum game*, the possible gains and losses among a set of players equals zero.
+- e.g. If one person gains two cookies and two other people each lose a cookie:
+	- +2 -1 -1 = 0
+- Maximizing one's own utility can *sometimes* directly clash with maximizing the utility of the group, especially when resources are limited or finite, e.g. in the tragedy of the commons. (Hardin 1968)
+
+> Many nonzero-sum games **cannot** be solved.
 
