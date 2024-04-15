@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/modeling-reality.md",
                 "mode": "source",
                 "source": false
               }
@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "linda",
+                "query": "hoc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,8 +87,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -101,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/modeling-reality.md"
               }
             }
           }
@@ -109,7 +108,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5
+    "width": 363.5,
+    "collapsed": true
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/modeling-reality.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/modeling-reality.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,11 +195,13 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2b0aae71a7cbc884",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
+    "docs/cog-decision/cog-decision.md",
+    "docs/cog-decision/choosing-resources.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/heuristics-biases.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
@@ -207,7 +209,6 @@
     "Untitled.md",
     "docs/discrete-2/imgs/example-graph.png",
     "docs/cog-decision/society-and-groups.md",
-    "docs/cog-decision/cog-decision.md",
     "docs/sys-prog/multithreading.md",
     "docs/cog-decision/modeling-reality.md",
     "docs/sys-prog/final-exam.md",
@@ -227,7 +228,6 @@
     "docs/sys-prog/project-2-dictionary.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/files.md",
-    "docs/cog-decision/choosing-resources.md",
     "docs/_includes/math.html",
     "docs/_includes",
     "_includes/math.html",
