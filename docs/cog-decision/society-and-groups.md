@@ -96,3 +96,32 @@
 
 > Many nonzero-sum games **cannot** be solved.
 
+### One-shot Ultimatum Game
+- Two individuals divide a sum of money between them.
+- Say the stake is \$100.
+- The proposer makes an offer between \$0 and \$100.
+- If the receiver accepts, they get the amount offered and the proposer gets the remainder.
+- If the receiver rejects, both players get zero.
+
+*Using \$100*: 
+
+- Most offered half (\$50)
+- Average offer about 48%
+- Offers of less than \$40 were frequently rejected.
+
+## Moral Judgment
+
+- The media tends to focus on unethical behavior that is extreme: *murder*, *assault*, hate crime, and so forth.
+
+### Immorality
+- DePaulo asked participants to record all of their social interactions and all of the lies that they told during those interactions every day for a week.
+	- College students reported lying in approximately one out of every 3 of their social interactions, thought these were not typically "serious lies"
+	- About twice as many lies were told to benefit the liars as to benefit other people.
+- **Examples:** "I led a girl to believe that I was a model with a New York Agency"
+
+#### Dan Ariely
+- People tend to take advantage of ambiguity.
+- Placed six Coca-Cola cans and six one-dollar bills in MIT dorm.
+- All cans were taken with 72 hours, but no dollar bills were taken, though their value is the same!
+- Stealing cans can be *easier to rationalize*.
+

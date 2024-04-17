@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/cog-decision.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "mode": "source",
                 "source": false
               }
@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hoc",
+                "query": "natural",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -100,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/cog-decision.md"
+                "file": "docs/cog-decision/society-and-groups.md"
               }
             }
           }
@@ -125,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/cog-decision.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/cog-decision.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,10 +196,10 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2b0aae71a7cbc884",
+  "active": "d2d1eac1d36d98e7",
   "lastOpenFiles": [
-    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/cog-decision.md",
+    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/choosing-resources.md",
     "docs/cog-decision/modeling-reality.md",
     "docs/cog-decision/society-and-groups.md",
