@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,8 +87,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -101,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -109,8 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -126,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,13 +194,17 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "d2d1eac1d36d98e7",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
+    "docs/discrete-2/imgs/full-2-3-ary-tree.png",
+    "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
+    "docs/discrete-2/imgs/tree-info.png",
+    "docs/discrete-2/imgs/trees-demo.png",
+    "docs/cog-decision/society-and-groups.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/choosing-resources.md",
     "docs/cog-decision/modeling-reality.md",
-    "docs/cog-decision/society-and-groups.md",
     "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/heuristics-biases.md",
@@ -217,14 +219,11 @@
     "docs/discrete-2/imgs/complete-graph.svg",
     "docs/discrete-2/imgs/WheelGraphs_1001.svg",
     "docs/discrete-2/imgs/cycle-graph.png",
-    "docs/discrete-2/imgs/complement_of_graph.jpg",
     "docs/sys-prog/multitasking.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
     "__plugin",
-    "docs/discrete-2/imgs/CompleteGraphs_801.svg",
-    "docs/discrete-2/imgs/Pasted image 20240401085145.png",
     "docs/cog-sci/10-the-rational-mind.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project-2-dictionary.md",
@@ -241,7 +240,6 @@
     "README.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/misc/sql-notes.md",
-    "Untitled 1.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
     "obsidian-vault",

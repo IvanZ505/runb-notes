@@ -1293,3 +1293,64 @@ M -> Pl, Pu, S, I
 2. Find *all vertices* leading to current.
 
 #todo based on our definition, is it impossible to have both a Euler walk and Euler circuit in the same graph? The theorem implies this is impossible, but the definitions do not have anything that goes against this.
+
+## Trees
+
+A tree is an *undirected graph* with **no** simple circuits.
+
+![](imgs/trees-demo.png)
+
+> A *disconnected graph* who's components by themselves are trees are called a *forest*.
+### Rooted Tree
+- A **rooted tree** is a tree in which *one vertex* has been designated as the *root*, and all edges lead *away* from this ***root vertex***.
+
+#### Height of A Rooted Tree
+
+In a *rooted tree*, the level containing the *root* is considered as level 0, and does not count toward the height.
+
+- Each level past the *root* of the tree is another level. (*number of edges between the specific vertex and the root*)
+- The **maximum level** of this tree is called the *height*.
+
+![](imgs/tree-info.png)
+
+### Tree Relationships
+
+Given the *root* or an *internal vertex* (a vertex containing a child) `v`:
+
+- The *children of `v`* are vertices that are adjacent to `v` and *one level further away* from the *root* than `v`.
+	- **Ex:** In the above tree, `G` and `F` are children of `C`, but `A` is not a child of `C` because whilst `A` is indeed *adjacent* to `C`, it is **not** one level further away from the root than `C`.
+- If `w` is the child of `v`, the `v` is called the **parent** of `w`.
+	- **Ex:** Using the same case as above, `C` would be the parent to both `G` and `F`.
+- Vertices with children are called *internal vertices* (the root also counts)
+- Vertices without any children are called *leaf*, or *terminal vertex*.
+	- **Ex:** `K` and `L` are both leaves, as is `G` and many others.
+- Two *distinct vertices* that have the **same** parent are called *siblings*.
+- If `v` lies on a unique path between `w` and the root, then `v` is an ancestor of `w` and `w` is a descendant of `v`. 
+
+### Subtree
+- The subtree of a tree would consist of a `vertex` and all of its descendants. with the `vertex` as the root of this new *subtree*.
+
+### M-ary Trees
+- A *m-ary tree* is a rooted tree where each *internal vertex* only has *up to `m`* number of children.
+
+#### Full m-ary Tree
+- A *full m-ary tree* is a *m-ary tree* where it has *exactly* `m` number of children.
+
+![](imgs/full-2-3-ary-tree.png)
+
+> In the picture above, `T₁` is a *full 2-ary tree*, and `T₃` is a *full 3-ary tree*.
+
+##### Binary Tree
+- A special type of *full m-ary trees* is a *binary tree*, which is essentially just a full 2-ary tree.
+
+### Theorems
+
+**Corollary 1:** If a *m-ary* tree has height `h` and leaves `l`, then `h ≥ logₘ l`.
+
+- If it is a *full and balanced* (all the leaves are at the height of `h`, or at most `h-1`, then `h = logₘ l`.
+
+**Theorem 2:** A tree with `n` vertices has `n-1` edges.
+
+**Theorem 3:** A *full m-ary tree* with `i` internal vertices has `n=mi + 1` vertices.
+
+**Theorem 4:**
