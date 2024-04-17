@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/cog-decision/cog-decision.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md"
+                "file": "docs/cog-decision/cog-decision.md"
               }
             }
           }
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/cog-decision/cog-decision.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/cog-decision/cog-decision.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,9 +197,11 @@
   },
   "active": "2b0aae71a7cbc884",
   "lastOpenFiles": [
-    "docs/cog-decision/modeling-reality.md",
+    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/choosing-resources.md",
+    "docs/cog-decision/modeling-reality.md",
+    "docs/cog-decision/society-and-groups.md",
     "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/heuristics-biases.md",
@@ -209,7 +211,6 @@
     "docs/sys-prog/the-shell.md",
     "Untitled.md",
     "docs/discrete-2/imgs/example-graph.png",
-    "docs/cog-decision/society-and-groups.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/final-exam.md",
     "docs/discrete-2/imgs/complete-graph.svg",
@@ -240,7 +241,6 @@
     "docs/cog-decision/cognitive-architecture.md",
     "docs/misc/sql-notes.md",
     "Untitled 1.md",
-    "docs/intro-infotech/iti103.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
     "obsidian-vault",

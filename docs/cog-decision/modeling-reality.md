@@ -1,4 +1,4 @@
-# Modeling Reality
+# [Modeling Reality](cog-decision)
 
 ## Schemas and Frameworks
 

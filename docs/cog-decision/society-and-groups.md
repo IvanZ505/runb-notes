@@ -1,4 +1,4 @@
-# Society and Groups
+# [Society and Groups](cog-decision)
 
 ## Groupthink
 - Group decision-making can be beneficial, providing all relevant evidence is considered.
@@ -58,7 +58,7 @@
 
 **Behavioral Game Theory**:
 
-- HOw people *actually* behave in strategic interactions.
+- How people *actually* behave in strategic interactions.
 
 ### Prisoner's Dilemma
 - Suppose you and another prisoner are held in separate cells, for two joint offences.

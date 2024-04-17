@@ -1,4 +1,4 @@
-# Choosing Resources
+# [Choosing Resources](cog-decision)
 
 ## Bounded Rationality
 
