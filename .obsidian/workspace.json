@@ -196,6 +196,7 @@
   },
   "active": "18585b27d6bbb011",
   "lastOpenFiles": [
+    "docs/_includes/top-btn.html",
     "docs/discrete-2/imgs/full-2-3-ary-tree.png",
     "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
     "docs/discrete-2/imgs/tree-info.png",
@@ -218,7 +219,6 @@
     "docs/sys-prog/final-exam.md",
     "docs/discrete-2/imgs/complete-graph.svg",
     "docs/discrete-2/imgs/WheelGraphs_1001.svg",
-    "docs/discrete-2/imgs/cycle-graph.png",
     "docs/sys-prog/multitasking.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
