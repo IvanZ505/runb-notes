@@ -1354,3 +1354,19 @@ Given the *root* or an *internal vertex* (a vertex containing a child) `v`:
 **Theorem 3:** A *full m-ary tree* with `i` internal vertices has `n=mi + 1` vertices.
 
 **Theorem 4:**
+
+### Spanning Trees
+
+A *spanning tree* of a **simple graph** `G` is a *subgraph* of `G` that's a tree containing every vertex of `G`.
+
+![](imgs/spanning-trees.jpg)
+
+#### Minimum Spanning Tree
+
+> **Note:** After drawing the *minimum spanning tree* always write out the sum of the weights of all the edges.
+
+- *Minimum spanning trees* are used in a **weighted graph** to find a *spanning tree* that has the minimum weight.
+
+*Meaning:* The minimum spanning tree in a connected weighted graph is a spanning tree that has the smallest possible sum of all the weights of its edges.
+
+##### Prim's Algorithm

@@ -21,26 +21,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2b0aae71a7cbc884",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -100,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -124,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/society-and-groups.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,15 +182,18 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2b0aae71a7cbc884",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
+    "docs/discrete-2/imgs/spanning-trees.jpg",
+    "docs/sys-prog/the-shell.md",
+    "README.md",
     "docs/discrete-2/discrete-2.md",
+    "docs/cog-decision/society-and-groups.md",
     "docs/_includes/top-btn.html",
     "docs/discrete-2/imgs/full-2-3-ary-tree.png",
     "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
     "docs/discrete-2/imgs/tree-info.png",
     "docs/discrete-2/imgs/trees-demo.png",
-    "docs/cog-decision/society-and-groups.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/choosing-resources.md",
@@ -212,7 +203,6 @@
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
-    "docs/sys-prog/the-shell.md",
     "Untitled.md",
     "docs/discrete-2/imgs/example-graph.png",
     "docs/sys-prog/multithreading.md",
@@ -237,7 +227,6 @@
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/comp-arch/4-floating-points.md",
-    "README.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/misc/sql-notes.md",
     "docs/CNAME",
