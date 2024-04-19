@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/society-and-groups.md"
               }
             }
           }
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/society-and-groups.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,8 +194,9 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "18585b27d6bbb011",
+  "active": "2b0aae71a7cbc884",
   "lastOpenFiles": [
+    "docs/discrete-2/discrete-2.md",
     "docs/_includes/top-btn.html",
     "docs/discrete-2/imgs/full-2-3-ary-tree.png",
     "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
@@ -206,7 +207,6 @@
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/choosing-resources.md",
     "docs/cog-decision/modeling-reality.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/midterm-review.md",
     "docs/cog-decision/heuristics-biases.md",
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
@@ -242,7 +242,6 @@
     "docs/misc/sql-notes.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
-    "obsidian-vault",
     "Untitled.canvas"
   ]
 }
