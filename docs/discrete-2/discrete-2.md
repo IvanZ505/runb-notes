@@ -794,7 +794,8 @@ Roll a dice, find the probability of finding of getting 6, write the distributio
 - If DRV (X) has a binomial distribution, or follows binomial distribution, we write it as `X~Bin(n,p)` - where `n` is the number of repetitions, and `p` is the probability of success.
 - **Note:** Your `x` value in a binomial distribution will be between `0` and `n`.
 
-> $p(X) = P(X=x) = _{n}C_{x}p^{x}q^{n-x}$
+
+$p(X) = P(X=x) = _{n}C_{x}p^{x}q^{n-x}$
 
 ##### Examples
 
@@ -921,9 +922,6 @@ b) The agent monitors the house sales in periods of 4 weeks. Find the probabilit
 - We are not going over uncertainty in this class. (No hat symbol)
 
 ---
-
-#todo quiz on binomial poisson distribution thursday, quiz next monday on rest of the distributions
-
 ### Geometric Distribution
 - In previous distributions, we always knew the number of trials.
 - However, in *Geometric Distribution*, or negative binomial distribution, you DON'T know your `n`.
@@ -933,7 +931,7 @@ Let X be a discrete random variable s.t. X=# of trials up to and including 1st r
 
 Then, you can write that `X~Geom(p)`, where `p` = probability of success.
 
-You can also write that `P(X=x) = p*q^(x-1)` If you know how many trials till you finally succeed.
+You can also write that $P(X=x) = p*q^{x-1}$ If you know how many trials till you finally succeed.
 
 > Clue: If the problem asks "*Up to and including blah blah for first blah...*", you **know** that you are using Geometric.
 
@@ -951,7 +949,7 @@ If X~Geom(p), then:
 
 If `X~NB(r,p)`, then the probability mass function of `X` is:
 
-$$p(X) = P(X=x) =
+$$P(X=x) =
 \begin{cases} 
       _{x-1}C_{r-1}p^{r}(1-p)^{x-r} & x=r,r+1,... \\
       0 & otherwise
