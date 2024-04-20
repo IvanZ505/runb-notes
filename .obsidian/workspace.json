@@ -182,8 +182,10 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "18585b27d6bbb011",
+  "active": "84ddc9c56b2d2291",
   "lastOpenFiles": [
+    "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
+    "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
     "docs/sys-prog/the-shell.md",
     "README.md",
@@ -207,8 +209,6 @@
     "docs/discrete-2/imgs/example-graph.png",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/final-exam.md",
-    "docs/discrete-2/imgs/complete-graph.svg",
-    "docs/discrete-2/imgs/WheelGraphs_1001.svg",
     "docs/sys-prog/multitasking.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",

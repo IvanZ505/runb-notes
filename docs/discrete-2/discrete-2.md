@@ -1370,3 +1370,25 @@ A *spanning tree* of a **simple graph** `G` is a *subgraph* of `G` that's a tree
 *Meaning:* The minimum spanning tree in a connected weighted graph is a spanning tree that has the smallest possible sum of all the weights of its edges.
 
 ##### Prim's Algorithm
+
+The *Prim's Algorithm* is one of two algorithms for finding the *minimum spanning tree* of a graph. This algorithm works by *building out* your spanning tree by adding edges to your spanning tree one by one.
+
+1. Find the *edge* with the **minimum value** in the graph and add it to your tree. (*This is your first element in the tree*)
+2. Look to the *adjacent vertices* to the *endpoints* of this edge and find the **minimum value** of the *additional edges* connected to these endpoints.
+	- As long as this new edge will not form a circuit, you can add it to your tree. 
+	- If it *does* give you a circuit, skip it and go to the next lowest one.
+3. Continue repeating step 2 with every added edge and *endpoint* connected to those edges until you visited **every vertex**.
+
+![](imgs/Prim-animation.gif)
+
+##### Kruskal's Algorithm
+
+The *Kruskal's Algorithm* is the other way to find the *minimum spanning tree* of a graph. In this algorithm, you first sort the weights of the edges in order, then start adding the lowest weighted edges *one-by-one* into your tree.
+
+1. Sort the weight from smallest value to largest weight value.
+2. Add the weighted edges to your tree one by one.
+	- If any of the edges for a *cycle* remove it.
+	- Repeat until you have visited **every** vertices.
+
+![](imgs/kruskals-algorithm-anim-1.gif)
+
