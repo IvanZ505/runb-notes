@@ -1072,7 +1072,7 @@ c. In alien shooter, when you collect 7 game tickets, you can upgrade your space
 	- Edges are *adjacent* if they share a **common end vertex**.
 		- However, edges that are *parallel* can not be *adjacent*.
 	- Two vertices, `U` and `V` are called *adjacent* if they are connected by an edge.
-	- The *degree* of a vertex, written as `d(V)` is the total number of edges with `V` as an end vertex. (**By convention, we count loops twice.**)
+		- The *degree* of a vertex, written as `d(V)` is the total number of edges with `V` as an end vertex. (**By convention, we count loops twice.**)
 	- A *pendant vertex* is a vertex with `d(V) = 1`.
 		- Any *edge* with a *pendent vertex* as a end point is a *pendant edge*.
 	- An *isolated* vertex is a vertex whose `d(V) = 0`.
