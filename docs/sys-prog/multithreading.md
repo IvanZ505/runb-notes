@@ -295,8 +295,14 @@ int main() {
 
 Sharing data between threads is *inherently unsafe* due to [data races](#data-race).
 
-***Solution:*** Sequentialize access to shared data structures so that *only one* thread can access a data structure at a time.
+**Question:** What should be sequentially accessed?
 
+- How much sequencing do we need in our program?
+	- Too little sequencing means data races could occur.
+		- Incomprehensible behavior
+	- Too much sequencing means poorer performance.
+
+***Solution:*** Sequentialize access to shared data structures so that *only one* thread can access a data structure at a time.
 ### Mutex Lock
 
 Using a *mutex*, we can enforce sequential access to data.
@@ -313,6 +319,35 @@ Using a *mutex*, we can enforce sequential access to data.
 
 - A destroyed mutex object can be re-initialized using `pthread_mutex_init()`; the results of otherwise referencing the object after it has been destroyed are undefined.
 - **Only destroy unlocked a mutex**, destroying a locked mutex results in undefined behavior.
+
+#### Example
+
+- Example using a bank account and accessing the balance.
+
+```C
+typedef struct {
+	int balance;
+	pthread_mutex_t lock;
+} account_t;
+
+void account_init(account_t *a, int initial) {
+	a->balance = initial;
+	pthread_mutex_init(&a->lock, NULL);  // Init the mutex lock
+}
+
+void account_change(account_t *a, int diff) {
+	pthread_mutex_lock(&a->lock); // Locks the lock.
+	a->balanace += diff;
+	pthread_mutex_unlock(&a->lock); // Unlocks after use
+}
+
+// Locking and unlocking ensures the sequential access as long as we don't access the field another way.
+
+void account_transfer(account_t *dest, account_t *src, int amount) {
+	account_change(src, -amoount);
+	account_change(dest, amount);
+}
+```
 
 ### Thread-safe Queue
 - For *safety*, ensure only one thread accesses the queue at a time.
@@ -331,6 +366,24 @@ Using a *mutex*, we can enforce sequential access to data.
 	- This can't work if the queue is empty.
 		- *if it is empty*, we might want to dequeue to block until another thread enqueues.
 
+#### Example
+
+```
+C1                      P1                       C2  
+dequeue  
+	-> wait for  
+	read_ready  
+						enqueue  
+							->signal  
+							read_ready  
+unblocked
+												
+												dequeue  
+												succeeds  
+												length = 0
+->wait for  
+read_ready
+```
 #### Producers vs Consumers
 - A Consumer thread will dequeue (block because nothing is in there)
 	- Wait for read_ready
@@ -351,13 +404,36 @@ pthread_cond_t
 int pthread_cond_init(pthread_cond_t *cv, pthread_condattr_t *attrs);
 int pthread_cond_destroy(pthread_cond_t *cv);
 
-int pthread_cond_wait(pthread_cond_t *cv, pthread_mutex+t *lock);
-int pthread_cond_signal(pthread_cond_t *cv);
+int pthread_cond_wait(pthread_cond_t *cv, pthread_mutex+t *lock); // Blocks thread until cv is signaled (temporarily unlocking lock)
+int pthread_cond_signal(pthread_cond_t *cv); // Wakes one thread waiting on the cv.
 ```
 
 #### Condition Broadcasting
 - Wakes up every thread that is waiting for this condition and signals to all of them that the condition has been met.
 - `pthread_cond_broadcast(pthread_cond_t *cv);`
+
+### Deadlocks
+
+*Deadlock* is a situation where a set of a set threads is being blocked because another thread currently holds the lock to a resource.
+
+#### Conditions
+
+4 Conditions for Deadlock
+
+1. Mutual exclusion
+2. Hold-and-wait
+	- It is possible to block trying to acquire a resource when holding onto another resource. 
+3. No preemptive
+	- If a thread has exclusive access, no other thread can force it to give up access.
+4. Circular wait
+	- e.g. A waits for B, B waits A.
+
+**To avoid deadlocks**, ensure that at least one of these conditions will not apply. (*e.g.* not allowing multiple locks avoids *hold-and-wait*).
+
+> It is also possible to design higher-level abstractions (*monitors*) to manage locks in a way that will not allow *deadlocks*.
+
+
+**Note:** Deadlocking does **not** require threads. Any two communicating processes can also deadlock.
 
 ### Starvation
 
