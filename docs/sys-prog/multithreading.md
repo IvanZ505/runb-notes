@@ -477,6 +477,113 @@ Two operations in a semaphore: *Post / increment* and *wait / decrement*.
 
 > A *mutex* is a semaphore whose maximum value is 1. 
 
+```
+mutex      semaphore  
+-----      ---------  
+init()     init(1)  
+locked     1  
+unlocked   0  
+lock()     wait()  
+unlock()   post()
+```
+
+> A *conditional variable* can also be a semaphore.
+
+```
+cond.var    semaphore  
+--------    ---------  
+init()      init(0)  
+wait()      wait()  
+signal()    post()
+
+... almost
+```
+
+- Signaling a *condition variable* when there is no thread waiting has no effect.
+	- Posting to a semaphore *always* raises its value.
+
+#### The Little Book of Semaphores
+
+```C
+#include <semaphore.h>
+
+sem_t;
+int sem_init(sem_t *sem, int pshared, unsigned int value);
+	// Initialize semaphore with specific initial value.
+	// pshared is typically 0.
+
+int sem_wait(sem_t *sem);
+int sem_post(sem_t *sem);
+
+typedef struct {
+	int first;
+	int last;
+	int size;
+	data_t *data;
+	sem_t lock;
+	sem_t empty;
+	sem_t full;
+} queue_t;
+
+void q_init(queue_t *q, int capacity) {
+	q->first = 0;  
+	q->last = 0;  
+	q->size = capacity;  
+	q->data = malloc(sizeof(data_t) * capacity);  
+	sem_init(&q->lock, 0, 1); // mutex initially unlocked  
+	sem_init(&q->empty, 0, capacity); // all spots are empty  
+	sem_init(&q->full, 0, 0); // no spots are full
+}
+
+void q_enqueue(queue_t *q, data_t item) {
+	sem_wait(&q->empty);
+	
+	sem_wait(&q->lock);  
+	
+	q->data[q->last] = item;  
+	q->last++;  
+	if (q->last == q->size) q->last = 0;  
+	
+	sem_post(&q->lock);  
+	
+	sem_post(&q->full);
+}
+
+void q_dequeue(queue_t *q, data_t *dst)  
+{  
+	sem_wait(&q->full);  
+	
+	sem_wait(&q->lock);  
+	
+	*dst = q->data[q->first];  
+	q->first++;  
+	if (q->first == q->size) q->first = 0;  
+	
+	sem_post(&q->lock);  
+	
+	sem_post(&q->empty);  
+}
+```
+
+---
+
+#### Major Differences
+
+- In general, any thread can post to any *semaphore*.
+
+- **Mutexes** have more restrictive rules, so it's easier to see when they are being misused.
+- More possible states...
+	- E.g. we can *count* the number of available resources.
+- Semaphores can simulate condition variables, but work needs to be done to handle broadcasts or to "lose" signals when no thread is waiting.
+
+##### Posix Specific Differences
+
+- `sem_post` and `sem_wait` are "safe" to use in signal handlers.
+- Semaphores can be shared among multiple processes.
+	- `sem_open()` associates a `sem_t` object with a semaphore file in the file system. (*Accessible by multiple processes*)
+
+> Possible tools: *Thread sanitizer* -> `-fsanitize=threads`... (Can not be used with address sanitizer)
+
 ### Starvation
 
 **Starvation** occurs when a thread is waiting for a resource, but other threads prevent it from acquiring the resource.
