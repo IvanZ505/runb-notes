@@ -432,8 +432,50 @@ int pthread_cond_signal(pthread_cond_t *cv); // Wakes one thread waiting on the 
 
 > It is also possible to design higher-level abstractions (*monitors*) to manage locks in a way that will not allow *deadlocks*.
 
-
 **Note:** Deadlocking does **not** require threads. Any two communicating processes can also deadlock.
+
+### Barriers
+
+*Barriers* are an abstraction that creates a "rendezvous".
+
+**Rendezvous** are a point where *all threads* wait until every thread has reached that point.
+
+> For in-depth information, visit [pthread_barrier_wait()](https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_barrier_wait.html).
+
+```C
+pthread_barrier_t
+
+int pthread_barrier_init(
+	pthread_barrier_t *bar,
+	pthread_barrierattr_t *attr,
+	unsigned count     // Indicates how many threads must wait at the barrier until any of them can proceed.
+);
+
+int pthread_barrier_destroy(pthread_barrier_t *bar);
+
+int pthread_barrier_wait(pthread_barrier_t *bar); // Block until the correct number of threads has reached this point.
+
+// Example of pthread_barrier_wait
+
+for(...) {
+	// Do stuff
+	pthread_barrier_wait(&bar);
+}
+```
+
+### Semaphore
+
+A *semaphore* is essentially an integer that represents the number of available resources.
+
+#### Operations
+
+Two operations in a semaphore: *Post / increment* and *wait / decrement*.
+
+*Post* increases the integer by 1 whereas *wait* decreases this integer by 1 (*If it is positive*).
+
+- If the *semaphore* is 0, then it blocks until the *semaphore* is positive again.
+
+> A *mutex* is a semaphore whose maximum value is 1. 
 
 ### Starvation
 
