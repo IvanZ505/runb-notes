@@ -295,6 +295,24 @@ int main() {
 
 Sharing data between threads is *inherently unsafe* due to [data races](#data-race).
 
+***Solution:*** Sequentialize access to shared data structures so that *only one* thread can access a data structure at a time.
+
+### Mutex Lock
+
+Using a *mutex*, we can enforce sequential access to data.
+
+`pthread_mutex_t` - An abstract struct
+
+`int pthread_mutex_init(pthread_mutex_t *lock, pthread_mutexattr_t *attrs);` - Initializes the mutex referenced by `*lock` with the attributes specified.
+
+- If there are no attributes specified (`NULL`), the default mutex attributes are used. 
+- Upon **success**, the state of the mutex becomes initialized and unlocked.
+	- Attempts to initialized a mutex *already* initialized results in **undefined** behavior.
+
+`int pthred_mutex_destroy(pthread_mutex_t *lock);` - Destroys the mutex. (*In effect*, the mutex object becomes uninitialized.)
+
+- A destroyed mutex object can be re-initialized using `pthread_mutex_init()`; the results of otherwise referencing the object after it has been destroyed are undefined.
+- **Only destroy unlocked a mutex**, destroying a locked mutex results in undefined behavior.
 
 ### Thread-safe Queue
 - For *safety*, ensure only one thread accesses the queue at a time.
