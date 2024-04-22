@@ -286,6 +286,16 @@ int main() {
 }
 ```
 
+> Referring to multitasking, `pthread_create` is analogous to [fork](multitasking#process) and `pthread_join` is analogous to [wait](multitasking#process).
+
+- The *difference* between **threads** and **processes** however is that *processes* have a parent/child process whereas *every thread* is considered a peer.
+	- *Any thread* can call `pthread_join` for another thread.
+
+## Sharing Data Safely
+
+Sharing data between threads is *inherently unsafe* due to [data races](#data-race).
+
+
 ### Thread-safe Queue
 - For *safety*, ensure only one thread accesses the queue at a time.
 

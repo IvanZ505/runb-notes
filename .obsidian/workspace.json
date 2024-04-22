@@ -38,9 +38,20 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f4f0776c3d8ff59a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/multitasking.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/sys-prog/multithreading.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -124,7 +133,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/multithreading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +149,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/multithreading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,8 +201,11 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2077e3a2f8e711de",
+  "active": "c8f61fcb6b6db89b",
   "lastOpenFiles": [
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/multithreading.md",
+    "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",
     "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
@@ -218,15 +228,12 @@
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
     "Untitled.md",
-    "docs/sys-prog/multithreading.md",
     "docs/sys-prog/final-exam.md",
-    "docs/sys-prog/multitasking.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
     "__plugin",
     "docs/cog-sci/10-the-rational-mind.md",
-    "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/project-2-dictionary.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/files.md",
