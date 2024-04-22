@@ -26,8 +26,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2077e3a2f8e711de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/multithreading.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/sys-prog/multithreading.md"
+              }
             }
           }
         ]
@@ -109,6 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/sys-prog/multithreading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,6 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/sys-prog/multithreading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,13 +194,13 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "c8f61fcb6b6db89b",
+  "active": "2077e3a2f8e711de",
   "lastOpenFiles": [
+    "docs/sys-prog/the-shell.md",
     "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
-    "docs/sys-prog/the-shell.md",
     "README.md",
     "docs/cog-decision/society-and-groups.md",
     "docs/_includes/top-btn.html",

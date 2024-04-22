@@ -19,7 +19,6 @@
 
 **Processes with separate virtual memories are protected from each other but can not easily communicate.**
 
-
 ##### Threads
 
 > Tasks within a single process
@@ -36,6 +35,8 @@
 - Threads visible to OS
 - Scheduling handled by OS
 
+The OS can schedule threads on *separate* processors.
+
 #### Green Threads
 
 > Also known as "library threads", or "language threads"
@@ -51,7 +52,7 @@
 - Outcome of program depends on which thread finishes first.
 - Nondeterminism introduced by thread scheduling.
 - **Ex:** If Thread A sets `X=1` and Thread B sets `X=2`. Program starts both threads and waits for both to finish, then prints `X`. Does it print 1 or 2?
-	- Yes. Instead of a single outcome, we have a set of possible outcomes (*nondeterminism*)
+	- Yes... Instead of a single outcome, we have a set of possible outcomes (*nondeterminism*)
 
 ### Data Race
 - Multiple threads make unsynchronized access to a piece of data, at least one of which writes to it.
@@ -89,7 +90,7 @@ for(i = 0; i < 100; i++) {
 - **Solution:** don't have data races.
 	- Forbid shared mutable data at language level (*Rust*)
 	- Synchronize access to shared data
-		- Enforce sequential access
+		- **Enforce** sequential access
 
 > Memory Fence (All incomplete thread writes MUST finish)
 
@@ -113,6 +114,8 @@ for(i = 0; i < 100; i++) {
 
 ### How can we make a lock?
 
+#### Wrong Way
+
 ```C
 int lock = 0;      // 0 to unlock, 1 to lock.
 
@@ -130,6 +133,8 @@ example:
 - The operation is not atomic!
 	- Another thread could be scheduled between the test and the set.
 
+In other words, there are gaps in the execution and in these gaps, another program can come along and modify the resource.
+
 ### Solution
 - `Test-and-set` - Obtains the current value of the variable and changes it in one fell swoop.
 - `Compare-and-go`
@@ -140,6 +145,7 @@ example:
 	- `while(test_andset(&lock) == 1) { // do nothing }`
 	- This works in a single step, making it impossible for another thread to go in a modify the lock.
 
+##### Spinlock
 - Test and Set is called a "spinlock"
 - It is horribly inefficient
 - Don't allow the scheduler to know when a thread is blocked by a lock.
@@ -148,10 +154,14 @@ example:
 
 > Instead of using spinlocks, we use higher-level system-provided *mutex locks*
 
-##### The PThread Library
+## The PThread Library
 - The POSIX Threads (PThreads) library provides a mutex abstraction that can be locked and unlocked.
 - Only one thread can have a given lock at a time. 
 - A thread attempting to lock a locked mutex will block until the mutex is unlocked.
+
+**To Use:** You must include the *-pthread* compilation option.
+
+`#include <pthread.h>` - also include this header.
 
 **Two operations: Lock and unlock**
 
@@ -168,6 +178,40 @@ unlock(&m);
 - C (Posix) gives us the tools to synchronize access to data structures, but it is up to us to use these tools correctly.
 - There is **nothing** stopping us from accessing a shared data structure without first getting exclusive access (except our own good sense)
 	- **Supply your own discipline**
+
+### `pthread_create`
+
+```C
+int pthread_create(
+	pthread_t *thread_id,
+	pthread_attr_t *attributes,
+	void *(*function) (void*),
+	void *argument
+)
+```
+
+We can think of `pthread_create()` as a function that *runs in the background*.
+
+- The function argument must be a function that takes in a void \* and returns a void \*.
+
+`pthread_attr_t` is a *abstract data type* that is used to specify features for a thread.
+
+- `int pthread_attr_init(pthread_attr_t *attr);` 
+	- various `pthread_attr_getX()` and `pthread_attr_setX()` functions to obtain/change the attributes.
+
+`pthread_t` may be an integer or a struct, so best to treat is as opaque data. (Just pass it to other functions)
+#### Success
+
+- On success, `pthread_create()` starts a new thread (*task*) within the current process.
+	- This new thread will execute the specified function and pass it the provided argument.
+	- The **id** of the new thread will be written to `*thread_id`.
+	- `*attributes` can be used to specify certain options or features. (Use `NULL` for defaults)
+	- Returns `0`.
+
+#### Failure
+
+- On failure, `pthread_create()` will return an **error code**. (*Note:* It does not write to errno.)
+
 
 ### Thread-safe Queue
 - For *safety*, ensure only one thread accesses the queue at a time.
