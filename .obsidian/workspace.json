@@ -27,8 +27,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -87,9 +86,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/discrete-2/discrete-2.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -112,7 +109,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +125,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,14 +177,14 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "84ddc9c56b2d2291",
+  "active": "c8f61fcb6b6db89b",
   "lastOpenFiles": [
+    "docs/discrete-2/discrete-2.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
     "docs/sys-prog/the-shell.md",
     "README.md",
-    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/society-and-groups.md",
     "docs/_includes/top-btn.html",
     "docs/discrete-2/imgs/full-2-3-ary-tree.png",
@@ -206,7 +201,6 @@
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
     "Untitled.md",
-    "docs/discrete-2/imgs/example-graph.png",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/final-exam.md",
     "docs/sys-prog/multitasking.md",

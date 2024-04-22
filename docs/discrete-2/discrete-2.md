@@ -1261,7 +1261,7 @@ M -> Pl, Pu, S, I
 
 - **Ex:** C₅ is a Euler circuit, but not a Euler walk. (*Deg. of each vertices in C₅ is 4.*)
 
-### Hamiltonian Path and Circuit
+### 1 Path and Circuit
 - A *Hamiltonian path* is a ***path*** which contains every *vertex* exactly *once*.
 - A *Hamiltonian circuit* is a ***circuit*** which uses every *vertex* exactly *once*.
 
@@ -1289,8 +1289,6 @@ M -> Pl, Pu, S, I
 
 1. Mark *initial* vertex with distance 0. Designate this as the **current.**
 2. Find *all vertices* leading to current.
-
-#todo based on our definition, is it impossible to have both a Euler walk and Euler circuit in the same graph? The theorem implies this is impossible, but the definitions do not have anything that goes against this.
 
 ## Trees
 
