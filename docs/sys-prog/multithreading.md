@@ -212,6 +212,79 @@ We can think of `pthread_create()` as a function that *runs in the background*.
 
 - On failure, `pthread_create()` will return an **error code**. (*Note:* It does not write to errno.)
 
+### `pthread_join`
+
+```C
+int pthread_join(
+	pthread_t thread_id,
+	void **return_value
+)
+```
+
+The `pthread_join` function will suspend execution of the *calling thread* until the *target thread* (`thread_id`) has terminated. (*Unless already terminated*)
+
+- Once the target thread has terminated, `pthread_join` writes the return value into `*return_value`.
+
+> On **success**, return 0, on **failure**, return an error code.
+
+### Example Using `pthread`
+
+```C
+// Function prototype
+void* worker(void *argument);
+
+// Our code
+{
+	pthread_t work_thread;
+	arg_t argument = get_next_argument();
+	ret_t = *return_value;
+
+	pthread_create(&work_thread, NULL, worker, argument);
+
+	// Do other things
+
+	pthread_join(work_thread, &return_value);
+
+	// At this point, the worker thread has completely terminated
+	// The pointer that it returns is stored within `return_value`
+}
+```
+
+### Other Functions
+
+`pthread_t pthread_self(void);` - returns the `thread_id` of the current thread.
+
+`void pthread_exit(void *ret_val);` - terminates the current thread and provides the return value. (*Thread version of exit()*)
+
+`int pthread_equal(pthread_t t1, pthread_t t2);` - Tests whether the two `pthread_id` are the same.
+
+`int pthread_kill(pthread_t thread, int sig);` - Send a signal to a thread.
+
+`int pthread_cancel(pthread_t thread);` - Tells a thread to terminate.
+
+
+### More Complexed Ex
+
+> Start a bunch of threads, wait for them all to terminate.
+
+```C
+int main() {
+	pthread_t threads[5];
+	int args[5];
+
+	// Spawn all the child threads.
+	for(int i = 0; i < 5; i++) {
+		args[i] = i;
+		pthread_create(&threads[i], NULL, thread_function, &args[i]);
+	}
+
+	// Wait for them all to terminate
+	for(int i = 0; i < 5; i++) {
+		pthread_join(threads[i], NULL);
+	}
+	// All tasks have been completed.
+}
+```
 
 ### Thread-safe Queue
 - For *safety*, ensure only one thread accesses the queue at a time.
