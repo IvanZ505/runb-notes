@@ -1,4 +1,4 @@
-# Moral and Social Decisions
+# [Moral and Social Decisions](cog-decision)
 
 ## Basic Concepts
 

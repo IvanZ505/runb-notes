@@ -1261,7 +1261,7 @@ M -> Pl, Pu, S, I
 
 - **Ex:** C₅ is a Euler circuit, but not a Euler walk. (*Deg. of each vertices in C₅ is 4.*)
 
-### 1 Path and Circuit
+### Path and Circuit
 - A *Hamiltonian path* is a ***path*** which contains every *vertex* exactly *once*.
 - A *Hamiltonian circuit* is a ***circuit*** which uses every *vertex* exactly *once*.
 
@@ -1388,3 +1388,7 @@ The *Kruskal's Algorithm* is the other way to find the *minimum spanning tree* o
 
 ![](imgs/kruskals-algorithm-anim-1.gif)
 
+
+### Decision Trees
+
+*Decision trees* are a flow-chart like data structure that 

@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/moral-social.md",
+                "file": "docs/cog-decision/learning-prediction.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/moral-social.md"
+                "file": "docs/discrete-2/discrete-2.md"
               }
             }
           }
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/moral-social.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/moral-social.md",
+                "file": "docs/discrete-2/discrete-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,9 +219,11 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "69baf8b43d1d5dec",
+  "active": "84ddc9c56b2d2291",
   "lastOpenFiles": [
+    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/cog-decision.md",
+    "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/moral-social.md",
     "docs/discrete-2/discrete-2.md",
     "docs/sys-prog/multitasking.md",
@@ -238,7 +240,6 @@
     "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
     "docs/discrete-2/imgs/tree-info.png",
     "docs/discrete-2/imgs/trees-demo.png",
-    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/choosing-resources.md",
     "docs/cog-decision/modeling-reality.md",
     "docs/cog-decision/midterm-review.md",
@@ -264,7 +265,6 @@
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/comp-arch/4-floating-points.md",
-    "docs/cog-decision/cognitive-architecture.md",
     "docs/misc/sql-notes.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
