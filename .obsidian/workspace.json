@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/multithreading.md",
+                "file": "docs/sys-prog/networking.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/sys-prog/networking.md"
               }
             }
           }
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/networking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/sys-prog/networking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,16 +219,17 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "84ddc9c56b2d2291",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/networking.md",
+    "docs/sys-prog/multithreading.md",
+    "docs/sys-prog/multitasking.md",
+    "docs/discrete-2/discrete-2.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/moral-social.md",
-    "docs/discrete-2/discrete-2.md",
-    "docs/sys-prog/multitasking.md",
-    "docs/sys-prog/sys-prog.md",
-    "docs/sys-prog/multithreading.md",
     "docs/sys-prog/the-shell.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
@@ -265,7 +266,6 @@
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/comp-arch/4-floating-points.md",
-    "docs/misc/sql-notes.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"

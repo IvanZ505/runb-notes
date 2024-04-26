@@ -1,4 +1,4 @@
-# Multithreading
+# [Multithreading](sys-prog)
 
 ## Threads
 
@@ -595,4 +595,10 @@ void q_dequeue(queue_t *q, data_t *dst)
 #### Solutions
 - One possible solution: enforce turn-taking.
 	- e.g. don't allow threads to get read access if a thread is waiting to get write access.
-- 
+
+### Livelock
+
+*Livelock* occurs when two or more tasks make state changes that undo the work of the other tasks.
+
+- The tasks end up spending all their time undoing and redoing the same state changes, and never actually advancing to do something productive.
+
