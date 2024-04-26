@@ -1,4 +1,5 @@
 {% include math.html %}
+{% include top-btn.html %}
 
 # Intro to Discrete Structures 2
 
