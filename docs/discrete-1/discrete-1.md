@@ -1,4 +1,4 @@
-
+{% include top-btn.html %}
 # Introduction to Discrete Structures 1
 
 Propositional Logic

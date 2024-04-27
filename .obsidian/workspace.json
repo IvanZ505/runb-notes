@@ -16,42 +16,6 @@
             }
           },
           {
-            "id": "84ddc9c56b2d2291",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/discrete-2/discrete-2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "69baf8b43d1d5dec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/cog-decision/learning-prediction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2077e3a2f8e711de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/networking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f4f0776c3d8ff59a",
             "type": "leaf",
             "state": {
@@ -63,8 +27,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -124,17 +86,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/sys-prog/networking.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "449a345dbfc256ce",
@@ -150,7 +109,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/networking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +125,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/networking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,15 +177,18 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "2077e3a2f8e711de",
+  "active": "c8f61fcb6b6db89b",
   "lastOpenFiles": [
+    "docs/intro-comm/comms.md",
+    "docs/discrete-2/discrete-2.md",
+    "docs/discrete-1/discrete-1.md",
+    "docs/cog-decision/learning-prediction.md",
+    "docs/data-structures/cs112.md",
     "docs/intro-infotech/iti103.md",
     "docs/sys-prog/networking.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
-    "docs/discrete-2/discrete-2.md",
-    "docs/cog-decision/learning-prediction.md",
     "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/moral-social.md",
@@ -264,9 +224,6 @@
     "docs/_includes",
     "_includes/math.html",
     "_includes",
-    "docs/comp-arch/1-overview-of-comp-arch.md",
-    "docs/sys-prog/c-basics.md",
-    "docs/sys-prog/systems-midterm.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"
