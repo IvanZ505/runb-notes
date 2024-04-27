@@ -124,6 +124,13 @@ Each router has a **routing table**.
 
 TCP itself makes sure that bytes are received in order by *dividing* the outgoing byte stream into "*segments*" (Each segment is sent in a single packet).
 
+The TCP packets indicate which connection they are part of using:
+
+- `local host:port`
+- `remote host:port`
+
+Using `bind()` - you can associate a socket with a port number on the host, which will allow you to listen on a certain port for incoming packets.
+
 ----
 
 ## Sockets
@@ -171,6 +178,13 @@ int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
 - We can cast the pointer to `struct sockaddr *` and provide the size.
 	- Usually, we don't create this struct ourselves.
 
+`write()` - send data to remote host
+
+`read()` - receive data from remote host.
+
+`close()` - closes both sides of the connection.
+
+`shutdown()` - Used to close one side of the connection.
 ### DNS
 
 > *Domain Name Service*
@@ -295,3 +309,63 @@ int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 
 *Note:* Each time we accept a connection request, we get a new socket.
 
+## Server Structure
+
+> "One at a time"
+
+- Repeating forever:
+	- Accept incoming connection
+	- Communicate with peer
+	- Close connection
+- Easy to write
+- Can only deal with one client at a time...
+
+> "One per process"
+
+- Repeating forever:
+	- Accept incoming connection
+	- Fork child process
+		- In child: deal with connection.
+	- Wait for child to terminate, then close connection.
+
+- Using this process, it allows *multiple* concurrent connections.
+- Provides some insulation (one connection handler cannot crash server)
+- Cumbersome communication between parent and children.
+
+**Problem:** How to deal with zombies???
+
+- Install handlers for `SIGCHILD`
+	- Handler uses `waitpid()` to clean up specific zombies.
+- Set `SIGCHILD` to `SIG_IGN`
+	- Prevents child processes from becoming zombies. (they just disappear when they die)
+
+> One connection per thread
+
+- Repeating forever:
+	- Accept incoming connection.
+	- Create new thread to handle connection.
+	- Detach thread
+
+
+**Perks and Drawbacks:**
+
+- This allows multiple concurrent connections.
+- Easily share data among all connection handler threads.
+- Minimal protection from infinite loops or crashes.
+
+*We might want to address signal handling...*
+
+- Signals sent to a multithreaded program will be handled by an undetermined thread.
+	- We can control this by setting signal masks per thread.
+	- e.g. `SIGINT` or `SIGHUP` being handled by primary thread.
+
+### Multiplexing
+
+- Fewer threads than connections.
+- **Problem:** We don't know what events will happen next.
+	- Should we call `accept()` or `read()` on a particular socket?
+	- How do we avoid waiting unnecessarily?
+- **Solution:** `select()` or `poll()` allow us to block on multiple file descriptors at once and wait until any of them are ready.
+- Lower latency than using multiple threads.
+- More complicated to write.
+- Makes it easy to specify timeouts.
