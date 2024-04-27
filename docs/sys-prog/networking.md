@@ -87,3 +87,91 @@ Each router has a **routing table**.
 	- Often indicated with a slash and a number. `208.14.128.0/9` - Indicates a subnet with a *9-bit prefix*.
 - Routers have their own protocols to send updated routing information.
 
+### Network Stack
+
+#### Link Layer
+
+- communication between machines on the same network : *Ethernet* communicates in *discrete messages* (frames)
+
+#### Internet Layer
+- (IP) Communication between machines on the Internet packet forwarding, *best-effort*
+
+- Messages are broken into individual packets, each sent separately.
+- These messages can arrive out of order, or not arrive at all.
+
+> *Size of these packets is  typically 20-65,000 bytes.* -> Packets too large are broken down (*fragmented*) and reassembled at the recipient. (1500 bytes is the typical byte size)
+
+- Endpoints are identified by IP address.
+	- Identifies a network interface (usually 1 per machine)
+
+#### Transport Layer
+- Two different transport protocols
+
+##### UDP
+
+> **User Datagram Protocol**
+
+- Send individual messages from one service to another endpoints identified by *IP address* and *port number*.
+- ***best effort, datagram protocol***
+- ***non-connection oriented***
+
+##### TCP
+
+> [**Transmission Control Protocol**](../intro-infotech/iti103#tcp/ip)
+
+- Read and write byte streams sent between two services.
+- Endpoints identified by IP address and port number
+
+TCP itself makes sure that bytes are received in order by *dividing* the outgoing byte stream into "*segments*" (Each segment is sent in a single packet).
+
+----
+
+## Sockets
+
+*Sockets* are a set of functions used to establish network communication part of POSIX.
+
+### Fundamental Type: The Socket
+
+The socket is basically a *file descriptor* that refers to a network service.
+
+	-> Functions attempt to be **as general as possible**.
+		-> Does not assume we are using a particular network.
+		-> Does not assume we are working at a particular level.
+
+```C
+
+int socket(int domain, int type, int protocol);
+```
+
+- *Domain*: what sort of network will we be using (*AF_INET*)
+- *Type*: What sort of socket are we creating.
+	- `SOCK_STREAM` - Communication via streams (e.g. TCP)
+	- `SOCK_DGRAM` - Communication via datagrams (e.g. UDP)
+	- `BLAH_BLAH` - A lot more other ones used by other network types.
+- *Protocol*: Used to distinguish between multiple transports of the same type (typically 0)
+
+> On Success, *returns a fd*. \
+> On Failure, *returns -1*.
+
+*Note:* This `socket()` type only creates a **abstract** socket, but does not configure it.
+
+```C
+
+int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+```
+
+> For **streaming** sockets, establishing a connection with a service on a remote host.
+
+- `sockfd` - the *file descriptor* opened by the abstract socket type.
+- `addr` - the address of the remote service.
+- `addrlen` - length of the addr struct.
+
+*Note*: Addresses are usually *network-specific structures*.
+
+- We can cast the pointer to `struct sockaddr *` and provide the size.
+	- Usually, we don't create this struct ourselves.
+
+### DNS
+
+> *Domain Name Service*
+

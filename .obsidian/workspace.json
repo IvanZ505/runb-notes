@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "natural",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +111,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -219,10 +220,11 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "18585b27d6bbb011",
+  "active": "2077e3a2f8e711de",
   "lastOpenFiles": [
-    "docs/sys-prog/sys-prog.md",
+    "docs/intro-infotech/iti103.md",
     "docs/sys-prog/networking.md",
+    "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
     "docs/discrete-2/discrete-2.md",
@@ -265,7 +267,6 @@
     "docs/comp-arch/1-overview-of-comp-arch.md",
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
-    "docs/comp-arch/4-floating-points.md",
     "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"
