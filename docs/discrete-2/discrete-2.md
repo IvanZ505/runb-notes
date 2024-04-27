@@ -393,7 +393,7 @@ So, the for `a¹⁹`:
 - The subset of a sample space is called an event.
 - The probability of some event `A` occurring is the cardinality of `A` over the cardinality of the sample space.
 
-$$P(A) = \frac{n(A)}{n(S)}$$
+$$P(A)=\frac{n(A)}{n(S)}$$
 
 - The probability of any event occurring must always be between 0 and 1. (As denoted by `0 ≤ P(A) ≤ 1`)
 - `P(A) = 1` if `A = S`
@@ -440,7 +440,7 @@ P(A1 ∪ A2 ∪ · · ·) = P(A1) + P(A2) + · · *([Addition Rule](../cog-decis
 
 - The sample space `S` is just `A ∪ A'`
 
-$$n(S) = \frac{n(A) + n(A')}{n(S)}$$
+$$n(S)=\frac{n(A) + n(A')}{n(S)}$$
 
 - So, `1 = P(A) + P(A')`
 
@@ -498,9 +498,9 @@ $$P(A|B) = \frac{P(A ∩ B)}{P(B)} = \frac{P(A and B)}{P(A)}$$
 
 - You know you are using [**Bayes Theorem**](../cog-decision/probability#bayes-theorem), if you are given P(B|A) and are asked to find P(A|B).
 
-Because we are given P(A|B)... $$P(B|A) = \frac{P(A∩B)}{P(A)}, P(A∩B) = P(A|B)*P(A)$$
+Because we are given P(A|B)... $P(B|A)=\frac{P(A∩B)}{P(A)}, P(A∩B) = P(A|B)*P(A)$
 
-Then, plug it into P(A|B)... $$P(B|A) = \frac{P(A∩B)}{P(B)}= \frac{P(A|B)*P(A)}{P(B)}$$
+Then, plug it into P(A|B)... $$P(B|A)=\frac{P(A∩B)}{P(B)}= \frac{P(A|B)*P(A)}{P(B)}$$
 **This is the basics of Bayes Theorem**
 
 #todo draw a chart for bayes theorem and try the questions
@@ -999,7 +999,7 @@ c) Assume that the process will not be stopped until 4 packages that fail are de
 If `X~H(N, R, n)`, the probability mass function of X is:
 
 $$p(X) = P(X=x) = \begin{cases} 
-  \frac{_RC_{x} * _{N-R}C_{n-x}}{_NC_n} & max(0, R+n-N) \leq x \leq min(n, R) \\ \\
+  \frac{_RC_{x} * _{N-R}C_{n-x}}{_NC_n} &everything \\ \\
 
  0 & otherwise\\
 \end{cases}$$
