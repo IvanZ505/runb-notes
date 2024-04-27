@@ -175,3 +175,123 @@ int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
 
 > *Domain Name Service*
 
+The DNS is a *hierarchical database* that stores information about "domains".
+
+- Domains are identified by words separated by periods:
+	- `rutgers.edu`
+	- `google.com`
+	- `amazon.com`
+- Each subdomain add additional words to the front of the name.
+
+> Domains are controlled by some organization, which can establish subdomains with their own owners.
+
+#### Domain Protocols
+
+`A` - Associates an IPv4 address with this domain.
+
+`AAAA` - Associates an IPv6 address with this domain.
+
+`MX` - Indicates the machine used for mail handling.
+
+> For many protocols, we look up the IP address of the domain and use that to connect (or send datagrams)
+
+#### Data Storage
+
+- Data is stored *Hierarchically*, similar to directories in the file system.
+	- `edu` says where to find `rutgers.edu`
+	- `rutgers.edu` says where to find `cs.rutgers.edu`
+	- `cs.rutgers.edu` says where to find `wax.cs.rutgers.edu`...
+	- and so on...
+
+> Typically, you have a *local DNS server* that caches the results from past DNS queries.
+
+The Unix commands `host` and `dig` perform DNS queries and print the results.
+
+Typically, your local internet configuration will specify a DNS server used for queries.
+
+#### Using DNS to Get Addresses
+
+##### The Old Way
+
+`gethostbyname()` -> old, no bueno.
+
+##### The Better Way
+
+```C
+
+int getaddrinfo(
+	const char *node,        // e.g. domain name
+	const char *service,     // e.g. service name or port #
+	const struct addrinfo *hints,   // used to narrow down results
+	struct addrinfo **res   // Will point to first entry of a linked list of answers
+);
+```
+
+> On success, *returns 0*. On *failure*, returns an error code.
+
+This error code is not compatible with `errno` or `perror()`, etc...
+
+- Use `gai_strerror()` to get a description of the error.
+
+```C
+
+struct addrinfo {
+	int ai_flags;
+	int ai_family;              // domain argument to socket()
+	int ai_socktype;            // type argument to socket()
+	int ai_protocol;            // protocol argument to socket()
+	socklen_t ai_addrlen;       
+	struct sockaddr *ai_addr;   // addr argument to connect()
+	char *ai_cannonname;
+	struct addrinfo *ai_next;
+};
+```
+
+> See `network.c` for examples of using `getaddrinfo()` with `socket()` and `connect()`.
+
+##### Usual Pattern for Clients
+- Use `getaddrinfo()` to get a linked list of address information records...
+- Use these with `socket()` and `connect()` to establish connection.
+
+###### Client server Pattern
+- Client creates connections (Active)
+- server waits for clients to request connections (Passive)
+
+> Establishing a *listening socket* requires three functions...
+
+```C
+
+int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+```
+
+- Tells the network system to associate our socket with a specific port on the local host.
+- `sockfd` - fd obtained from `socket()`.
+- `addr` - idnetifies the port (recommended: *Obtain from `getaddrinfo`*).
+
+> Returns 0 on success, returns -1 on failure and sets `errno`
+
+```C
+
+int listen(int sockfd, int backlog);
+```
+
+- Tells the network system that we want to wait for incoming connection requests.
+- `sockfd` - Obtained from `socket()`
+- `backlog` - determines size of connection request queue.
+
+> Returns 0 on succes, -1 on failure (sets `errno`)
+
+```C
+
+int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+```
+
+- Obtains file descriptor for incoming connection request (block until one arrives, if none have arrived yet)
+- `sockfd` - listening socket
+- `addr` - address of remote host will be written here.
+	- (*Use `NULL` if we don't care*)
+
+> Returns new streaming socket specific to this connection, returns -1 on failure and sets `errno`
+
+*Note:* Each time we accept a connection request, we get a new socket.
+
