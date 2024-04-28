@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/moral-social.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md"
+                "file": "docs/cog-decision/moral-social.md"
               }
             }
           }
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/moral-social.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/discrete-2/discrete-2.md",
+                "file": "docs/cog-decision/moral-social.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,8 +196,9 @@
   },
   "active": "87183001c4e254fe",
   "lastOpenFiles": [
-    "docs/intro-comm/comms.md",
+    "docs/cog-decision/cog-decision.md",
     "docs/discrete-2/discrete-2.md",
+    "docs/intro-comm/comms.md",
     "docs/discrete-1/discrete-1.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/data-structures/cs112.md",
@@ -206,7 +207,6 @@
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
-    "docs/cog-decision/cog-decision.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/cog-decision/moral-social.md",
     "docs/sys-prog/the-shell.md",
