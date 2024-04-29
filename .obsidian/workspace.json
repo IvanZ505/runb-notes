@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-decision/moral-social.md",
+                "file": "docs/sys-prog/final-exam.md",
                 "mode": "source",
                 "source": false
               }
@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "registers",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -100,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/cog-decision/moral-social.md"
+                "file": "docs/sys-prog/final-exam.md"
               }
             }
           }
@@ -124,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/cog-decision/moral-social.md",
+                "file": "docs/sys-prog/final-exam.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/cog-decision/moral-social.md",
+                "file": "docs/sys-prog/final-exam.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,8 +195,9 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "87183001c4e254fe",
+  "active": "d2d1eac1d36d98e7",
   "lastOpenFiles": [
+    "docs/cog-decision/moral-social.md",
     "docs/cog-decision/cog-decision.md",
     "docs/discrete-2/discrete-2.md",
     "docs/intro-comm/comms.md",
@@ -208,7 +210,6 @@
     "docs/sys-prog/multithreading.md",
     "docs/sys-prog/multitasking.md",
     "docs/cog-decision/cognitive-architecture.md",
-    "docs/cog-decision/moral-social.md",
     "docs/sys-prog/the-shell.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",

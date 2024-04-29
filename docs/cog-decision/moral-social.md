@@ -47,5 +47,5 @@ Imagine an urn filled with marbles:
 
 ### Manufacturing Uncertainty
 
-- Tobacco industry hiring researchers to divert attention from tabacco.
+- Tobacco industry hiring researchers to divert attention from tobacco.
 
