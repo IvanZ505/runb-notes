@@ -1,6 +1,6 @@
 # Final Exam Details
 
-- Date: TBD
+- Date: 5/6/2024
 - 24 hour window
 - Format: primarily multiple choice
 - Exam itself will be approximately 1.5 hours
