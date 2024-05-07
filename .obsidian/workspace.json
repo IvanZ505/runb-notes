@@ -21,7 +21,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/final-exam.md",
+                "file": "docs/sys-prog/files.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "addd4fa4aa636f15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/the-shell.md",
                 "mode": "source",
                 "source": false
               }
@@ -33,14 +45,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/multitasking.md",
+                "file": "docs/sys-prog/final-exam.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e36ea41c23c11dfd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/intro-infotech/iti103.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "76b7cc0cf4b3b727",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/the-shell.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -70,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "registers",
+                "query": "processing grou",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/sys-prog/final-exam.md"
+                "file": "docs/sys-prog/the-shell.md"
               }
             }
           }
@@ -125,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/final-exam.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/final-exam.md",
+                "file": "docs/sys-prog/the-shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,6 +233,20 @@
   },
   "active": "d2d1eac1d36d98e7",
   "lastOpenFiles": [
+    "docs/sys-prog/multitasking.md",
+    "docs/sys-prog/the-shell.md",
+    "docs/sys-prog/project1-my-little-malloc.md",
+    "docs/sys-prog/final-exam.md",
+    "docs/comp-arch/3-bit-level-operations-in-c.md",
+    "docs/sys-prog/networking.md",
+    "docs/intro-infotech/iti103.md",
+    "docs/sys-prog/multithreading.md",
+    "docs/cog-sci/1-foundations-of-cog-sci.md",
+    "Untitled.md",
+    "docs/sys-prog/sys-prog.md",
+    "docs/sys-prog/c-basics.md",
+    "docs/sys-prog/files.md",
+    "docs/sys-prog/systems-midterm.md",
     "docs/cog-decision/moral-social.md",
     "docs/cog-decision/cog-decision.md",
     "docs/discrete-2/discrete-2.md",
@@ -204,13 +254,7 @@
     "docs/discrete-1/discrete-1.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/data-structures/cs112.md",
-    "docs/intro-infotech/iti103.md",
-    "docs/sys-prog/networking.md",
-    "docs/sys-prog/sys-prog.md",
-    "docs/sys-prog/multithreading.md",
-    "docs/sys-prog/multitasking.md",
     "docs/cog-decision/cognitive-architecture.md",
-    "docs/sys-prog/the-shell.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
@@ -223,21 +267,13 @@
     "docs/discrete-2/imgs/trees-demo.png",
     "docs/cog-decision/choosing-resources.md",
     "docs/cog-decision/modeling-reality.md",
-    "docs/cog-decision/midterm-review.md",
-    "docs/cog-decision/heuristics-biases.md",
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
-    "Untitled.md",
-    "docs/sys-prog/final-exam.md",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
     "__plugin",
-    "docs/cog-sci/10-the-rational-mind.md",
-    "docs/sys-prog/project-2-dictionary.md",
-    "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/files.md",
     "docs/_includes/math.html",
     "docs/_includes",
     "_includes/math.html",

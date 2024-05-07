@@ -19,6 +19,10 @@
 	- [pointers](#pointers)
 - 
 
+### Syntax
+- C syntax notes from [Computer Architecture](comp-arch/basics-of-c).
+- C syntax notes from [Systems Programming](c-basics)
+
 ### Pointers
 - C pointers have 2 parts, *address of data* and *type* (ex: `char *`)
 	- `type` goes away in compilation, so you need to already know what type is the pointer.
@@ -272,7 +276,9 @@ Ex:
 	- However, without hardware support for atomic instructions, no coordination between threads is possible.
 
 - `compare-and-swap` 
-
+	- Compares content of a memory location with a given value.
+	- If they are the same, modify the contents of that memory to new value.
+	- Atomic process.
 - `deadlock`
 	- Mutual exclusion
 	- Hold and wait

@@ -1,4 +1,4 @@
-# Networking
+# [Networking](sys-prog)
 
 ## Network Communication
 
@@ -358,7 +358,7 @@ int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 - Signals sent to a multithreaded program will be handled by an undetermined thread.
 	- We can control this by setting signal masks per thread.
 	- e.g. `SIGINT` or `SIGHUP` being handled by primary thread.
-
+**
 ### Multiplexing
 
 - Fewer threads than connections.

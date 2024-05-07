@@ -192,7 +192,7 @@ int pthread_create(
 
 We can think of `pthread_create()` as a function that *runs in the background*.
 
-- The function argument must be a function that takes in a void \* and returns a void \*.
+	- The function argument must be a function that takes in a void \* and returns a void \*.
 
 `pthread_attr_t` is a *abstract data type* that is used to specify features for a thread.
 
