@@ -21,62 +21,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/files.md",
+                "file": "docs/os-design/1-introduction.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "addd4fa4aa636f15",
+            "id": "17948a28a8b8b565",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f4f0776c3d8ff59a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/final-exam.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e36ea41c23c11dfd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/intro-infotech/iti103.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "76b7cc0cf4b3b727",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/sys-prog/the-shell.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.6.3"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "processing grou",
+                "query": "hindsight",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,8 +85,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -137,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/sys-prog/the-shell.md"
+                "file": "docs/os-design/1-introduction.md"
               }
             }
           }
@@ -161,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
+                "file": "docs/os-design/1-introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/sys-prog/the-shell.md",
+                "file": "docs/os-design/1-introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -231,8 +192,15 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "d2d1eac1d36d98e7",
+  "active": "87183001c4e254fe",
   "lastOpenFiles": [
+    "docs/sys-prog/files.md",
+    "README.md",
+    "docs/os-design/1-introduction.md",
+    "docs/os-design/0-os-design.md",
+    "docs/cog-decision/learning-prediction.md",
+    "docs/os-design",
+    "docs/cog-decision/midterm-review.md",
     "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",
     "docs/sys-prog/project1-my-little-malloc.md",
@@ -245,28 +213,22 @@
     "Untitled.md",
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/c-basics.md",
-    "docs/sys-prog/files.md",
     "docs/sys-prog/systems-midterm.md",
     "docs/cog-decision/moral-social.md",
     "docs/cog-decision/cog-decision.md",
     "docs/discrete-2/discrete-2.md",
     "docs/intro-comm/comms.md",
     "docs/discrete-1/discrete-1.md",
-    "docs/cog-decision/learning-prediction.md",
     "docs/data-structures/cs112.md",
     "docs/cog-decision/cognitive-architecture.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
-    "README.md",
-    "docs/cog-decision/society-and-groups.md",
     "docs/_includes/top-btn.html",
     "docs/discrete-2/imgs/full-2-3-ary-tree.png",
     "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
     "docs/discrete-2/imgs/tree-info.png",
     "docs/discrete-2/imgs/trees-demo.png",
-    "docs/cog-decision/choosing-resources.md",
-    "docs/cog-decision/modeling-reality.md",
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
@@ -278,7 +240,6 @@
     "docs/_includes",
     "_includes/math.html",
     "_includes",
-    "docs/CNAME",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"
   ]

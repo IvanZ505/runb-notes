@@ -1,4 +1,4 @@
-# [Learning and Prediction](../cog-decision/cog-decision)
+ # [Learning and Prediction](../cog-decision/cog-decision)
 
 Review: What is a heuristic?
 
