@@ -21,19 +21,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/os-design/1-introduction.md",
+                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "17948a28a8b8b565",
+            "id": "df80f3ff321d9a87",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.3"
+                "file": "docs/cog-sci/2-history-of-the-mind.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bb6531fdf087e91e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/sys-prog/multithreading.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hindsight",
+                "query": "skinner",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +99,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -98,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/os-design/1-introduction.md"
+                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md"
               }
             }
           }
@@ -122,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/os-design/1-introduction.md",
+                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/os-design/1-introduction.md",
+                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,9 +209,15 @@
   },
   "active": "87183001c4e254fe",
   "lastOpenFiles": [
+    "docs/cog-sci/2-history-of-the-mind.md",
+    "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+    "docs/sys-prog/multithreading.md",
+    "docs/os-design/1-introduction.md",
+    "docs/philosophical-cog-sci",
+    "docs/os-design/imgs/virtualizing-memory.png",
+    "docs/os-design/imgs",
     "docs/sys-prog/files.md",
     "README.md",
-    "docs/os-design/1-introduction.md",
     "docs/os-design/0-os-design.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/os-design",
@@ -208,7 +229,6 @@
     "docs/comp-arch/3-bit-level-operations-in-c.md",
     "docs/sys-prog/networking.md",
     "docs/intro-infotech/iti103.md",
-    "docs/sys-prog/multithreading.md",
     "docs/cog-sci/1-foundations-of-cog-sci.md",
     "Untitled.md",
     "docs/sys-prog/sys-prog.md",
@@ -219,8 +239,6 @@
     "docs/discrete-2/discrete-2.md",
     "docs/intro-comm/comms.md",
     "docs/discrete-1/discrete-1.md",
-    "docs/data-structures/cs112.md",
-    "docs/cog-decision/cognitive-architecture.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
@@ -231,15 +249,12 @@
     "docs/discrete-2/imgs/trees-demo.png",
     "docs/discrete-2/imgs/cut-vertices-edgefs.png",
     "docs/discrete-2/imgs/con-vs-discon-graph.png",
-    "docs/discrete-2/imgs/connected-and-disconnected-graphs.webp",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
     "__plugin",
     "docs/_includes/math.html",
     "docs/_includes",
-    "_includes/math.html",
-    "_includes",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"
   ]

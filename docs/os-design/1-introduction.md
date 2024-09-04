@@ -47,6 +47,13 @@ Programming assignments will be done in groups of two. Group members cannot be c
 - Provides an abstraction to use your hardware.
 - Allows users to run their own apps over the hardware.
 
+> Operating System (*OS*): Software that converts hardware into a useful form for applications.
+
+From a ***high-level view***...
+
+- It is a *software layer* between the hardware and the application programs/users that provides a *virtual* interface: **easy** and **safe**.
+- A *resource manager* that allows programs/users to share the hardware resource: **fair** and **efficient**.
+- Sometimes also considered to include a set of utilities to simplify application development. (*we will not consider these utils to be part of the OS in this course*)
 ### Why Study OS?
 - Before, the goal of OS was to have a high level overseer to manage the resources of the computer.
 - Today, instead of hardware oriented computing, we are now in a *data oriented* computing phase.
@@ -76,7 +83,10 @@ Programming assignments will be done in groups of two. Group members cannot be c
 - IV - Storage
 
 ### What does OS Provide?
-- Role 1: Abstraction - Provide standard library for resources.
+
+#### Role 1: Abstraction
+
+- Provide standard library for resources.
 - What is a *resource*?
 	- Anything valuable (e.g. CPU, memory, disk)
 - What abstraction does modern OS typically provide for each resource?
@@ -94,15 +104,15 @@ Programming assignments will be done in groups of two. Group members cannot be c
 	- What are the correct abstractions?
 	- How much hardware should be exposed?
 
-#### System Calls
+##### System Calls
 - System calls allow users to tell the OS what to do.
 - The OS provides some interface (APIs, standard library).
 - A typical OS exports a few hundred system calls (545?)
+	- However, only around 100 are actually used.
 - Run programs - Access memory - Access devices
 
----
-
-- Role 2: Resource management - Share resources well
+#### Role 2: Resource Management
+- Share resources well
 - Advantages of OS providing resource management?
 	- Protect applications from one another.
 	- Provide efficient access to resources (cost, time, energy)
@@ -113,8 +123,83 @@ Programming assignments will be done in groups of two. Group members cannot be c
 - Challenges
 	- What are the *correct mechanisms*?
 	- What are the *correct policies*?
-
 #### Mechanism vs Policy
 
+---
 
+### OS Organization
 
+#### Virtualization
+
+Virtualization is making each application believe that it has each resource to itself.
+
+##### Virtualizing CPU
+- The system has a very large number of virtual CPUs.
+- Turning a single CPU into a seemingly infinite number of CPUs.
+- Allowing many programs to seemingly run at once is the *Virtualization* of the CPU.
+
+**Example:** Having multiple programs that run `for` loops that print out things. All of the programs are able to execute independently of one another despite having only 1 CPU.
+
+**Mechanism:**
+
+- Virtual-to-physical memory mapping, page-fault, etc...
+
+![](imgs/virtualizing-memory.png)
+
+- It is as if each running program has its own private memory.
+- Each program has allocated memory at the same address.
+- Then, each process will access its own private virtual address space.
+- The OS maps address space onto the physical memory.
+- A memory reference within one running program **DOES NOT** affect the address space of other processes.
+- **Physical memory** is a shared resource, managed by the OS.
+
+#### Concurrency
+
+Event are occurring simultaneously and may interact with each other.
+
+- The OS must be able to handle concurrent events.
+
+**Easier case**: *Hide* concurrency from independent processes.
+
+**Trickier case**: *Managing* concurrency with interacting processes.
+
+- Providing abstractions ([locks, semaphores, condition variables, shared memory, critical sections](../sys-prog/multithreading#locks)) to processes.
+- Ensure processes do not [deadlock](../sys-prog/multithreading#Deadlocks).
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include "common.h"
+
+volatile int counter = 0;
+int loops;
+
+void *worker(void *arg) {
+	int i;
+	for (i = 0; i < loops; i++) {
+		counter++;
+	}
+	return NULL;
+}
+
+int main(int argc, char *argv[]) {
+	if (argc != 2) {
+		fprintf(stderr, "usage: threads <value>\n");
+		exit(1);
+	}
+	loops = atoi(argv[1]);
+	pthread_t p1, p2;
+	printf("Initial value: %d\n", counter);
+	pthread_create(&p1, NULL, worker, NULL);
+	pthread_create(&p2, NULL, worker, NULL);
+	pthread_join(p1, NULL);
+	pthread_join(p2, NULL);
+	printf("Final value: %d\n", counter);
+	return 0;
+}
+```
+
+- The main program creates two threads.
+	- [**Thread**](../sys-prog/multithreading#Threads): a function running within the same memory space.
+	- Each thread start running in a routine called `worker()`.
+		- `worker()`: increments a counter

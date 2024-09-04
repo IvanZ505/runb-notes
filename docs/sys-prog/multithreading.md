@@ -26,7 +26,7 @@
 - A multithreading process has multiple tasks sharing the same virtual memory.
 - **Multithreading** greatly simplifies communication between tasks and allows for miscommunication/interference between tasks.
 
-### Major Types of Multithrading
+### Major Types of Multithreading
 
 #### OS Threads
 
@@ -46,7 +46,7 @@ The OS can schedule threads on *separate* processors.
 - Cannot take advantage of multiple threads.
 - *Lower overhead than OS threads but are generally less powerful than OS threads.*
 
-##  Need for Synchronization
+## Need for Synchronization
 
 ### Race Condition
 - Outcome of program depends on which thread finishes first.
@@ -103,6 +103,8 @@ for(i = 0; i < 100; i++) {
 	- Typically, these are inserted in library code by experts.
 
 ## Tools for Synchronization
+
+#### Locks
 - Mutual exclusion / "**locks**"
 	- Idea: resources that at most one thread can access simultaneously.
 
