@@ -75,3 +75,6 @@
 - How do current AI models work? And how human-like are they, really?
 
 > Monday: Chomsky's Review of [Skinner](../cog-sci/2-history-of-the-mind#Behaviorism) (Behaviorism with the mice)
+
+- Operant conditioning / conditioned responses
+

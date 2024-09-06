@@ -16,24 +16,12 @@
             }
           },
           {
-            "id": "87183001c4e254fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "df80f3ff321d9a87",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/cog-sci/2-history-of-the-mind.md",
+                "file": "docs/os-design/2-virtualization.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "skinner",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,8 +87,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -113,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md"
+                "file": "docs/os-design/2-virtualization.md"
               }
             }
           }
@@ -137,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+                "file": "docs/os-design/2-virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+                "file": "docs/os-design/2-virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,18 +194,25 @@
       "markdown-table-editor:Open Markdown Table Editor": false
     }
   },
-  "active": "87183001c4e254fe",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
-    "docs/cog-sci/2-history-of-the-mind.md",
-    "docs/philosophical-cog-sci/philosophical-cog-sci.md",
-    "docs/sys-prog/multithreading.md",
+    "docs/comp-arch/6-assembly.md",
+    "docs/os-design/2-virtualization.md",
+    "docs/os-design/0-os-design.md",
     "docs/os-design/1-introduction.md",
+    "docs/cog-sci/2-history-of-the-mind.md",
+    "docs/mmp/mmp.md",
+    "docs/cog-sci/cog-sci-finals.md",
+    "docs/intro-ds/intro-ds.md",
+    "docs/mmp",
+    "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+    "docs/intro-ds",
+    "docs/sys-prog/multithreading.md",
     "docs/philosophical-cog-sci",
     "docs/os-design/imgs/virtualizing-memory.png",
     "docs/os-design/imgs",
     "docs/sys-prog/files.md",
     "README.md",
-    "docs/os-design/0-os-design.md",
     "docs/cog-decision/learning-prediction.md",
     "docs/os-design",
     "docs/cog-decision/midterm-review.md",
@@ -234,11 +228,6 @@
     "docs/sys-prog/sys-prog.md",
     "docs/sys-prog/c-basics.md",
     "docs/sys-prog/systems-midterm.md",
-    "docs/cog-decision/moral-social.md",
-    "docs/cog-decision/cog-decision.md",
-    "docs/discrete-2/discrete-2.md",
-    "docs/intro-comm/comms.md",
-    "docs/discrete-1/discrete-1.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
@@ -253,8 +242,6 @@
     "_plugins",
     "__plugins",
     "__plugin",
-    "docs/_includes/math.html",
-    "docs/_includes",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"
   ]
