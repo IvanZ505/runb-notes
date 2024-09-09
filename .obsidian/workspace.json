@@ -16,12 +16,24 @@
             }
           },
           {
-            "id": "df80f3ff321d9a87",
+            "id": "43c549034d39ae1a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/os-design/2-virtualization.md",
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "412ef46e4bc38ae8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
                 "mode": "source",
                 "source": false
               }
@@ -70,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "introspection",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/os-design/2-virtualization.md"
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md"
               }
             }
           }
@@ -124,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/os-design/2-virtualization.md",
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/os-design/2-virtualization.md",
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,16 +208,22 @@
   },
   "active": "18585b27d6bbb011",
   "lastOpenFiles": [
-    "docs/comp-arch/6-assembly.md",
+    "Untitled 1.md",
+    "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+    "docs/cog-decision/cognitive-architecture.md",
+    "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+    "obsidian-vault/things-i-wanna-do.md",
+    "obsidian-vault/2024-09-09.md",
+    "docs/philosophical-cog-sci/reading-notes.md",
+    "docs/cog-sci/2-history-of-the-mind.md",
     "docs/os-design/2-virtualization.md",
+    "docs/comp-arch/6-assembly.md",
     "docs/os-design/0-os-design.md",
     "docs/os-design/1-introduction.md",
-    "docs/cog-sci/2-history-of-the-mind.md",
     "docs/mmp/mmp.md",
     "docs/cog-sci/cog-sci-finals.md",
     "docs/intro-ds/intro-ds.md",
     "docs/mmp",
-    "docs/philosophical-cog-sci/philosophical-cog-sci.md",
     "docs/intro-ds",
     "docs/sys-prog/multithreading.md",
     "docs/philosophical-cog-sci",
@@ -222,12 +240,6 @@
     "docs/sys-prog/final-exam.md",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
     "docs/sys-prog/networking.md",
-    "docs/intro-infotech/iti103.md",
-    "docs/cog-sci/1-foundations-of-cog-sci.md",
-    "Untitled.md",
-    "docs/sys-prog/sys-prog.md",
-    "docs/sys-prog/c-basics.md",
-    "docs/sys-prog/systems-midterm.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",

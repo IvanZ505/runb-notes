@@ -74,7 +74,5 @@
 - What does it mean to say an AI "thinks"?
 - How do current AI models work? And how human-like are they, really?
 
-> Monday: Chomsky's Review of [Skinner](../cog-sci/2-history-of-the-mind#Behaviorism) (Behaviorism with the mice)
-
-- Operant conditioning / conditioned responses
+## [Unit 1: What is Cog Sci?](1-what-is-cog-sci)
 
