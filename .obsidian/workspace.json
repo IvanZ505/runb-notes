@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,9 +50,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e8337283f9d23a4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/intro-ds/intro-ds.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -82,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "introspection",
+                "query": "hard problem",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +111,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -112,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md"
+                "file": "docs/intro-ds/intro-ds.md"
               }
             }
           }
@@ -136,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+                "file": "docs/intro-ds/intro-ds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+                "file": "docs/intro-ds/intro-ds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,17 +190,9 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "916bd0596823f52a",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -203,15 +208,21 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
-      "markdown-table-editor:Open Markdown Table Editor": false
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "18585b27d6bbb011",
+  "active": "e8337283f9d23a4d",
   "lastOpenFiles": [
-    "Untitled 1.md",
     "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
-    "docs/cog-decision/cognitive-architecture.md",
+    "docs/intro-ds/intro-ds.md",
     "docs/philosophical-cog-sci/philosophical-cog-sci.md",
+    "docs/intro-ds/imgs/frequent-triples-and-beyond.png",
+    "docs/intro-ds/imgs/a-priori.png",
+    "docs/intro-ds/imgs/maximal-closed-itemsets.png",
+    "docs/intro-ds/imgs",
+    "Untitled 1.md",
+    "docs/cog-decision/cognitive-architecture.md",
     "obsidian-vault/things-i-wanna-do.md",
     "obsidian-vault/2024-09-09.md",
     "docs/philosophical-cog-sci/reading-notes.md",
@@ -222,7 +233,6 @@
     "docs/os-design/1-introduction.md",
     "docs/mmp/mmp.md",
     "docs/cog-sci/cog-sci-finals.md",
-    "docs/intro-ds/intro-ds.md",
     "docs/mmp",
     "docs/intro-ds",
     "docs/sys-prog/multithreading.md",
@@ -239,7 +249,6 @@
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/final-exam.md",
     "docs/comp-arch/3-bit-level-operations-in-c.md",
-    "docs/sys-prog/networking.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
@@ -247,13 +256,9 @@
     "docs/discrete-2/imgs/full-2-3-ary-tree.png",
     "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
     "docs/discrete-2/imgs/tree-info.png",
-    "docs/discrete-2/imgs/trees-demo.png",
-    "docs/discrete-2/imgs/cut-vertices-edgefs.png",
-    "docs/discrete-2/imgs/con-vs-discon-graph.png",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",
-    "__plugin",
     "obsidian-vault/Untitled.canvas",
     "Untitled.canvas"
   ]

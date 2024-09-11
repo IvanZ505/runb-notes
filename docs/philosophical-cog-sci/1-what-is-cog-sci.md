@@ -129,3 +129,109 @@
 > "It appears that the word 'control' here is merely a misleading paraphrase for the traditional 'denote' or 'refer'" - Chomsky
 
 - *Horn 1* or *Horn 2* again.
+
+#### Response Strength
+- In the Skinner box, this is measured by rate of bar presses during extinction.
+
+*What about in verbal behavior?*
+
+- Volume, pitch, speed, amount + rate of repetition, low delay, size (in writing), & overall frequency or "probability"
+- **Skinner:** "if we are shown a prized work of art and exclaim 'Beautiful!', the speed and energy of the response will not be lost on the owner."
+
+##### Chomsky's Response
+
+> "It does not appear totally obvious that in this case the way to impress the owner is to shriek in a loud, high-pitched voice, repeatedly, and with no delay (high response strength). It may be equally effective to look at the picture silently (long delay) and then murmur in a soft, low pitched voice. (By def, very low response strength.)"
+
+- Skinner's measurements of verbal behavior response strength is bogus.
+
+#### Reinforcer
+- Why do we expend effort doing novel, creative behavior (music, writing, even talking to yourself)?
+	- Validation? 
+- Skinner: "*Verbal behavior* may reach over centuries or to thousands of listeners or readers at the same time. The writer may not be reinforced often or immediately, but his net reinforcement may be great."
+	- This is contradictory, as in a Behaviorist model, the "thought" of the reinforcement should **not** be in the theory.
+
+##### Chomsky's Response to Reinforcer
+- Future readers aren't reinforcing S, because they are not a S at all!
+- The phrase "X is reinforced by Y" (stimulus, state of affairs, events, etc...) is a *cover term* for "X wants Y, X likes Y, X wishes that Y were the case", etc...
+	- "Reinforcement" here does not have any explanatory force.
+	- Calls Skinner delusional for trying to use "this paraphrase to introduce any new clarity or objectivity into the description of wishing, liking, etc..."
+
+#### Two Deeper Problems
+
+*With Skinner's proposal as well as Behaviorism in general*
+
+##### Syntax of a sentence is not observable
+- John is easy to please... vs John is eager to please...
+	- In the ordering of the sentence, everything is laid out the same.
+- **Paraphrase:** It's easy to please John.
+- **Paraphrase:** \* It's eager to please John.
+	- Syntactically, this is not a correct sentence.
+
+> "the syntactical organization of an utterance is not something directly represented in any simple way in the physical structure of the utterance itself."
+
+- The basic structures of language does not account for all the nuances of language.
+	- The attachment of sentence modifiers is done completely separate to the structure of the sentence.
+
+
+---
+
+
+##### Language Acquisition
+- Operant conditioning is slow and incremental.
+	- Conditioning is something that increases and decreases in strength and requires multiple iterations.
+- Chomsky argues that children hear scattered bits of language, and don't learn only from explicit instruction + reinforcement.
+	- You create a lot of novel sentences. There is no trouble getting the structure of the sentence.
+- "The Poverty of the Stimulus"
+	- We know way more than if we just stored our life experiences.
+	- Must be some part of language that is *innate*
+- "Universal Grammar"
+	- There's something about humans that allow us to acquire language on the basis of limited input.
+	- Overcome the poverty of the stimulus and acquire language.
+- We *constantly* understand and produce grammatical sentences we've never heard.
+- *No form of conditioning* can explain genuinely novel, but rule-governed behavior.
+	- Kids may overgeneralize a rule. "Teach" → "Teached"
+	- Kids won't say sentences totally out of order.
+- Knowing a language is *knowing a set of rules* for constructing well-formed sentences.
+	- Learned through unknown mechanisms w/ unknown innate component.
+- What is acquired when we learn to speak?
+	- "Grammar"
+- How do we acquire this?
+	- Language seems to be something everyone can accomplish without trying to.
+	- Done through observation.
+
+### Cognitivism
+- Enormously influential conception of "behavioral science" (now called cognitive science)
+- Linguistic notions like meaning, reference, grammar and related psychological notions like thought, knowledge, concepts, are needed to formulate problems being studied.
+
+## The Computational Theory of Mind
+- *Not everyone endorses, but the most widely accepted.*
+- Computational systems transform representations in accordance with rules.
+- Representations are symbols that have *content* (ie. they *represent* things in the world; they have *intentionality*)
+	- The representations are like symbols on the ticker tape for a Turing Machine.
+	- We move from one thought to the next, just like a Turing Machine.
+- Ex: If you think "it's raining" and "if it's raining then the streets are wet", what do you think next?
+- Hypothesis: You have *symbols* in your mind that correspond to these thoughts.
+	- They have the form "P" and "If P then Q"
+	- **Then,** there is a rule that says to transform any pair of symbol of the form `P` and `If P then Q` into a symbol in the form of `Q`
+	- This **explains and predicts** that you conclude Q, and provides a mechanism (computation)
+
+### Reductive Neuroscience
+- We can't directly *see* mental representations or computations.
+- That's because presentations and computations are *functional*.
+	- Just like a computer program -- **defined by what it does**
+		- It's like a functional entity. E.g. Microsoft Word. (You can't find it in the computer, but what matters is that it executes the functions that it was made for.)
+- But... we can directly observe and manipulate the...
+
+
+- This tendency is to some extent due to practical concerns.
+	- We can **observe** and **intervene** on neural processes much more easily than cognitive processes.
+	- Also, that's where the money goes.
+- But it often encourages a *reductive* attitude toward cognition.
+	- We need to think about *why* these things in the brain are happening.
+- **Cognition is nothing more** than neural mechanisms.
+
+#### Krakauer et al.
+- Cognitive Neuroscientists mounted a strong critique of reductionism.
+- Their basic point: looking at neural processes alone won't tell you anything about cognition.
+- You need to know what those neural processes and *implementing*.
+
