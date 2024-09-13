@@ -43,3 +43,28 @@ Things part of the human mind/equivalent but doesnt fit into the 3 categories?
 
 Examples of an artificial equivalent of representational states?
 
+### Reflexivity
+- A system `S` has the capacity for reflexivity iff it can produce an informational state INF that explicitly represents or is directed at `S` such that 
+
+#### Examples in Humans
+- Self-awareness
+- Self-representation
+- Introspection
+- Meta-cognition
+	- Having a belief about the belief of the mind:
+		- "It's beautiful outside" -> Reflecting on that belief.
+- Source-monitoring
+
+### Terminological Matters
+- Exercising a reflexive capacity.
+- Reflexive representation vs Self-representation
+	- Same thing except avoiding the concept of self.
+- Reflexivity vs reflectivity
+	- Reflectivity is a special case, but we treat ourselves as the object of "intentionality"
+
+
+#### Reflexivity Enables
+
+1. Distinguishing self-caused from externally caused movement.
+
+##### Varieties
