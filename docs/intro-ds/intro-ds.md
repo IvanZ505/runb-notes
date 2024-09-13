@@ -307,3 +307,66 @@ How do we reserve memory for pass-2?
 ### Problem
 - Due to the smaller size of the multihash algorithm, there would be more colllisions.
 
+## Random Sampling
+
+## MapReduce
+
+- Much of the course will be devoted to large scale computing for data analytics.
+- **Challenges:**
+	- How to *distribute computing*?
+	- *Distributed/parallel programming* is hard
+- **Map-reduce** addresses all of the above.
+	- Google's computational/data manipulation model
+	- Elegant way to work with big data.
+### Motivation: Google Example
+- 20+ billion web pages x 20KB = 400+ TB
+- 1 Computer reads 30-34 MB/sec from disk
+	- ~4 months to read the web
+- ~1,000 hard drives to store the web
+- Takes even more to *do* something useful with the data!
+- **Today, a standard architecture** for such problems is emerging (data center):
+	- Cluster of commodity Linux nodes
+	- Commodity network (ethernet) to connect them.
+
+### Large-scale Computing
+- **Large scale** computing for data mining problems on commodity hardware.
+- **Challenges**:
+	- *How do you distribute computing*?
+	- How can we make it easy to write distributed programs?
+	- **Machines Fail**:
+		- One server may stay up for 3 years...
+
+### MapReduce Framework
+- Elegant way to work with big data.
+
+#### Storage Infrastructure
+
+> File system: Google > GFS
+
+#### Programming Model
+
+> Map-Reduce
+
+---
+
+Some other open-source systems: Apache Hadoop and Spark
+
+---
+
+#### Storage Infrastructure
+- **Problem**:
+	- If nodes fail, how to store data persistently?
+- *Answer*:
+	- Distributed File System (DFS):
+		- Google GFS, Hadoop HDFS
+- Typical usage pattern of DFS
+	- Huge files (100s of GB to TBs)
+	- Data is rarely update in place (e.g. Google, Amazon)
+	- Reads and appends are common.
+
+
+### Distributed File System
+- **Reliable distributed File system**
+	- Data kept in "Chunks" spread across machines
+	- Each chunk *replicated* on different machines
+		- Seamless recovery from disk or machine failure.

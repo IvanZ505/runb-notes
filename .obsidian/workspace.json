@@ -45,26 +45,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/sys-prog/multithreading.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e8337283f9d23a4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/intro-ds/intro-ds.md",
+                "file": "docs/os-design/2-virtualization.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -94,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hard problem",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,8 +99,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ce5edcb02d5a4639",
@@ -125,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/intro-ds/intro-ds.md"
+                "file": "docs/os-design/2-virtualization.md"
               }
             }
           }
@@ -149,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/intro-ds/intro-ds.md",
+                "file": "docs/os-design/2-virtualization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/intro-ds/intro-ds.md",
+                "file": "docs/os-design/2-virtualization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,17 +169,9 @@
                 "useHierarchy": true
               }
             }
-          },
-          {
-            "id": "e24995bd9eef5353",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -212,10 +191,12 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e8337283f9d23a4d",
+  "active": "bb6531fdf087e91e",
   "lastOpenFiles": [
-    "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+    "docs/sys-prog/multithreading.md",
+    "obsidian-vault/2024-09-11.md",
     "docs/intro-ds/intro-ds.md",
+    "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
     "docs/philosophical-cog-sci/philosophical-cog-sci.md",
     "docs/intro-ds/imgs/frequent-triples-and-beyond.png",
     "docs/intro-ds/imgs/a-priori.png",
@@ -235,7 +216,6 @@
     "docs/cog-sci/cog-sci-finals.md",
     "docs/mmp",
     "docs/intro-ds",
-    "docs/sys-prog/multithreading.md",
     "docs/philosophical-cog-sci",
     "docs/os-design/imgs/virtualizing-memory.png",
     "docs/os-design/imgs",
