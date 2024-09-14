@@ -182,7 +182,6 @@ How can we ensure user process can't harm others?
 
 ---
 
-
 ### Preemptive Scheduling
 
 - Previous schedulers:

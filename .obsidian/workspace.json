@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/os-design/2-virtualization.md",
+                "file": "obsidian-vault/RUMAD-Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -112,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/os-design/2-virtualization.md"
+                "file": "obsidian-vault/RUMAD-Notes.md"
               }
             }
           }
@@ -136,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/os-design/2-virtualization.md",
+                "file": "obsidian-vault/RUMAD-Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/os-design/2-virtualization.md",
+                "file": "obsidian-vault/RUMAD-Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,6 +193,8 @@
   },
   "active": "bb6531fdf087e91e",
   "lastOpenFiles": [
+    "docs/os-design/2-virtualization.md",
+    "obsidian-vault/RUMAD-Notes.md",
     "docs/sys-prog/multithreading.md",
     "obsidian-vault/2024-09-11.md",
     "docs/intro-ds/intro-ds.md",
@@ -208,7 +210,6 @@
     "obsidian-vault/2024-09-09.md",
     "docs/philosophical-cog-sci/reading-notes.md",
     "docs/cog-sci/2-history-of-the-mind.md",
-    "docs/os-design/2-virtualization.md",
     "docs/comp-arch/6-assembly.md",
     "docs/os-design/0-os-design.md",
     "docs/os-design/1-introduction.md",
@@ -228,7 +229,6 @@
     "docs/sys-prog/the-shell.md",
     "docs/sys-prog/project1-my-little-malloc.md",
     "docs/sys-prog/final-exam.md",
-    "docs/comp-arch/3-bit-level-operations-in-c.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
     "docs/discrete-2/imgs/spanning-trees.jpg",
