@@ -23,10 +23,9 @@
 
 > This is what is called *classical conditioning* = pairing response to CS.
 
-#### Steps
+### Association
 - Conditioning works by *co-presenting two stimuli*
 - Response to the unconditioned stimuli "rubs off" onto the CS.
-- ***Association***
 - It is supposed to be "simple" - no need to posit rational thought, just brute association.
 	- Brute connection between food and salivation. It just *happens*. Then, by associating the bell with food, you conditioned that *bell* with the salivatory response.
 
@@ -53,6 +52,7 @@
 ### Classical Associationism
 - Problem: What is associated with what, exactly? 
 - Classical associationism: A representation ("idea") of the bell is associated w representation of food.
+- But could we get rid of the "ideas"
 
 ---
 
@@ -85,7 +85,7 @@
 		- Most remote from Behaviorism.
 - Skinner knew that, so he wrote *Verbal Behavior* (1957) - Radical extension of Behaviorism to complex human behavior.
 
-### Skinner Box
+## Skinner Box
 
 - Stimulus: Light flash
 - Response: Bar press
@@ -130,7 +130,7 @@
 
 - *Horn 1* or *Horn 2* again.
 
-#### Response Strength
+### Response Strength
 - In the Skinner box, this is measured by rate of bar presses during extinction.
 
 *What about in verbal behavior?*
@@ -176,16 +176,21 @@
 ---
 
 
-##### Language Acquisition
+## Language Acquisition
+
+#### Operant Conditioning
 - Operant conditioning is slow and incremental.
 	- Conditioning is something that increases and decreases in strength and requires multiple iterations.
 - Chomsky argues that children hear scattered bits of language, and don't learn only from explicit instruction + reinforcement.
 	- You create a lot of novel sentences. There is no trouble getting the structure of the sentence.
-- "The Poverty of the Stimulus"
-	- We know way more than if we just stored our life experiences.
-	- Must be some part of language that is *innate*
-- "Universal Grammar"
-	- There's something about humans that allow us to acquire language on the basis of limited input.
+
+### The Poverty of the Stimulus
+- We know way more than if we just stored our life experiences.
+- Must be some part of language that is *innate*
+
+
+#### Universal Grammar
+- There's something about humans that allow us to acquire language on the basis of limited input.
 	- Overcome the poverty of the stimulus and acquire language.
 - We *constantly* understand and produce grammatical sentences we've never heard.
 - *No form of conditioning* can explain genuinely novel, but rule-governed behavior.
