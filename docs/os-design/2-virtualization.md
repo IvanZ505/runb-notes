@@ -33,6 +33,26 @@
 	- Two *processes* examining same memory address `0xffe84264` see *different* values (I.e different contents)
 	- Two *threads* examining memory address `0xffe84264` will see the *same* value. (I.e. same contents)
 
+### Process Memory Segments
+- The OS allocates memory for each process - ie. a running program -- for data and code
+- This memory consists of different segments
+- Stack - for local variables -- incl. command line arguments and environment variables
+- Heap - for dynamic memory
+- Data segment for -- global uninitialized variables (`.bss`) -- global initialized variables (`.data`)
+- Code segment typically read-only
+
+## Virtualizing the CPU
+
+> **Goal:** Give each process impression it alone is actively using CPU.
+
+- Resources can be shared in **time** and **space**.
+- Assume single uniprocessor
+	- Time-sharing (multi-processors: advanced issue)
+- Memory?
+	- Space-sharing (later)
+- Disk?
+	- Space-sharing (later)
+
 ### How to Provide Good CPU Performance?
 - **Direct execution** - Best performance, but no safety checks
 	- Allow user process to run directly on hardware.
@@ -68,6 +88,166 @@ How can we ensure user process can't harm others?
 
 `read()` --assembly--> `movl $6 %eax;  int $64`
 
+##### System Call
+
+```OS
+syscall() {
+	sysnum = %eax
+	sys_handle= get_fn_table(sysnum) // see below
+	sys_handle()
+}
+```
+
+###### Syscall Table
+
+| Num | Function  |
+| --- | --------- |
+| 6   | sys_read  |
+| 7   | sys_write |
+|     |           |
+|     |           |
+
+#### What to Limit
+
+- User processes are not allowed to perform:
+	- General memory access
+	- Disk I/O
+	- Special `x86` instructions like `lidt`
+- *What if processes try to do something restricted?*
+
+### 2: CPU Away
+- OS requirements for **multiprogramming** (or multitasking)
+	- Mechanism
+		- To switch between processes.
+	- Policy
+		- To decide which process to schedule when when
+- Separation of policy and mechanism
+	- *Reoccurring theme in OS*
+	- **Policy: Decision-maker to optimize some workload performance metric**
+		- Which process when?
+		- Process **Scheduler:** Future lecture
+	- **Mechanism: Low-level code that implements the decision**
+		- How?
+		- Process *Dispatcher*: Today's lecture
+
+#### Dispatch Mechanism
+
+OS runs *dispatch loop*
+
+```pseudo
+while(1) {
+	run process A for some time-slice
+	stop process A and save its context \   Context-
+	load context of another process B   /    switch
+}
+```
+
+##### Question 1
+
+**How does dispatcher gain control?**
+
+- Option 1: *Cooperative Multi-tasking*
+	- Trust process to relinquish CPU to OS through traps.
+		- Examples: System call, page fault (access page not in main memory), or error (illegal instruction or divide by zero)
+		- Provide special `yield()` system call
+	- **Problem with cooperative approach?**
+		- Programs can misbehave:
+			- By avoiding all traps and performing no I/O, can take over entire machine.
+			- Only solution: REBOOT!
+		- Not performed in modern OS
+- Option 2: *True Multi-tasking*
+	- Guarantee OS can obtain control periodically
+	- Enter OS by enabling periodic alarm clock
+		- Hardware generates timer interrupt (CPU or separate chip)
+	- User must not able able to mask timer interrupt
+	- Dispatcher counts interrupts between context switches
+		- Example: Waiting 20 timer ticks gives `200` ms time slice.
+		- Common time slices range form 10 ms to 200 ms.
+
+##### Question 2
+
+**What execution context must be saved and restored?**
+
+- Dispatcher must track context of process when not running.
+	- Save context in *process control block (PCB)* (or, process descriptor)
+	- PCB is a structure maintained for each process in the OS
+- What information is stored in PCB?
+	- Process ID `pid`
+	- Process state (I.e. running, ready, or blocked)
+	- Execution state (all registers, PC, stack `ptr`) -- context
+	- Scheduling priority
+	- Accounting information (parent and child processes)
+	- Credentials (which resources can be accessed, owner)
+	- Pointers to other allocated resources (e.g. open files)
+- Requires special hardware support
+	- Hardware saves process *PC* and *PSR* on interrupts
+
+##### Question 3
+
+**How is Context saved?**
+
+```C
+// The information xv6 tracks about each process
+// including its register context and state
+struct proc {
+	char *mem;                      // start of process memory
+	uint sz;                        // size of process memory
+	char *kstack;                   // bottom of kernel stack for this process
+	enum proc_state state;          // Process state
+	int pid;                        // Process id
+	struct proc *parent;            // parent process
+	int killed;                     // If non-zero, have been killed
+	struct file *ofile[NOFILE];     // open files
+	struct inode *cwd;              // current directory
+	struct context context;         // Switch here to run process
+	struct trapframe *tf;           // trap frame for the current interrupt
+};
+```
+
+![](imgs/context-switch.png)
+
+##### Question 4
+
+**What context must be saved?**
+
+```C
+// the registers will save and restore
+// to stop and subsequently restart a process
+struct context {
+	int eip; // Index pointer register
+	int esp; // stack pointer register
+	int ebx; // called the base register
+	int ecx; // called the counter register
+	int edx; // called the data register
+	int esi; // source index register
+	int edi; // Destination index register
+	int ebp; // stack base pointer register
+};
+
+// the different states a process can be in
+enum proc_state {
+	UNUSED, EMBRYO, SLEEPING, RUNNABLE, RUNNING, ZOMBIE
+}
+```
+
+| Operating System                        | Hardware                           | Program   |
+| --------------------------------------- | ---------------------------------- | --------- |
+|                                         |                                    | Process A |
+|                                         | timer interrupt                    | ...       |
+|                                         | save `regs(A)` to `k-stack(A)`     |           |
+|                                         | move to kernel mode                |           |
+|                                         | jump to trap handler               |           |
+| Handle the trap                         |                                    |           |
+| Call `switch()` routine                 |                                    |           |
+| save `regs(A)` to `proc-struct(A)`      |                                    |           |
+| restore `regs(B)` from `proc-struct(B)` |                                    |           |
+| switch to `k-stack(B)`                  |                                    |           |
+| `return-from-trap` (into B)             |                                    |           |
+|                                         | restore `regs(B)`from `k-stack(B)` |           |
+|                                         | move to user mode                  |           |
+|                                         | jump to B's IP                     |           |
+|                                         |                                    | Process B |
+|                                         |                                    | ...       |
 
 ### 3: Slow Operations
 - When running process performs operations that does not use CPU, OS switches to process that needs CPU (policy issues)
