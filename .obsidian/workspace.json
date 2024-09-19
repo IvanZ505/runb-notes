@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+                "file": "docs/intro-ds/intro-ds.md",
                 "mode": "source",
                 "source": false
               }
@@ -52,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "priming",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian-vault/RUMAD-Notes.md"
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md"
               }
             }
           }
@@ -136,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "obsidian-vault/RUMAD-Notes.md",
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "obsidian-vault/RUMAD-Notes.md",
+                "file": "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,14 +191,20 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "bb6531fdf087e91e",
+  "active": "18585b27d6bbb011",
   "lastOpenFiles": [
-    "docs/os-design/2-virtualization.md",
+    "docs/cog-sci/4-artificial-minds.md",
+    "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
+    "docs/intro-ds/intro-ds.md",
+    "docs/intro-ds/imgs/mapreduce-reduce.png",
+    "docs/intro-ds/imgs/word-counting.png",
+    "docs/intro-ds/imgs/mapreduce-diagram.png",
+    "docs/intro-ds/imgs/distributed-fs.png",
+    "U.md",
     "obsidian-vault/RUMAD-Notes.md",
+    "docs/os-design/2-virtualization.md",
     "docs/sys-prog/multithreading.md",
     "obsidian-vault/2024-09-11.md",
-    "docs/intro-ds/intro-ds.md",
-    "docs/philosophical-cog-sci/1-what-is-cog-sci.md",
     "docs/philosophical-cog-sci/philosophical-cog-sci.md",
     "docs/intro-ds/imgs/frequent-triples-and-beyond.png",
     "docs/intro-ds/imgs/a-priori.png",
@@ -227,15 +233,9 @@
     "docs/cog-decision/midterm-review.md",
     "docs/sys-prog/multitasking.md",
     "docs/sys-prog/the-shell.md",
-    "docs/sys-prog/project1-my-little-malloc.md",
-    "docs/sys-prog/final-exam.md",
     "docs/discrete-2/imgs/kruskals-algorithm-anim-1.gif",
     "docs/discrete-2/imgs/Prim-animation.gif",
-    "docs/discrete-2/imgs/spanning-trees.jpg",
     "docs/_includes/top-btn.html",
-    "docs/discrete-2/imgs/full-2-3-ary-tree.png",
-    "docs/discrete-2/imgs/m-array-tree-in-discrete-mathematics3.png",
-    "docs/discrete-2/imgs/tree-info.png",
     "_plugins/svg_mime_type.rb",
     "_plugins",
     "__plugins",

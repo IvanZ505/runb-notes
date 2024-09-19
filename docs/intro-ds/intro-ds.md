@@ -370,3 +370,114 @@ Some other open-source systems: Apache Hadoop and Spark
 	- Data kept in "Chunks" spread across machines
 	- Each chunk *replicated* on different machines
 		- Seamless recovery from disk or machine failure.
+
+![](imgs/distributed-fs.png)
+### Distributed Computation
+
+### Programming Model: MapReduce
+- Warm-up task:
+	- We have a huge text document
+
+#### Task: Word Count
+
+- **Assumptions:**
+	- File too large for memory, but all `<word, count>` pairs fit into memory.
+- **A naive method:**
+	- Count occurrences of words:
+		- `words(doc.txt) | sort | uniq -c`
+			- where `words()` takes a file and outputs the words in it, one per line.
+	- The method captures the essence of `MapReduce`
+		- Great thing is that it is naturally parallelizable.
+
+
+#### Overview
+- Sequentially read a lot of data.
+- **Map:**
+	- Extract something you care about
+- **Group by key:** Sort and shuffle
+- **Reduce:** Aggragate, summarize, filter or transform.
+- Write the result
+
+#### Diagram
+
+![](imgs/mapreduce-diagram.png)
+
+#### Word Counting
+
+![](imgs/word-counting.png)
+
+```python
+map(key, value):  
+// key: document name; value: text of the document  
+	for each word w in value:  
+		emit(w, 1)  
+
+reduce(key, values):  
+// key: a word; value: an iterator over counts  
+	result = 0  
+	for each count v in values:  
+		result += v  
+		emit(key, result)
+```
+
+#### Reduce Step
+
+![](imgs/mapreduce-reduce.png)
+
+##### More Specifically
+- **Input:** A set of key-value pairs
+- Programmer specifies two methods:
+	- `Map(k,v)→<k',v'>*`
+		- Takes a key-value pair and outputs a set of key-value pairs.
+			- E.g. key is the filename, value is a chunk of the file.
+		- There is one Map call for every (k,v) pair.
+	- #todo finish filling this in
+
+### Dealing with Failures
+
+#### Map Worker Failure
+- Map tasks **complete** or **in-progress** at worker are reset to *idle* (because intermediate files are no longer accesible on map workers)
+- Reschedule the task on another map worker
+- Reduce workers are notified when task is rescheduled on another worker.
+
+#### Reduce worker Failure
+- Only **in-progress tasks** are reset to *idle* (because reducer outputs are stored in *global file system*)
+- Reduce task is restarted.
+
+#### Master Failure
+- `MapReduce` task is aborted and client is notified.
+
+### How many Map and Reduce jobs?
+- `M` map tasks, `R` reduce tasks
+- **Rule of thumb:**
+	- Make *M equal to or larger than the number of nodes in the cluster*
+	- *One DFS chunk per map is common*
+	- Improves dynamic load balancing and speeds up recovery from worker failures.
+- **Usually R is smaller than M**
+	- Because output is summarization of map tasks.
+
+### Refinements
+
+#### Backup Tasks
+- **Problem**
+	- *Slow workers* significantly lengthen the job completion time:
+		- Other jobs on the machine
+		- Bad disks
+		- Weird things
+- **Solution**
+	- *Near end of phase*, produce *multiple backup copies* of tasks
+		- Whichever one finishes first "wins"
+- **Effect**
+	- Save the effort of rerun a task due to machine failure.
+
+#### Partition Function
+- Want to control how keys get partitioned
+	- Inputs to map tasks are created by contiguous splits of input file.
+	- Reducer needs to ensure that records with the same intermediate key end up at the same worker.
+- System uses a default partition funtion:
+	- `hash(key) mod R`
+		- Same key in the same reducer
+		- Load balancing
+- Sometimes useful to override the hash function:
+	- E.g. `hash(hostname(URL)) mod R` ensures URLs from a host end up in the same output file.
+

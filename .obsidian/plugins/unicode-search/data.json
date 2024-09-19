@@ -1852,6 +1852,24 @@
     "initialized": true,
     "codepoints": [
       {
+        "firstUsed": "2024-09-16T18:52:33.159Z",
+        "lastUsed": "2024-09-16T18:53:32.545Z",
+        "useCount": 3,
+        "codepoint": "₂"
+      },
+      {
+        "firstUsed": "2024-09-16T18:52:27.373Z",
+        "lastUsed": "2024-09-18T19:01:41.748Z",
+        "useCount": 3,
+        "codepoint": "→"
+      },
+      {
+        "firstUsed": "2024-09-16T18:52:20.468Z",
+        "lastUsed": "2024-09-16T18:52:54.041Z",
+        "useCount": 2,
+        "codepoint": "₁"
+      },
+      {
         "firstUsed": "2024-09-11T22:20:25.976Z",
         "lastUsed": "2024-09-11T22:20:25.976Z",
         "useCount": 1,

@@ -235,3 +235,127 @@
 - Their basic point: looking at neural processes alone won't tell you anything about cognition.
 - You need to know what those neural processes and *implementing*.
 
+## Reductive Neuroscience
+
+- 
+
+### Marr's Levels
+
+*David Marr* famously defined three "levels" of analysis in cognitive science:
+
+#### Computational Level
+
+**Question:** What is the system *doing?*
+
+- What function is it computing?
+- **Examples:**
+	- Flying (bird)
+	- Logical inference, e.g., moving from `p` to `if p then q` to `q` (human cognition)
+#### Algorithmic Level
+
+**Question:** What is the process by which it performs function?
+
+- What *algorithm* is it implementing? What are the symbols + processes involved?
+- **Examples:**
+	- Flapping wings, moving air upwards underneath (bird)
+	- Symbols have logical form `P`, `if P then Q`, `Q`; built in rules take you from each logical form.
+
+#### Implementational Level
+
+**Question:** How is this process implemented?
+
+- What are the *biological mechanisms*?
+- **Examples:**
+	- Something about feathers, muscles, etc...
+	- Some collection of neural mechanisms, unknown in the case of logical #todo what?
+
+#### Conclusion
+
+- *Neuroscience* can not be the only way to approach studying behavior, just like how you can't just understand how birds fly by looking at their feathers.
+- We have to zoom out and look at what the biology is implementing to make sense of how it works.
+
+### Mirror Neurons
+
+- People were very excited by this in the 90s and 00s.
+
+> A cautionary tale
+
+- *Speculative neuroscience* - Speculation ran wild...
+	- Maybe mirror neurons show that we understand others' actions through [simulation](../cog-sci/cog-sci-finals#Simulation-Theory)!
+	- Maybe they're *required* for understanding action!
+	- Maybe *malfunctions* in mirror neurons can explain *autism*!
+- ... But none of these hypotheses have robust support
+	- (only thin empirical support for mirror neurons in humans, ppl w brain damage preventing motor planning still understand others' actions, etc...)
+
+> "A potential objection to this might be to say, 'Who cares what philosphers say about the differences between psychology and neuroscience, or reductionism in general? We are scientists, not philosophers!"
+
+- The answer to this is simple: There is *no escape* from philosophy.
+- "Every scientist takes a philosophical position, either tacitly or explicitly, whenever they state that a result is..." #todo fill out
+
+### Special Sciences
+
+- Reductionism is a claim about "special" sciences (i.e. a science other than physics)
+- Reduction of special science S to physics:
+	- Take any laws of S, which says `S₁x→S₂y`
+	- `S₁` is supply, `S₂` is demand (for example)
+- There will be **bridge laws** that map `S₁` and `S₂`.
+
+#### Type vs Tokens
+- Type = general kind (e.g. blue)
+- Token = particular instance of that token (instance of blue)
+
+##### Token Materialism
+- The view that every instance of a special science properly (like money, or psychological events) is identical to a token physical thing.
+##### Type Materialism
+- The view that every general kind of a special science property is identical to a type of physical thing.
+
+### Special Sciences
+- **Fodor's claim:** There are no actual laws of physics that involve these weird disjunctive predicates. (*Disjunctive kinds are arbitrary*)
+	- Ex: There's no laws that say Either this or this increases will lead to this or this increasing, etc...
+- How would you put Fodor's point, using the example of a law of economics (e.g. printing excess money causes inflation?)
+
+## LoT vs Connectionism
+- Fodor & Pylyshyn are interested in [mental architecture](../cog-decision/cognitive-architecture)
+	- They argue there must be a *language of thought (LoT)*
+	- In other words, mental representations must have a language-like structure.
+- Mental architecture = the most basic building blocks of psychology.
+- What are the primitive units of thought? And how do we derive all the complexity of human behavior from those units?
+- **Most important Qs at the heart of CogSci**
+
+### Combinatorial Syntax & Semantics
+- Fundamental difference between *simple* ("atomic") and *complex* ("molecular") representations.
+- Complexed representations contain simple representations.
+
+---
+
+English sentence: "**John loves Mary**"
+
+- This expresses the proposition that *John loves Mary*
+- It also has a part corresponds to *John*, a part that corresponds to *Mary*, and a part that corresponds to the *loving relation*.
+- Language-like representations have **constituents (parts)** and a *syntactic* relation between them.
+
+---
+
+- Fodor and Pylyshyn's claim: thoughts have this same sort of structure.
+- Thoughts have *constituents*, and a *syntactic relation* between them.
+- This is the **LoT Hypothesis**
+
+### Structure-Sensitive Operations
+- If thoughts have a combinatorial syntax & semantics, you can compute over types of structure.
+	- P&Q transformed into P
+	- P→Q and P transformed into Q
+- So... If there is a classical, LoT architecture in the mind, then we should find lots of computations that are sensitive to structure.
+	- There should be a logic of thought
+- *Not necessarily the same logic that you learn in logic classes.*
+
+### Connectionism
+
+> Check out old notes from [Cog Sci](../cog-sci/4-artificial-minds#Evaluating-Connectionism).
+
+- The Alternative to LoT. (Looks like neural networks)
+- Representations are nodes 
+- Very useful in semantic priming.
+	- If you've read the word 'doctor' you'll be better at discriminating 'nurse' than 'bread'
+- Common explanation to semantic priming is that there is a "semantic network" in memory.
+	- Spreading activation through the network.
+- Representations that mean *doctor* and *nurse* are linked; so are *bread* and *butter*; but *doctor* and *bread* are not.
