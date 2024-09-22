@@ -202,4 +202,5 @@ int main(int argc, char *argv[]) {
 - The main program creates two threads.
 	- [**Thread**](../sys-prog/multithreading#Threads): a function running within the same memory space.
 	- Each thread start running in a routine called `worker()`.
-		- `worker()`: increments a counter
+		- `worker()`: increments a counter\
+
