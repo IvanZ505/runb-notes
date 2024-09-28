@@ -364,3 +364,4 @@ English sentence: "**John loves Mary**"
 - Common explanation to semantic priming is that there is a "semantic network" in memory.
 	- Spreading activation through the network.
 - Representations that mean *doctor* and *nurse* are linked; so are *bread* and *butter*; but *doctor* and *bread* are not.
+

@@ -1,10 +1,17 @@
-# Virtualization
+# [Virtualization](0-os-design)
 
 ## CPU Virtualization
 
  > **Core Idea:** Understand the different approaches for virtualizing the CPU.
  
 ### Process
+
+---
+
+> For previous info on [*processes*](../sys-prog/the-shell#Processes), and from [compiled](../sys-prog/final-exam#Processes).
+
+---
+
 
 > A *process* is an ***execution stream*** in the context of a *process state*. (A unit of scheduling in the CPU)
 
@@ -104,8 +111,6 @@ syscall() {
 | --- | --------- |
 | 6   | sys_read  |
 | 7   | sys_write |
-|     |           |
-|     |           |
 
 #### What to Limit
 
@@ -279,7 +284,7 @@ enum proc_state {
 #### Scheduler
 - Logic that decides which ready job to run
 - Metric
-	- Measurement of ... #todo fill out
+	- Measurement of scheduling quality
 
 
 ### Scheduling Performance Metrics
@@ -317,7 +322,14 @@ enum proc_state {
 - **Workload**
 	- `arrival_time`
 	- `run_time`
-- #todo find these
+- **Schedulers**
+	- `FIFO`
+	- `SJF`
+	- `STCF`
+	- `RR`
+- **Metrics**
+	- Turnaround time
+	- Response time
 
 
 ### FIFO
@@ -340,6 +352,12 @@ enum proc_state {
 
 > In this case, the turnaround time would be ~20 seconds.
 
+## Convoy Affect
+
+- **Passing the Tractor**
+	- FIFO: Turnaround time can suffer when short jobs have to wait for long jobs...
+- *New Scheduler*
+
 ### SJF
 - Shortest Job First Scheduler
 - **Choose the task with the shortest time**
@@ -355,12 +373,25 @@ enum proc_state {
 > In this case, the runtime would be (10s + 20s + 80s) /3 = 36.7s avg.
 
 
+
 ---
 
 > Past here, we will not assume part 1 and 2 of the workload.
 
 
 ---
+
+#### SJF W/(Arrival Time)
+
+![](imgs/sjf-arrival-time.png)
+
+- What is the average turnaround time here?
+- **Stuck behind a tractor again**
+
+![](imgs/tractored-sjf.png)
+
+> (60 + (70 – 10) + (80 – 10)) / 3 = 63.3s
+
 
 ### Preemptive Scheduling
 
@@ -369,5 +400,282 @@ enum proc_state {
 	- Only schedule new jobs when previous job voluntarily relinquishes CPU (Performs I/O or exits)
 - New Scheduler:
 	- Preemptive: Potentially schedule different jobs at any point by taking CPU away from running job.
+	- STCF (Shortest Time-to-Completion first)
+	- **Always** run job that will complete the quickest.
 
-**
+#### Example w/ Prev
+
+![](imgs/stcf-exmaple.png)
+
+- Avg Turnaround time here: 36.6s...
+- With SJF it *was* 63.3s.
+
+## Response Time
+- Sometimes we care about when job starts instead of when it finishes...
+
+*New Metric:* `response_time = first_run_time - arrival_time`
+
+##### Response v Turnaround
+
+![](imgs/response-vs-turnaround.png)
+
+### Round Robin Scheduler
+
+- **Previous schedulers:**
+	- FIFO, SJF, STCF can have poor *response times*
+- **New Scheduler:** RR (Round Robin)
+		- Alternate ready processes every fixed-length time slice.
+
+![](imgs/round-robin-schedl.png)
+
+---
+
+- *In what way* is RR worse?
+	- Average turnaround time with equal length jobs is **horrible**
+- Other reasons why RR could be better?
+	- If we don't know the runtime of each job, it gives shorter jobs a chance to run and finish first.
+
+#### Why is Preemption hard in GPUs?
+
+##### Massive Parallelism
+- Thousands of threads run simultaneously
+- Saving and restoring thread states during context switches is computationally expensive
+
+##### Long-Running Kernels
+- GPU tasks can run for extended periods
+- High-priority tasks may experience delays waiting for these kernels to finish
+
+##### High Overhead
+- Preempting a task requires saving states (registers, memory)
+- Restoring these states on resumption is resource-intensive, increasing the overhead.
+
+## MLFQ
+
+- **Multi-level Feedback Queue**
+- Goal: General-purpose scheduling
+- Must support two job types with distinct goals:
+	- "*interactive*" programs care about *response time*
+	- "*batch*" programs care about *turnaround time*
+- **Approach:** Multiple levels of round-robin
+	- Each level has higher priority than lower levels and preempts them.
+- MLFQ has a number of distinct queues.
+- Each queue is assigned a different priority level.
+
+#### Priorities
+
+- **Rule 1:** If `priority(A) > priority(B)`, A runs
+- **Rule 2:** If `priority(A) == priority(B)`, A & B run in RR
+
+![](imgs/prioirities-mlfq.png)
+
+#### History
+
+- Use past behavior of process to predict future behavior
+	- Common technique in systems
+- Processes alternate between I/O and CPU work
+- Guess how CPU burst (job) will behave based on past CPU bursts (jobs) of this process.
+
+#### More MLFQ Rules
+- **Rule 3:** Processes start at top priority
+- **Rule 4:** If job uses whole slice, demote process (longer time slices at lower priorities)
+
+
+### Interactive Process (MLFQ)
+
+- Interactive jobs perform quick operations and does I/O.
+- As it does not use the entire time slice, the interactive jobs never get demoted...
+
+![](imgs/interactive-job-mlfq-1.png)
+
+#### Problems?
+- Unforgiving + Starvation
+	- Gaming the system
+- **Low priority jobs may never get scheduled...**
+
+![](imgs/interactive-job-mlfq-2.png)
+
+*Answer:* Periodically boost priority of all jobs (or all jobs that haven't been scheduled)
+
+### Lottery Scheduling
+
+![](imgs/meme/y0drRB.gif)
+
+**Goal: Proportional share**
+
+- Fair-share scheduler
+	- Guarantee that each job obtain *a certain percentage* of CPU time.
+	- Not optimized for turnaround or response time.
+- Approach
+	- Give processes lottery tickets
+	- Whoever wins runs
+	- Higher priority == MORE TICKETS
+
+> Amazingly simple to implement.
+
+#### Tickets
+- Represent the share of a resource that a process should receive
+- *percent of tickets* represents its share of the system resource in question
+
+**Example:**
+
+- There are two processes: A and B
+	- Process A has 75 tickets (Receive 75% of the CPU)
+	- Process B has 25 tickets (Receive 25% of the CPU)
+
+---
+
+- The scheduler picks a *winning ticket*
+	- Load the state of that winning process and runs it.
+
+**Example:**
+
+- There are 100 tickets
+	- Process A has 64 tickets: 0-74
+	- Process B has 25 tickets: 75-99
+
+![](imgs/lottery-scheduling.png)
+
+- Intuition
+	- The longer these two jobs compete, the more likely they are to achieve the desired percentages.
+
+![](imgs/lottery-example.png)
+
+## Multiprocessor Scheduling
+- The rise of multicore processor is the source of multiprocessor scheduling proliferation.
+	- **Multicore:** Multiple CPU cores are packed onto a single chip.
+- Adding more CPUS **DOES NOT** make that single application run faster.
+	- Rewrite application to run in parallel, using *threads*
+
+**How to schedule jobs on** ***MULTIPLE CPUs***?
+
+### Caches (Multiprocessor)
+
+> Previous info about [*caches*](../comp-arch/7-memory-hierarchy#Caches).
+
+##### Single CPU with Cache
+
+![](imgs/cpu-mem-layout.png)
+
+- By keeping data in cache, the system can make slow memory *appear to be a fast* one.
+
+#### Cache Coherence
+- Consistency of shared resource data stored in multiple caches.
+
+![](imgs/cache-coherence-0-1.png)
+
+![](imgs/cache-coherence-2-3.png)
+
+##### Cache Coherence Solution
+- Bus snooping
+	- Each cache pays attention to memory updates by **observing the bus**.
+	- When a CPU sees an update for a data item it holds in its cache, it will notice the change and either *invalidate* its copy or *update* it.
+- When accessing shared data across CPUs, mutual exclusion primitives should likely be used to *guarantee correctness.*
+
+
+###### Don't Forget Synchronization!
+
+```C
+typedef struct __Node_t {
+	int value;
+	struct __Node_t *next;
+} Node_t;
+
+int List_Pop() {
+	Node_t *tmp = head;       // Remember old head....
+	int value = head->value;  // ... and its value
+	head = head->next;        // advance head to next pointer
+	free(tmp);                // free old head
+	return value;
+}
+```
+
+#### Cache Affinity
+
+- Keep a process on the same CPU if at all possible
+	- A process builds up a fair bit of state *in a cache* of a CPU.
+	- The next time the process run, it will run faster if some of its state is *already present* in cache on that CPU.
+- A **multiprocessor scheduler** should consider *cache affinity* when making its scheduling decision.
+
+
+##### Cache Affinity Queue
+- Put all jobs that need to be scheduled into a single queue.
+
+![](imgs/cache-coherence-queue.png)
+
+- Each CPU simply picks the next job from the globally shared queue.
+- Cons:
+	- Some form of *locking* have to be inserted - **lack of scalability**
+	- **Cache affinity**
+
+![](imgs/cache-affinity.png)
+
+- **Preserving affinity** for most
+	- Jobs A through D are not moved across processors.
+	- Only job `E` migrates from CPU to CPU.
+- Implementing such a scheme can be **complex**.
+
+## MQMS
+
+**Multi-queue Multiprocessor Sceduling**
+
+- MQMS consists of multiple scheduling queues.
+	- Each queue will follow a particular scheduling discipline.
+	- When a job enters the system, it is placed on **exactly one** scheduling queue.
+	- Avoid the problems of *information sharing* and *synchronization*.
+
+- With RR (Round Robin), the system may produce a schedule that looks like this:
+
+![](imgs/mqms-schedule-ex.png)
+
+- MQMS provides more *scalability* and *cache affinity*.
+
+## Completely Fair Scheduler
+- Replaced the O(1) scheduler
+	- In use since 2.6.23 and has O(log n) runtime.
+- Moves from MLFQ to Weighted Fair queuing
+	- First major OS to use a fair scheduling algorithm
+	- Processes ordered by the amount of CPU time they use.
+- Gets rid of queues in favor of [red-black tree](../data-structures/cs112#red-black-bsts) of processes.
+- CFS isn't actually "*completely fair*"
+	- Unfairness is bound `O(N)`
+
+![](imgs/cfs-red-black-tree.png)
+
+- CFS changes or removes time-slice allotment
+	- Do away with time-slices completely.
+	- Assign each process a proportion of the processor.
+- CFS is based on a simple concept.
+- Model scheduling as if the system had an ideal, perfectly multitasking processor.
+	- Each process receives `1/n` of the processor's time, where `n` is the number of runnable processes.
+	- Would be scheduled for infinitely small durations.
+	- In any measurable period, all `n` processes would run for the same amount of time.
+
+**Ideal processor possible?** - Why not?
+
+- Rank processes based on their worth and need for processor time.
+- Processes with a higher priority run before those with a lower priority.
+- Linux has two priority ranges:
+	- *Nice value:* Ranges from -20 to +10 (default is 0)
+		- High values of nice means **lower** priority
+	- Real-time priority: ranges from 0 to 99
+		- Higher values mean **higher** priority
+	- Real-time processes always executes before standard (nice) processes.
+
+#### Target Latency (TL)
+- Minimum amount of time - idealized to an infinitely small duration - required for every runnable task to get at least one turn on the processor.
+- Window where every process gets some CPU.
+
+#### Minimum Granularity (MG)
+- Imposes a floor on the time-slice assigned to each process
+- For example: Run for 1 ms to ensure there is a ceiling on the incurred switching costs.
+- Not perfectly fair when the number of processes grows so large.
+
+### Preventing Gaming
+
+- **Problem:** Higher priority job could trick scheduler and get more CPU by performing I/O right before the time-slice ends.
+- **Fix:** Account for job's total run time at priority level (instead of just this time slice); downgrade when exceed threshold.
+
+## Stack Detour
+
+![](imgs/stack-frame-linux.png)
+

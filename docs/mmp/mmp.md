@@ -99,3 +99,4 @@ Examples of an artificial equivalent of representational states?
 - Anomaly detection within the system plus appropriate adaptation directed at the system.
 ## The Minimal Self
 
+
