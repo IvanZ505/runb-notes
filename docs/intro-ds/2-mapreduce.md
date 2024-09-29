@@ -78,7 +78,7 @@
 - Each chunk *replicated* on different machines
 	- Seamless recovery from disk or machine failure.
 
-![](imgs/distributed-fs.png)
+![](imgs/actual/distributed-fs.png)
 
 ## Programming Model: MapReduce
 - Warm-up task:
@@ -108,13 +108,13 @@
 
 #### Diagram
 
-![](imgs/mapreduce-diagram.png)
+![](imgs/actual/mapreduce-diagram.png)
 
 ##### In Parallel
-![](imgs/parallel-mapreduce.png)
+![](imgs/actual/parallel-mapreduce.png)
 #### Word Counting
 
-![](imgs/word-counting.png)
+![](imgs/actual/word-counting.png)
 
 ##### Word Count Using MapReduce
 
@@ -134,10 +134,10 @@ reduce(key, values):
 
 #### Map Step
 
-![](imgs/mapreduce-map.png)
+![](imgs/actual/mapreduce-map.png)
 #### Reduce Step
 
-![](imgs/mapreduce-reduce.png)
+![](imgs/actual/mapreduce-reduce.png)
 
 #### More Specifically
 - **Input:** A set of key-value pairs
@@ -172,7 +172,7 @@ reduce(key, values):
 	- *Reduce* processes all `k'v'`-pairs grouped by key into new `k''v''`-pairs.
 - **All phases are distributed with many tasks doing the work.**
 
-![](imgs/mapreduce-breakdown.png)
+![](imgs/actual/mapreduce-breakdown.png)
 
 #### Data Flow
 - **Input and final output** are stored on a *global* DFS.
