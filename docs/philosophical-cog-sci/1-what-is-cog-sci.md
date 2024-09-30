@@ -455,4 +455,5 @@ English sentence: "**John loves Mary**"
 - **False belief task**
 	- Sally Ann hides a doll in a drawer, then leaves the room
 	- Somebody comes in and moves the doll to a different drawer
-	- Task: which drawer will Sally Ann look in? First one, bc she falsely believes that's where the doll is)
+	- Task: which drawer will Sally Ann look in? First one, b.c. she falsely believes that's where the doll is)
+

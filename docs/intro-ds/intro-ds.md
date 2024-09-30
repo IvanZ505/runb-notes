@@ -54,3 +54,8 @@ Due to the massive amount of data out there, it is almost impossible to manually
 ## [MapReduce](2-mapreduce)
 
 ## [LSH](3-lsh)
+
+## [Clustering](4-clustering)
+
+## [Dimensionality Reduction](5-dimensionality-reduction)
+

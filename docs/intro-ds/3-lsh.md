@@ -218,3 +218,5 @@ Clearly, the hash function depends on the similarity metric:
 
 ![](imgs/actual/types-of-rows.png)
 
+#### Similarity for Signatures
+- Which know: 
