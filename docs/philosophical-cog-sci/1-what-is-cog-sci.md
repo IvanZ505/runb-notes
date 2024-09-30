@@ -365,3 +365,94 @@ English sentence: "**John loves Mary**"
 	- Spreading activation through the network.
 - Representations that mean *doctor* and *nurse* are linked; so are *bread* and *butter*; but *doctor* and *bread* are not.
 
+## Language of Thought
+- Fodor & Pylyshyn argued that thought has to have a language-like structure
+	- Compositional syntax & and semantics.
+		- Put simple structures together to make more complexed structures.
+	- Structure sensitive operations.
+		- Being able to go, x is F, if x is F, then x is G, and go to x is G.
+		- Whatever the variables mean, you can still get to x is G
+		- Allows you to do logical thinking.
+		- Perform the operations on these more complexed structures.
+
+> **Breakdown:** here are the different structures, and here are the more complexed operations you can run on these structures.
+
+
+### Two options
+
+1. We think in our spoken, *natural* language -- thinking = reusing language in your head, & people who speak different languages will have a different LoT.
+2. There is innate LoT, independent of natural language -- the classic LoT hypothesis
+
+
+##### LoT Cont
+- Fodor strongly preferred option 2
+- One argument: How do we learn natural language in the first place?
+- Seems like we learn the word "dog" by learning that "dog" means *dog*.
+- You have to already have the concept DOG to learn that "dog" refers to dogs.
+
+---
+
+- But there are some other empirical ways into this problem.
+- For example: What about people who lose their ability to use natural language?
+- This condition is called *aphasia*.
+- If we think in natural  language, aphasics should show massive cognitive deficits.
+- If we think in an innate LoT, then in principle there should be aphasics w minimal cognitive deficits.
+
+---
+
+- Two components of natural language... #todo 
+
+### Lexicon & Thought
+- Novelty-preference task: kids look longer + reach for *new* items.
+- 13 m/o are shown some objects, including a car.
+- Either given a word ("This is a car") or not
+- Then they see two objects: an airplane, and a *different* car.
+- Word condition: preference for airplane.
+	- The word is queue them to categorize the object as a car.
+	- If given a car and prompted with the word car, they would prefer the more novel airplane.
+- Even works with new words (made up like: *This is a dax!*)
+
+---
+
+- Suggests that words are "invitations to form categories" (i.e. concepts)
+- Varley cites evidence that chimps who learn the words 'same' and 'different' are better at same/different tasks (premack 1988)
+- Suggests lexicon might be a crucial aid to cognition.
+
+### Grammar & Thought
+- Another idea is that **grammar** play a key role. #todo fill in
+
+> The ability to concatenate and embed linguistic expressions might allow for increasingly complex forms of thought. For example, long chains of inferences in conditional or causal reasoning might become possible with the availability of sentential forms and their various connectors."
+
+- This ability to take expressions and make them more and more complexed.
+
+> Sally thinks that the marble is in the basket. (Theory of mind)
+
+### Aphasia
+- Two forms of aphasia.
+- **Agrammatism**: lack of ability to use grammar
+	- The boy kissed the girl/The girl kissed the boy
+	- Unable to tell the difference between these two words.
+		- Lose ability to put the different components of the sentence together.
+- **Anomia**: Lack of ability to use lexicon.
+	- Use of individual words.
+- Not entirely distinct (impairments of one always correlate to some impairment of the other, but not equally severe.)
+
+#### Anomia
+- Evidence of impairment: Lupyan & Mirman (2013)
+	- SS included anomic aphasics & healthy controls
+	- Task: Categorize objects
+- When categorizing things with many features in common (e.g. fruits), no impairment.
+	- When a lot of defining features of a category, no impairment.
+- When categorizing things that have only a few features in common (e.g. things made of wood), aphasics were impaired.
+
+> Varley: But they didn't include a group w cognitive deficits but no language deficit to compare; just healthy controls.
+
+- You don't know that you isolated the specific linguistic computation as the causal reasoning for the aphasia.
+
+#### Agrammatism
+- Does verbal shadowing (saying words out loud that you're hearing) disrupt task performance?
+- Example:  Theory of mind (working out other people's beliefs)
+- **False belief task**
+	- Sally Ann hides a doll in a drawer, then leaves the room
+	- Somebody comes in and moves the doll to a different drawer
+	- Task: which drawer will Sally Ann look in? First one, bc she falsely believes that's where the doll is)
