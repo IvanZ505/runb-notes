@@ -574,6 +574,8 @@ enum proc_state {
 
 ###### Don't Forget Synchronization!
 
+> Read about [synchronization](3-concurrency#Synchronization).
+
 ```C
 typedef struct __Node_t {
 	int value;

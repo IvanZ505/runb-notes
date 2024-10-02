@@ -84,3 +84,79 @@
 ###### Disadvantages
 - Cannot leverage multiprocessors
 - Entire process blocks when one thread blocks
+
+#### Approach 2
+
+##### Kernel-level threads: One-to-one thread mapping  
+- OS provides each user-level thread with a kernel thread
+- Each kernel thread scheduled independently
+- Thread operations (creation, scheduling, synchronization) performed by OS  
+
+###### Advantages
+- Each kernel-level thread can run in parallel on a multiprocessor  
+- When one thread blocks, other threads from process can be scheduled  
+
+###### Disadvantages  
+- Higher overhead for thread operations
+- OS must scale well with increasing number of thread
+
+## Locks
+
+#### Non-Determinism
+
+> Previous notes on [non-determinism](../sys-prog/multithreading)
+
+- Concurrency leads to non-deterministic results!
+- [Race conditions](../sys-prog/multithreading#Race-Condition)
+
+Whether a bug manifests depends on CPU schedule!
+
+- Passing tests means little...
+- How to program: Imagine scheduler is malicious.
+- Assume scheduler will pick bad ordering at some point...
+
+---
+
+#### Program Verification
+
+
+---
+
+### What do we want?
+- What 3 instructions to execute as an uninterruptable group
+- That is, we want them (on the software layer) to execute atomically...
+
+```assembly
+mov 0x123, %eax
+add %0x1, %eax                      // CRITICAL SECTION
+mov %eax, 0x123
+```
+
+- I have some piece of code that, where there are multiple threads running at the same time, ONE MUST be serialized.
+
+##### More Generally
+- Need mutual exclusion for *critical sections*
+	- If process `A` is in critical section `C`, process `B` can't.
+	- (Okay if other processes do unrelated work)
+
+### Synchronization
+- Build higher-level synchronization primitives in OS
+	- Operations that ensure correct ordering of instructions across threads.
+- Motivation: Build them once and get them right.
+
+### Mutex
+- **Goal:** Provide mutual exclusion (Mutex)
+- **Three common operations:**
+	- Allocate and Initialize: `Pthred_mutex_t mylock = PTHREAD_MUTEX_INITIALIZER;`
+- **Acquire:**
+	- Acquire exclusion access to lock.
+	- Wait if lock is not available (some other process in critical section)
+	- *Spin* or *Block* (relinquish CPU) while waiting.
+		- Block says, "I will delay my checking of the lock instead of perpetually checking"
+	- `Pthread_mutex_lock(&mylock);`
+- **Release:**
+	- #todo fill out this
+
+
+#### Example: Shared Linked List Issues
+1. Functionality is a problem (Visibility)
