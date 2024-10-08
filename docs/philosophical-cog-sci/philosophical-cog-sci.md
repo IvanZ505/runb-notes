@@ -76,3 +76,5 @@
 
 ## [Unit 1: What is Cog Sci?](1-what-is-cog-sci)
 
+## [Midterm 1](midterm-review-1)
+

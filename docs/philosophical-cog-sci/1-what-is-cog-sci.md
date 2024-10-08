@@ -318,7 +318,6 @@
 - **Fodor's claim:** There are no actual laws of physics that involve these weird disjunctive predicates. (*Disjunctive kinds are arbitrary*)
 	- Ex: There's no laws that say Either this or this increases will lead to this or this increasing, etc...
 - How would you put Fodor's point, using the example of a law of economics (e.g. printing excess money causes inflation?)
-
 ## LoT vs Connectionism
 - Fodor & Pylyshyn are interested in [mental architecture](../cog-decision/cognitive-architecture)
 	- They argue there must be a *language of thought (LoT)*
@@ -400,7 +399,14 @@ English sentence: "**John loves Mary**"
 
 ---
 
-- Two components of natural language... #todo 
+- Two components of natural language -> Lexicon and Grammar.
+- **Lexicon:** Representations of primitive meaningful units of the language.
+	- "walk"/"dog"/"-ing"
+- **Grammar:** System of rules used to derive complex expressions from simple ones.
+	- "dog walking"; "walking the dog"; "The dog is walking"
+
+
+One might think one or both aspects of language are responsible for human-like cognition.
 
 ### Lexicon & Thought
 - Novelty-preference task: kids look longer + reach for *new* items.
@@ -419,7 +425,12 @@ English sentence: "**John loves Mary**"
 - Suggests lexicon might be a crucial aid to cognition.
 
 ### Grammar & Thought
-- Another idea is that **grammar** play a key role. #todo fill in
+- Another idea is that **grammar** play a key role.
+- Chimps and other animals have a limited ability to *combine* symbols.
+- Perhaps this is the cause of their lack of humanlike cognition.
+
+
+----
 
 > The ability to concatenate and embed linguistic expressions might allow for increasingly complex forms of thought. For example, long chains of inferences in conditional or causal reasoning might become possible with the availability of sentential forms and their various connectors."
 
@@ -451,9 +462,133 @@ English sentence: "**John loves Mary**"
 
 #### Agrammatism
 - Does verbal shadowing (saying words out loud that you're hearing) disrupt task performance?
-- Example:  Theory of mind (working out other people's beliefs)
+	- Does it disrupt compositional thought??
+- Example:  [Theory of mind](../cog-sci/11-emergence-of-the-mind#Theory-Of-Mind) (working out other people's beliefs)
 - **False belief task**
 	- Sally Ann hides a doll in a drawer, then leaves the room
 	- Somebody comes in and moves the doll to a different drawer
 	- Task: which drawer will Sally Ann look in? First one, b.c. she falsely believes that's where the doll is)
 
+##### Example: Agrammatism
+- Subject SA had sever agrammatism.
+- Nonetheless capable of distinguishing what's really in a container (eg. a book containing hidden necklace) from what somebody *think* was in the container? (...the pages)
+- *There is also a debate about whether infants and animals have theory of mind.*
+	- Kids don't pass the false belief task till ~ age 3.5
+	- But looking time shows 15 m/os that lack cognitive vocab will look longer when people act contrary to their false beliefs. (e.g. Sally thinks the doll is in the first drawer but looks in the second drawer)
+		- Even though kids can't use the judgment, they are still implicitly representing it in their mind.
+	- *Replication issues*
+
+**ToM** tasks require embedding mental representations in a *compositional* way.
+
+- Taking one representation and making it into a *constituent* of another.
+- Representing someone else's mental state and simulating their representations.
+
+		The doll is in the drawer. (Ann moves it) <- Learning this is false does NOT make children think the second statement is false.
+		Sally thinks [the doll is in the drawer]
+
+- Presence in agrammatic aphasics suggests that LoT is independent of natural language.
+
+#### Calculation
+- With math, `7-5=?` vs `5-7=?`
+- People with agrammatism was nonetheless good at calculation.
+	- Even though this feels like a structure-sensitive operation....
+
+---
+
+- This suggests that the ability to compose representations in complex ways is **not** dependent on grammar of natural language.
+
+---
+
+#### Cross-Domain Integration
+- One purpose language might have is facilitating information across different cognitive systems.
+	- Can you give an example?
+- Task: You have to walk to a corner in the room, but after you see the room, you're spun around and disoriented.
+	- If there's a landmark (e.g. an odor or an object), Ss can find their way to it by integrating it with mental map of where the target corner is.
+- Verbal shadowing negatively affects performance.
+- *Children* who can't use 'left' or 'right' terms fail at this task....
+- However, severe aphasics performed well on this task...
+	- *Even* when doing the limited verbal shadowing that they're capable of!
+
+### Language -> Thought?
+
+Aphasics are capable of complexed, compositional thought:
+
+- ToM
+- Calculation
+- Cross-domain integration
+- Suggests that complexed thought is functionally *dissociable* from language.
+	- There's some kind of disassociability.
+- Good news for the language of thought hypothesis.
+
+---
+
+- So, what role does language play in cognition then?
+- We can use language in our heads ("inner speech")
+- It may have some useful functions - e.g. cues to form categories, helping keep something in memory.
+
+#### Example
+- If you have to keep a string of numbers memorized for a minute, what strategy might you use?
+- You might sing it in your head as a melody...
+
+# Connectionism
+
+
+## Research Programs
+- A simple approach to philosophy of science: we have hypotheses that are true or false, and we confirm them with empirical tests.
+- But to know whether a piece of evidence should be interpreted as *confirming* your hypothesis, you have to have a whole theory with tons of "auxiliary assumptions"
+- Other philosophers argued that *falsification* is the key to **substantive** scientific claims.
+- However, Lakatos argued that *research programs* that are not fruitful or not play a bigger role in science than hypotheses/theories that are true or not.
+
+
+---
+
+- For Lakatos, research programs consist of a "core" and a "belt"
+- Core: background assumptions about what you're studying:
+	- Not typically challenged from within the research program.
+- Belt: Auxiliary hypothesis that are directly empirically tested.
+	- Can be challenged/changed frequently without threating the core of the research program.
+
+> These research programs *thrive* or *die* based on if they are *progressive* or *degenerating*.
+
+
+- **Progressive research programs:** generate new findings, new auxiliary (belt) hypotheses.
+- **Degenerating research programs:** No new predictions to test, no new hypotheses.
+
+> *Lakatos:* Degeneration of a research program is the real reason why ideas die out in science, not outright falsification (Behaviorism)
+
+### Neuroconnectionism
+
+- The **Core:**
+	- Artificial Neural Networks (ANN) are in the "Goldilocks zone" of computational abstraction for *capturing neural computations* - not too detailed, not too abstract.
+- The **Belt:**
+	- A series of particular hypotheses and experimental results about the similarities and differences between various ANNs and brain activity.
+- **Example:** Using neural networks to model the visual system.
+	- Architectures, data sets, objectives, and learning rules have all been tinkered with to improve model/brain similarity.
+- **Four central ingredients of ANNs:**
+	- Architectures, data sets, objectives and learning rules
+
+### ANN
+
+#### Ingredients
+
+##### Architectures
+- Basic computational scaffold.
+
+##### Data Sets
+- Large databases, usually image or text.
+
+##### Objectives
+- Goals like classification, efficiency.
+
+##### Learning Rules
+- Rules used for changing weights to reduce error.
+
+---
+
+
+
+#### Neurosymbolic Approach
+
+- "Neurosymbolic" approaches hard code LoT-style symbols alongside ANNs into one integrated, hybrid model.
+- The symbols are useful for representing novel combinations of concepts, representing abstract rules, and storing discrete facts.
+- The ANN components are useful for learning from large amounts of data.
