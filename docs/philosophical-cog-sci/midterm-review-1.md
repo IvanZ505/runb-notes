@@ -94,6 +94,97 @@
 - Almost like doing it sarcastically. (Krakauer)
 
 
+## Mirror Neurons
+
+- A warning into "speculative sciences."
+- Involved fMRI scans revealing that certain neurons would fire each time a task was being learnt by some.
+	- Lead to beliefs that these neurons were responsible for *mimicking* the behavior.
+	- **Took a backwards approach** -> Found some empirical evidence, and formulated a hypothesis around that.
+- The actual route should have been to *develop some theory first*
+- Then develop an algorithm for testing it.
+- Then actually test it.
+- **Marr's Three Levels again**
+
+
+## Special Sciences
+
+- Sciences involving disjunctive kinds. (Or statements)
+- The whole idea of *Reductionism* is a claim about these "special" sciences that aim to explain concepts using bridge laws.
+- **They are multiply realizable**
+
+
+## Classical Architectures
+
+#### Combinatorial Syntax and Semantics
+- Language representations have PARTS and a syntactical relationship between the two of them.
+	- Ex: John loves Mary. There is the part that corresponds to the subject, John, a part that corresponds with the object, Mary, and one that corresponds to the idea of "loving"
+- *If you **have*** this, then you have a structure of those operations, and with this comes the structure sensitive operations.
+
+#### Structure Sensitive Operations
+- It is just looking at the structures and not the contents.
+- `p then q`, you can compute `q` without knowing what `q` stands for.
+-  You can infer from "This is a red square" to "This is a square"
+	- Doesn't matter that it's both red and square, you can use the STRUCTURE to do the work.
+- More about the formula than what's in it.
+
+##### Example
+- It's raining.
+- If its raining then the streets are wet.
+- The streets are wet.
+
+## Connectionist Architecture
+
+- Representations are nodes in a network; mental processes involve activating nodes, and activation spreading from node to node
+- **Evidence** - Semantic priming
+
+---
+
+- Consists of  
+	- nodes (which have content, like nurse),  
+	- links (which connect the nodes), + 
+	- weights (which modulate strength of links)
+
+
+---
+
+###### Not Tested
+
+- Classical and connectionist could be compatible, you brain might be implementing a classical architecture within a connectionist architecture.
+- Or maybe both are running in your mind at the same time.
+
+
+---
+
+## Theory of Mind
+- Involves some combination in your thinking
+- And if Varley proved aphasics can still do this combinations in their thinking despite agrammatism, it means that this is spoken language does not relate to how people do calculations in their head.
+
+## Aphasia
+
+### Components in Language
+- A grammar (where words go in the sentence)
+- A lexicon (what the words (components) themselves mean)
+
+### Anomia
+- An inability to understand the lexicons.
+- - Use of individual words.
+### Agrammatism
+- An inability to understand the grammar.
+	- The boy kissed the girl/The girl kissed the boy
+	- Unable to tell the difference between these two words.
+		- Lose ability to put the different components of the sentence together.
+
+> Not entirely distinct (impairments of one always correlate to some impairment of the other, but not equally severe.)
+
+
+### Studies that Were Talked About
+- People with agrammatism were tested on particular abilities like ToM, cross-domain integration and calculations.
+	- Why? Being blind and hearing better. Adapting to a lifetime of a certain impairment.
+- Tell me about aphasia and aphasia and the theory of mind in relation to Language of Thought.
+- **Studies show compositional thought does NOT rely of the use of language**
+	- If so, then is it actually true thoughts are compositionally in a language-like sense?
+- **Neuroconnectionism** - a blend between neuroscience and connectionism.
+
 ## Neuroconnectionism
 - Won't ask what a neural network is, but should know what a neural network is, and how it differs from a *classical* framework.
 
@@ -140,72 +231,3 @@
 ##### Example
 - In Neuroconnectionism, which ANNs can test particular cognitive functions.
 - Goldilocks zone?
-
-
-## Aphasia
-
-### Components in Language
-- A grammar (where words go in the sentence)
-- A lexicon (what the words (components) themselves mean)
-
-### Anomia
-- An inability to understand the lexicons.
-- - Use of individual words.
-### Agrammatism
-- An inability to understand the grammar.
-	- The boy kissed the girl/The girl kissed the boy
-	- Unable to tell the difference between these two words.
-		- Lose ability to put the different components of the sentence together.
-
-> Not entirely distinct (impairments of one always correlate to some impairment of the other, but not equally severe.)
-
-
-### Studies that Were Talked About
-- People with agrammatism were tested on particular abilities like ToM, cross-domain integration and calculations.
-	- Why? Being blind and hearing better. Adapting to a lifetime of a certain impairment.
-- Tell me about aphasia and aphasia and the theory of mind in relation to Language of Thought.
-
-## Classical Architectures
-
-#### Combinatorial Syntax and Semantics
-- Language representations have PARTS and a syntactical relationship between the two of them.
-- *If you **have*** this, then you have a structure of those operations, and with this comes the structure sensitive operations.
-
-#### Structure Sensitive Operations
-- It is just looking at the structures and not the contents.
-- `p then q`, you can compute `q` without knowing what `q` stands for.
--  You can infer from "This is a red square" to "This is a square"
-	- Doesn't matter that it's both red and square, you can use the STRUCTURE to do the work.
-- More about the formula than what's in it.
-
-##### Example
-- It's raining.
-- If its raining then the streets are wet.
-- The streets are wet.
-
-## Connectionist Architecture
-
-- Representations are nodes in a network; mental processes involve activating nodes, and activation spreading from node to node
-- **Evidence** - Semantic priming
-
----
-
-- Consists of  
-	- nodes (which have content, like nurse),  
-	- links (which connect the nodes), + 
-	- weights (which modulate strength of links)
-
-
----
-
-###### Not Tested
-
-- Classical and connectionist could be compatible, you brain might be implementing a classical architecture within a connectionist architecture.
-- Or maybe both are running in your mind at the same time.
-
-
----
-
-## Theory of Mind
-- Involves some combination in your thinking
-- And if Varley proved aphasics can still do this combinations in their thinking despite agrammatism, it means that this is spoken language does not relate to how people do calculations in their head.
