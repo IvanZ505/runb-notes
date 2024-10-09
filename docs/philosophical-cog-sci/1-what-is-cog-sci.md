@@ -1,4 +1,4 @@
-# Unit 1: What is Cognitive Science
+# [Unit 1: What is Cognitive Science](philosophical-cog-sci)
 
 ## Chomsky vs Skinner
 

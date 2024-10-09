@@ -4,6 +4,7 @@
 
 - Office Hours: *Thursday, 1:30-3pm*
 	- Email first! Might be on Zoom or might be on campus (106 Somerset St. Rm 545)
+
 ## Structure
 
 ### Assignments
@@ -24,6 +25,7 @@
 - Participation: 10%
 - Exams: 60% (30% each)
 - Paper: 
+
 ### Attendance
 - Attendance is mandatory
 	- If you have to miss lecture because of illness or personal issues, please email me.
@@ -49,7 +51,7 @@
 
 ## Units
 
-### Unit 1: What is cognitive science?
+### [Unit 1: What is cognitive science?](1-what-is-cog-sci)
 - Behaviorism vs cognitive science
 - Problems for reductionist neuroscience
 - The Language of Thought (LoT)
@@ -57,6 +59,9 @@
 		- Conditions where people lose the ability to speak language (Aphasia)
 	- LoT vs neural networks
 	- LoT in the brain?
+
+#### [Midterm 1](midterm-review-1)
+
 
 ### Unit 2: Modularity and Perception vs Cognition
 - Is the mind a big soup of associations? Or is it organized into separate subsystems?
@@ -74,7 +79,5 @@
 - What does it mean to say an AI "thinks"?
 - How do current AI models work? And how human-like are they, really?
 
-## [Unit 1: What is Cog Sci?](1-what-is-cog-sci)
 
-## [Midterm 1](midterm-review-1)
 
