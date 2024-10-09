@@ -96,7 +96,6 @@
 
 ## Neuroconnectionism
 - Won't ask what a neural network is, but should know what a neural network is, and how it differs from a *classical* framework.
-	- 4 components of neural networks, architectures, training sets, learning rules, objectives.
 
 ### ANN
 
@@ -106,6 +105,14 @@
 	- Balance between biological realism and algorithmic clarity.
 - **Silico copies of brain regions** -> Too detailed to be computationally tractable.
 - **Box and Arrow Cognitive Models** -> Too computational with no base in biology.
+
+
+##### The Belt of ANNs
+- 4 components of neural networks, architectures, training sets, learning rules, objectives.
+	- Architecture: what framework makes up the ANN
+	- Training set: The database that the ANN is trained on, pics or text
+	- Objectives: What the ANN sets out to accomplish (task)
+	- Learning rules: What rules are used to tweak the hidden nodes to get more accurate answers.
 
 ## Research Programs
 - How it differs
