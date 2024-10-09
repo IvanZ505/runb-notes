@@ -30,6 +30,8 @@
 - There is nothing about the mind or mental states at all.
 - **All behavior** is conditioned.
 
+> For additional notes, check out notes from [Intro](../cog-sci/2-history-of-the-mind#Behaviorism) and [PhiloCS](1-what-is-cog-sci#Behaviorism).
+
 ### Skinner Box
 - Light box, bar press, food, and shock.
 - Apparatus used to show conditioned behavior or rats to avoid punishment and receive rewards.
@@ -110,7 +112,7 @@
 
 - Sciences involving disjunctive kinds. (Or statements)
 - The whole idea of *Reductionism* is a claim about these "special" sciences that aim to explain concepts using bridge laws.
-- **They are multiply realizable**
+- **They are [multiply realizable](../cog-sci/1-foundations-of-cog-sci#Multiple-Realizability-Thesis)**.
 
 
 ## Classical Architectures
@@ -136,6 +138,9 @@
 
 - Representations are nodes in a network; mental processes involve activating nodes, and activation spreading from node to node
 - **Evidence** - Semantic priming
+
+
+> Previous notes on the mental architecture debate: [Intro](../cog-sci/4-artificial-minds#The-Great-Debate).
 
 ---
 
