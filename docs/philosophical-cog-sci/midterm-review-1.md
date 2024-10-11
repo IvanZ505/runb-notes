@@ -22,6 +22,7 @@
 	- The following response is a observable behavior due to the stimulus.
 - Separated by *unconditional stimulus*, *unconditioned response* and *conditioned stimulus*
 	- In Pavlov's dogs, the example would be food (US), salivation (UR), and the bell (CS)
+
 #### Extinction
 - How long the conditioned response takes to fade. This is also related to the *strength of association*, aka how strong of an association is formed.
 
@@ -30,7 +31,7 @@
 - There is nothing about the mind or mental states at all.
 - **All behavior** is conditioned.
 
-> For additional notes, check out notes from [Intro](../cog-sci/2-history-of-the-mind#Behaviorism) and [PhiloCS](1-what-is-cog-sci#Behaviorism).
+> For additional notes, check out notes from [Intro](../cog-sci/2-history-of-the-mind#behaviorism) and [PhiloCS](1-what-is-cog-sci#behaviorism).
 
 ### Skinner Box
 - Light box, bar press, food, and shock.
@@ -57,7 +58,7 @@
 
 ## Computational Theory of Mind
 - The mind works a little like a computer, made up of symbols and operates in a rule based manner.
-- Think [Turing machine](../discrete-1/discrete-1#Turing-Machine).
+- Think [Turing machine](../discrete-1/discrete-1#turing-machine).
 
 ## Reductive Neuroscience
 - We can boil down everything in the mind to just what it does.
@@ -112,7 +113,7 @@
 
 - Sciences involving disjunctive kinds. (Or statements)
 - The whole idea of *Reductionism* is a claim about these "special" sciences that aim to explain concepts using bridge laws.
-- **They are [multiply realizable](../cog-sci/1-foundations-of-cog-sci#Multiple-Realizability-Thesis)**.
+- **They are [multiply realizable](../cog-sci/1-foundations-of-cog-sci#multiple-realizability-thesis)**.
 
 
 ## Classical Architectures
@@ -140,7 +141,7 @@
 - **Evidence** - Semantic priming
 
 
-> Previous notes on the mental architecture debate: [Intro](../cog-sci/4-artificial-minds#The-Great-Debate).
+> Previous notes on the mental architecture debate: [Intro](../cog-sci/4-artificial-minds#the-great-debate).
 
 ---
 
@@ -173,6 +174,7 @@
 ### Anomia
 - An inability to understand the lexicons.
 - - Use of individual words.
+
 ### Agrammatism
 - An inability to understand the grammar.
 	- The boy kissed the girl/The girl kissed the boy
@@ -235,4 +237,3 @@
 
 ##### Example
 - In Neuroconnectionism, which ANNs can test particular cognitive functions.
-- Goldilocks zone?

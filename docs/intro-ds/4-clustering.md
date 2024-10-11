@@ -86,7 +86,7 @@ Ex:
 
 ![](imgs/actual/ex-picking-k-1.png)
 
-![](imgs/ex-picking-k-2.png)
+![](imgs/actual/ex-picking-k-2.png)
 
 ![](imgs/actual/ex-picking-k-3.png)
 

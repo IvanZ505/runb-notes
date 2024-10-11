@@ -70,3 +70,14 @@ $$A_{[m*n]}=U_{[m*r]}\Sigma_{[r*r]}(V_{[n*r]})^T$$
 - `V`: right singular vectors
 	- `n*r` matrix (`n` terms, `r` concepts)
 
+![](imgs/actual/svd-visual.png)
+
+### SVD Properties
+- It is **always** possible to decompose a real matrix `A` into `A=UΣV`$^T$, where
+	- `U`, `Σ`, `V`: Unique
+	- `U`, `V`: Column orthonormal
+		- `U`$^T$ `U` = `I`; `V`$^T$ `V` = `I` (`I`: Identity matrix)
+		- (Columns are orthogonal unit vectors)
+	- `Σ`: **Diagonal**
+		- Entries (singular values) are *positive*, and sorted in decreasing order (`σ₁ ≥ σ₂ ≥ ... ≥ 0`)
+
