@@ -12,7 +12,7 @@
 
 ### Motivation for Concurrency
 
-#todo get graph
+![](imgs/motivation-for-conc.png)
 
 - The speeds of each CPU by itself sort of tapered off, and is no longer growing (individually)
 - Needing more and more power
@@ -64,6 +64,8 @@
 	- However, they *can* access another thread's IP.
 - Do they share a stack pointer?
 	- **NO!** Also bad practice to share stack pointers.
+
+![](imgs/thread-shares.png)
 
 ### OS Support
 
@@ -155,8 +157,227 @@ mov %eax, 0x123
 		- Block says, "I will delay my checking of the lock instead of perpetually checking"
 	- `Pthread_mutex_lock(&mylock);`
 - **Release:**
-	- #todo fill out this
+	- Release exclusive access to lock; let another process enter critical section.
+	- `Pthread_mutex_unlock(&mylock);`
 
+##### Other Examples
+- Consider multi-threaded applications that do more than increment shared balance.
+- Multi-threaded application with shared linked-list:
+	- All **concurrent**:
+		- Thread A inserting element a
+		- Thread B inserting element b
+		- Thread C looking up element c
 
 #### Example: Shared Linked List Issues
 1. Functionality is a problem (Visibility)
+2. *Linked-list race*
+
+##### Locking Linked Lists: Approach 1
+- Consider everything to be in the critical section.
+
+![](imgs/locking-ll-1.png)
+
+- However, this means other threads have to do a lot of waiting....
+- *Can the critical section be smaller?*
+
+##### Locking Linked Lists: Approach 2
+
+
+![](imgs/locking-ll-2.png)
+
+- `lookup()` is unable to be made any smaller due to the need to maintain the linked list in a undisturbed state when traversing through it.
+
+## Implementing Synchronization
+- Build Higher-level synchronization primitives in OS.
+	- Operations that ensure correct ordering of instructions across threads.
+- **Motivation:** Build them once and get them right.
+
+#### Lock Implementation Goals
+- **Correctness**
+	- *Mutual Exclusion*
+		- Only one trhead in critical section at a time.
+	- *Progress (deadlock-free)*
+		- If several simultaneous requests, must allow one to proceed.
+	- *Bounded (starvation-free)*
+		- Must eventually allow each waiting thread to enter.
+- **Fairness**
+	- Each thread waits for same amount of time
+- **Performance**
+	- CPU is not used unnecessarily (e.g. spinning)
+
+### Implementing Synchronization
+- To implement, we need atomic operations
+	- **Atomic operation:** NO other instructions may be interleaved.
+- *Examples of atomic operations*
+	- Code between interrupts on uniprocessors.
+		- Disable time interrupts, don't do any I/O
+	- Loads and stores of words
+		- `load r1, B`
+		- `store r1, A`
+	- **Special hw instructions**
+		- Test & set
+		- Compare & swap
+
+#### Implementing Locks w/Interrupts
+- **Turn off** interrupts for critical sections.
+	- Prevent dispatcher from running another thread.
+	- Code between interrupts executes atomically.
+
+```C
+void acquire(lockT *l) {
+	disableInterrupts();
+}
+void release(lockT *l) {
+	enableInterrupts();
+}
+```
+
+- Disadvantages??
+	- Only works on uniprocessors.
+	- Process can keep control of CPU for arbitrary length.
+	- Cannot perform other necessary work.
+
+#### Implementing Locks w/Load + Store
+- Code uses a single **shared** lock variable.
+
+```C
+boolean lock = false; // shared variable
+void acquire(bool *lock) {
+	while(*lock) /* wait */ ;
+	*lock = true;
+}
+void release(bool *lock) {
+	*lock = false;
+}
+```
+
+- Why doesn't this works? Example schedule that fails with 2 threads?
+
+##### Race Condition
+- `*lock == 0` initially
+
+| Thread 1             | Thread 2             |
+| -------------------- | -------------------- |
+| `while(*lock == 1);` |                      |
+|                      | `while(*lock == 1);` |
+|                      | `*lock = 1`          |
+| `*lock = 1`          |                      |
+
+- Both threads grab lock!
+- **Problem:** Testing lock and setting locks are not atomic.
+
+#### xchg:atomic exchange, or test-and-set
+
+```C
+// xchg(int *addr, int newval)
+// return what was point to by addr
+// at the same time, store newval into addr
+
+int xchg(int *addr, int newval) {
+	int old = *addr;
+	*addr = newval;
+	return old;
+}
+
+static inline uint xchg(volatile unsigned int *addr, unsigned int newval) {
+	uint result;
+	asm volatile("lock; xchgl %0, %1" : "+m" (*addr), "=a" (result) : "1" (newval): "cc");
+	return result; 
+}
+```
+
+
+##### Lock Implementation with XCHG
+
+```C
+typedef struct __lock_t {
+	int flag;
+} lock_t;
+
+void init(lock_t *lock) {
+	lock->flag = 0;
+}
+
+void acquire(lock_t *lock) {
+	while(xchg(&lock->flag, 1) == 1);       //  int xchg(int *addr, int newval)
+	// spin-wait (do nothing)
+}
+
+void release(lock_t *lock) {
+	lock->flag = 0;
+}
+```
+
+### Other Atomic HW Instructions
+```C
+int CompareAndSwap(int *addr, int expected, int new) {
+	int actual = *addr;
+	if(actual == expected) *addr = new;
+	return actual;
+}
+
+void acquire(lock_t *lock) {
+	while(CompareAndSwap(&lock->flag, 0, 1) == 1);
+	// spin-wait (do nothing)
+}
+```
+
+##### Basic Spinlocks are Unfair
+
+![](imgs/spinlock-unfair.png)
+
+#### Fairness: Ticket Locks
+- **Idea:** Reserve each thread's turn to use a lock.
+- Each thread spins until their turn.
+- Use new atomic primitive, fetch-and-add:
+
+```C
+int FetchAndAdd(int *ptr) {
+	int old = *ptr;
+	*ptr = old +1;
+	return old;
+}
+```
+
+- **Acquire**: Grab ticket;
+- Spin while not thread's ticket != turn.
+- **Release**: Advance to next turn.
+
+![](imgs/ticket-lock-ex.png)
+
+##### Ticket Lock Implementation
+
+```C
+typedef struct  __lock_t {
+	int ticket;
+	int turn;
+}
+
+void lock_init(lock_t *lock) {
+	lock->ticket = 0;
+	lock->turn = 0;
+}
+
+void acquire(lock_t *lock) {
+	int myturn = FAA(&lock->ticket);
+	while(lock->turn != myturn); // spin
+}
+
+void release(lock_t *lock) {
+	FAA(&lock->turn);
+}
+```
+
+### Spinlock Performance
+- **Fast when...**
+	- Many CPUs
+	- Locks held a short time
+	- Advantage: Avoid context switch
+- **Slow when...**
+	- one CPU
+	- locks held a long time
+	- Disadvantage: spinning is wasteful
+
+#### CPU Scheduler is Ignorant
+
+![](imgs/sched-ignorant.png)
