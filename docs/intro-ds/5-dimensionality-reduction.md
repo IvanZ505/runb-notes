@@ -81,3 +81,19 @@ $$A_{[m*n]}=U_{[m*r]}\Sigma_{[r*r]}(V_{[n*r]})^T$$
 	- `Σ`: **Diagonal**
 		- Entries (singular values) are *positive*, and sorted in decreasing order (`σ₁ ≥ σ₂ ≥ ... ≥ 0`)
 
+![](imgs/actual/svd-breakdown.png)
+
+### Dimensionality Reduction with SVD
+- Instead of using *two coordinates* `(x,y)` to describe point locations, let's use only one coordinate (`z`)
+- Point's position is its location along vector `v₁`
+- **How to choose `v₁`?** - Minimize reconstruction error.
+
+#### Goal
+- Minimize the sum of reconstruction errors:
+
+$$\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{D}||x_{ij}-z_{ij}||^{2}$$
+
+- Where `xᵢⱼ` are the "old" and `zᵢⱼ` are the "new" coordinates.
+- **SVD gives "best" axis to project on:**
+	- "**best**" = minimizing the reconstruction errors.
+- In other words, **minimum reconstruction error**
