@@ -36,6 +36,8 @@ Taught By Kania Jay
 
 ## [Assembly](../comp-arch/6-assembly)
 
+## [Bomblab](bomblab-notes)
+
 ## [Memory Hierarchy](../comp-arch/7-memory-hierarchy)
 
 ## [Finals Review](../comp-arch/comp-arch-finals)

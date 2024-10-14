@@ -45,7 +45,7 @@ Due to the massive amount of data out there, it is almost impossible to manually
 ### This Class
 - This class overlaps with machine learning, statistics, artificial intelligence, databases but more stress on:
 	- **Scalability:** (big data and big models)
-	- **Algorithms**
+	- **Algorithms** - Check out [DS notes](../data-structures/cs112)
 	- **Computing Architectures**
 	- Automation for handling **large data**
 

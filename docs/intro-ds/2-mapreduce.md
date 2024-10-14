@@ -1,5 +1,8 @@
 # [MapReduce](intro-ds#MapReduce)
 
+
+> MapReduce in Java with Hadoop.
+
 - Much of the course will be devoted to large scale computing for data analytics.
 - **Challenges:**
 	- How to *distribute computing*?

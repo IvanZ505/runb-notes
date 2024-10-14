@@ -63,7 +63,7 @@
 #### [Midterm 1](midterm-review-1)
 
 
-### Unit 2: Modularity and Perception vs Cognition
+### [Unit 2: Modularity and Perception vs Cognition](2-modularity-of-mind)
 - Is the mind a big soup of associations? Or is it organized into separate subsystems?
 	- Fodor thought it was not a soup of associations.
 - Does the way we think affect the way we see?

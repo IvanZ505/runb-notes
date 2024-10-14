@@ -1,4 +1,4 @@
-# Bomb Lab
+# [Bomb Lab](comp-arch)
 
 | Instructions | What it does                                              |
 | ------------ | --------------------------------------------------------- |

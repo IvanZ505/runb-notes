@@ -69,6 +69,11 @@
 
 $$conf(I→j)=\frac{support(I ∪ j)}{support(I)}$$
 
+#### Confidence
+
+> Check out notes on [probability from CDM](../cog-decision/probability) and probability from [Discrete](../discrete-2/discrete-2#probability)
+
+
 #### Mining Association Rules
 
 - **Step 1:** Find all frequent itemsets `I`
