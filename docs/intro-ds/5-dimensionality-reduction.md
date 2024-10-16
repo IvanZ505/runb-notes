@@ -97,3 +97,114 @@ $$\sum\limits_{i=1}^{N}\sum\limits_{j=1}^{D}||x_{ij}-z_{ij}||^{2}$$
 - **SVD gives "best" axis to project on:**
 	- "**best**" = minimizing the reconstruction errors.
 - In other words, **minimum reconstruction error**
+
+
+## Gathering Ratings
+
+### Explicit Feedback
+- Ask people to rate items
+- Doesn't work well in practice - people can't be bothered.
+
+### Implicit Feedback
+- Learn ratings from user actions.
+	- E.g. purchase implies high rating.
+- What about possible low ratings?
+
+## Predicting Utilities
+
+**Key problem:** Utility matrix `U` is *sparse*.
+
+- Most people have not rated most items.
+- **Cold Start:**
+	- New items have no ratings
+	- New users have no history
+- **Four approaches** to recommender systems:
+	- Content-based
+	- Collaborative Filtering
+	- Collaborative reasoning
+	- Large Foundation Models
+
+### Content Based Recommendations
+
+**Main idea:** Recommend items to customer `x` *similar to previous items* rated highly by `x`.
+
+
+- **Example**:
+	- *Movie Recommendations:*
+		- Recommend movies with same actors, director, genre, ...
+	- *Websites, blogs, news:*
+		- Recommend other sites with "similar" content...
+
+#### Workflow
+- Collect all the items that the user `x` has liked before.
+- Create a *Item Profile*
+
+#### Item Profile
+- For each item, create an *item profile*.
+- **Profile** is a set (vector) of features.
+	- **Movies:** Author, title, actor, director....
+	- **Text:** Set of "important" words in document,.
+- **How to pick important features?**
+	- Usual heuristic from text mining is **TF-IDF** (Term frequency \* Inverse Doc Frequency.)
+		- Term...Feature
+		- Document...Item
+
+##### Sidenote: TF-IDF
+
+$f_{ij}$ = Frequency of term (feature) *i* in doc (item) *j*.
+
+$$TF_{ij}=\frac{f_{ij}}{max_{k}f_{kj}}$$
+
+> *Note:* We normalize TF to discount for "longer" documents.
+
+- $n_{i}$ = number of docs that mention term *i*
+- *N* = total number of docs
+	- $IDF_{i}=log(\frac{N}{n_{i}})$
+- TF-IDF score: $w_{ij}=TF_{ij}*IDF_{i}$
+
+> Doc profile = set of words with higher **TF-IDF** scores, together with their scores.
+
+
+#### Use Profiles and Prediction
+- **User profile possibilities:**
+	- Weighted average of all rated item profiles.
+	- **Variation:** Weight by the *top-rated* items.
+	- ...
+- **Prediction Heuristic:**
+	- Given user profile `x` and item profile *i*, estimate: 
+	- $u(x,i) = cos(x,i) = \frac{x*i}{||x||*||i||}$
+
+> Key: Use the item profiles in order to build out a *user profile*
+
+#### Pros: Content based Approach
+- No need for data on other users.
+	- No *sparsity problem*
+- Able to recommend to users with unique tastes.
+- Able to recommend new & unpopular items.
+	- No *cold-start* item problem.
+		- There are two types of *cold-start* problems. (**Cold-start** user and item)
+- Able to provide explanations.
+	- Can provide explanations of recommended items by *listing content-features* that caused an item to be recommended.
+
+#### Cons:
+
+
+#todo fill this out
+
+## Collaborative Filtering
+- Consider user `x`
+- Find set `N` of other users whose ratings are "*similar*" to `x`'s ratings.
+- Estimate `x`'s ratings based on ratings of users in `N`.
+
+### Finding "Similar" Users
+- Let $r_x$ be the vector of user `x`'s ratings.
+- **Jaccard similarity measure**
+	- *Problem:* Ignores the value of the rating.
+- **Cosine similarity measure**
+	- $sim(x,y) = cos(r_{x},r_{y}) = \frac{r_{x}*r_{y}}{||r_{x}||*||r_{y}||}$
+	- **Problem:**
+		- Treats missing ratings as "negative"
+			- There should be a lot of shared ratings because in a massive database, there will be a LOT of 0's, as the users would not have rated every item, but would have more items unrated than rated.
+				- This means, *more users* will have those 0's in common.
+		- People's ratings scales are different.
+			- Some people give 5 stars easier than others, so those 5 star ratings don't mean as much.
