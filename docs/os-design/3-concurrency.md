@@ -381,3 +381,4 @@ void release(lock_t *lock) {
 #### CPU Scheduler is Ignorant
 
 ![](imgs/sched-ignorant.png)
+
