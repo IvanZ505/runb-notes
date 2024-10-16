@@ -109,3 +109,15 @@
 - Not mere dispositions - psychologically real mechanisms.
 	- You might have the mechanism (competence) but not be disposed to use it (performance)
 	- *Performance error*, not a *competence error*
+
+---
+
+- **Gall:** People might have good memory for chess but not music, so there can't be one memory.
+- **Fodor:** No bc. memory for chess/music could be an *interaction*
+	- Memory + knowledge of domain + past experience.
+- **Can't infer** from different *performance* to no shared *competence* (mechanism)
+
+---
+
+
+
