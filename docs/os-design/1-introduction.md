@@ -144,7 +144,7 @@ Virtualization is making each application believe that it has each resource to i
 
 - Virtual-to-physical memory mapping, page-fault, etc...
 
-![](imgs/virtualizing-memory.png)
+![](imgs/real/virtualizing-memory.png)
 
 - It is as if each running program has its own private memory.
 - Each program has allocated memory at the same address.

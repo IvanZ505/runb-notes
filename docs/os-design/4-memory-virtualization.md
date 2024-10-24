@@ -35,7 +35,7 @@
 
 #### Memory Is Expensive
 
-#todo get picture of mem
+![](imgs/real/mem-expensivev.png)
 
 ### Motivation for Virtualization
 - **Uniprogramming:** One process runs at a time.
@@ -55,7 +55,13 @@ Why do processes need dynamic allocation of memory?
 
 ##### Recursive Procedures
 
-#todo  huh? what is dis
+- **Uniprogramming:** One process runs at a time.
+
+![](imgs/real/uniprogramming.png)
+
+- **Disadvantages:**
+	- Only one process runs at a time.
+	- Process can destroy OS.
 
 ## Multiprogramming Goals
 
@@ -75,6 +81,45 @@ Why do processes need dynamic allocation of memory?
 ##### Sharing
 - Cooperative processes can share portions of address space.
 - *Although* you want to keep the processes separate, you should be able to allow sharing *memory* between two processes.
+
+
+### Abstraction: Address Space
+
+- **Address space:** Each process has set of addresses that map to bytes.
+	- Address space has static and dynamic components.
+		- *Static:* Code and some global variables.
+		- *Dynamic:* Stack and Heap
+- **Problem:**
+	- How can OS provide illusion of private address space to each process?
+
+### Motivation for Dynamic Memory
+- Why do processes need dynamic allocation of memory?
+	- Do not know amount of memory needed at compile time.
+	- Must be pessimistic when allocate memory statically.
+		- Allocate enough fro worst possible case; Storage is *not* used efficiently.
+- **Recursive procedures:**
+	- Do not know how many times procedure will be nested.
+- **Complex Data Structures**: Lists and trees.
+- **Type types of dynamic allocation:**
+	- Stack
+	- Heap
+
+#### Where Are Stacks Used?
+- The OS uses stacks for procedure call frames (local variable and parameters)
+
+```C
+main() {
+	int A = 0;
+	foo (A);
+	printf("A: %d\n", A);
+}
+
+void foo (int Z) {
+	int A = 2;
+	Z = 5;
+	printf("A: %d Z: %d\n", A, Z);
+}
+```
 
 
 ---
@@ -135,15 +180,33 @@ int main(int argc, char *argv[]) {
 
 ---
 
+## Virtualize Memory
+
+**Problem:** How to run multiple processes simultaneously?
+
+- Addresses are "hardcoded" into process binaries.
+- How to avoid collisions??
+
+Possible solutions for Mechanisms:
+
+1. Time sharing
+2. Static relocation
+3. Base
+4. Base+bounds
+5. Segmentation
+
 ### Time Sharing of Memory
 - Try similar approach to how OS virtualizes CPU.
-- #todo fill out this
+- **Observation:**
+	- OS gives illusion of many virtual CPUs by saving *CPU registers* to memory when process isn't running.
+- Could give illusion of many virtual memories by saving *memory* to *disk* when process isn't running.
 
 #### Problems with Time Sharing Memory
 - **Problem:** Ridiculous poor performance.
 	- You need to kick out every other process...
 - Better alternative: space sharing
-	- #todo whataaaaa
+	- At same time, space of memory is divided across processes.
+- **Remainder** of solutions all use space sharing.
 
 ### Static Relocation
 - Idea; OS rewrites each program before loading it as a process in memory.
@@ -157,15 +220,16 @@ int main(int argc, char *argv[]) {
 > Better techniques out there, this ones old.
 
 
-##### Static: Layout in Memory:
+##### Layout in Memory
 
-#todo get shit
+![](imgs/real/static-rel-layout-in-mem.png)
 
 #### Disadvantages
 - **No protection**
 	- Processes can just go access other processes/ destroy the OS.
 	- No privacy.
-- #todo what
+- Cannot move address space after it has been placed.
+	- May not be able to allocate new process...
 	- Heap should dynamically grow with the memory.
 
 ### Dynamic Relocation
@@ -179,13 +243,165 @@ int main(int argc, char *argv[]) {
 		- **Converts** the virtual address back to the physical address.
 	- Memory hardware uses *physical* or *real* addresses.
 
+---
+
+**Trivia:**
+
+- Who invented DRAM and when was it invented???
+	- Robert Dennard, patent filed in 1968.
+- **Why is it dynamic??**
+	- DRAM depends on each capacitor-transistor circuit holding onto its charge until the data can be refreshed.
+
+---
+
 #### Hardware Support
 
 - **Two operating modes**
-	- *Priveleged* (protected, kernel) mode: OS runs.
+	- *Privileged* (protected, kernel) mode: OS runs.
 		- When enter OS (trap, system calls, interrrupts, exceptions)
 		- Allows certain instructions to be executed.
 			- **Can manipulate contents of MMU**
 		- Allows OS to access all of physical memory.
 	- *User mode*: User processes run.
 		- Perform translation of logical address to physical address.
+
+
+##### Implementation of Dynamic Relocation BASE REG
+
+![](imgs/real/mmu-base-reg.png)
+
+- **Idea:** Translate virtual addresses to physical by adding a fixed offset each time.
+- Store offset in base register.
+- Each process has different value in base register.
+
+#### Visual Representation
+
+![](imgs/real/dynamic-relocation-ex-1.png)
+
+![](imgs/real/dynamic-relocation-ex-2.png)
+
+### Dynamic with Base+Bounds
+- **Idea:** Limit the address space with a bounds register.
+- **Base register:** Smaller physical address (or starting location)
+- **Bounds Register:** Size of this process's virtual address space.
+	- Sometimes defined as largest physical address (base + size)
+- OS kills process if process loads/stores beyond bounds.
+
+#### Implementation of BASE+BOUNDS
+
+- **Translation** on every memory access of user process.
+	- MMU compares logical address to bound register.
+		- *If logical address is greater, then generate error*
+	- MMU adds base register to logical address to form physical address.
+
+![](imgs/real/implementation-base+bounds.png)
+
+#### Managing Processes with Base+Bounds
+- Context-switch
+	- Add base+bound registers to PCB.
+	- Steps:
+		- Change to privileged mode.
+		- Save Base+bounds registers of old process.
+		- Load Base+bounds registers of new process.
+		- Change to user mode and jump to new process.
+- **What if don't change** Base+bounds registers when switch?
+- Protection requirement
+	- User process cannot change Base+bounds registers.
+	- User process cannot change to privilege mode.
+
+#### Base+Bounds Advantages
+- Provides protection (both read and write) across address spaces.
+- Support dynamic relocation.
+	- Can place process at different locations initially and also move address spaces.
+- Simple, inexpensive implementation.
+	- Few registers, little logic in MMU.
+- Fast
+	- Add and compare in parallel.
+
+#### Base+Bounds Disadvantages
+- Each process must be allocated contiguously in physical memory.
+	- Must allocate memory that may not be used by process.
+- **No partial sharing:** Cannot share limited parts of address space.
+
+### Segmentation
+- Divide address space into logical segments.
+	- Each segment corresponds to logical entity in address space.
+		- Code, stack, heap.
+- Each segment can independently:
+	- Be placed separately in physical memory.
+	- Grow and shrink.
+	- Be protected (separate read/write/execute protection bits)
+
+#### Segmented Addressing
+- Process now specifies segment and offset within segment.
+- How does process designate a particular segment?
+	- Use part of logical address.
+		- Top bits of logical address select segment.
+		- Low bits of logical address select offset within segment.
+- What if small address space, not enough bits?
+	- Implicitly by type of memory reference.
+	- Special registers.
+
+#### Segmentation Implementation
+- MMU contains Segment Table (per process)
+	- Each segment has own base and bounds, protection bits.
+	- Example: 14 bit logical address, 4 segments; how many bits for segment? How many bits for offset?
+
+![](imgs/real/segment-table.png)
+
+#### Advantages of Segmentation
+- Enables sparse allocation of address space.
+	- Stack and heap can grow independently.
+	- Heap: if no data on free list, dynamic memory allocator requests more from OS (e.g. UNIX: malloc calls `sbrk()`)
+	- Stack: OS recognizes reference outside legal segment, extends stack implicitly.
+- Different protection for different segments.
+	- Read-only status for code.
+- Enables sharing of selected segments.
+- Supports dynamic relocation of each segment.
+
+#### Disadvantages of Segmentation
+- Each segment must be allocated contiguously.
+	- May not have sufficient physical memory for large segments.
+
+##### Problem: Fragmentation
+
+**Definition:** Free memory that can't be usefully allocated.
+
+###### Why?
+- Free memory (hole) is too small and scattered.
+- Rules for allocating memory prohibit using this free space.
+
+###### Types of Fragmentation
+- External: Visible to allocator (e.g. OS)
+- Internal: Visible to requester (e.g. if must allocate at some granularity)
+
+![](imgs/real/problem-fragmentation.png)
+
+### Paging
+- **Goal:** Eliminate requirement that address space is contiguous.
+	- Eliminate external fragmentation.
+	- Grow segments as needed.
+- **Idea:** Divide address spaces and physical memory into fixed-sized pages.
+	- Size: 2², Example: 4KB
+	- Physical page: page frame.
+
+#### Translation of Page Addresses
+- How to translate logical address to physical address?
+	- High order bits of address designate page number.
+	- Low-order bits of address designate offset within page.
+- **How does** format of address space determine number of pages and size of pages?
+	- Figure out how many bits you need to locate all the addresses on the page.
+
+![](imgs/real/page-addr-translation.png)
+
+### Where Are PageTables Stored?
+
+- How big is a typical page table?
+	- Assume 32-bit address space.
+	- Assume 4KB pages.
+	- Assume 4 byte entries.
+- Page table size = num entries ✕ size of each entry.
+- Num entries = num virtual pages = 2^(bits for vpn)
+- Bits for vpn = 320 number of bits for page offset = 32 0 Ig(KB) = 32-12 = 20.
+
+#IMPORTANT WILL BE ON EXAM A LOTTTTTT

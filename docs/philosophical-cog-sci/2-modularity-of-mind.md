@@ -120,4 +120,54 @@
 ---
 
 
+## Domain Specificity
 
+### Mandatoriness
+- Input systems are not under "executive control."
+- You can choose what to think about.
+
+##### Stroop Task
+- The *Stroop Effect* - 
+	- Say the color of the font
+- You *Just cant help processing it*
+- **Lexical identification** is mandatory (or "automatic")
+
+##### Caveats
+1. Attention
+
+- If you are absorbed in some task, you may fail to parse what someone says.
+	- Fodor: this minimizes the *input* to the parser, or the extend to which the *output* is cognized.
+	- The operation of the parser (transforming inputs into outputs) is *still mandatory*
+- **Covert Attention** vs **Overt Attention**
+	- You can do this with your senses.
+
+1. Re-interpretation
+
+- Paints (or experts) might be able "see" the 2D projection of 3D objects.
+	- Fodor: This is a post-module re-interpretation of the output, not an effect on processing within the module.
+
+---
+
+- **Mandatory=** Hold fixed the input (e.g. don't shut your eyes, stop up ears, etc...), and you will always get the output.
+- "Think of an utterance of 'All Gaul is divided into three parts' as an acoustic object. Now try hearing an utterance of 'All Gaul is divided into three parts' as an acoustic object. Notice the difference."
+- Potential counterexample: Semantic satiation.
+	- Words start to lose meaning and you stop processing the meaning when you repeat it.
+
+### Information Encapsulation
+
+- 1940s/50s: "New look" psychology.
+- Perception is driven by expectations & values.
+- People slower/less accurate at recognizing the color of a playing card if it doesn't match the suit.
+	- A black heart.
+
+#### "New Look"
+- How does perception having access to your expectations (playing cards) & values (coins) square with speed and manditoriness of perception?
+- Fodor: We don't want input systems to have access to *all of your expectations and values.*
+	- *Encapsulation*
+		- They only have access to *proprietary store of information*.
+			- Specialized information, does **not** include all your background knowledge, feelings, etc...
+		- Example: Light from above prior
+- Quicker to avoid having to sift through all that background info.
+
+
+---

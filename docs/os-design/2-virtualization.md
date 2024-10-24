@@ -48,6 +48,8 @@
 - Data segment for -- global uninitialized variables (`.bss`) -- global initialized variables (`.data`)
 - Code segment typically read-only
 
+![](imgs/real/process-mem-segs.png)
+
 ## Virtualizing the CPU
 
 > **Goal:** Give each process impression it alone is actively using CPU.
@@ -209,7 +211,15 @@ struct proc {
 };
 ```
 
-![](imgs/context-switch.png)
+![](imgs/real/context-switch.png)
+
+- Process A has moved from user to kernel mode, OS decides it must switch from A to B 
+- Save context (PC, registers, kernel stack pointer) of A on kernel stack
+- Switch SP to kernel stack of B
+- Restore context from B’s kernel stack  
+- Who has saved registers on B’s kernel stack?  
+	- OS did, when it switched out B in the past
+- Now, CPU is running B in kernel mode, return-from-trap to switch to user mode of B
 
 ##### Question 4
 
@@ -263,6 +273,133 @@ enum proc_state {
 		- Waiting for the CPU
 	- *Blocked:*
 		- Asleep: Waiting for I/O on synchronization to complete.
+
+
+#### State Transitions
+
+![](imgs/real/state-transitions.png)
+
+##### OS Tasks
+- The OS must track every process in the system.
+	- Each process is identified by a unique Process ID (PID)
+- OS maintains queues of all processes.
+	- Ready Queue: Contains all ready processes.
+	- Event Queue: One logical queue per event.
+		- e.g. disk I/O and locks.
+		- Contains all processes waiting for that event to complete.
+
+
+### Summary
+- **Virtualization**
+	- The process of Virtualization and context switching gives each process the impression that it has its own CPU.
+- Direct execution makes processes fast.
+- Limited execution at key points to ensure OS retains control.
+- **Hardware provides a lot of OS Support**
+	- User vs kernel mode
+	- timer interrupts
+	- automatic register saving.
+
+
+## Process Creation
+- **Two ways** to create a process.
+	- Build a new empty process from scratch.
+	- Copy an existing process and change it appropriately.
+
+### Build New Process
+
+#### Steps
+- Load specific code and data into memory and create an empty call stack.
+- Create and initialize PCB (make look like context-switch)
+- Put process on ready list.
+
+#### Advantages & Disadvantages
+- **Advantage:** No wasted work.
+- **Disadvantage:** Difficult to setup process correctly and to express all possible options.
+	- Process permissions, where to write I/O, environment variables.
+	- Example: WindowsNT has call with 10 arguments.
+
+### Clone Existing Process
+- Clone an existing process and change it.
+- **Example:** Unix `fork()` and `exec()`.
+	- `fork()` - Clones calling process.
+	- `exec(char *file)` - Overlays file image on calling process.
+
+#### `fork()`
+- Stops current process and save its state.
+- Make copy of code, data, stack and PCB.
+- Add new PCB to ready list.
+- Any changes needed to child process?
+
+##### `Exec(char *file)`
+- Replace current data and code segments with those in specified file.
+
+#### Advantages & Disadvantages
+- **Advantage:** Flexible, clean, simple
+- **Disadvantage** Wasteful to perform copy and then overwrite of memory.
+
+---
+
+### Unix Process Creation
+
+- How are Unix shells implemented??
+
+```C
+
+while(1) {
+	char *cmd = getcmd();
+	int retval = fork();
+	if(retval == 0) {
+	// This is the child process
+	// Set up child process' environment here
+	// E.g where is standard I/O, how to handle signals? 
+	exec(cmd);
+	// Exec does not return if it succeeds.
+	printf("Error: Could not execute %s\n", cmd);
+	exit(1);
+	} else {
+	// This is the parent process, wait for tthe child to finish.
+	int pid = retval;
+	wait(pid);
+	}
+}
+```
+
+
+## Stack Detour
+
+### IA32/Linux Stack Frame
+- **Current Stack Frame** ("Top" to Bottom)
+	- "Argument build" area (parameters for function about to be called)
+	- Local variables (if can't be kept in registers)
+	- Saved register context (when reusing registers)
+	- Old frame pointer (for caller)
+- **Caller's Stack Frame**
+	- Return address
+		- Pushed by `call` instruction
+	- Arguments for this call
+
+---
+
+- The stack grows downward (*from higher to lower memory addresses*)
+- The frame pointer (`%ebp`) points to the old `%ebp` value in the current frame.
+- The stack pointer (`%ebp`) points to the top of the stack, which is the argument build area.
+- The 'call' instruction pushes the *return address* onto the stack.
+- The frame pointer provides a **stable reference point** for accessing local variables and parameters.
+- This structure allows for nested function calls and proper return to the calling function.
+
+![](imgs/real/stack-detour.png)
+
+### Swap Setup 1
+
+![](imgs/meme/swap-setup-1.png)
+
+### Swap Setup 2
+
+![](imgs/real/swap-setup-2.png)
+
+### Swap Setup 3
+
+![](imgs/real/swap-setup-3.png)
 
 ---
 
@@ -338,7 +475,7 @@ enum proc_state {
 
 ##### FIFO Turnaround
 
-`completion_time - arrival_time`
+> Def: `turnaround_time` = `completion_time - arrival_time`
 
 - You must take the average for Turnaround time as each task will finish at different times.
 
@@ -352,7 +489,7 @@ enum proc_state {
 
 > In this case, the turnaround time would be ~20 seconds.
 
-## Convoy Affect
+#### Convoy Affect
 
 - **Passing the Tractor**
 	- FIFO: Turnaround time can suffer when short jobs have to wait for long jobs...
@@ -383,12 +520,12 @@ enum proc_state {
 
 #### SJF W/(Arrival Time)
 
-![](imgs/sjf-arrival-time.png)
+![](imgs/real/sjf-arrival-time.png)
 
 - What is the average turnaround time here?
 - **Stuck behind a tractor again**
 
-![](imgs/tractored-sjf.png)
+![](imgs/real/tractored-sjf.png)
 
 > (60 + (70 – 10) + (80 – 10)) / 3 = 63.3s
 
@@ -403,9 +540,9 @@ enum proc_state {
 	- STCF (Shortest Time-to-Completion first)
 	- **Always** run job that will complete the quickest.
 
-#### Example w/ Prev
+### STCF Scheduler
 
-![](imgs/stcf-exmaple.png)
+![](imgs/real/stcf-exmaple.png)
 
 - Avg Turnaround time here: 36.6s...
 - With SJF it *was* 63.3s.
@@ -417,7 +554,7 @@ enum proc_state {
 
 ##### Response v Turnaround
 
-![](imgs/response-vs-turnaround.png)
+![](imgs/real/response-vs-turnaround.png)
 
 ### Round Robin Scheduler
 
@@ -426,7 +563,7 @@ enum proc_state {
 - **New Scheduler:** RR (Round Robin)
 		- Alternate ready processes every fixed-length time slice.
 
-![](imgs/round-robin-schedl.png)
+![](imgs/real/round-robin-schedl.png)
 
 ---
 
@@ -466,7 +603,7 @@ enum proc_state {
 - **Rule 1:** If `priority(A) > priority(B)`, A runs
 - **Rule 2:** If `priority(A) == priority(B)`, A & B run in RR
 
-![](imgs/prioirities-mlfq.png)
+![](imgs/real/prioirities-mlfq.png)
 
 #### History
 
@@ -485,14 +622,14 @@ enum proc_state {
 - Interactive jobs perform quick operations and does I/O.
 - As it does not use the entire time slice, the interactive jobs never get demoted...
 
-![](imgs/interactive-job-mlfq-1.png)
+![](imgs/real/interactive-job-mlfq-1.png)
 
 #### Problems?
 - Unforgiving + Starvation
 	- Gaming the system
 - **Low priority jobs may never get scheduled...**
 
-![](imgs/interactive-job-mlfq-2.png)
+![](imgs/real/interactive-job-mlfq-2.png)
 
 *Answer:* Periodically boost priority of all jobs (or all jobs that haven't been scheduled)
 
@@ -533,12 +670,12 @@ enum proc_state {
 	- Process A has 64 tickets: 0-74
 	- Process B has 25 tickets: 75-99
 
-![](imgs/lottery-scheduling.png)
+![](imgs/real/lottery-scheduling.png)
 
 - Intuition
 	- The longer these two jobs compete, the more likely they are to achieve the desired percentages.
 
-![](imgs/lottery-example.png)
+![](imgs/real/lottery-example.png)
 
 ## Multiprocessor Scheduling
 - The rise of multicore processor is the source of multiprocessor scheduling proliferation.
@@ -554,16 +691,16 @@ enum proc_state {
 
 ##### Single CPU with Cache
 
-![](imgs/cpu-mem-layout.png)
+![](imgs/real/cpu-mem-layout.png)
 
 - By keeping data in cache, the system can make slow memory *appear to be a fast* one.
 
 #### Cache Coherence
 - Consistency of shared resource data stored in multiple caches.
 
-![](imgs/cache-coherence-0-1.png)
+![](imgs/real/cache-coherence-0-1.png)
 
-![](imgs/cache-coherence-2-3.png)
+![](imgs/real/cache-coherence-2-3.png)
 
 ##### Cache Coherence Solution
 - Bus snooping
@@ -602,14 +739,14 @@ int List_Pop() {
 ##### Cache Affinity Queue
 - Put all jobs that need to be scheduled into a single queue.
 
-![](imgs/cache-coherence-queue.png)
+![](imgs/real/cache-coherence-queue.png)
 
 - Each CPU simply picks the next job from the globally shared queue.
 - Cons:
 	- Some form of *locking* have to be inserted - **lack of scalability**
 	- **Cache affinity**
 
-![](imgs/cache-affinity.png)
+![](imgs/real/cache-affinity.png)
 
 - **Preserving affinity** for most
 	- Jobs A through D are not moved across processors.
@@ -627,7 +764,7 @@ int List_Pop() {
 
 - With RR (Round Robin), the system may produce a schedule that looks like this:
 
-![](imgs/mqms-schedule-ex.png)
+![](imgs/real/mqms-schedule-ex.png)
 
 - MQMS provides more *scalability* and *cache affinity*.
 
@@ -641,7 +778,7 @@ int List_Pop() {
 - CFS isn't actually "*completely fair*"
 	- Unfairness is bound `O(N)`
 
-![](imgs/cfs-red-black-tree.png)
+![](imgs/real/cfs-red-black-tree.png)
 
 - CFS changes or removes time-slice allotment
 	- Do away with time-slices completely.
@@ -663,7 +800,20 @@ int List_Pop() {
 		- Higher values mean **higher** priority
 	- Real-time processes always executes before standard (nice) processes.
 
+
+----
+
+- Assume the targeted latency is 20 milliseconds.
+- If there are two runnable tasks at the same priority.
+	- Each will run for 10 milliseconds before preempting in favor of the other.
+- If we have four tasks at the same priority.
+	- Each will run for 5 milliseconds.
+- If there are 20 tasks, each wilkl run for 1 millisecond.
+- As the number of runnable tasks approaches infinity, the proportion of allotted processor and the assigned time slice approaches zero.
+- **Problem???** (Solution: Run any tasks for a minimum of 1 millisecond)
+
 #### Target Latency (TL)
+
 - Minimum amount of time - idealized to an infinitely small duration - required for every runnable task to get at least one turn on the processor.
 - Window where every process gets some CPU.
 
@@ -672,6 +822,15 @@ int List_Pop() {
 - For example: Run for 1 ms to ensure there is a ceiling on the incurred switching costs.
 - Not perfectly fair when the number of processes grows so large.
 
+---
+
+- Given for instance a target latency of 20 ms.
+- **Example 1:**
+	- Two runnable processes of equal niceness, then both processes will run for 10 ms each before being pre-empted in favor of the other process.
+- **Example 2:**
+	- If there are 10 processes of equal niceness, each runs for 2 ms each.
+
+
 ### Preventing Gaming
 
 - **Problem:** Higher priority job could trick scheduler and get more CPU by performing I/O right before the time-slice ends.
@@ -679,5 +838,5 @@ int List_Pop() {
 
 ## Stack Detour
 
-![](imgs/stack-frame-linux.png)
+![](imgs/real/stack-frame-linux.png)
 

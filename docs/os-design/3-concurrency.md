@@ -12,7 +12,7 @@
 
 ### Motivation for Concurrency
 
-![](imgs/motivation-for-conc.png)
+![](imgs/real/motivation-for-conc.png)
 
 - The speeds of each CPU by itself sort of tapered off, and is no longer growing (individually)
 - Needing more and more power
@@ -65,7 +65,29 @@
 - Do they share a stack pointer?
 	- **NO!** Also bad practice to share stack pointers.
 
-![](imgs/thread-shares.png)
+![](imgs/real/thread-shares.png)
+
+- **Multiple threads within a single process share:**
+	- Process ID (PID)
+	- Address space
+		- Code (Instruction)
+		- Most data (heap)
+	- Open file descriptors
+	- Current working directory
+	- User and group id
+- **Each thread has its own:**
+	- Thread ID (TID)
+	- Set of registers, including Program counter and Stack pointer.
+	- Stack for local variables and return addresses. (in same address space)
+
+##### Thread API
+
+- Variety of thread systems exists
+	- POSIX Pthreads
+- Common thread operations.
+	- Create
+	- Exit
+	- Join (Instead of `wait()` for processes)
 
 ### OS Support
 
@@ -175,7 +197,7 @@ mov %eax, 0x123
 ##### Locking Linked Lists: Approach 1
 - Consider everything to be in the critical section.
 
-![](imgs/locking-ll-1.png)
+![](imgs/real/locking-ll-1.png)
 
 - However, this means other threads have to do a lot of waiting....
 - *Can the critical section be smaller?*
@@ -183,7 +205,7 @@ mov %eax, 0x123
 ##### Locking Linked Lists: Approach 2
 
 
-![](imgs/locking-ll-2.png)
+![](imgs/real/locking-ll-2.png)
 
 - `lookup()` is unable to be made any smaller due to the need to maintain the linked list in a undisturbed state when traversing through it.
 
@@ -232,7 +254,7 @@ void release(lockT *l) {
 }
 ```
 
-- Disadvantages??
+- **Disadvantages**??
 	- Only works on uniprocessors.
 	- Process can keep control of CPU for arbitrary length.
 	- Cannot perform other necessary work.
@@ -324,7 +346,7 @@ void acquire(lock_t *lock) {
 
 ##### Basic Spinlocks are Unfair
 
-![](imgs/spinlock-unfair.png)
+![](imgs/real/spinlock-unfair.png)
 
 #### Fairness: Ticket Locks
 - **Idea:** Reserve each thread's turn to use a lock.
@@ -343,7 +365,9 @@ int FetchAndAdd(int *ptr) {
 - Spin while not thread's ticket != turn.
 - **Release**: Advance to next turn.
 
-![](imgs/ticket-lock-ex.png)
+##### Ticket Lock Example
+
+![](imgs/real/ticket-lock-ex.png)
 
 ##### Ticket Lock Implementation
 
@@ -380,5 +404,224 @@ void release(lock_t *lock) {
 
 #### CPU Scheduler is Ignorant
 
-![](imgs/sched-ignorant.png)
+![](imgs/real/sched-ignorant.png)
+
+#### Ticket Lock With `Yield()`
+
+```C
+void acquire(lock_t *lock) {
+	int myturn = FAA(&lock->ticket);
+	while(lock->turn!=myturn) yield(); // This is it right here
+}
+```
+
+![](imgs/real/yield-instead-ofspin.png)
+
+- **Waste:**
+	- Without yield: O(thread \* time_slice)
+	- With yield: O(threads \* context_switch)
+- So, even without yield, spinning is slow with high thread contention.
+- **Next improvement**: Block and put thread in waiting queue instead of spinning.
+
+---
+
+**Mutual exclusion:** (e.g. A and B don't run at the same time)
+
+- Solved with *locks*
+
+**Ordering:** (e.g. B runs after A does something)
+
+- Solved with *condition variables* and *semaphores*
+
+
+---
+
+## Condition Variables
+
+- `wait(cond_t *cv, mutex_t *lock)`
+	- Assumes the lock is held when `wait()` is called.
+	- Puts caller to sleep + releases the lock (atomically)
+	- When awoken, reacquires lock before returning.
+- `signal(cond_t *cv)`
+	- Wakes a single waiting thread (if `>= 1` thread is waiting)
+	- If there is no waiting thread, just return, doing nothing.
+
+### Join Implementation: Correct
+
+**Parent:**
+
+```C
+void thread_join() {
+	mutex_lock(&m);          // W
+	if (done == 0) {         // X
+		cond_wait(&c, &m);   // Y
+	}
+	mutex_unlock(&m);        // Z
+}
+```
+
+
+**Child:**
+
+```C
+void thread_exit() {
+	mutex_lock(&m);         // a
+	done = 1;               // b
+	cond_signal(&c);        // c
+	mutex_unlock(&m);       // d
+}
+```
+
+
+> **Note:** `cond_wait` also releases mutex before waiting provided condition is not met yet.
+
+| Parent: | w   | x   | y   |     |     |     |     | z   |
+| ------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Child:  |     |     |     | a   | b   | c   | d   |     |
+
+**Use mutex** to ensure no race between interacting with `state` and `wait`/`signal`.
+
+### Producer/Consumer Problem
+- **Producers** generate data.
+- **Consumers** grab data and process it.
+
+**Use condition variables to:**
+
+- Make producers wait when buffers are full.
+- Make consumers wait when there is nothing to consume.
+
+![](imgs/real/prod-cons-prob.png)
+
+> Confused, why does this work? if the mutex is locked, how tf is the other producer thread running????
+
+
+### Conditional Variable Rule of Thumbs
+- Whenever a lock is acquired, *recheck* assumptions about state!
+	- Use `while` instead of `if`
+- Possible for another thread to grab lock between signal and wakeup from `wait`
+	- `signal()` simply makes a thread **runnable**, does not guarantee the thread run next.
+- Note that some libraries also have "*spurious wakeups*"
+	- May wake multiple waiting threads at a signal or at any time.
+
+---
+
+- **Keep state** in addition to CV's
+- **Always do wait/signal** with lock held.
+- Whenever thread wakes from waiting, **recheck state**
+
+---
+
+### Condition Variables vs Semaphores
+- **Condition Variables** have no state (other than waiting queue)
+	- Programmer must track additional states.
+- **Semaphores** have state: track integer value.
+	- State cannot be directly accessed by user program, but state determines the behavior of semaphore operations.
+
+## Semaphores
+
+### Semaphore Operations
+
+##### Allocate and Initialize
+
+```C
+sem_t sem;
+sem_init(sem_t *s, int initval) {
+	s->value = initval;
+}
+```
+
+- User cannot read or write value directly after initialization.
+
+##### Wait or Test
+- *Sometimes `P()` for Dutch word*
+- Waits until value of **semaphore** is `>` 0, then decrements sem value.
+
+##### Signal or Increment or Post
+- *Sometimes `V()` for Dutch*
+- Increment sem value, then wake a single waiter.
+
+### Join with CV vs Semaphores
+
+**Conditional Variables:**
+
+```C
+void thread_join() {
+	mutex_lock(&m);
+	if(done == 0)
+		cond_wait(&c, &m);
+	mutex_unlock(&m);
+}
+
+void thread_exit() {
+	mutex_lock(&m);
+	done = 1;
+	cond_signal(&c);
+	mutex_unlock(&m);
+}
+```
+
+**Semaphores:**
+
+```C
+sem_wait() // waits until value > 0, then decrement
+sem_post() // increment value, then wake a single waiter
+
+sem_t s;
+sem_init(&s, ???);         // Init to 0, so sem_wait() must wait.
+
+void thread_join() {
+	sem_wait(&s);
+}
+
+void thread_exit() {
+	sem_post(&s);
+}
+```
+
+#### Equivalence Claim
+- **Semaphores** are *equally powerful* to Locks + CVs.
+	- What does this mean?
+- One might be more convenient, but that's not relevant.
+- Equivalence means each can be built from the other.
+
+
+### Semaphore Cases
+
+##### Case 1
+
+- Simplest case:
+	- Single producer thread, single consumer thread
+	- Single shared buffer between producer and consumer.
+- **Requirements:**
+	- Consumer must wait for producer to fill buffer.
+	- Producer must wait for consumer to empty buffer (if filled)
+- **Require 2 Semaphores:**
+	- `emptyBuffer`: Initialize to ???
+		- 1 -> 1 empty buffer; producer can run 1 time first
+	- `fullBuffer`: Initialize to ???
+		- 0 -> 0 full buffers; consumer can run 0 times first
+
+![](imgs/real/semaphore-case-1.png)
+
+##### Case 2
+
+- Next case: **Circular Buffer**
+	- Single producer thread, single consumer thread.
+	- Shared buffer with `N` elements between producer and consumer.
+- Requires 2 Semaphores:
+	- `emptyBuffer`: Initializes to ???
+		- N -> N empty buffers; producer can run `N` times fast.
+	- `fullBuffer`: Initialize to ???
+		- 0 -> 0 full buffers; consumer can run 0 times fast
+
+![](imgs/real/semaphore-ex-2.png)
+
+##### Case 3
+
+- **Final case:**
+	- Multiple producer threads, multiple consumer threads.
+	- Shared buffer with `N` elements between producer and consumer.
+- **Requirements:**
+	- Each consumer must grab unique filled element.
+	- Each producer must grab unique empty element.
 

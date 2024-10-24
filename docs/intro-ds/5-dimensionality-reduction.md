@@ -208,3 +208,73 @@ $$TF_{ij}=\frac{f_{ij}}{max_{k}f_{kj}}$$
 				- This means, *more users* will have those 0's in common.
 		- People's ratings scales are different.
 			- Some people give 5 stars easier than others, so those 5 star ratings don't mean as much.
+
+#### Evaluation in RS
+
+### Top N Recommendations
+- Top-N Recommendation
+	- Provide a length-N recommendation list for each user.
+	- Examine the hit items in the recommendation list.
+
+| Rank | Hit? |
+| ---- | ---- |
+| 1    |      |
+| 2    | X    |
+| 3    | X    |
+| 4    | X    |
+| 5    |      |
+
+- Supposing we have `5` items provided for the user, *we call that our recommendation list.*
+	- You can't guarantee those 5 are all correct.
+	- *Examine which of those* 5 appears in the testing data set.
+		- **Hit item**
+
+---
+
+- Confusion matrix
+
+|                 | Reality             | Reality             |                           |
+| --------------- | ------------------- | ------------------- | ------------------------- |
+|                 | Actually right      | Actually wrong      |                           |
+| Recommended     | True positive (tp)  | False Positive (fp) | **All Recommended items** |
+| Not Recommended | False negative (fn) | True negative (tn)  |                           |
+|                 | **All good items**  |                     |                           |
+
+---
+
+### Metrics: Precision and Recall
+
+##### Precision
+- A measure of exactness, determines the fraction of relevant items retrieved out of all items retrieved.
+	- E.g. the proportion of recommended movies that are actually good...
+
+
+$$TODO FILL$$
+
+##### Recall
+- A measure of completeness, determines the fraction of relevant items retrieved out of all relevant items.
+	- E.g. the proportion of good movies out of all...
+
+
+#todo fill out the equaiton
+
+
+#### Precision vs Recall
+- E.g. typically, there is a tradeoff between precision and recall.
+- When a recommender system is tuned to increase precision, *recall* will be decreased. (or vice versa)
+	- E.g. Recommend a lot of items.
+		- **Recall** is high..
+		- **Precision** may be very small...
+
+#todo get the picture.
+
+
+### $F_{1}$ Measure
+- The `F₁` Measure attempts to combine Precision and Recall into a single value for comparison purposes.
+	- The harmony mean of Precision and Recall.
+	- May be used to gain a **more balanced view** of performance.
+
+$$F_{1}=2*\frac{precision * recall}{precision+ recall}$$
+
+- Optimal value = 1
+
