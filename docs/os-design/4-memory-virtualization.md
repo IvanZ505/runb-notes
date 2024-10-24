@@ -394,7 +394,9 @@ Possible solutions for Mechanisms:
 
 ![](imgs/real/page-addr-translation.png)
 
-### Where Are PageTables Stored?
+#### Where Are PageTables Stored?
+
+> Short answer: Also in memory.
 
 - How big is a typical page table?
 	- Assume 32-bit address space.
@@ -402,6 +404,84 @@ Possible solutions for Mechanisms:
 	- Assume 4 byte entries.
 - Page table size = num entries ✕ size of each entry.
 - Num entries = num virtual pages = 2^(bits for vpn)
-- Bits for vpn = 320 number of bits for page offset = 32 0 Ig(KB) = 32-12 = 20.
+- Bits for vpn (virtual page num) = 320 number of bits for page offset = 32 0 Ig(KB) = 32-12 = 20.
 
 #IMPORTANT WILL BE ON EXAM A LOTTTTTT
+
+#### Memory Accesses with Pages
+
+```Assembly
+0x0010: movl 0x110, %edi
+0x0013: addl $0x3, %edi
+0x0019: movl %edi, 0x110
+```
+
+- Assume PT is at phys addr 0x5000
+- Assume PTE's are 4 bytes.
+- Assume 4KB pages.
+- How many bits for offset?
+	- 12
+
+###### Physical Memory Accesses with Paging?
+1. Fetch instruction at logical addr 0x0010; vpn?
+
+- Access page table to get ppn (Physical page number) for vpn 0.
+- Memory ref 1: `0x5000`
+- Learn vpn is at ppn 2.
+- Fetch instruction at `0x2010` (mem ref. 2)
+
+Exec, load from logical addr `0x1100`, vpn??
+
+- Access page table to get ppn for vpn 1.
+- Memory ref. 3: `0x5004`
+- Learn vpn 1 is at ppn 0.
+- `Movl` from `0x0100` into reg (mem ref 4)
+
+> **Pagetable is slow!!!** Doubles memory references
+
+
+### Multilevel Page Tables
+
+##### Goal
+
+Allow each page table to be allocated non-contiguously.
+
+**Idea:** Page the page tables.
+
+- Creates multiple levels of page tables; outer level "page directory"
+- Only allocate page tables for pages in use.
+- Used in x86  architectures (hardware can walk known structure)
+
+#todo get the diagram...
+
+
+> Current systems have 4 levels of page tables. (They only use 48 bits of the page table.)
+
+
+- The multilevel page table uses a data structure known as a *radix tree*.
+	- These radix trees have keys that are combined together with the different nodes in the tree.
+- Each thing in the outer page table points to another entry in the *inner page*.
+	- The *inner page* will also have entries that point to the actual physical page that contains your data.
+	- **How do you know which inner page entries to actually access?**
+- **The representation bits** can be *smaller*, but *cannot be bigger* than the 4KB size of each page.
+
+> Think about it like a book. Outer page (page directory) is like a table of contents.
+
+
+#### Address Format
+- How should the logical address be structured?
+	- How many bits for each paging level?
+- **Goal:**
+	- Each page table fits within a page.
+	- PTE size \* number PTE (page table entry) = page size.
+	- Assume PTE size is 4 bytes.
+
+###### Example
+
+- 30-bit address:
+	- If you have a 4KB page, and each entry is 4 bytes...
+		- You can only have 1024 entries...
+	- With 18 bits for the page, `2^18` is a quarter of a million entries...
+		- Way too many.
+		- You can not use just 1 level, but you need 1 more level.
+
