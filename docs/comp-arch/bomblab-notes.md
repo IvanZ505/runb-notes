@@ -6,7 +6,7 @@
 | mov          | moves first param into second                             |
 | sub          | subtract first num from second num and stores in second   |
 | sar          | arithmetic right shift                                    | 
-
+rachel d kim
 
 ## GDB Debugger
 

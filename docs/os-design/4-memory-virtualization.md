@@ -96,7 +96,7 @@ Why do processes need dynamic allocation of memory?
 - Why do processes need dynamic allocation of memory?
 	- Do not know amount of memory needed at compile time.
 	- Must be pessimistic when allocate memory statically.
-		- Allocate enough fro worst possible case; Storage is *not* used efficiently.
+		- Allocate enough for worst possible case; Storage is *not* used efficiently.
 - **Recursive procedures:**
 	- Do not know how many times procedure will be nested.
 - **Complex Data Structures**: Lists and trees.
@@ -475,6 +475,8 @@ Allow each page table to be allocated non-contiguously.
 	- Each page table fits within a page.
 	- PTE size \* number PTE (page table entry) = page size.
 	- Assume PTE size is 4 bytes.
+
+![](imgs/multilevel.png)
 
 ###### Example
 

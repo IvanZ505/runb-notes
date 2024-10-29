@@ -171,3 +171,72 @@
 
 
 ---
+
+- Starkest examples: *illusions*
+	- Muller-Lyer Pulsating Star
+- McGurk effect keeps working even after you know he's saying "ba"
+
+---
+
+#### Carpentered World
+- One hypothesis is the "carpentered world hypothesis"
+- Longer lines look further away because of corners constructed in certain cultural environments.
+- However, blind children who have cataracts removed are *immediately susceptible*.
+
+---
+
+*Instead,* informational encapsulation seems to rely on info about length cues that is **innately available to vision.**
+
+- Remains impossible to "unsee"
+- Vision is to some degree *insensitive*... #todo huh??
+
+#### Why Encapsulation
+- **Fodor:** The *point* of perception is to contradict belief.
+- You don't want it to tell you what you expect to be out there.
+- You want it to tell you what is out there, even if it doesn't align with your expectations.
+- **It explains why input systems are fast**
+- Can simply ignore most of the info stored in the mind.
+	- No need to search through all of your knowledge to see what's relevant.
+- Input systems just make assumptions that are reliable. (Light from above prior)
+
+##### Caveat (a)
+- "The information that input systems provide must somehow be reconciled with background knowledge."
+	- Even if it doesn't access the background knowledge.
+- You don't end up thinking that the lines to the right are equally long.
+- But this is something that happens cognitively -- input systems say their piece + you sort out what's true.
+
+##### Caveat (b)
+- "Evidence for the cognitive penetrability "
+- Multiple systems might perform the same function.
+	- Fodor: What word comes next in "I have the pepper, but please pass the ..."
+- If the signal is degraded (can't hear it well), people will understand the sentence better if it ends with "salt" than if it ends with "dog"
+
+##### Caveat (c)
+- There can be "top-down" information flow *within* input systems without violating encapsulation.
+	- Fodor's example: If the 's' in 'legislation' is replaced with a cough, people still hear the 's'
+
+
+### Wishful Thinking
+- Recall the "New Look": Perception driven by expectations and values.
+- Balcetis & Dunning (2010) are an example of the revival of this perspective.
+	- Their Question: does visual perception of distance have access to our desires.
+- Encapsulation *says* that this should NOT ever happen.
+
+---
+
+
+##### Experiment 1
+- Will thirst affect perception of how far away bottle of water is?
+	- n=47.
+	- Some Ss drink water (quenched) others each salty pretzels (thirsty)
+	- Sit across from full bottle of water 36 in. away - rate desirability and verbally estimate distance.
+- **Result:**
+	- Thirsty Ss rated water as more desirable than quenched (p<0.001)
+	- Thirsty Ss also estimated that the bottle was ~10% *closer* (25.1 in vs 28.0 in) (`p=0.05`)
+
+
+---
+
+- Does the nonverbal DV (dependent variable) really eliminate the possibility of the effect as being post-perceptual?
+	- Example: Suppose I tell you before the study that I'll give you \$20 if you underthrow the beanbag.
+	- Does you underthrowing the beanbag show anything about your visual perception?
