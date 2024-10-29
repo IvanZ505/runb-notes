@@ -7,3 +7,5 @@
 ## [Concurrency](3-concurrency)
 
 ## [Memory Virtualization](4-memory-virtualization)
+
+## [Midterm](midterm-review)
