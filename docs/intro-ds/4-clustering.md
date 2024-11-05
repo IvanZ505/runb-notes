@@ -49,7 +49,14 @@ Ex:
 	- Measure cluster distances by distances of centroids.
 2. When to stop combining clusters?
 
+#### Example: Hierarchical Clustering
+
 ![](imgs/actual/ex-hierarchical-custering-centrod.png)
+
+##### Non-euclidean Case
+- **What about the Non-Euclidean Case?**
+	- The only "locations" we can talk about are the points themselves.
+		- e.g. there is no "average" of two sets.
 
 ### Implementation
 - **Naive implementation of hierarchical clustering:**
