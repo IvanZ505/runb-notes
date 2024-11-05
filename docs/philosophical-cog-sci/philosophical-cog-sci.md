@@ -73,6 +73,8 @@
 	- Ex: You see friend in the distance but aren't sure until they are closer. Now is it the visual system that identifies the friend, or is it the cognitive system.
 	- Does you visual system tell you something is a table or does it just give you the shapes and colors and then your cognitive system identifies it as the table?
 
+#### [Midterm 2](midterm-review-2)
+
 ### Unit 3: Non-standard minds: Animals, kids, AI
 - Can apes think logically?
 - ... Can toddlers?
