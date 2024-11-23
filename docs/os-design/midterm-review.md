@@ -505,7 +505,7 @@
 - PTE size \* number PTE (page table entry) = page size.
 - Assume PTE size is 4 bytes.
 
-![](imgs/multilevel.png)
+![](imgs/real/multilevel.png)
 
 ###### Example
 

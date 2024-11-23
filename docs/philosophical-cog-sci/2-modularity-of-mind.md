@@ -335,7 +335,9 @@
 #### Mandelbaum
 - Perceptual systems should **categorize** stimuli.
 - Instead of just representing *visual* features (color, shape, motion, etc...) it would be useful for your visual system to identify what *kind of thing* you're looking at.
+
 ##### Problem
+
 - What categories?
 - You could categorize a banana as a *yellow thing*, or *fruit*, or *bananas*, or etc....
 - Mandelbaum appeals to the idea of *basic-level* categorization.

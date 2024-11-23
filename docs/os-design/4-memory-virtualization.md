@@ -476,7 +476,7 @@ Allow each page table to be allocated non-contiguously.
 	- PTE size \* number PTE (page table entry) = page size.
 	- Assume PTE size is 4 bytes.
 
-![](imgs/multilevel.png)
+![](imgs/real/multilevel.png)
 
 ###### Example
 
@@ -486,4 +486,253 @@ Allow each page table to be allocated non-contiguously.
 	- With 18 bits for the page, `2^18` is a quarter of a million entries...
 		- Way too many.
 		- You can not use just 1 level, but you need 1 more level.
+
+
+#### Problems
+
+Problems with 2 levels?
+
+> Page directories (outer level) may not fit in a page.
+
+- Solution
+	- Split page directories into pieces.
+	- Use another page dir to refer to the page dir pieces.
+
+![](imgs/real/two-page-tbl-sol.png)
+
+	How large is virtual address space with 4 KB pages, 4 byte PTEs, each page table fits in pages given 1, 2, 3 levels?
+	4 KB / 4 Bytes -> 1 K entries per level.
+	1 level: 1 K * 4K = 2^22 ~ 4 MB
+	2 levels: 1 K * 1K * 4K = 2^32 ~ 4 GB
+	3 levels: 1 K * 1K * 1K * 4K = 2^42 ~ 4 TB
+
+### Paging Pros & Cons
+
+#### Advantage
+- No external fragmentation
+	- Don't need to find contiguous spaces.
+	- Any page can be placed in any frame in physical memory.
+- **Fast to allocate and free**
+	- Alloc: No searching for suitable free space.
+	- Free: Doesn't have to coalesce with adjacent free space.
+	- Just use bitmap to show free/allocated page frames.
+- **Simple to swap-out** portions of memory to disk
+	- Page size matches disk block size.
+	- Can run process when some pages are on disk.
+	- Add "present" bit to PTE.
+
+#### Disadvantage
+- Internal fragmentation
+	- Page size may not match size needed by process.
+	- Waste memory grows with larger pages.
+	- **Tension?**
+- Addition memory reference to page table -> Very inefficient.
+	- Page tables are also stored in memory.
+	- The MMU stores only base address of page table.
+	- Solution: [TLBs](#translation-lookaside-buffer).
+- Storage for page tables may be substantial
+	- Simple page table: Requires PTE for all pages in address space.
+		- Entry needed even if page not allocated.
+	- Problematic with dynamic stack and heap within address space.
+	- Page tables must be allocated contiguously in memory.
+	- Solution: Combine paging and segmentation.
+
+
+##### Avoid Simple Linear Page Table
+- Use more complex page tables, instead of just a big array.
+- Any data structure is possible with software-managed TLB.
+	- Hardware looks for vpn in TLB on every memory access.
+	- If TLB does not contain vpn, TLB miss...
+		- Trap into OS and let OS find vpn -> vpn translation.
+		- OS notifies TLB of vpn -> ppn for future access.
+
+##### Other Approaches
+1. Inverted Pagetables
+2. Segmented Pagetables
+3. Multi-level Pagetables
+	- Page the page tables.
+	- Page the pagetables of the pagetables etc...
+
+
+### Translation Steps
+
+1. Extract **VPN** (Virtual page number) from **VA** (virtual address)
+2. Calculate addr of **PTE** (page table entry)
+3. Read **PTE** from memory (**expensive**)
+4. Build **PA** (physical address)
+5. Read contents of **PA** from memory into registers (**Expensive**)
+
+### Paging and Segmentation
+
+- Divide the address space into segments (code, heap, stack)
+	- Segments can be variable length.
+- Divide each segment into fixed-sized pages.
+- Logical address divided into three portions.
+
+![](imgs/real/page-segmentation.png)
+
+##### Implementation
+
+- Each segment has a page table.
+- Each segment track base (physical address) and bounds of **page table** for that segment.
+
+#### Advantages of Paging and Segmentation
+
+- Advantages of Segments
+	- Supports sparse address spaces.
+	- Decrease size of page tables.
+	- If segment not used, not needed for page table.
+- Advantages of Pages.
+	- No external fragmentation.
+	- Segments can grow without any reshuffling.
+	- Can run process when some pages are swapped to disk.
+- Advantages of Both
+	- Increase flexibility of sharing
+		- Share either single page or entire segment
+		- How???
+
+#### Disadvantages
+
+- Potentially large page tables (for each segment)
+	- Must allocate each page table contiguously.
+	- More problematic with more address bits.
+	- Page table size?
+		- Assume 2 bits for segment, 18 bits for page number, 12 bits for offset.
+
+				Each page table is:
+				 = Number of entries * size of each entry
+				 = Number of pages * 4 bytes
+				 = 2^18 * 4 bytes = 2^20 bytes = 1 MB
+
+## Translation Lookaside Buffer
+
+- The translation lookaside buffer is address cache inside the CPU.
+- It stores only translation addresses. 
+- It's purpose is to mitigate some of the expenses of repeatedly accessing similar pages by keeping that address in this TLB.
+
+### TLB Organization
+
+#### TLB Entry
+
+![](imgs/real/tlb-organization.png)
+
+
+#### Associative vs Direct Mapped
+
+![](imgs/real/tlb-org-associativity.png)
+
+#### Set Associative
+
+- There is a chance of multiple addresses getting mapped to the same location in the cache if you use a directly mapped cache. Each time a conflict happens, you must replace it, removing it from the cache.
+- Set Associative TLBs try to mitigate this issue a little.
+- Kick out the one that was least recently used (LRU)
+
+##### TLB Associativity Trade-offs
+
+- **Higher Associativity**
+	- Better utilization, fewer collisions.
+	- *Slower*
+	- *More hardware*
+- **Lower Associativity**
+	- Fast
+	- Simple, less hardware
+	- *Greater chance of collisions*
+
+> Usually, TLBs are fully associative.
+
+#### TLB Performance
+
+- How can system improve TL performance (Hit rate) given fixed number of TLB entries?
+	- **Increase page size:**
+		- Fewer unique page translations needed to access same amount of memory.
+- **TLB reach:**
+	- Number of TLB entries \* Page size
+
+##### With Workloads
+
+- Sequential array accesses almost always hit in the TLB.
+	- Very fast!
+- What access pattern will be slow?
+	- Highly random, with no repeat 
+
+#### Workload Locality
+
+- **Spatial Locality:** Future access will be to nearby addresses.
+- **Temporal Locality:** Future access will be repeats to the same data.
+- What TLB Characteristics are best for each type?
+	- *Spatial:*
+		- Access same page repeatedly; need same vpn -> ppn translation
+		- Same TLB entry re-used.
+	- *Temporal:*
+		- Access same address in near future...
+		- Same TLB entry re-used in near future.
+		- How near in future? How many TLB entries are there?
+
+
+### Better Page Tables
+
+> Problem: Simple linear page tables require too much contiguous memory.
+
+- Many options for efficiently organizing page tables.
+- If OS traps on TLB miss, OS can use any data structure.
+	- Inverted page tables (hashing)
+- If Hardware handles TLB miss, page tables must follow specific format.
+	- Multi-level page tables used in x86 architecture.
+	- Each page table fits within a page.
+
+### Motivation
+
+**OS Goal**: Support processes when not enough physical memory.
+
+- Single process with very large address space.
+- Multiple processes with combined address space.
+
+User code should be independent of amount of physical memory.
+
+- Correctness, if not performance.
+
+> Virtual memory: OS provides illusion of more physical memory.
+
+- **Why does this work?**
+	- Relies on key properties of user processes (workload) and machine architecture (hardware)
+
+
+
+#todo find what i missed? (probably 11/12)
+
+### Locality of Reference
+
+- Leverage *locality of reference* within processes.
+	- *Spatial:* Reference memory addresses **near** previously referenced addresses.
+		- Example of this would be accessing array entries.
+	- *Temporal:* Reference memory addresses that have referenced in the past.
+		- LRU and Clock LRU.
+	- Processes spend majority of time in a small portion of the code...
+		- *Estimate:* 90% of time in 10% of code.
+- **Implication**
+	- Process only uses small amount of address space at any moment.
+	- Only small amount of address space must be resident in physical memory.
+
+> Watermark threshold.
+
+
+#### Virtual Memory Intuition
+
+- Idea: OS keeps... #todo what????
+
+#### Virtual Address Space Mechanisms
+
+- Each page in virtual address space maps to one of three locations:
+	- Physical main memory: Small, fast, expensive.
+	- Disk (Backing store): Large, slow, cheap
+	- Nothing (Error): Free
+- Extend page tables with extra bit: `present`
+	- `permissions (r/w), valid, present`
+	- Page in memory: present bit `set` in PTE.
+	- Page on disk: `present` bit cleared.
+		- PTE points to block on disk.
+		- Causes trap into OS when page is referenced.
+		- **Trap: page fault**
+
+> The OS is responsible for kicking out addresses from the TLB. So, it is also responsible for changing the bit.
 
