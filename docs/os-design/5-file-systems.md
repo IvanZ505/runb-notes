@@ -18,7 +18,9 @@
 		- Free space that can't be used.
 	- Ability to grow file over time?
 	- Performance of sequential accesses (contiguous layout?)
-	- #todo what did i miss
+	- Speed to find data blocks for random access?
+	- Wasted space for meta-data overhead (everything that isn't data)?
+		- Meta-data must be stored persistently too!
 
 ## Contiguous Allocation
 
@@ -28,6 +30,8 @@ Allocate each file to contiguous sectors on disk...
 - OS allocates by finding sufficient free space.
 	- Must predict future size of file. (Show space be reserved?)
 - Example: IBM OS/360
+
+![[contiguous-allocation.png]]
 
 #### Problems?
 
@@ -51,7 +55,7 @@ Allocate each file to contiguous sectors on disk...
 		- Each entry: starting block and size.
 
 
-#todo get the photo
+![[imgs/real/small-num-extents.png]]
 
 #### Problems?
 
@@ -72,7 +76,7 @@ Allocate each file to contiguous sectors on disk...
 	- Meta-data:
 	- Examples: TOPS-10, Alto
 
-#todo get the photo
+![[imgs/real/linked-allocation.png]]
 
 #### Problems?
 
@@ -93,10 +97,7 @@ Allocate each file to contiguous sectors on disk...
 - Variation of Linked Allocation
 - Keep linked-list information for all files in on-disk FAT table.
 - Metadata: location of first block of file.
-	- And, FFAT table itself
-
-#todo get the photo
-
+	- And, FAT table itself
 
 #### Comparison
 
@@ -108,6 +109,23 @@ Allocate each file to contiguous sectors on disk...
 
 ## Indexed Allocation
 
+- Allocate fixed-size array of block pointers
+	- Meta-data: Fixed-sized array of block pointers
+	- Allocate space for pointers at file creation time.
+
+![[imgs/real/index-allocation.png]]
+
+##### Advantages
+
+- No external fragmentation
+- Files can be easily grown up to max file size
+- Supports random access
+
+##### Disadvantages
+
+- Large overheads for meta-data:
+	- Wastes space for unneeded pointers as *most files are small*.
+
 ### Multi-level Indexing
 
 - Variation of Indexed Allocation
@@ -116,8 +134,8 @@ Allocate each file to contiguous sectors on disk...
 		- Additional pointers to blocks of pointers.
 	- Examples: UNIX FFS-based file systems, ext2, ext3.
 
-#todo get the photo
 
+![[imgs/real/multlevel-indexing.png]]
 
 #### Comparison
 
@@ -134,6 +152,11 @@ Allocate each file to contiguous sectors on disk...
 	- Organize extents into multi-level tree structure.
 		- Each leaf node: starting block and contiguous size.
 		- Minimize meta-data overhead when have few extents.
+- Fragmentation: Both internal and external are reasonable.
+- Ability to grow file over time: Can grow.
+- Seek cost for sequential accesses: Still good performance.
+- Speed to calculate random accesses: Depends on the size.
+- Wasted space fr metadata: Relatively small overhead
 
 ## Data Blocks
 
@@ -141,8 +164,7 @@ Allocate each file to contiguous sectors on disk...
 - Think about it like our project 3, where we have a bunch of blocks, and some of the ones at the start store information about the other blocks. (*Inodes*)
 	- Inode will contain all the information about the block.
 
-#todo get the stupid photo
-
+![[imgs/real/data-blocks.png]]
 
 ### Inodes
 
@@ -150,7 +172,7 @@ Allocate each file to contiguous sectors on disk...
 - Does not matter if you create a directory, subdirectory, or a file, they're all files, so they will all have indoes.
 - *Inodes are stored in order so its easy to do the calculations*
 
-#todo get the photo of all the different things in a inode
+![[imgs/real/inode-blocks.png]]
 
 ##### Direct vs Indirect Pointers
 
@@ -165,7 +187,7 @@ Allocate each file to contiguous sectors on disk...
 - 4KB disk block.
 - 16 inodes per inode block.
 
-#todo get img
+![[imgs/real/one-inode-block.png]]
 
 > When you systems like Linux, where everything is a file, you will have a lot of wasted space for the inodes.
 
@@ -186,7 +208,7 @@ Allocate each file to contiguous sectors on disk...
 
 ---
 
-#todo get photo of block tree lookin ass..
+![[imgs/real/inode-layout.png]]
 
 Optimize for smaller blocks vs more indirect pointers.
 
@@ -198,7 +220,7 @@ Assume 256 byte inodes (16 inodes/block)
 
 - What is the offset for inode with number 4?
 
-#todo get photo...
+![[imgs/real/practice-disk.png]]
 
 	Since there are 16 inodes for block, and we know that the inodes start at block 3, it will be in block 3. 
 	Then, the offset would be 256 bytes * the number of inodes (5, 0-indexed).
@@ -218,11 +240,11 @@ Assume 256 byte inodes (16 inodes/block)
 		- Calculate the offset into the inode region (`32 * sizeof(inode) (256 bytes)`) = 8192.
 		- Add start address of the inode table (12KB) + inode region (8KB) = 20 KB.
 
-#todo get the picture of the inode table.
+![[imgs/real/inode-table.png]]
 
 #### Directories
 
-#todo link it
+> Access previous directories notes [here](../sys-prog/files#directories).
 
 > File systems may vary
 
@@ -241,6 +263,8 @@ Various formats could be used...
 	- Block size
 	- \# of inodes.
 - **Store this in the superblock**
+- This is the first block in the disk. (Will contain all the information)
+- *If this block is missing, that means you can't find anything in the file system.*
 
 #### On Disk Structures
 
@@ -264,11 +288,110 @@ Various formats could be used...
 |           |            |            |           |           | 9. write  |           |          |
 |           |            |            |           | 10. write |           |           |          |
 
-#todo figure out 1-4??
 
-5. Read the bmap to find a free `inode` in the bitmap.
+#hw root directory required for our fs hw too
+
+#hw reserve the bitmap!!!!!!!!
+
+1. Go to the `root` inode, read the contents of the root inode.
+2. Find all and read all the data blocks for the root inode. 
+3. Read `foo` inode, going to its data block.
+4. Read it's data to see if the `bar` file already exists or not. If not...
+5. Read the bmap to find a free inode in the bitmap.
 6. Immediately write to it and reserve the `inode` so it can't be stolen.
 7. Write the data for foo.
 8. Every time file gets created, you need to read the `inode` to update the file creation time.
 9. Update the file creation time.
 10. Write the number of links to the foo inode.
+
+### Opening Files
+
+	open /foo/bar
+
+
+| data bmap | inode bmap | root inode | foo inode | bar inode | root data | foo data | bar data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | -------- | -------- |
+|           |            | 1. read    |           |           |           |          |          |
+|           |            |            |           |           | 2. read   |          |          |
+|           |            |            | 3. read   |           |           |          |          |
+|           |            |            |           |           |           | 4. read  |          |
+|           |            |            |           | 5. read   |           |          |          |
+
+- The first step to opening a file is *checking that the file exists*.
+
+### Writing To Files
+
+	write to /foo/bar
+
+> *All assuming that the file exists and has been opened*
+
+
+| data bmap | inode bmap | root inode | foo inode | bar inode | root data | foo data | bar data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | -------- | -------- |
+|           |            |            |           | 1. read   |           |          |          |
+| 2. read   |            |            |           |           |           |          |          |
+| 3. write  |            |            |           |           |           |          |          |
+|           |            |            |           |           |           |          | 4. write |
+|           |            |            |           | 5. write  |           |          |          |
+
+1. Read `bar`'s inode, because it contains the info on where the blocks for `bar` are.
+2. Read the data bitmap to find out where is the next *free* data block that is available.
+3. Convert the bitmap and reserve it, **same reason** as when creating.
+4. Write the contents of what we want to write directly to the data block.
+	1. Otherwise, if you point `bar`'s inode to the data block before writing, your file will point to corrupted data and and also wastes a block. (If the system crashes)
+	2. In the optimal scenario, we only waste a data block, but we don't point our `bar` inode to a corrupted block.
+5. Actually write the inode to point to the data.
+
+### Reading a File
+
+	read /foo/bar
+
+
+| data bmap | inode bmap | root inode | foo inode | bar inode | root data | foo data | bar data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | -------- | -------- |
+|           |            |            |           | 1. read   |           |          |          |
+|           |            |            |           |           |           |          | 2. read  |
+|           |            |            |           | 3. write  |           |          |          |
+
+3. For the access time, in order to update it.
+
+#### FUSE Filesystem
+
+#todo get photo
+
+- It is a mechanism to customize and build your own file system.
+- The *FUSE module* in the kernel will translate the operations implemented by user space, it will redirect it to be using the standard file system calls.
+
+##### `fuse_operations`
+
+- Registering a bunch of function calls.
+
+## RAID
+
+> Redundant Array of Inexpensive Disks
+
+### Why Multiple Disks
+
+- Sometimes we want many disks -- why??
+	- Capacity
+	- Reliability
+		- Disks have piss poor reliability. They fail very frequently because of the amount of write operations.
+	- Performance
+- Challenge: most file systems work on only one disks.
+
+---
+
+### RAID
+
+> Combines a bunch of disks to offer better reliability and performance.
+
+- Build logical disk from many physical disks.
+- Be able to recover data from the disks even if one disk fails.
+
+
+### General Strategy: Mapping
+
+- Build fast, large disk from smaller ones.
+
+#todo get photo
+
