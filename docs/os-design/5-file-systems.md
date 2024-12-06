@@ -31,7 +31,7 @@ Allocate each file to contiguous sectors on disk...
 	- Must predict future size of file. (Show space be reserved?)
 - Example: IBM OS/360
 
-![[contiguous-allocation.png]]
+![](contiguous-allocation.png)
 
 #### Problems?
 
@@ -55,7 +55,7 @@ Allocate each file to contiguous sectors on disk...
 		- Each entry: starting block and size.
 
 
-![[imgs/real/small-num-extents.png]]
+![](imgs/real/small-num-extents.png)
 
 #### Problems?
 
@@ -76,7 +76,7 @@ Allocate each file to contiguous sectors on disk...
 	- Meta-data:
 	- Examples: TOPS-10, Alto
 
-![[imgs/real/linked-allocation.png]]
+![](imgs/real/linked-allocation.png)
 
 #### Problems?
 
@@ -113,7 +113,7 @@ Allocate each file to contiguous sectors on disk...
 	- Meta-data: Fixed-sized array of block pointers
 	- Allocate space for pointers at file creation time.
 
-![[imgs/real/index-allocation.png]]
+![](imgs/real/index-allocation.png)
 
 ##### Advantages
 
@@ -135,7 +135,7 @@ Allocate each file to contiguous sectors on disk...
 	- Examples: UNIX FFS-based file systems, ext2, ext3.
 
 
-![[imgs/real/multlevel-indexing.png]]
+![](imgs/real/multlevel-indexing.png)
 
 #### Comparison
 
@@ -164,7 +164,7 @@ Allocate each file to contiguous sectors on disk...
 - Think about it like our project 3, where we have a bunch of blocks, and some of the ones at the start store information about the other blocks. (*Inodes*)
 	- Inode will contain all the information about the block.
 
-![[imgs/real/data-blocks.png]]
+![](imgs/real/data-blocks.png)
 
 ### Inodes
 
@@ -172,7 +172,7 @@ Allocate each file to contiguous sectors on disk...
 - Does not matter if you create a directory, subdirectory, or a file, they're all files, so they will all have indoes.
 - *Inodes are stored in order so its easy to do the calculations*
 
-![[imgs/real/inode-blocks.png]]
+![](imgs/real/inode-blocks.png)
 
 ##### Direct vs Indirect Pointers
 
@@ -187,7 +187,7 @@ Allocate each file to contiguous sectors on disk...
 - 4KB disk block.
 - 16 inodes per inode block.
 
-![[imgs/real/one-inode-block.png]]
+![](imgs/real/one-inode-block.png)
 
 > When you systems like Linux, where everything is a file, you will have a lot of wasted space for the inodes.
 
@@ -208,7 +208,7 @@ Allocate each file to contiguous sectors on disk...
 
 ---
 
-![[imgs/real/inode-layout.png]]
+![](imgs/real/inode-layout.png)
 
 Optimize for smaller blocks vs more indirect pointers.
 
@@ -240,7 +240,9 @@ Assume 256 byte inodes (16 inodes/block)
 		- Calculate the offset into the inode region (`32 * sizeof(inode) (256 bytes)`) = 8192.
 		- Add start address of the inode table (12KB) + inode region (8KB) = 20 KB.
 
-![[imgs/real/inode-table.png]]
+
+![](imgs/real/inode-table.png)
+
 
 #### Directories
 
