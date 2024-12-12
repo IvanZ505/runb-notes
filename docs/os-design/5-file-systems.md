@@ -372,6 +372,9 @@ Various formats could be used...
 
 > Redundant Array of Inexpensive Disks
 
+- RAID is both transparent and deployable.
+- Logical... #todo what?
+
 ### Why Multiple Disks
 
 - Sometimes we want many disks -- why??
@@ -390,10 +393,172 @@ Various formats could be used...
 - Build logical disk from many physical disks.
 - Be able to recover data from the disks even if one disk fails.
 
-
 ### General Strategy: Mapping
 
 - Build fast, large disk from smaller ones.
 
 #todo get photo
 
+---
+
+> *Throughput*: Number of I/O Operations per second.
+
+---
+
+### General Strategy: Redundancy
+
+- Add even more disk reliability.
+
+#todo get photo
+
+> This uses half the disks as a failsafe. (RAID2)
+
+
+#### Redundancy
+
+- Trade-off to amount of redundancy.
+- *Increase number of copies:*
+	- Improve reliability (and maybe performance)
+- Decrease number of copies (deduplication)
+	- Improves space efficiency.
+
+The standard is to have `2f + 1` copies of the data, where `f` is the "failures"
+
+- If I can tolerate `f` failures in the system, I can recover from somewhere else.
+- Recover from the point agreed upon by the different copies.
+- Present user with the version of the copy.
+- the `+1` ensures that there is a majority for choosing the agreed upon point.
+
+### Reasoning About RAID
+
+- **RAID:** system for mapping logical to physical blocks.
+- **Workload:** types of reads/writes issued by applications (sequential vs. random)
+- **Metric:** Capacity, reliability, performance.
+
+#### Metrics
+
+- Capacity: How much space can apps use?
+- Reliability: How many disks can we safely lose?
+	- Assuming fail stop!
+- Performance: How long does each workload take?
+
+> Normalize each to characteristics of one disk.
+
+	N := Number of disks
+	C := Capacity of disks #todo finish filling this in
+	S := Sequential throughout of 1 disk
+	R := Random throughput of 1 disk
+	D := latency of one small I/O operation
+
+### RAID0
+
+> Striping
+
+- Optimized for capacity. No redundancy.
+
+#todo get the photo.
+
+- The reason for the zigzag pattern of mapping is to be able to read and write in parallel.
+- Ex: If your disk allows you to read two blocks concurrently, and your application would like to access blocks 0-3, you would need to issue 2 read requests.
+	- Whereas for striping, you only need 1 request, as each one would be able to read 2 blocks.
+
+#### Four Disk Striping
+
+#todo get the photo
+
+Given a logical address A, it is easy to find the block location of it:
+
+	Disk = A % disk_count
+	Offset = A / disk_count
+
+*Variations:*
+
+- Changing the chunk size of the stripes...
+
+#todo get the photo.
+
+
+#### RAID0 Analysis
+
+- What is the capacity? `N*C`
+- How many disks can fail? `0`
+- Latency: `D`
+- Throughput (Sequential, random)? `N*S`, `N*R`
+	- Buying more disks improves throughput, but not latency!!
+
+### RAID1
+
+> Mirroring
+
+#todo get the photo
+
+- For every disk, use one disk as a mirror for the other one.
+
+#### RAID1 Layout
+
+- How many disks can fail in a 4 disk RAID1 setup? Best case: `2`
+
+#### RAID1 Analysis
+
+- What is the capacity: `N/2 * C`
+- How many disks can fail: `1 or N/2`
+- Latency (read, write)? `D` 
+	- (Only D because it is the same value mirrored)
+	- RAID4 requires 2D for write because of the calculation necessary for the next write.
+- Throughput:
+	- Sequential Read: `N*S`
+	- Sequential Write: `(N/2)*S`
+	- Random read: `N*R`
+	- Random write: `(N/2)*R` (Synchronization costs)
+		- You can not go and write something else to a mirroring disk, the throughput of that disk **must** be used to mirror the write of another disk.
+
+#### Crashes
+
+- What happens if a crash occurs before the changes get mirrored on the other disk?
+- When two requests are made, there is no telling which one gets executed first?
+- *RAID1* can not account for this.
+
+##### Solution
+
+- Problem: Consistent-update problem
+- Use non-volatile RAM in RAID controller.
+- Software RAID controllers (e.g. Linux md) don't have this option.
+
+> *Million dollar solution lol*
+
+
+### RAID4
+
+> Strategy
+
+- Use parity disk.
+	- Use a disk as a parity disk which stores some calculated variables from all the other disks.
+	- If one disk fails, you can use the parity values from this disk to regenerate the data.
+- In algebra, if an equation has `N` variables, and `N-1` are known, you can often solve for the unknown.
+	- So basically, if there are `N` disks, you can recover the failure of one disk with the `N-1` disks.
+
+#### Example
+
+> Simple additive parity.
+
+#todo get the photo.
+
+#### RAID4 Analysis
+
+- What is the capacity? `(N-1)*C` (1 to store parity)
+- How many disks can fail? `1`
+- Latency? (Read, write) Read: `D` Write: `2D`
+	- Write costs more because you must write to the parity disk.
+- Throughput:
+	- Sequential read: `(N-1)*S`
+	- Sequential write: `(N-1)*S`
+		- During sequential writes, the parity block gets changed too because of striping.
+	- Random read: `(N-1)*R`
+	- Random write: `R/2`
+		- Because you need to read and write the parity block too.
+		- You must wait for one random write (to a block) to finish and change the parity BEFORE you can write to another disk.
+		- (The parity IS **ALSO** a disk, which only takes in 1 write at a time!!!)
+
+#### Crashes
+
+- If the system crashes, the disk that failed will be marked and using the parity/the other disks, you can recalculate the missing data.
