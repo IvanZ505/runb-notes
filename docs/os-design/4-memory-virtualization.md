@@ -452,8 +452,7 @@ Allow each page table to be allocated non-contiguously.
 - Only allocate page tables for pages in use.
 - Used in x86  architectures (hardware can walk known structure)
 
-#todo get the diagram...
-
+![](imgs/real/multilevel-page-tables.png)
 
 > Current systems have 4 levels of page tables. (They only use 48 bits of the page table.)
 
