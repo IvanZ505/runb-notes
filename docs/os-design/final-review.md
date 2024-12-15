@@ -589,4 +589,5 @@ fopr(int i = 0; i < 2048; i++) {
 			- How near is this "future"? (Not the rapper)
 			- How many TLB entries are there???
 
+### Memory Policy
 
