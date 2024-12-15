@@ -591,3 +591,683 @@ fopr(int i = 0; i < 2048; i++) {
 
 ### Memory Policy
 
+> The goal of our memory policies is to minimize the number of page faults.
+
+- Page faults require milliseconds to handle the reading from disk.
+	- Compare this to just nanoseconds for memory accesses.
+- Implication: Plenty of time for OS to make a good decision as to where to store the page.
+
+The OS has TWO decisions to make:
+
+- Page selection
+	- *When* should a page (or pages) be brought into memory?
+- Page replacement
+	- *Which* page gets thrown out of memory and back into *disk*?
+
+> Our memory policies should rely on *locality of reference*.
+
+#### Locality of Reference
+
+- We can leverage the *locality of reference* within processes.
+	- *Spatial*: Referencing memory addresses **near** previously referenced addresses.
+	- *Temporal*: Referencing memory addresses that have been referenced in the past.
+- We will use the fact that Processes spend the *majority* of their time in only a small portion of the code.
+	- Estimated to be around 90% of time in just 10% of code.
+- Since processes only use small amounts of address space at any time...
+- We only need a small amount of address space in physical memory.
+
+#### Memory Hierarchy
+
+![](imgs/real/memory-hierarchy.png)
+
+#### Virtual Address Space Mechanisms
+
+- Each page in virtual address space will map to one of three locations:
+	- Physical main memory: Small, fast, but expensive.
+	- Disk (Backing store): Large, slow, but cheap.
+	- Nothing (error): Free page.
+- To account for storing in disk, we extend the page tables with an extra bit: `present`
+	- `permissions (r/w)`, `valid`, `present`
+	- Page in memory: `present` bit is set in the PTE.
+	- Page on disk: `present` bit is cleared.
+		- The PTE will then point to where the block on disk is.
+		- Will trap into OS when page is referenced. This trap is a **page fault**.
+
+![](imgs/real/present-bit.png)
+
+##### Translation Steps
+
+> The hardware and the OS will cooperate to translate the addresses.
+
+1. Hardware checks the TLB for the virtual address.
+	- If the TLB hits, address translation is done, the page is in the physical memory.
+2. If TLB misses, OS walks the page tables.
+	- If the PTE for the page has its `present` bit set, then page is in physical memory.
+3. If **page fault** (when `present` bit is cleared)
+	- Trap into OS (not handled by the hardware)
+	- OS selects a victim page in memory to replace.
+		- Write victim page out to disk if modified.... (need another bit: `dirty`)
+	- OS reads referenced page from disk into memory.
+	- Page table is updated, `present` bit is set, process can continue execution.
+
+---
+
+#### Average Memory Access Time
+
+> AMAT for short.
+
+	Hit % = portion of access that goes straight to RAM.
+	Miss % = portion of accesses that go to disk first.
+	Tm = Time for memory access.
+	Td = Time for disk access.
+
+`AMAT = (Hit% * Tm) + (Miss% * Td)`
+
+---
+#### Page Selection
+
+- **Demand paging:** Load the page only when a page fault occurs.
+	- When process starts: No pages are loaded into memory.
+	- Problem: Pay the cost of page fault for every newly accessed page.
+- **Prepaging:** (Anticipatory, prefetching) Load the page before referenced.
+	- Have the OS predict future accesses (*oracle*) and bring pages into memory early.
+	- Works well for some access patterns (e.g. sequential access)
+	- Problems: May lead to *thrashing*, where the system is constantly paging, spending too long page faulting for pages it doesn't need.
+- You can combine prepaging with user supplied hints about page references...
+	- "Maybe i'll need this in the future", "don't need this one anymore", sequential access here... etc...
+	- Example: `madvise()` in Unix.
+
+### Page Replacement
+
+> Which page in the main memory should be selected as the victim to be evicted?
+
+- Write out the victim page to disk if modified (dirty bit set)
+- If victim page is not modified (clean), just discard.
+
+#### OPT
+
+> Replace the page that won't be used for the longest time in the *future*.
+
+- Advantages: Guaranteed to minimize the number of page faults that occur.
+- Disadvantages: Requires the OS to predict the future. (Future sight!)
+	- Not very practical but a good comparison.
+
+##### OPT Example
+
+![](imgs/real/opt-example.png)
+
+#### FIFO
+
+> Replace the pages that have been in memory for the longest. (First one in, first one out)
+
+- The reasoning for this approach is, maybe the first page has been accessed a long time ago, so we're done with it now.
+- Advantages: Fair, all pages receive equal residency.
+	- Also very easy to implement with a circular buffer.
+- Disadvantages: Some pages may always be needed.
+
+![](imgs/real/fifo-example.png)
+
+#### LRU
+
+> Replace the page that has been *least recently used*.
+
+- The reasoning here is because of the disadvantage of FIFO, if some pages are always needed, we'll just evict the one that hasn't been accessed for the longest time!
+- Problem: Does not consider the frequency of accesses.
+
+![](imgs/real/lru-example.png)
+
+##### Implementing LRU
+
+- Software perfect LRU
+	- OS will maintain a ordered list of physical pages by the reference time.
+	- When a page is referenced: Move the page to the front of the list.
+	- When a page needs to be evicted: Pick page at the back of the list.
+	- Trade-off: Slow on memory reference, fast on replacement.
+- Hardware Perfect LRU
+	- Associate timestamp register with each page.
+	- When page is referenced: Store the system clock in register.
+	- When a page needs to be evicted: Scan through registers to find the oldest clock.
+	- Trade-off: Fast on memory references, slow on replacement. (esp. as the memory size grows)
+
+> In practice, do not implement a perfect LRU.
+
+- LRU is an approximation anyways, so just approximate some more.
+- Goal: Find an old page, but not necessarily the oldest.
+
+#### Page Replacement Comparison
+
+> What happens when we add more physical memory? How does that impact performance?
+
+- LRU, OPT: Adding more memory will guarantee fewer to same number of page faults.
+	- Smaller memory sizes are guaranteed to contain a subset of larger memory sizes.
+	- Stack property: Smaller cache always subset of bigger.
+- FIFO: Add more memory, *usually* have fewer page faults.
+	- **Belady's Anomaly**: May actually have *more* page faults!!!
+
+Consider the following example:
+
+	Consider access stream: 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5
+	Consider physical memory sizes: 3 pages vs 4 pages
+	How many misses with FIFO?
+	3 Pages = 9 misses.
+	4 Pages = 10 misses.
+
+#### Clock Algorithm
+
+> A *clock hand* that traverses the physical memory, looking for a page with it's `use` bit cleared.
+
+- In hardware:
+	- Keep a `use` (or `reference`)  bit for each page frame.
+	- When the page is referenced, set the `use` bit.
+- In the OS:
+	- Page replacement: Look for a page with `use` bit cleared. (Has not been referenced in a while)
+
+**Implementation**
+
+- Keep pointer to last examined page frame.
+- Traverse pages in circular buffer.
+- Clear `use` bits as search continues.
+- Stop when you find a page with already cleared `use` bit, replace this page.
+
+![](imgs/real/clock-implementationgif.gif)
+
+##### Small Clock Extensions
+
+- Replace multiple pages at the same time
+	- Since it's expensive to run the replacement algorithm and to write single block to disk, find multiple victims each time and track free list.
+- Add software counter (`chance`)
+	- To better differentiate between the page accesses.
+	- Increment a software counter if `use` bit is 0.
+	- Replace when the chance exceeds some specified limit.
+- Use dirty bit to give preference to dirty pages.
+	- Since it's more expensive to replace dirty pages, we'll skip those for now.
+		- Dirty pages *must* be written to disk, clean pages can just be discarded.
+	- Replace the pages that have both `use` bit and `dirty` bit cleared.
+
+## File Systems
+
+> A structure to help map files to disk blocks.
+
+A similarity to memory?
+
+- Same principle: Map logical abstractions to a physical resource.
+
+### Some Allocation Strategies
+
+- There are multiple different allocation methods for File systems, some which work better than others.
+- Questions to consider:
+	- Fragmentation? How much internal and external fragmentation of disk space does this lead to?
+	- Is there an ability to grow the file? How easy is it to do that?
+	- Performance of sequential accesses (How contiguous is the layout)?
+	- Speed to find data blocks for random accesses?
+	- Wasted space for metadata overhead?
+- Each of the different methods has it's own ups and downs to consider...
+
+#### Contiguous Allocation
+
+> Allocate each file to a contiguous sector on the disk.
+
+- Metadata: Starting block and the size of the file
+- OS allocates by finding sufficient free space.
+	- Must predict the future size of the file, reserve the space.
+
+![](contiguous-allocation.png)
+
+- Fragmentation: (`-`) Horrible external fragmentation (Since you must find a big enough space.)
+- Ability to grow file: (`-`) May not be able to without moving the file.
+- Seek cost for sequential accesses: (`+`) Excellent performance.
+- Speed to calculate random accesses: (`+`) Simple to calculate
+- Wasted space for metadata: (`+`) Little metadata overhead
+
+#### Small Number of Extents
+
+> Building off Contiguous allocation by allocating *multiple* contiguous segments per file.
+
+- Metadata: A small array designating the size of each extent.
+	- Each entry will contain the starting block and size.
+
+![](imgs/real/small-num-extents.png)
+
+- Fragmentation: (`-`) Helps the external fragmentation.
+- Ability to grow file: (`-`) Overall still bad because it can only grow until you run out of extents.
+- Seek cost for sequential accesses: (`+`) Still good performance.
+- Speed to calculate random accesses: (`+`) Still simple calculations.
+- Wasted space for metadata: (`+`) Larger overhead than before, but still small overhead.
+
+#### Linked Allocation
+
+> Allocate linked list of *fixed-sized* blocks (Multiple sectors)
+
+- Metadata: Location to the first block of file.
+	- Each block will also contain pointers to the next block in the linked allocation.
+
+![](imgs/real/linked-allocation.png)
+
+- Fragmentation: (`+`) No external fragmentation (You can use any block), no internal fragmentation, once block is full, get the next one.
+- Ability to grow file: (`+`) Can grow very easily.
+- Seek cost for Sequential Access: (`+/-`) Depends on the data layout.
+- Speed to calculate random accesses: (`-`) Ridiculously poor.
+- Wasted space for metadata: (`-`) Waste a pointer for every single block the file needs.
+
+> Tradeoff here is that the block size does not need to equal the sector size!
+
+#### File Allocation Table (FAT)
+
+> A variation of Linked allocation which also stores the linked list information for all files in a on-disk FAT table.
+
+- Metadata: Location of first block of the file and the FAT table itself.
+
+![](imgs/real/fat-alloocation.png)
+
+- Same basic advantages and disadvantages as linked allocation.
+- Extra Disadvantage: Reading from two disk locations for every data read. (FAT table + actual disk location)
+- Optimization: Caching the FAT in main memory.
+	- Advantage: Greatly improves the random accesses speed.
+	- However, what portions should be cached? Does this scale with larger file systems?
+
+#### Indexed Allocation
+
+> Allocate fixed-sized blocks for each file.
+
+- Metadata: Fixed-sized array of block pointers.
+- Allocate space for pointers at file creation time.
+
+![](imgs/real/index-allocation.png)
+
+- Fragmentation: (`+`) No external fragmentation.
+- Ability to grow file: (`+`) Files can be easily grown up to a max file size.
+- Sequential Access: (`+`) Fast sequential accessing.
+- Random accessing: (`+`) Supports that too.
+- Overhead for metadata: (`-`) Large wasted overhead for pointers that are unneeded. (Most files are small)
+
+### Multilevel Indexing
+
+> A variation of Indexed allocation that dynamically allocates hierarchy of pointer to blocks as needed.
+
+- Metadata: Small number of pointers that are allocated statically.
+	- Additional pointers can be allocated if needed that point to blocks of pointers.
+
+![](imgs/real/multlevel-indexing.png)
+
+- **Advantage:** Does not waste space for unneeded pointers.
+	- Still fast access for small files.
+	- Can grow to what size??
+- **Disadvantages:** Need to read indirect blocks of pointers to calculate addresses. (extra disk read)
+	- Keep indirect blocks cached in main memory.
+
+Multilevel indexing supports a *flexible number of Extents*
+
+#### Flexible Number of Extents
+
+> Dynamically allocate multiple contiguous regions (extents) per file.
+
+- Organize extents into multilevel tree structure.
+	- Each leaf node: starting block and contiguous size.
+	- Minimize the metadata overhead when there are a few extents.
+	- Allows growth beyond fixed number of extents.
+
+- Fragmentation: (`+`) Both are reasonable.
+- Ability to grow File: (`+`) Can grow.
+- Seek cost for sequential accesses: (`+`) Still good performance.
+- Speed to calculate random accesses: (`+/-`) Depends of the size, some calculations still needed.
+- Wasted space for metadata: (`+`) Relatively small overhead.
+
+---
+
+### On Disk Structures
+
+#### Data Blocks
+
+> Everything on the disk is a data block.
+
+- You can think about it like the 3rd project, where we have a bunch of blocks (pages), and some of them at the start store information about the other blocks (pages).
+
+![](imgs/real/data-blocks.png)
+
+#### Inodes
+
+> Inodes contain all the information about the block. (Metadata)
+
+- Every inode is structured the same way, whether its for a directory, subdirectory or file.
+	- Everything has a inode too!
+- Inodes are also stored in order `0-....`, which also refers to their inode number.
+	- Ex: Inode number `32`, calculate the offset into the inode region (`32 * sizeof(inode) (256 bytes) = 8192`), then add the start address of the inode region: `8192 + 3 * 4KB = 20 KB`
+- In the disk, there will be some blocks reserved for inode blocks, blocks who's main purpose is just to store inodes. It looks like as follows:
+
+![](imgs/real/inode-blocks.png)
+
+> Each inode block will typically be `256` bytes, but depending on the FS, maybe `128`.
+
+This means, with a typical 4KB disk block: `16` inodes per inode block.
+
+![](imgs/real/one-inode-block.png)
+
+##### Inode Metadata
+
+```C
+struct inode {
+	uint16_t	ino;				/* inode number */
+	uint16_t	valid;				/* validity of the inode */
+	uint32_t	size;				/* size of the file */
+	uint32_t	type;				/* type of the file */
+	uint32_t	link;				/* link count */
+	int			direct_ptr[16];		/* direct pointer to data block */
+	int			indirect_ptr[8];	/* indirect pointer to data block */
+	struct stat	vstat;				/* inode stat */
+}
+```
+
+##### Direct vs Indirect Pointers
+
+> In order to optimize for small and large files, we need a mixture of direct and indirect pointers to data blocks in the inode.
+
+- A **direct pointer** in an inode points directly to a physical block in the memory.
+	- A inode structure will have 16 direct pointers.
+- An **indirect pointer** may point to a physical block, but each entry in the physical block may point to another physical block of memory.
+	- This allows you to have double, or even triple indirect pointers.
+
+![](imgs/real/inode-table.png)
+
+#### Directories
+
+- Commonly store directory entries in data blocks.
+- Large directories will just use multiple data blocks.
+- Use bit in the inode to distinguish directories from files. (`type`)
+
+##### Simple Directory Example
+
+![](imgs/real/simple-directory-ex.png)
+
+#### Bitmaps
+
+> For easy way to locate a free data block or free inode.
+
+- Store a bitmap block for the inodes and for the data.
+- Think about the project.
+
+![](imgs/real/inode-data-bmaps-ex.png)
+
+#### Superblock
+
+> This will be the first block of the entire FS, and store configurations metadata.
+
+- Will allow you to know the block sizes, # of inodes, and the calculations of where each section starts.
+
+```C
+struct superblock {
+	uint32_t	magic_num;			/* magic number */
+	uint16_t	max_inum;			/* maximum inode number */
+	uint16_t	max_dnum;			/* maximum data block number */
+	uint32_t	i_bitmap_blk;		/* start block of inode bitmap */
+	uint32_t	d_bitmap_blk;		/* start block of data block bitmap */
+	uint32_t	i_start_blk;		/* start block of inode region */
+	uint32_t	d_start_blk;		/* start block of data block region */
+}
+```
+
+### File System Operations
+
+#### Create File
+
+> `create /foo/bar`
+
+| data bmap | inode bmap | root inode | foo inode | foo inode | bar inode | root data | foo data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | --------- | :------- |
+|           |            | 1. read    |           |           |           |           |          |
+|           |            |            |           |           |           | 2. read   |          |
+|           |            |            | 3. read   |           |           |           |          |
+|           |            |            |           |           |           |           | 4. read  |
+|           | 5. read    |            |           |           |           |           |          |
+|           | 6. write   |            |           |           |           |           |          |
+|           |            |            |           |           |           |           | 7. write |
+|           |            |            |           |           | 8. read   |           |          |
+|           |            |            |           |           | 9. write  |           |          |
+|           |            |            |           | 10. write |           |           |          |
+
+
+1. Go to the `root` inode, read the contents of the root inode.
+2. Find all and read all the data blocks for the root inode. 
+3. Read `foo` inode, going to its data block.
+4. Read it's data to see if the `bar` file already exists or not. If not...
+5. Read the bmap to find a free inode in the bitmap.
+6. Immediately write to it and reserve the `inode` so it can't be stolen.
+7. Write the data for foo.
+8. Every time file gets created, you need to read the `inode` to update the file creation time.
+9. Update the file creation time.
+10. Write the number of links to the foo inode.
+
+#### Opening Files
+
+> `open /foo/bar`
+
+
+| data bmap | inode bmap | root inode | foo inode | bar inode | root data | foo data | bar data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | -------- | -------- |
+|           |            | 1. read    |           |           |           |          |          |
+|           |            |            |           |           | 2. read   |          |          |
+|           |            |            | 3. read   |           |           |          |          |
+|           |            |            |           |           |           | 4. read  |          |
+|           |            |            |           | 5. read   |           |          |          |
+
+- The first step to opening a file is *checking that the file exists*.
+
+#### Writing To Files
+
+> `write to /foo/bar`
+
+(*All assuming that the file exists and has been opened*)
+
+| data bmap | inode bmap | root inode | foo inode | bar inode | root data | foo data | bar data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | -------- | -------- |
+|           |            |            |           | 1. read   |           |          |          |
+| 2. read   |            |            |           |           |           |          |          |
+| 3. write  |            |            |           |           |           |          |          |
+|           |            |            |           |           |           |          | 4. write |
+|           |            |            |           | 5. write  |           |          |          |
+
+1. Read `bar`'s inode, because it contains the info on where the blocks for `bar` are.
+2. Read the data bitmap to find out where is the next *free* data block that is available.
+3. Convert the bitmap and reserve it, **same reason** as when creating.
+4. Write the contents of what we want to write directly to the data block.
+	- Otherwise, if you point `bar`'s inode to the data block before writing, your file will point to corrupted data and and also wastes a block. (If the system crashes)
+	- In the optimal scenario, we only waste a data block, but we don't point our `bar` inode to a corrupted block.
+1. Actually write the inode to point to the data.
+
+#### Reading a File
+
+> `read /foo/bar`
+
+| data bmap | inode bmap | root inode | foo inode | bar inode | root data | foo data | bar data |
+| --------- | ---------- | ---------- | --------- | --------- | --------- | -------- | -------- |
+|           |            |            |           | 1. read   |           |          |          |
+|           |            |            |           |           |           |          | 2. read  |
+|           |            |            |           | 3. write  |           |          |          |
+
+3. For the access time, in order to update it.
+
+#### Efficiency
+
+- How can we avoid excessive I/O for basic operations?
+	- Like all good answers in OS, add a cache.
+- **Write buffering**
+	- Procrastinate the process.
+	- This helps to overwrites, deletes, and scheduling.
+
+## RAID
+
+> RAID stands for "*Redundant Array of Inexpensive Disks*", and is a method to increase capacity of disks whilst maintaining reliability and performance.
+
+### RAID Strategies
+
+#### Mapping
+
+> Build fast, large disks from smaller ones.
+
+![](imgs/real/raid-strat-mapping.png)
+
+#### Redundancy
+
+> Add more disks for reliability purposes.
+
+![](imgs/real/raid-strat-redundancy.png)
+
+#### Tradeoffs
+
+> Like all good things in OS...
+
+- There are tradeoffs to each approach. In return for *reliability*, and maybe performance, you have *increased* the number of copies, but now you need multiple times more disk space.
+- Or, you decrease the number of copies, which improves the *space efficiency*.
+
+---
+
+> **Note:** Some standards
+
+- *Throughput*: Number of I/O Operations complete per second.
+- `2f-1`: The industry standard number of copies of data, where `f` is the "failures" in the system.
+
+---
+
+### Metrics
+
+- Capacity: How much space can apps use?
+- Reliability: How many disks can we safely lose?
+	- Assuming fail stop!
+- Performance: How long does each workload take?
+
+> Normalize each to characteristics of one disk.
+
+	N := Number of disks
+	C := Capacity of disks #todo finish filling this in
+	S := Sequential throughout of 1 disk
+	R := Random throughput of 1 disk
+	D := latency of one small I/O operation
+
+### RAID0 Striping
+
+> Optimized completely for maximum capacity, no redundancy.
+
+![](imgs/real/raid-0-striping.png)
+
+- The reason for the zigzag pattern of mapping is to be able to read and write in parallel.
+- Ex: If your disk allows you to read two blocks concurrently, and your application would like to access blocks 0-3, you would need to issue 2 read requests.
+	- Whereas for striping, you only need 1 request, as each one would be able to read 2 blocks.
+
+#### Four Disk Striping
+
+![](imgs/real/raid-0-four-disk-striping.png)
+
+Given a logical address A, it is easy to find the block location of it:
+
+	Disk = A % disk_count
+	Offset = A / disk_count
+
+*Variations:*
+
+- Changing the chunk size of the stripes...
+
+![](imgs/real/raid-0-chunk-sizing.png)
+
+#### RAID0 Analysis
+
+- What is the capacity? `N*C`
+- How many disks can fail? `0`
+- Latency: `D`
+- Throughput (Sequential, random)? `N*S`, `N*R`
+	- Buying more disks improves throughput, but not latency!!
+
+### RAID1 Mirroring
+
+> Keep two copies of the data at all times.
+
+![](imgs/real/raid-1-mirroring.png)
+
+- For every disk, use one disk as a mirror for the other one.
+
+#### RAID1 Layout
+
+![](imgs/real/raid-1-layout.png)
+
+- How many disks can fail in a 4 disk RAID1 setup? Best case: `2`
+
+#### RAID1 Analysis
+
+- What is the capacity: `N/2 * C`
+- How many disks can fail: `1 or N/2`
+- Latency (read, write)? `D` 
+	- (Only D because it is the same value mirrored)
+	- RAID4 requires 2D for write because of the calculation necessary for the next write.
+- Throughput:
+	- Sequential Read: `N*S`
+	- Sequential Write: `(N/2)*S`
+	- Random read: `N*R`
+	- Random write: `(N/2)*R` (Synchronization costs)
+		- You can not go and write something else to a mirroring disk, the throughput of that disk **must** be used to mirror the write of another disk.
+
+#### Crashes
+
+- What happens if a crash occurs before the changes get mirrored on the other disk?
+- When two requests are made, there is no telling which one gets executed first?
+- *RAID1* can not account for this.
+
+##### Solution
+
+- Problem: Consistent-update problem
+- Use non-volatile RAM in RAID controller.
+- Software RAID controllers (e.g. Linux md) don't have this option.
+
+> *Million dollar solution lol*
+
+### RAID4 Parity
+
+> Using a parity disk, you can restore some data.
+
+- Use a disk as a parity disk which stores some calculated variables from all the other disks.
+	- If one disk fails, you can use the parity values from this disk to regenerate the data.
+- In algebra, if an equation has `N` variables, and `N-1` are known, you can often solve for the unknown.
+	- So basically, if there are `N` disks, you can recover the failure of one disk with the `N-1` disks.
+
+#### Example
+
+> Simple additive parity.
+
+![](imgs/real/raid-4-example.gif)
+
+#### RAID4 Analysis
+
+- What is the capacity? `(N-1)*C` (1 to store parity)
+- How many disks can fail? `1`
+- Latency? (Read, write) Read: `D` Write: `2D`
+	- Write costs more because you must write to the parity disk.
+- Throughput:
+	- Sequential read: `(N-1)*S`
+	- Sequential write: `(N-1)*S`
+		- During sequential writes, the parity block gets changed too because of striping.
+	- Random read: `(N-1)*R`
+	- Random write: `R/2`
+		- Because you need to read and write the parity block too.
+		- You must wait for one random write (to a block) to finish and change the parity BEFORE you can write to another disk.
+		- (The parity IS **ALSO** a disk, which only takes in 1 write at a time!!!)
+
+#### Crashes
+
+- If the system crashes, the disk that failed will be marked and using the parity/the other disks, you can recalculate the missing data.
+
+### RAID5 Distributed Parity
+
+> Built off of RAID 4. Rotate the parity across different disks.
+
+![](imgs/real/raid-5-dis-parity.png)
+
+#### RAID5 Analysis
+
+- Capacity: `(N-1)*C`
+- How many disks can fail? `1`
+- Latency (read, write)? R: `D`, W: `2*D` (You need to read and write the parity disk as well.)
+- Throughput:
+	- Sequential Reads: `(N-1) * S`
+	- Sequential Writes: `(N-1) * S`
+	- Random Reads: `N * R`
+	- Random Writes: `N * R/4`
+
+
+Good luck on the exam. You got this, remember the FOOD AFTER!!!

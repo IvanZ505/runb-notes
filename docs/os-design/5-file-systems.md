@@ -94,6 +94,8 @@ Allocate each file to contiguous sectors on disk...
 
 ## File-Allocation Table (FAT)
 
+![](imgs/real/linked-allocation.png)
+
 - Variation of Linked Allocation
 - Keep linked-list information for all files in on-disk FAT table.
 - Metadata: location of first block of file.
@@ -291,10 +293,6 @@ Various formats could be used...
 |           |            |            |           | 10. write |           |           |          |
 
 
-#hw root directory required for our fs hw too
-
-#hw reserve the bitmap!!!!!!!!
-
 1. Go to the `root` inode, read the contents of the root inode.
 2. Find all and read all the data blocks for the root inode. 
 3. Read `foo` inode, going to its data block.
@@ -397,7 +395,7 @@ Various formats could be used...
 
 - Build fast, large disk from smaller ones.
 
-#todo get photo
+![](imgs/real/raid-strat-mapping.png)
 
 ---
 
@@ -409,7 +407,7 @@ Various formats could be used...
 
 - Add even more disk reliability.
 
-#todo get photo
+![](imgs/real/raid-strat-redundancy.png)
 
 > This uses half the disks as a failsafe. (RAID2)
 
