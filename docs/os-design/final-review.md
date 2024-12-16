@@ -1,4 +1,5 @@
-# Finals Review
+{% include top-btn.html %}
+# [Finals Review](0-os-design)
 
 - Format: 75% on material after the midterm, 25% on stuff before the midterm.
 - **Virtual memory is a big portion**
@@ -159,7 +160,6 @@ void foo (int Z) {
 	- *User mode* (Minority mode)
 		- Perform translation of logical addresses to physical address.
 		- (*Important note*) The translation is performed in *user mode*, not privileged mode.
-
 
 Minimal MMU contains **base register** for translations.
 
