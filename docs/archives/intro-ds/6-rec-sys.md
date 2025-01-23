@@ -1,4 +1,4 @@
-# Recommender Systems
+# [Recommender Systems](intro-ds)
 
 ## Recommendations
 
