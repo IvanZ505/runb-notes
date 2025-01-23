@@ -104,50 +104,59 @@
 	const button_div = document.querySelector(".button-div");
 
 	const pathways = [
+	{
+		name : "Cog Sci of Smell",
+		path : "cog-smell/0-cog-smell"},
+		{
+		name : "Comp Algos",
+		path : "comp-algos/0-comp-algos"},
+		{
+		name : "Ugrad Sem in Cog Sci",
+		path : "usem-cog-sci/0-usem-cog-sci"},
 		{
 		name : "Philo Cog Sci",
-		path : "philosophical-cog-sci/philosophical-cog-sci"},
+		path : "archive/philosophical-cog-sci/philosophical-cog-sci"},
 		{
 		name : "Operating Systems",
-		path : "os-design/0-os-design"},
+		path : "archive/os-design/0-os-design"},
 		{
 		name : "Intro to Data Science",
-		path : "intro-ds/intro-ds"},
+		path : "archive/intro-ds/intro-ds"},
 		{
 		name : "Cognition & Decision Making",
-		path : "cog-decision/cog-decision"},
+		path : "archive/cog-decision/cog-decision"},
 		{
 		name : "Systems Programming",
-		path : "sys-prog/sys-prog"},
+		path : "archive/sys-prog/sys-prog"},
 		{
 		name : "Discrete 2",
-		path : "discrete-2/discrete-2"},
+		path : "archive/discrete-2/discrete-2"},
 		{
 		name : "Discrete 1",
-		path : "discrete-1/discrete-1"},
+		path : "archive/discrete-1/discrete-1"},
 		{
 		name: "Comp Arch",
-		path: "comp-arch/comp-arch"
+		path : "archive/comp-arch/comp-arch"
 		},
 		{
 		name: "Cog Sci",
-		path: "cog-sci/cog-sci"
+		path : "archive/cog-sci/cog-sci"
 		},
 		{
 		name: "Intro CS",
-		path: "intro-cs/cs111"},
+		path : "archive/intro-cs/cs111"},
 		{
 		name: "Data Structures",
-		path: "data-structures/cs112"},
+		path : "archive/data-structures/cs112"},
 		{
 		name: "Intro to IT",
-		path: "intro-infotech/iti103"},
+		path : "archive/intro-infotech/iti103"},
 		 {
 		name: "Intro to Comms",
-		path: "intro-comm/comms"},
+		path : "archive/intro-comm/comms"},
 		{
 		name: "Three",
-		path: "three-js/threejs"}];
+		path : "archive/misc/threejs"}];
 
 	for(let i = 0; i < pathways.length; i++) {
 		button_div.innerHTML += `<button class="buttons" type="button" onclick="window.location.href='https://ivanz505.github.io/runb-notes/${pathways[i].path}';">${pathways[i].name}</button>`;
