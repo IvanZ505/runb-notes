@@ -154,3 +154,80 @@ Since `m` prefers `w'` to `w` we know `m` must have proposed to `w''`. Therefore
 - **Theorem:** In Gale-Shapley, every $w \in W$ is matched with her worst valid partner (according to `w`).
 
 > **Summary:** Stable matchings always exist, and can be found by the Gale-Shapley algorithm. It is optimal for the proposing side amog all stable matchings.
+
+## Running Time Analysis
+
+#todo get all the notes that i missed before this
+
+### Ignoring the Constant
+
+- We will often ignore the constants in the running time: 
+	- $T(n) = f(n)$ and $T(n) = 10f(n)$ are considered to be similar.
+	- The exact constants usually depend on the exact implementation.
+
+### Assumptions Before Introducing Big O Notation
+
+- Fix an algorithm. Let $T(n)$ be its worst-case running time when the input size is `n`.
+- In the next slides, we are interested in the behavior of functions when $n \rightarrow \inf$... #todo what did i miss.
+
+### Big O Notation
+
+- We define `O(n)` as the class of functions `g(n)` that satisfy:
+
+$${lim sup}_{n \rightarrow \infty} \frac{g(n)}{f(n)} < +\infty$$ #todo finish filing this
+
+
+- In other words, `O(f(n))` is the class of functions `g(n)` where there is a constant $c \in \mathbb{R}^{+}$ and a number $N\in \mathbb{N}$, so that as long as $n \geq N$, we have $g(n) \leq c*f(n)$.
+- In other words, `O(f(n))` is the class of functions `g(n)` where there is a constant $c \in \mathbb{R}^+$, so that for all sufficiently large `n` we have $g(n) \leq c * f(n)$.
+
+> Intuitively, this means $f(n) \in O(g(n))$ means that `f(n)` (ultimately) grows at most as fast as `g(n)`, ignoring the constant.
+
+#todo finish with the slides
+
+#todo wtf is the quiz blud
+
+### The Notations
+
+#todo write out the notaiton
+
+#### $\Omega$
+
+> Define $\Omega (f(n))$ as the class of functions $g(n)$ that satisfy $f(n) \in O(g(n))$ (grows at least as fast (bad) as `f(n)`)
+
+#### $\omicron$
+
+> Define #todo wtf???
+
+
+---
+
+#### #todo quiz?
+
+
+---
+
+##### A Note on `O` and $\theta$
+
+- Many people use `O(f(n))` to refer to $\theta(f(n))$.
+
+#todo theres so much FUCKING 
+
+
+### Common Running Times
+
+- For every function `f(n)` above `g(n)` in the list below, we have `f(n) = o(g(n))`.
+	- 1 (constant)
+	- #todo what? what?
+
+### Polynomial Time
+
+> A running time `T(n)` is called *polynomial time* if $T(n) = O(n^c)$.
+
+- Polynomial time is an important concept and is quite robust across #todo what
+
+## Binary Search
+
+**Problem:** We are given `n` integers in weakly increasing order $a_1 \leq a_2 \leq ... \leq a_n$ (stored in an array) and a query $q \in \mathbb{Z}$. Decide whether there is a number $a_i$ in the array that is equal to `q`.
+
+#todo pseudocode
+
