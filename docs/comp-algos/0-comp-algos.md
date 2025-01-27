@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> The [Course site](https;//sites.google.com/views/rutgers-cs344-s25)
+> The [Course site](https://sites.google.com/views/rutgers-cs344-s25)
 
 - Textbook - *Algorithm Design*
 
@@ -157,38 +157,59 @@ Since `m` prefers `w'` to `w` we know `m` must have proposed to `w''`. Therefore
 
 ## Running Time Analysis
 
-#todo get all the notes that i missed before this
+### Time Efficiency of an Algorithm
 
-### Ignoring the Constant
+- An algorithm takes an input, *performs some operations*, and then gives an output.
+- Even if two algorithms achieve the same function, one of them can be **faster** than the other.
+- How do we compare these algorithms and answer which one is faster?
+
+#### Worst-case Analysis
+
+- We will focus on the *worst-case* analysis of running time:
+	- For each input size *n*, what is the maximum possible running time *`T(n)`*?
+- In other words, `T(n)` is a guarantee that as long as the input size is `n`, the running time will be at **most** `T(n)`.
+
+> You can also define a "average-case" running time. However, worst-case analysis is more widely accepted and captures reality pretty well. **Exception, the simplex algorithm**
+
+#### Focusing on Large Inputs
+
+- We will focus on the situation when the inputs are large: How fast does the running time `T(n)` grow as a function of the input size `n` when $n \rightarrow \infty$?
+- For most (if not all) algorithms covered in this course, their performance in the limit ($n \rightarrow \infty$) can usually capture their performance for smaller `n` too.
+
+#### Ignoring the Constant
 
 - We will often ignore the constants in the running time: 
 	- $T(n) = f(n)$ and $T(n) = 10f(n)$ are considered to be similar.
 	- The exact constants usually depend on the exact implementation.
 
+### Different Running Times
+
+![](imgs/diff-runtimes.png)
+
 ### Assumptions Before Introducing Big O Notation
 
 - Fix an algorithm. Let $T(n)$ be its worst-case running time when the input size is `n`.
-- In the next slides, we are interested in the behavior of functions when $n \rightarrow \inf$... #todo what did i miss.
+- We are interested in the behavior of functions when $n \rightarrow \infty$, and we assume that the functions `f(n)`, `g(n)`, ... are positive (b.c. they are running time.)
 
 ### Big O Notation
 
 - We define `O(n)` as the class of functions `g(n)` that satisfy:
 
-$${lim sup}_{n \rightarrow \infty} \frac{g(n)}{f(n)} < +\infty$$ #todo finish filing this
-
+$$\limsup_{n \rightarrow \infty} \frac{g(n)}{f(n)} < +\infty. \quad ($\limsup_{n \rightarrow \infty} \frac{g(n)}{f(n)} := \lim_{n\to\infty}\sup_{n' \geq n} \{\frac{g(n')}{f(n')}\})$$ 
 
 - In other words, `O(f(n))` is the class of functions `g(n)` where there is a constant $c \in \mathbb{R}^{+}$ and a number $N\in \mathbb{N}$, so that as long as $n \geq N$, we have $g(n) \leq c*f(n)$.
 - In other words, `O(f(n))` is the class of functions `g(n)` where there is a constant $c \in \mathbb{R}^+$, so that for all sufficiently large `n` we have $g(n) \leq c * f(n)$.
 
 > Intuitively, this means $f(n) \in O(g(n))$ means that `f(n)` (ultimately) grows at most as fast as `g(n)`, ignoring the constant.
 
-#todo finish with the slides
+##### Example
 
-#todo wtf is the quiz blud
+If $f(n)=3n^{2} + 100 n + 7$ and $g(n)=n^2$, then we can write $f(n) \in Og(gn(n))$, or $3n^{2}+100n+7 \in O(n^2)$.
+
+- For example, `O(n)` is the class of functions that grow at most linearly, and `O(n^2)` is the class of functions that grow at most quadratically.
+- We will say, for example, an algorithm runs in `O(n)` (or `O(n^2)`, etc...) time to characterize/classify its running time.
 
 ### The Notations
-
-#todo write out the notaiton
 
 #### $\Omega$
 
@@ -196,38 +217,61 @@ $${lim sup}_{n \rightarrow \infty} \frac{g(n)}{f(n)} < +\infty$$ #todo finish fi
 
 #### $\omicron$
 
-> Define #todo wtf???
+> Define $\omicron(f(n))$ as the class of functions `g(n)` that satisfy $\lim_{n\to\infty}\frac{g(n)}{f(n)} = 0$ (grows strictly slower than `f(n)`).
 
+#### $\omega$
 
----
+> Define $\omega(f(n))$ as the class of functions `g(n)` that satisfy $f(n) \in \omicron(g(n))$ (grows strictly faster than `f(n)`).
 
-#### #todo quiz?
+#### $\theta$
 
+> Define $\theta(f(n))$ as the class of functions `g(n)` that satisfy $g(n) \in O(f(n))$ and $f(n) \in O(g(n))$ (same growth rate as `f(n)`).
 
 ---
 
 ##### A Note on `O` and $\theta$
 
 - Many people use `O(f(n))` to refer to $\theta(f(n))$.
-
-#todo theres so much FUCKING 
+- For example, "*sorting `n` numbers via pairwise comparisons must take at least $O(n \log{n})$ time.*" is generally understandable but inaccurate.
+	- As Professor Wang says, **please try to use these notations accurately**!!!
 
 
 ### Common Running Times
 
 - For every function `f(n)` above `g(n)` in the list below, we have `f(n) = o(g(n))`.
-	- 1 (constant)
-	- #todo what? what?
+	- $1$ (constant)
+	- $\log_2 \log_2 n$ (double logarithmic)
+	- $\log_2 n$ (logarithmic)
+	- $\log_{2}^c n$ for a constant c > 1 (polylogarithmic)
+	- $n^c$ for a constant c > 0 (polynomial)
+	- $a^n$ for a constant a > 1 (exponential)
+	- $n!$ (factorial)
 
 ### Polynomial Time
 
 > A running time `T(n)` is called *polynomial time* if $T(n) = O(n^c)$.
 
-- Polynomial time is an important concept and is quite robust across #todo what
+- Polynomial time is an important concept and is quite robust across different computing models. For example, (a bit informally), polynomial time on a Turing machine is the same as polynomial time in any common programming language.
+- If the input size doubles, a polynomial-time algorithm only becomes a constant ($2^c$) times slower (in terms of upper bounds $O(n^c)$). Some people use the word "efficient" to refer to polynomial time.
 
 ## Binary Search
 
 **Problem:** We are given `n` integers in weakly increasing order $a_1 \leq a_2 \leq ... \leq a_n$ (stored in an array) and a query $q \in \mathbb{Z}$. Decide whether there is a number $a_i$ in the array that is equal to `q`.
 
-#todo pseudocode
+```pseudocode
+l = 1, r = n  
+while l ≤ r do  
+	Let m be ⌊(l + r)/2⌋  
+	if am = q then  
+		Return “Yes”  
+	else if am < q then  
+		l ← m + 1  
+	else (am > q)  
+		r ← m − 1  
+	end if  
+end while  
+Return “No”
+```
+
+> The running time is $O(\log n)$. 
 
