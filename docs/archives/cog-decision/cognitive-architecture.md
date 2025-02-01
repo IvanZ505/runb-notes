@@ -420,3 +420,37 @@ Mere distraction condition: After receiving the decision-relative information, p
 2. Replicability
 	1. Not reporting experiments that did not show the desired results.
 
+## Graphs
+
+> A *graph*is a way of encoding **pairwise relationships** among objects.
+
+#todo mhmmm
+
+### Connectivity
+
+- In graph applications, we are often interested in this question: is there a way to go from vertex `u` to vertex `w`?
+
+#todo just review your shit on graphs.
+
+
+### Stacks and Queues
+
+- STacks and queues are common data structures.
+- Both of them support operations: *push* and *pop* an element.
+- The difference is:
+	- Queues are FIFO (first in, first out): always pop the element that was pushed (enqueued) in the queue the earliest.
+	- Stacks are LIFO (last in, first out): always pop the element that was pushed in the stack the latest.
+
+### Graph Traversal
+
+- Depth-first search (DFS) and breadth-first search (BFS) #todo just pop that shit in here
+
+#### Depth First Search
+
+#todo get the pseudocode.
+
+
+#### Breadth First Search
+
+#todo get the psuedocode
+
