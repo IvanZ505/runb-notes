@@ -275,6 +275,198 @@ Return “No”
 
 > The running time is $O(\log n)$. 
 
-## Divide and Conquer: Sorting
+## Sorting
 
+### Divide and Conquer
+
+##### Quiz: A Tiling Problem
+
+![](imgs/tiling-prob.png)
+
+- In order to solve this problem, we need to break it down into quadrants.
+- When `n=1`, a single tile is enough. If `n>1`, we must divide the grid into four quadrants, putting a tile in the center touching the three quadrants without an "X" and recurse.
+
+![](imgs/tiling-prob-sol.png)
+
+##### Quiz: Fast Exponentiation
+
+> Suppose we need to compute $a^n \mod p$, the remainder after dividing $a^n$ by `p`, for positive integers `a`,`n`,`p`. Can we do it in $O(\log n)$ time (if `a` and `p` are constants)?
+
+Answer:
+
+- If `n` is even, then:
+	- $a^n \mod p = (a^{n/2}\mod p)^2 \mod p$.
+- If `n` is odd, then:
+	- $a^n \mod p = ((a^{\frac{n-1}{2}} \mod p)^2 * a) \mod p$
+
+#### Fast Exponentiation
+
+```pseudo
+procedure Exp(a,n,p)       > Compute a^n mod p
+	if n <= 1 then
+		return a^n mod p
+	endif
+	b <- Exp (a, [n/2], p)
+	if `n` is even then
+		Return b^2 mod p
+	else
+		return b^2 *a mod p
+	endif
+end procedure
+```
+
+#### Sorting in $O(n \log n)$ Time
+- We need to sort `n` distinct numberes in increasing order.
+- We have seen in a previous lecture that any comparison-based sorting algorithm must take $\Omega(n \log n)$ time in the worst case.
+- In this lecture, we will present *two* comparison-based sorting algorithms that run in $n \log n)$ time. Hence their running times are optimal up to constatns.
+
+### Mergesort
+
+> Mergesort involves sorting the first half, then the second half, and then merging the two halves to get a sorted array.
+
+```pseudo
+procedure Mergesort(l, r)
+	if l >= r then
+		Return
+	endif
+	m <- [(l + r)/2]       > `m` is the midpoint
+	Mergesort(l, m)
+	Mergesort(m+1, r)
+	Merge the two sorted lists. (a_l, ..., a_m) and (a_m+1, ..., a_r)
+end procedure
+```
+
+#### Merging
+- To merge two sorted lists, we can view the two lists as stacks/queues and pop the smaller element each time.
+
+##### Example
+- The list are `(4,7,9,10)` and `(2,3,8,15)`. We first compare `4` and `2` and pop the smaller one, `2` from the second list. Next we compare `4` and `3` and. pop the smaller one, `3` from the second list...
+
+#### Time Complexity
+
+Let `T(n)` be the worst-case time complexity to mergesort `n` numbers. We (roughly) have the *recurrence relation*:
+
+$$T(n) = 2T(n/2) + O(n)$$
+
+This solves to $T(n)=O(n\log n)$.
+
+It is important to know how to solve recurrence relations. We will provide a pictorial illustration and a formal proof this time.
+
+![](imgs/mergesort-pics.png)
+
+##### Time Complexity Proof
+
+More formally, we have (for all `n > 1` and a constant `c`)
+
+$$T(n) \leq T(n/2) + T(n/2) + cn$$
+
+- and $T(1) \leq c$ and $T(2) \leq c$ and $T(3) \leq c$.
+- We postulate that $T(n) \leq 3cn\ln n$ for all `n >= 2` and prove it by *strong induction*.
+
+![](imgs/mergesort-time-proof.png)
+
+### Quicksort
+
+```pseudo
+procedure Quicksort(l, r)
+	if l >= r then
+		Return
+	end if
+	Find the median `p` in (a_l, ... , a_r) where p is the "pivot"
+	Rearrange (a_l, ..., a_r) and put the number smaller than `p` left to `p` and the numbers larger than `p` right of `p`.
+	Let `m` be the index of `p` after the rearrangement.
+	Quicksort(l, m-1)
+	Quicksort(m+1, r)
+end procedure
+```
+
+Assume for now we can find the median in linear time.
+
+![](imgs/quicksort-pics.png)
+
+### Median of Medians
+
+- In general, how to find the `k`-th largest element in a set of size `n`?
+- This can be done in `O(n)` time using an algorithm called *median of medians*.
+- The running time of *quicksort* is hence:
+	- $T(n) = 2T(n/2) + O(n)$
+- which solves to $T(n) = O(n \log n)$
+
+```pseudo
+procedure MoM((a_1, ..., a_n), k)        > Find the k-th smallest
+	if n <=10 then
+		Brute force and return the solution
+	end if
+	Divide `a` into `n/5` groups of 5 numbers.
+	Let `M` be the medians of each group.           > |M| = n/5
+	Find the median of `M` using MoM(M, |M|/2), call it `b` and let its rank in `a` be `k'`.
+	If k' >= k then
+		Remove everything larger than `b` in `a`
+		Return MoM(a', k)
+	else
+		Remove everything smaller than `b` in `a`, get `a'`
+		Return MoM(a', k-k')
+	end if
+end procedure
+```
+
+##### Quiz: Rank of `b`
+
+- Show that the rank of `b` is between `0.3n` and `0.7n`. In other words, $o.3n <=k'<=0.7n$.
+
+Answer: `k' >= 0.3n` because in half the `0.2n` groups, at least 3 elements are smaller than `b`.
+
+`k' <= 0.7n` because in half the `0.2n` groups, at least 3 elements are larger than `b`.
+
+#### Time Complexity of MoM
+
+- Finding the median of meidans takes $T(0.2n)$ time.
+- The rank of `b` is between 0.3n and 0.7n, and so recursion takes at most $T(0n.7n)$ time.
+- The time complexity isL $T(n) = T(0.2n) + T(0.7n) + O(n)$.
+
+##### Mathematical Induction
+
+![](imgs/math-induction.png)
+
+##### Strong Induction
+
+![](imgs/strong-induction.png)
+
+#### Comments on Quicksort
+
+- We can find the median in linear time and use that as the pivot, but in practice, people usually use a *uniformly random element from the current range* as the pivot.
+- Random-pivot quicksort can guarantee a running time of $O(n\log n)$ in *expectation*, but the worst-case time will be $\Theta(n^2)$. In practice it is likely faster than median-pivot quicksort due to its smaller time complexity constant.
+- Alternatively, we can do this: run random-pivot quicksort and count thenumber of steps, if ti takes too long then fall back to median-pivot quicksort.
+	- This method guarantees a worst-case running time of $O(n \log n$) while having a small time complexity constant.
+
+#### Running time of Random Pivot Quicksort
+
+The expected number of comparisons is:
+
+$$\sum_{i=1}^{n}\sum_{i+1}^{n}Pr[i \text{ and } j \text{ are compared }] = \sum_{i=1}^{n}\sum_{i+1}^{n} \frac{2}{j-i+1}$$
+
+$$= 2n \sum_{t=2}^{n} \frac{1}{t}=O(n \log n)$$
+
+> Hence the expected running time of random-pivot quicksort is $O(n \log n)$.
+
+---
+
+##### Example
+
+- Given an array of `n` distinct integers, find the `k`-th smallest one.
+
+> This can be done in $O(n)$ time via *median of medians*.
+
+### Stooge Sort
+
+- Stooge sort is an interesting way to sort `n` numbers.
+- The algorithm is very simple. For simplicity, we add to the array at most two $+\infty$'s so that now `n` is a multiple of 3.
+
+## Dynamic Programming
+
+- Talk about dynamic programming introduction
+- Some examples
+- Longest increasing subsequence.
+
+### Number Pyramid
 
