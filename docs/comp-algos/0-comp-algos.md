@@ -461,6 +461,160 @@ $$= 2n \sum_{t=2}^{n} \frac{1}{t}=O(n \log n)$$
 
 - Stooge sort is an interesting way to sort `n` numbers.
 - The algorithm is very simple. For simplicity, we add to the array at most two $+\infty$'s so that now `n` is a multiple of 3.
+	- Recursively sort the first $\frac{2n}{3}$ numbers.
+	- Recursively sort the last $\frac{2n}{3}$ numbers.
+	- Recursively sort the first $\frac{2n}{3}$ numbers.
+
+#### Time Complexity of Stooge Sort
+
+- The time complexity of Stooge Sort is $T(n) = 3T (\frac{2n}{3})+ O(1)$.
+- How to solve this?
+- One can still guess and prove by induction, but there is a tool called the *master theorem*.
+
+### The Master Theorem
+
+- In the recurrence relation $T(n) = aT(n/b) + f(n)$ if $a \le 1$ and $b > 1$ are constants and $f(n) \geq 0$, then let $c_{crit} = \log_{b}a$ and we have the following:
+	- If $f(n) = O(n^c)$ for $c < c_{crit}$, then $T(n) = \Theta(n^{c_{crit}})$.
+	- If $f(n) = \Theta(n^{c_{crit}}* \log^{k}n)$ for a constant $k > -1$, then $T(n) = \Theta(n^{c_{crit}} * \log^{k+1}n)$. 
+	- If $f(n) = \Omega(n^c)$ for $c > c_{crit}$ and `f(n)` *satisfies the regarality condition $a*f(n/b) \leq k*f(n)$ for all sufficiently large `n` and some constant $k < 1$*, then $T(n) = \Theta(f(n))$.
+
+> The master theorem is not hard to prove using induction, but is a very useful shortcut for many recurrence relation.
+
+### Closest Pair of Points
+
+> **Problem:** Given `n` points on a Euclidean plane, fine the pair of points with the smallest Euclidean distance.
+
+![](imgs/cloest-pair-points.png)
+
+#### Brute Force
+
+The brute force approach takes $O(n^2)$ time.
+
+> Is there a faster algorithm??
+
+#### Ideas
+
+- Maybe it helps to divide the points into subsets.
+- The closest pair of points are either in the same subset or in different subsets.
+- Recursively solve the problem in each subset, and then find the closest pair of points that come from two different subsets.
+
+##### Divide into Clusters
+
+- Try dividing into two subsets??
+- How do we select the two subsets?
+	- Since we want the *closest* pair, it makes sense to put the poitns that are close together into the same subset/cluster.
+	- A simple guess is to draw a line to divide the points into two halves. Each half is a cluster.
+
+##### Applying the Ideas
+
+```pseudo
+procedure Closest(P)       > finding the closest pair in `P`
+	if |P| <= 10 THEN
+		Enumerate all pairs and return the closest pair.
+	end if
+	Draw a line `l` that cuts `P` into two clusters P_1 and P_2.
+	Closest(P_1) and get distance `d_1`
+	Closest(P_2) and get distance `d_2`.
+	Compute the closest pair between P_1 and P_2.
+end procedure
+```
+
+> This way, we only need to compute the closest pair between $P_1$ and $P_2$ if the distance is less than $min(d_1, d_2)$.
+
+#### More Ideas
+
+- Only need to compute the closest pair between $P_1$ and $P_2$ if the distance is less than $d = \min(d_1,d_2)...$.
+- Only need to consider points that are less than `d` away from the separating line `l`.
+
+![](imgs/closest-by-d-distance.png)
+
+![](imgs/zoomed-in-closest-d-distance.png)
+
+> There is at most one point in each square of side length $\frac{d}{2}$.
+
+```pseudo
+procedure Closest(P)        > Find the closest pair in `P`
+	if |P| <=10 then
+		Enumerate all pairs and return the closest pair
+	end if
+	Draw a verticle line `l` that cuts `P` into `P_1` and `P_2`
+	Closest(P_1) and get distance `d_1`
+	Closest(P_2) and get distance `d_2`
+	Let `d <- min(d_1, d_2)`
+	Focus on the points `Q` in the tape
+	Sort `Q` according to their `y`-coordinate
+	Check each point in `Q` with the next `11` points in `Q` and update `d`
+	Return `d`
+end procedure
+```
+
+##### Improving the Time Complexity
+
+- It takes `O(n \log n)` time to sort the points at each step.
+- Improvement: Sort the points according to their `y`-coordinates in advance, and pass down the sorted array to the recursive calls.
+
+## Polynomial Multiplication
+
+### Problem Statement
+
+- Recall that a univariate *polynomial* `A` of degree at most `n` can be written as:
+
+$$A(x) = a_n * x^n + a_{n-1} * x^{n-1} + ... + a_1 + x + a_0$$
+
+$a_n, a_{n-1}, ..., a_0$ are its coefficients (integers or real numbers).
+
+> Problem: Given two polynomials `A,B` of degree at most `n`, compute their product `AB`.
+
+	n=2. Let A = x²+3x+7 and B = 7x+3. We need to compute AB=7x³+24x²+58x+21.
+
+
+### Integer Multiplication
+
+- Polynomial multiplication algorithms are useful for multiplying two large integers.
+
+#### Example
+
+> Suppose that we need to compute `137 * 73`. We can construct $A = x^3 +3x + 7$ and $B=7x + 3$ (where `x=10`). Then we compute $AB=7x^3 + 24x^2 + 58x + 21$ and plug in `x = 10`.
+
+Even when the two numbers are large (of `n` digits), there can only be a few nonzero ($O(n \log n)$) digits in the last step, so the last step does not take much time!
+
+### Natural Algorithm
+
+A natural way to compute polynomial multiplication is to use its expansion:
+
+![](imgs/natural-algo-polynomial.png)
+
+
+> The (worst-case) running time is `ϴ(n²)`.
+
+### Long Multiplication
+
+0 In the case of integer multiplication, we probably know the *long multiplication*. It can take $\Theta(n^2)$ time.
+
+![](imgs/long-mult-natural.png)
+
+#### Divide and Conquer
+
+> Using divide and conquer, we can create an algorithm that runs in ο(n²) time.
+
+We can "divide" any polynomial of degree `2n-1` into two polynomials of degree `n-1`:
+
+$$A=a_{2n-1}x^{2n-1}+a_{2n-2}x^{2n-2}+...+a_1x + a_0$$
+
+$$= (a_{2n-1}x^{n-1}+a_{2n-2}x^{n-2}+...+a_n)x^n$$
+$$+ (a_{n-1}x^{n-1}+ a_{n-2}x^{n-2}+...+a_0$$
+$$=A_{high}x^n+A_{low}$$
+
+Then we can compute polynomial multiplication using:
+
+$$AB = A_{high}B_{high}x^{2n}+(A_{high}B_{low}+ A_{low}B_{high})x^n + A_{low}B_{low}$$
+
+> This formula reduces the input size from (2n-1) to (n-1), but there are `4` subproblems.
+
+The running time is: $T(n) = 4T(n/2)+O(n)$.
+
+#todo there is still so much fdkajfdkfa
+
 
 ## Dynamic Programming
 

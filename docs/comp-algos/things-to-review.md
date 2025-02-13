@@ -1,0 +1,4 @@
+- [ ] Master theorem
+- [ ] Notations
+- [ ] Mergesort, quicksort, stoogesort
+- [ ] 
