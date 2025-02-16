@@ -613,8 +613,39 @@ $$AB = A_{high}B_{high}x^{2n}+(A_{high}B_{low}+ A_{low}B_{high})x^n + A_{low}B_{
 
 The running time is: $T(n) = 4T(n/2)+O(n)$.
 
+### Karatsuba Algorithm
+
+> The Karatsuba Algorithm computes $A_{high}B_{high}$, $A_{low}B_{low}$, and $(A_{high}+A_{low})(B_{high}+B_{low})$, and then takes it in order to compute:
+
+![](imgs/karatsuba-algo.png)
+
+The running time of this algorithm is: $T(n)=3T(n/2) + O(n)$. This is because there are three subproblems of polynomial multiplication of half input size, and the rest are addition and subtraction that only takes linear time.
+
+#### Karatsuba Algorithm Example
+
+![](imgs/karatsuba-algo-ex.png)
+
 #todo there is still so much fdkajfdkfa
 
+### Fast Fourier Transform
+
+> Also known as *FFT*. It is a very useful algorithm, but requires some knowledge on complex numbers.
+
+#### Facts about Complex Numbers
+
+> Let ℂ be the set of complex numbers. It is a number field, and one can do addition / subtraction / multiplication / division, similar to other number fields like ℚ and ℝ.
+
+- Any complex number can also be written as `a + bi`, where `a ∈ ℝ` is the real part, and `b ∈ ℝ` is the imaginary part. The constant `i` is the imaginary unit. *i²=-1*.
+
+##### Eulers Formula
+
+For any *θ ∈ ℝ*,
+
+$$e^{\theta i}= \cos \theta + i \sin \theta$$
+
+For example,
+
+$$e^{\frac{\pi i}{2}}=i, \space e^{\pi i} = -1, \space$$
 
 ## Dynamic Programming
 
