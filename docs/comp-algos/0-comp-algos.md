@@ -275,6 +275,157 @@ Return “No”
 
 > The running time is $O(\log n)$. 
 
+## Graphs
+
+> For previous notes on graphs, check out [Discrete 2](../archives/discrete-2/discrete-2#graphs)
+
+- To reiterate what we've learned in the past, **graphs** are a way of encoding *pairwise relationships* among objects.
+- This means, A graph `G = (V,E)` consists of a set `V` of vertices and a set `E` of edges.
+	- The *vertices `V`* encode the objects.
+	- The *edges `E`* encode the *pairwise relationships*. These edges may or may not have directions or weights. The graph with undirected (resp. directed) edges are called undirected (resp. directed) graphs.
+		- *Directed graphs can also be called digraphs.*
+
+#### Example of Graph
+
+![](imgs/example-of-graph.png)
+
+- Other examples may include online social networks: The vertices are users and a directed edge from a person `a` to another person `b` means that `a` follows `b`.
+- Or, course scheduling, where the vertices are courses and a undirected edge between that wo courses means there is a conflict between the two.
+
+### Connectivity
+
+> In graph applications, we are often interested in this question: Is there a way to go from vertex `u` to vertex `v`?
+
+#### Walks and Simple Paths
+
+- In an undirected graph `G`, a *walk*`O` is a (finite for our purposes) sequence of vertices ($v_1, v_2, ..., v_k$) with the property that each consecutive pair is joined by an edge in `G`.
+	- For a digraph, this definition is the same, except that the consecutive pair must be joined by an edge from $v_i$ to $v_{i+1}$.
+- In unweighted graphs, the *length* of a walk is `k-1`, the number of edges in it.
+
+##### Simple Path
+
+> A walk is then called a *simple path* if all vertices on `P` are distinct from one another.
+
+
+- A walk `P` is then called a cycle if it is also a *simple path*, with the start and end vertices being the same.
+
+##### Quiz
+
+How many walks and simple paths of length 3 are there in the following directed graph?
+
+![](imgs/walks-quiz.png)
+
+	Walks: 4 * 3 * 3 * 3
+	Simple Paths: 4 * 3 * 2 * 1
+
+#### Graph Connectivity in Undirected Graphs
+
+- The vertices in any *undirected* graph can be divided into *connected components*. Vertices can reach each other via walks if and only if they are in the same connected component. A graph is called **connected** if it has only one connected component. 
+- Formally, in an undirected graph, we write `u ~ v` if there is a walk from vertex `u` to vertex `v`. The binary relation `~` is an *equivalence relation* because it is:
+	- Reflexive: `u ~ u` for any vertex `u`.
+	- Symmetric: If `u ~ v` then `v ~ u`.
+	- Transitive: If `u ~ v` and `v ~ w`. then `u ~ w`.
+- Each equivalence class is a connected component.
+
+#### Forests and Trees
+
+- A **forest** is an undirected graph without cycles.
+- A **tree** is a connected undirected graph without cycles.
+
+> Naturally speaking, a forest is a disjoint union of trees.
+
+##### Quiz
+
+If there are 3 possible trees of 3 vertices, how many possible trees of 4 vertices are there?
+
+![](imgs/trees-counting-quiz.png)
+
+> Cayley's Formula: There are $n^{n-2}$ trees of `n` vertices.
+
+#### Degrees
+
+> In a undirected graph, the *degree*of a vertex is the number of incident edges it has. (An edge from a vertex to itself should be counted twice)
+
+- The sum of the degrees for all vertices in a undirected graph is ALWAYS even.
+- In a directed graph, the *outdegree* of a vertex is the number of incident outgoing edges it has, and the indegree of a vertex is the number of incident incoming edges it has. The sum of the outdegrees for all vertices is always equal to the sum of the indegrees.
+
+### Graph Searching
+
+#### Depth First Search
+
+```pseudocode
+Initialize S to be a stack with one element s  
+while S is not empty do  
+	Take a vertex u from the stack S  
+	if visited[u] = false then  
+		visited[u] = true  
+		for each edge (u, v) incident to u do  
+			Add v to the stack S  
+		end for  
+	end if  
+end while
+```
+
+#### Breadth-First Search
+
+```pseudocode
+Initialize Q to be a queue with one element s  
+while Q is not empty do  
+	Take a vertex u from the queue Q  
+	for each edge (u, v) incident to u do  
+		if discovered[v] = false then  
+			discovered[v] = true  
+			Add v to the queue Q  
+		end if  
+	end for  
+end while
+```
+
+#### Comparisons between BFS and DFS
+
+- An adjacency matrix takes $O(n^2)$ space. It is easy to check in *O(1)* time whether there is an edge from `u` to `v`.
+- An adjacency list takes $O(n+m)$ space. If `m` is much smaller than $n^2$, adjacency lists might perform better than adjacency matrices in many algorithms.
+- In the rest of the course, we assume by default that graphs are represented by adjacency lists.
+- Both DFS and BFS will run in $O(n^2)$ (and not better) time if using adjacency matrix representation. Both DFS and BFS will run in $O(n+m)$ time if using adjacency list representation.
+
+### Adjacency Lists
+
+> The *adjacency list* representation of a graph is an array `Adj`, where for each vertex `v`, `Adj[v]` contains a list of vertices to which `v` has (outgoing) edges.
+
+- If the graph is directed, one can also maintain an array of incoming edges to each vertex if needed in the algorithm.
+
+### Strongly Connected Components
+
+> The vertices in any *directed* graph can be divided into **strongly connected components**.
+
+1. `u` can reach `v` in a walk and...
+2. `v` can reach `u` in a walk.
+
+- A graph is called *strongly connected* if it has only one strongly connected component.
+
+Formally, in a directed graph, we write `u ~ v` if they are in the same strongly connected component. This binary relation `~` is an *equivalence relation* because it is:
+
+- Reflective: `u ~ v` for any vertex `u`.
+- Symmetric: If `u ~ v`, then `v ~ u`.
+- Transitive: If `u ~ v` and `v ~ w`, then `u ~ w`.
+
+Every equivalence class is a strongly connected component.
+
+### Topological Sorting
+
+> In a directed graph, a *topological ordering* is an ordering $v_1, v_2, ...,v_n)$ of the vertices, so that every edge that goes from $v_i$ to $v_j$ must satisfy $i < j$.
+
+- A directed graph has a topological ordering if and only if it is a directed acyclic graph (DAG).
+	- A *DAG* is a directed graph **without** cycles.
+	- For example, the prerequisite graph for courses should be a DAG, otherwise the courses in a cycle can never be taken.
+
+#### Topological Sorting Algorithm
+
+- To compute a topological ordering of a graph `G`, we repeatedly do the following steps.
+	- Find a vertex `v` with no incoming edges and order it first.
+	- Delete `v` and the edges incident to it from `G`.
+- This can be done in $O(n + m)$ time if we maintain the indegrees of each vertex.
+
 ## Sorting
 
 ### Divide and Conquer
