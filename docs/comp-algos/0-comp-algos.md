@@ -1,3 +1,6 @@
+{% include math.html %}
+{% include top-btn.html %}
+
 # Design and Analysis of Computer Algorithms
 
 ## Introduction
