@@ -48,4 +48,27 @@
 - theres no such thing as ether through which gravity propagates
 - gravity warps space and time
 - what are the questions children ask about the mind
-- 
+
+## Matthew Stone
+
+- Rutgers purchased some subscriptions to LLMs such as copilot/
+- LLMs are useful for thinking since we know they work differently.
+- Bunch of bullet points
+- meta trained its llm by using bittorrent feed of illegal copyrighted material, pirated books etc.
+	- Common crawl - measures the size of the indices
+- predict the next word, sound shapes of the word has temp. ambiguity. 
+	- to resolve the ambiguity comp. sys use the prediction algo
+- write email on what youve done bullet points.
+- google build model in multilingual setting. english, spanish, german.
+- as data decrease. fluency and effect of responses degrade.
+- poverty of the stimulus
+- he thinks connectionism is not the correct way to model. langauge models are a proof of concept that error signals...
+- ml likes sys that learn from scratch. learning is not be all and end all of bio. cognition.
+- get the data, predicting next word, reinforcement it.
+- ask for the info that you want from them in a specific way
+- profile of diff. neural behavior to show some pattern of bheaviour that diff neurons are exhibiting
+	- successful in the early stages: sa visual info comes in
+- dogs that run also bark? need to be sensitive to the unfolding syntactic relation.
+- theres no way to know if ... reflects... the possibility of silicon minds.
+- as long as neural networks are only appx. hooked up and cant do the causal and counterfactual reasoning... etc etc...?
+
