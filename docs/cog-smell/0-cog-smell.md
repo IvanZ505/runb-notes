@@ -138,3 +138,20 @@
 ---
 
 - Though today we're going to talk a lot about food & odor perception from a bottom-up perception
+
+#note cumulative frequency histogram
+
+-  by showing the mean, it shows you the variance.
+
+## T-Test
+
+> Also known as student's t-test
+
+
+- The fundamental underpinning and statistical test in psych, biomedical research.
+- It was invented by the Guinness brewing company.
+	- Needed to solve a QOL problem.
+	- Something about barley and sinking and floating.
+- The T-Test is a test of how many tests would make you confident that the batch is above or below your cutoff.
+- T-test only works on *normal* data.
+

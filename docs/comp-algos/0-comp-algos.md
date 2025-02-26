@@ -809,3 +809,10 @@ $$e^{\frac{\pi i}{2}}=i, \space e^{\pi i} = -1, \space$$
 
 ### Number Pyramid
 
+
+#important LIS w <= k positions apart very sim to midterm problem??
+
+brute forcing is like a question on the midterm, improving it would be a bonus
+
+dp transition function
+
