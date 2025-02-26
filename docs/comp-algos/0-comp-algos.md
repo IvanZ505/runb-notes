@@ -26,7 +26,7 @@
 - Grading only counts for completion!!!
 
 #### Exam Policy
-
+o
 - Three exams, midterms are in class.
 - All exams are closed book.
 - Exam questions will come from lectures homework assignments and exercises in our textbook.
@@ -630,7 +630,7 @@ $$= 2n \sum_{t=2}^{n} \frac{1}{t}=O(n \log n)$$
 - In the recurrence relation $T(n) = aT(n/b) + f(n)$ if $a \le 1$ and $b > 1$ are constants and $f(n) \geq 0$, then let $c_{crit} = \log_{b}a$ and we have the following:
 	- If $f(n) = O(n^c)$ for $c < c_{crit}$, then $T(n) = \Theta(n^{c_{crit}})$.
 	- If $f(n) = \Theta(n^{c_{crit}}* \log^{k}n)$ for a constant $k > -1$, then $T(n) = \Theta(n^{c_{crit}} * \log^{k+1}n)$. 
-	- If $f(n) = \Omega(n^c)$ for $c > c_{crit}$ and `f(n)` *satisfies the regarality condition $a*f(n/b) \leq k*f(n)$ for all sufficiently large `n` and some constant $k < 1$*, then $T(n) = \Theta(f(n))$.
+	- If $f(n) = \Omega(n^c)$ for $c > c_{crit}$ and `f(n)` *satisfies the regularity condition $a*f(n/b) \leq k*f(n)$ for all sufficiently large `n` and some constant $k < 1$*, then $T(n) = \Theta(f(n))$.
 
 > The master theorem is not hard to prove using induction, but is a very useful shortcut for many recurrence relation.
 
