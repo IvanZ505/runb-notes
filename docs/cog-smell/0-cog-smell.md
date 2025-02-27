@@ -238,6 +238,8 @@
 
 ### Autoassociation: Learning Odorant Combinations
 
+![](imgs/Pasted%20image%2020250226182616.png)
+
 #### The Problem: Pattern Recognition
 
 - The brain must **combine related odor inputs**:
@@ -342,10 +344,6 @@
 		- Somatosensation (e.g. creamy, cold)
 		- Trigeminal stimulation (e.g. spicy, hot)
 		- Astringency (e.g. pucker)
-- **Taste:** #todo ikfhjasdoifasoifas
-
-#todo get the photo
-
 > Orthonasal - the normal way. Retronasal - back of your mouth.
 
 #### Retronasal Olfactory Sensation
@@ -358,15 +356,287 @@
 - The sensation of an odor that is perceived when entering the nose through the nostrils (aka nares).
 - Orthonasal and retronasal smell often differs markedly in palatability (e.g. cut grass).
 
-### Food Perception
+## Food Perception
 
-#### Molecular Gastronomy
+### Flavor vs. Taste vs. Smell
 
-- A branch of food science emphasizing the chemistry of ingredients and how ... #todo aakakjffjjfjfjff
+- **Flavor**: The **multimodal sensation** associated with food or drink in the mouth.
+    - Includes:
+        - **Retronasal smell** (e.g., banana, hamburger)
+        - **Taste** (e.g., sour, salty)
+        - **Somatosensation** (e.g., creamy, cold)
+        - **Trigeminal stimulation** (e.g., spicy hot)
+        - **Astringency** (e.g., pucker)
+- **Taste**: The sensations **arising specifically from the taste buds** in the mouth, including:
+    - **Sweet, sour, salty, bitter, and umami**
+- **Smell**: The sensations **arising from the nose**, whether **orthonasal** or **retronasal**.
+    
+---
+
+### Retronasal vs. Orthonasal Smell
+
+- **Retronasal olfactory sensation**:
+    - Perceived when **chewing and swallowing** forces an odorant from the mouth **up behind the palate** into the nose.
+    - These smells **seem to originate from the mouth**, even though they are detected in the **olfactory mucosa**.
+- **Orthonasal olfactory sensation**:
+    - Perceived when an odor **enters the nose through the nostrils (nares)**.
+- **Key difference**:
+    - **Orthonasal and retronasal perception often differ in palatability** (e.g., cut grass).
 
 ---
 
-- Though today we're going to talk a lot about food & odor perception from a bottom-up perception
+### Demonstration: The Jelly Bean Test
+- Some foods have **strong retronasal smells** but **not strong orthonasal smells**.
+- Example: Certain candies and foods have **muted odors when sniffed but strong flavors when eaten**.
+
+---
+
+### Food Perception & Industry
+- **Food perception** is the subject of extensive **industry research**, especially in **New Jersey**.
+- In commercial settings, this field is often called **"sensory science."**
+- A clear **application of cognitive science**, especially basic research.
+
+---
+
+### Neurogastronomy
+
+- **Interdisciplinary study** of how the brain creates **flavor** from multimodal food perceptions.
+- Term coined by **Gordon Shepherd (2013)**.
+- Emphasizes:
+    - **Mechanisms of food perception**
+    - **Food-related decision-making**
+- Features an **annual symposium** organized by the **International Society of Neurogastronomy**, bringing together **scientists, chefs, and clinicians**.
+
+---
+
+### Molecular Gastronomy
+
+- A branch of **food science** emphasizing the **chemistry of ingredients** and how their format and flavor can be changed using **lab-based techniques**.
+
+- **Kitchen techniques include**:
+    - **Foams**
+    - **Liquid nitrogen freezing** (e.g., shattering ingredients, making unusual ice creams)
+    - **Dehydration & Powdering**
+    - **Spherification**
+    - **Meat glues**
+- The term **"molecular cuisine"** refers to the **cooking style** explicitly derived from **molecular gastronomy**.
+- **Alinea (Chicago, 3 Michelin stars)** is the **most famous restaurant** using molecular cuisine.
+    
+
+---
+
+### Top-Down Influences on Food Perception
+
+- While today's discussion focuses on **bottom-up factors** in food & odor perception, **top-down effects** are also crucial.
+- **McCall et al. (2004)**:
+    - Showed that **Pepsi vs. Coke** evoked **different preferences & fMRI patterns** when labeled, but **not when served blindly**.
+    - **Marketing acts like an ingredient**—it **alters flavor perception**.
+- **Expectations, social factors, and cognitive influences** shape food perception.
+    
+
+---
+
+### Odor Release in Food Consumption
+- Most foods release **distinct odorant molecules**:
+    - **Before consumption** (_orthonasal smell_).
+    - **During consumption** (_retronasal smell_).
+- Most foods are composed of **dozens to hundreds of different odorants**.
+- The **food industry** constantly works to improve flavor replication by:
+    - **Extracting flavor compounds** (_challenging due to chemistry_).
+    - **Synthesizing and blending flavor components**.
+
+## Vanilla: Biology and Chemistry
+
+### Vanilla Biology and Production
+
+- **Vanilla** is a **tropical orchid** prized for its **aromatic fruit (“bean”)**.
+- It is the **most popular odor in the world**.
+
+---
+
+#### Challenges in Vanilla Cultivation
+
+- **Difficult to grow**:
+    - Requires **high humidity & consistent hot temperatures**.
+    - Climbing vine → Needs **supporting trees or structures**.
+    - Requires **mycorrhizal fungi** on roots for symbiosis.
+- **Pollination issues**:
+    - Cannot be easily pollinated, even by **orchid bees**.
+    - Indigenous to **Mexico**, but pollinating bees live **only in Mexico**, not in Africa or Polynesia (where most plantations are).
+    - **Solution:**
+        - **Hand pollination**: Workers use **a stick** to self-pollinate vanilla orchids.
+        - Orchid flowers must be pollinated **within 12 hours of blooming**.
+- **Harvesting & Growth**:
+    - **9 months** from pollination to mature vanilla bean pod.
+    - **Vanilla sap** can trigger **allergic reactions** in workers.
+
+---
+
+#### Vanilla Processing & Curing
+
+- **Processing vanilla pods requires extensive treatment**:
+    1. **Killing**: Heated in **hot water bath** to trigger **vanillin-generating enzymes**.
+    2. **Sweating**: Wrapped in **fabric** to let enzymes work for **one week**.
+    3. **Drying**: **One month** in the sun.
+    4. **Conditioning**: **Six months** in storage.
+- **Challenges in processing**: (they are highly variable)
+    - Vanilla pods are **not synchronized**, requiring **individual hand-harvesting**.
+    - Beans **respond differently** to the curing process.
+
+![](imgs/Pasted%20image%2020250226184755.png)
+
+---
+
+### Varieties of Commercial Vanilla
+- **Vanilla planifolia**
+	- *99% of world production.*
+    - **Bourbon vanilla** (_Madagascar vanilla_)
+        - **Grown in Indian Ocean islands** (especially **Madagascar**) & some in **India**.
+        - Aroma is **strongly vanillin-centered**.
+    - **Mexican vanilla**
+        - A **small production** of the same plant **in its native range**.
+- **Vanilla tahitensis**
+    - **Tahitian vanilla**
+        - Originated in **Guatemala**, transplanted to the Philippines in the 1600s then **Tahiti in the 1800s**.
+        - Aroma is **less vanillin-centered**, with **strong floral notes**.
+
+---
+
+### Vanilla Odor Chemistry
+
+#### Natural Vanilla Chemistry
+
+> All natural vanillas contain odorants besides vanillin.
+
+- **Main aromatic compound**: **Vanillin (4-hydroxy-3-methoxybenzaldehyde)**
+- **Vanillin formation process**:
+    - Growing vanilla pods contain **vanillin-glucoside**.
+    - **Curing process breaks it down** into:
+        - **Vanillin** (_volatile odor molecule_).
+        - **Glucose** (_a sugar_).
+- **Vanillin yield**:
+    - **500 kg of vanilla pods** → **1 kg of vanillin**.
+    - **Worldwide natural vanillin yield**: ~**50 tons/year**.
+- **Other odorants**:
+    - Natural vanilla contains **multiple aromatic compounds**, some contributing more than others.
+
+---
+
+### Synthetic Vanilla Chemistry
+
+- **Vanillin can be synthesized cheaply** compared to natural vanilla.
+- **Main production pathway** (_~85% of world supply_):
+    - **Synthesized from guaiacol** (a **wood smoke component**, can be derived from petroleum).
+- **Alternative pathway**:
+    - **Synthesized from lignins**, a major component of plant cell walls.
+- **Synthetic vanilla** contains **only vanillin** (lacks other natural aroma compounds).
+
+#### Source of Vanillin
+
+![](imgs/Pasted%20image%2020250226184622.png)
+
+---
+
+### Vanilla Use in Food & Products
+
+#### Common Applications
+
+> The vanilla aroma is ubiquitous
+
+- **Food**:
+    - Cakes, cookies, pastries, ice cream, custards.
+    - **Most chocolate** and many **coffee flavors** contain vanilla.
+    - **Cream soda** is vanilla soda.
+    - **Root beer** contains a lot of vanilla.
+- **Other Uses**:
+    - **Perfumes**.
+    - **Consumer packaged goods** (e.g., shampoos, soaps).
+    - **Air fresheners & aromatherapy**.
+
+---
+
+### Vanilla’s Chemical Properties & Limitations
+
+> It's chemistry is a big limiting factor
+
+- **Solubility**:
+    - **Slightly soluble in water** (10 g/L).
+    - **Freely soluble in ethanol**.
+- **Thermal Properties**:
+    - **Boiling point**: **545°F (285°C)**.
+    - **Melting point**: **178–181°F (81–83°C)**.
+    - **Vapor pressure**:
+        - **1 mmHg at 225°F**.
+        - **0.00018 mmHg at 25°C**.
+- **Stability**:
+    - **Slowly oxidizes** in moist air.
+    - **Affected by light**.
+    - **Both hydrophobic & hydrophilic properties**.
+- **Human Detection Threshold**:
+    - Conflicting reports:
+        - **0.000000011 ppb**.
+        - **0.0002 ppb**.
+    - (_Either way, incredibly tiny!_).
+
+---
+
+### Vanilla Extract
+
+- **Natural Vanilla Extract**:
+    - Solution of **vanilla-related compounds** in **at least 35% ethanol**.
+    - Derived from **actual vanilla beans** → Contains **vanillin plus other aromatic compounds**.
+- **Common Types & Prices**:
+    - **Bourbon (Madagascar) vanilla**:
+        - **McCormick**: $25 / 8 oz
+        - **Baldwin’s oak-finished vanilla**: $60 / 8 oz
+    - **Tahitian vanilla extract**:
+        - **Nielsen-Massey** is the most well known: $68 / 8 oz
+    - **Variance in natural vanilla** → **Flavors vary by brand & harvest conditions**.
+- **Synthetic Vanilla Extract**:
+    - Contains **only vanillin** (sometimes **ethyl vanillin** for variation).
+    - **Consistent & cheap**.
+
+---
+
+#### When to Use Natural vs. Synthetic Vanilla
+
+##### Use Synthetic Vanilla When
+- **High heat cooking** (e.g., **baking cookies**).
+- **Need consistency** across batches.
+- **Vanilla flavor will be masked** by other strong flavors.
+- **Cost-sensitive applications**.
+
+##### Use Natural Vanilla When
+
+- **Vanilla is the star of the dish** (_e.g., ice cream, crème brûlée, flan, Chantilly cream_).
+- **Low-temperature recipes** (preserves delicate aroma).
+
+_(Now you know why vanilla is key in cold desserts!)_
+
+---
+
+### Vanilla Extract Experiment
+
+#### Supplies
+- **Vanilla beans**
+- **Everclear (99% ethanol, drinkable)**
+- **Water**
+
+#### Potential Hypotheses
+
+- **Alcohol is a better solvent than water** for extracting vanillin.
+    - **Test concentrations**: 100%, 50%, 10%, 0% ethanol.
+- **Aroma strength increases over time** (_with diminishing returns_).
+- **Cutting up pods** speeds up extraction.
+- **More pods = faster, stronger flavor**.
+
+### Dependent Variables
+
+- **Color changes (photo analysis)**.
+- **Odor assessments (smell/taste tests)**.
+
+---
+
 
 #note cumulative frequency histogram
 
