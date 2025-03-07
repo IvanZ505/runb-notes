@@ -72,3 +72,28 @@
 - theres no way to know if ... reflects... the possibility of silicon minds.
 - as long as neural networks are only appx. hooked up and cant do the causal and counterfactual reasoning... etc etc...?
 
+## Kristen Syrett
+
+- Inherent noise is noise in the data. Humans have to do that mapping process for words but there is a lot of noise.
+- Gavagai problem? In a noisy scenario, it is difficult to map the sound and the meaning. for kids, they dont have any 1-1 mapping thingy.
+- 11-13 months for first words
+	- Before then, it's just babbling.
+- well before they produce language, they are able to understand language. (5 months)
+- expressive vocab: 75-500 words, receptive vocab: 300-900 words
+- They give it meaning and category.
+- In the beginning there is a lot of nouns, content words before function words.
+	- function words are like and, or, the etc...
+- locke says if we observe how children learn lang. people ordinarily show them the item and repeat the name that stands for it. "white", "sweet", "sugar", etc...
+	- Building up association to teach babies.
+	- Gavagai problem.
+- Children learn specific nouns mapping onto discete objects easier.
+- Children do not learn through imitation.
+- The parents are producing language that is flawed and full of disfluencies. They produce a lot of junk, stopping, starting, and making mistakes.
+- They are learning a rule like i "drived" there.
+- whole object bias, taxonomic bias: new word, they have an assumption on what that meaning might be. shape bias: shape is a highly relevant sm for categorization
+- mutual exclusivity, novel name nameless category, principle of contrast
+- color is not a reliable feature for kids
+- syntactic boostrapping - surface level structural properties of sentences are well correlated w certain aspects of their semantics
+- numbers and adjectives each occupy their own position.
+- in some languages they got no adjectives. no clear distinction beteween adjectives and verbs
+
