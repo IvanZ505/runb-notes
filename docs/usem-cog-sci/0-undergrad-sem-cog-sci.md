@@ -97,3 +97,14 @@
 - numbers and adjectives each occupy their own position.
 - in some languages they got no adjectives. no clear distinction beteween adjectives and verbs
 
+## Karen Stromberg
+
+- children must develop adult like competence
+	- understanding the lang.
+	- speaking the lang
+	- normal intuitions about the language (metalinguistic knowledge)
+- Chomsky
+	- Acuisition is due to biological endowment
+	- the innate biological mechinaisms are specific to language
+	- They guess and induce the right rules
+- 

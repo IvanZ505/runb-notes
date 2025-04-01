@@ -816,3 +816,58 @@ brute forcing is like a question on the midterm, improving it would be a bonus
 
 dp transition function
 
+
+### Minimum Spanning Trees
+
+> The MST problem considers a weighted undirected graph with *n* vertices and *m* edges.
+
+
+#todo FINISH THIS!!!!!!!
+
+## Greedy Algorithms
+
+
+### Coin Exchange
+
+### The Exchange Argument
+
+### Interval Scheduling
+
+#### Interval Covering
+
+
+### Deadlines
+
+### Optimal Offline Caching
+
+## Minimum Standing Tree
+
+### The Cut Property
+
+### Prim's Algorithm
+
+#### Fibonacci Heap
+
+### Kruskal's Algorithm
+
+#### Union Find
+
+### Boruvka's Algorithm
+
+
+## Shortest Path
+
+### Dijkstra's Algorithm
+
+#### With Fibonacci Heap
+
+
+### Bellman-Ford Algorithm
+
+
+#### Negative Cycle Detection
+
+#### Simpler Implementation
+
+### Floyd-Warshall Algorithm
+
