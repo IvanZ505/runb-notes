@@ -842,3 +842,15 @@ dp transition function
 
 ## [Midterm Review](midterm-2)
 
+## Flow Networks
+
+> A *flow network* is a directed graph in which each edge `e` has a *capacity* $c_e$.
+
+- A *s-t flow* is a function `f` that assigns each edge a nonnegative real number, $f: E \rightarrow ℝ_{\ge 0}$ . The number `f(e)` represents the flow that the edge `e` carries. A flow `f` must satisfy the following two conditions.
+	- **Capacity:** $0 \leq f(e) \leq c_e$, for any $e \in E$.
+	- **Conservation:** For any vertex `v` other than the vertices `s` and `t`, we have:
+
+$$
+\sum_{e\  into \  v}{f(e)} = \sum_{e \ out \  of \ v}{f(e)}
+$$
+
