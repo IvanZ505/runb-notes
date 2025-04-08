@@ -655,3 +655,6 @@ _(Now you know why vanilla is key in cold desserts!)_
 - T-test only works on *normal* data.
 
 
+Note: 390 receptors in olfactory genes
+
+convergence from olfactory epithelium to olfactory bulb

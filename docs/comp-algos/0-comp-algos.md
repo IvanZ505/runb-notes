@@ -187,7 +187,7 @@ Since `m` prefers `w'` to `w` we know `m` must have proposed to `w''`. Therefore
 
 ### Different Running Times
 
-![](imgs/diff-runtimes.png)
+![](imgs/real/diff-runtimes.png)
 
 ### Assumptions Before Introducing Big O Notation
 
@@ -290,7 +290,7 @@ Return “No”
 
 #### Example of Graph
 
-![](imgs/example-of-graph.png)
+![](imgs/real/example-of-graph.png)
 
 - Other examples may include online social networks: The vertices are users and a directed edge from a person `a` to another person `b` means that `a` follows `b`.
 - Or, course scheduling, where the vertices are courses and a undirected edge between that wo courses means there is a conflict between the two.
@@ -316,7 +316,7 @@ Return “No”
 
 How many walks and simple paths of length 3 are there in the following directed graph?
 
-![](imgs/walks-quiz.png)
+![](imgs/real/walks-quiz.png)
 
 	Walks: 4 * 3 * 3 * 3
 	Simple Paths: 4 * 3 * 2 * 1
@@ -341,7 +341,7 @@ How many walks and simple paths of length 3 are there in the following directed 
 
 If there are 3 possible trees of 3 vertices, how many possible trees of 4 vertices are there?
 
-![](imgs/trees-counting-quiz.png)
+![](imgs/real/trees-counting-quiz.png)
 
 > Cayley's Formula: There are $n^{n-2}$ trees of `n` vertices.
 
@@ -435,12 +435,12 @@ Every equivalence class is a strongly connected component.
 
 ##### Quiz: A Tiling Problem
 
-![](imgs/tiling-prob.png)
+![](imgs/real/tiling-prob.png)
 
 - In order to solve this problem, we need to break it down into quadrants.
 - When `n=1`, a single tile is enough. If `n>1`, we must divide the grid into four quadrants, putting a tile in the center touching the three quadrants without an "X" and recurse.
 
-![](imgs/tiling-prob-sol.png)
+![](imgs/real/tiling-prob-sol.png)
 
 ##### Quiz: Fast Exponentiation
 
@@ -506,7 +506,7 @@ This solves to $T(n)=O(n\log n)$.
 
 It is important to know how to solve recurrence relations. We will provide a pictorial illustration and a formal proof this time.
 
-![](imgs/mergesort-pics.png)
+![](imgs/real/mergesort-pics.png)
 
 ##### Time Complexity Proof
 
@@ -517,7 +517,7 @@ $$T(n) \leq T(n/2) + T(n/2) + cn$$
 - and $T(1) \leq c$ and $T(2) \leq c$ and $T(3) \leq c$.
 - We postulate that $T(n) \leq 3cn\ln n$ for all `n >= 2` and prove it by *strong induction*.
 
-![](imgs/mergesort-time-proof.png)
+![](imgs/real/mergesort-time-proof.png)
 
 ### Quicksort
 
@@ -536,7 +536,7 @@ end procedure
 
 Assume for now we can find the median in linear time.
 
-![](imgs/quicksort-pics.png)
+![](imgs/real/quicksort-pics.png)
 
 ### Median of Medians
 
@@ -580,11 +580,11 @@ Answer: `k' >= 0.3n` because in half the `0.2n` groups, at least 3 elements are 
 
 ##### Mathematical Induction
 
-![](imgs/math-induction.png)
+![](imgs/real/math-induction.png)
 
 ##### Strong Induction
 
-![](imgs/strong-induction.png)
+![](imgs/real/strong-induction.png)
 
 #### Comments on Quicksort
 
@@ -638,7 +638,7 @@ $$= 2n \sum_{t=2}^{n} \frac{1}{t}=O(n \log n)$$
 
 > **Problem:** Given `n` points on a Euclidean plane, fine the pair of points with the smallest Euclidean distance.
 
-![](imgs/cloest-pair-points.png)
+![](imgs/real/cloest-pair-points.png)
 
 #### Brute Force
 
@@ -680,9 +680,9 @@ end procedure
 - Only need to compute the closest pair between $P_1$ and $P_2$ if the distance is less than $d = \min(d_1,d_2)...$.
 - Only need to consider points that are less than `d` away from the separating line `l`.
 
-![](imgs/closest-by-d-distance.png)
+![](imgs/real/closest-by-d-distance.png)
 
-![](imgs/zoomed-in-closest-d-distance.png)
+![](imgs/real/zoomed-in-closest-d-distance.png)
 
 > There is at most one point in each square of side length $\frac{d}{2}$.
 
@@ -736,7 +736,7 @@ Even when the two numbers are large (of `n` digits), there can only be a few non
 
 A natural way to compute polynomial multiplication is to use its expansion:
 
-![](imgs/natural-algo-polynomial.png)
+![](imgs/real/natural-algo-polynomial.png)
 
 
 > The (worst-case) running time is `ϴ(n²)`.
@@ -745,7 +745,7 @@ A natural way to compute polynomial multiplication is to use its expansion:
 
 0 In the case of integer multiplication, we probably know the *long multiplication*. It can take $\Theta(n^2)$ time.
 
-![](imgs/long-mult-natural.png)
+![](imgs/real/long-mult-natural.png)
 
 #### Divide and Conquer
 
@@ -771,13 +771,13 @@ The running time is: $T(n) = 4T(n/2)+O(n)$.
 
 > The Karatsuba Algorithm computes $A_{high}B_{high}$, $A_{low}B_{low}$, and $(A_{high}+A_{low})(B_{high}+B_{low})$, and then takes it in order to compute:
 
-![](imgs/karatsuba-algo.png)
+![](imgs/real/karatsuba-algo.png)
 
 The running time of this algorithm is: $T(n)=3T(n/2) + O(n)$. This is because there are three subproblems of polynomial multiplication of half input size, and the rest are addition and subtraction that only takes linear time.
 
 #### Karatsuba Algorithm Example
 
-![](imgs/karatsuba-algo-ex.png)
+![](imgs/real/karatsuba-algo-ex.png)
 
 #todo there is still so much fdkajfdkfa
 
@@ -840,34 +840,5 @@ dp transition function
 
 ### Optimal Offline Caching
 
-## Minimum Standing Tree
-
-### The Cut Property
-
-### Prim's Algorithm
-
-#### Fibonacci Heap
-
-### Kruskal's Algorithm
-
-#### Union Find
-
-### Boruvka's Algorithm
-
-
-## Shortest Path
-
-### Dijkstra's Algorithm
-
-#### With Fibonacci Heap
-
-
-### Bellman-Ford Algorithm
-
-
-#### Negative Cycle Detection
-
-#### Simpler Implementation
-
-### Floyd-Warshall Algorithm
+## [Midterm Review](midterm-2)
 
