@@ -658,3 +658,75 @@ _(Now you know why vanilla is key in cold desserts!)_
 Note: 390 receptors in olfactory genes
 
 convergence from olfactory epithelium to olfactory bulb
+
+**Olfactory Sensory Neurons**
+
+## Changing Sensory Systems
+
+- The changing of sensory systems could be useful if you want to *optimize* the function for a particular environment or goal.
+- Or, to more effectively link sensory input to attention, affect, motivated behavior, etc...
+
+#### Adaptive Responses
+
+> Sensory changes to adjust to stimuli as they are encountered.
+
+- *Example:* Pupillary responses.
+
+#### Anticipatory Responses
+
+> Sensory changes that occur when a stimulus is expected.
+
+- *Example:* Priming based illusions.
+- *Example:* Interpreting sound sources.
+
+#### Ongoing Responses
+
+> Sensory changes that last indefinitely.
+
+- *Example:* Recognition based illusions.
+
+---
+
+- **Postulation**: Sensory dynamics have a *cognitive* component in so far as they apply *pre-existing information* about the world to better interpret sensory input **or** couple sensory input to behavior.
+- If this is indeed true, this means that:
+	- We should see beliefs about the world reflected in sensory processing, maybe even beliefs that are *incorrect.*
+- Cognitive *dysfunction* might be expected to manifest in particular forms of *sensory dysfunction*.
+
+---
+
+### What if an Odor Becomes Common?
+
+![](imgs/Pasted%20image%2020250505162600.png)
+
+- This is a change in neural representations based on *learned* natural statistics about odors.
+
+### What if it Predicts Shock
+
+- **Discriminative** fear conditioning yields odor-specific fear and odor-specific increases in OSN output.
+
+![](imgs/Pasted%20image%2020250505162846.png)
+
+> This is a change in neural representations based on *learned* odor-shock contingencies. Why could that be useful?
+
+### What if the Mouse *Thinks* an Odor Predicts a Shock
+
+- Single-odor conditioning yields generalization in OSNs (Olfactory sensory neurons).
+
+![](imgs/Pasted%20image%2020250505163237.png)
+
+> This is a change in neural representations based on *inferred* odor-shock contingencies. Why could that be useful?
+
+- *Single-odor* conditioning yields generalization in the PG cells (periglomerular cells crucial for processing odor info)
+
+![](imgs/Pasted%20image%2020250505170140.png)
+
+> This is a change in neural representations caused by *learning* that occurs during first inhalation.
+
+
+- **Contingencies**: Why might that timing matter?
+
+
+
+#todo Patient reported outcomes
+
+#todo something else what?? 

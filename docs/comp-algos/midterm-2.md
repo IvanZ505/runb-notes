@@ -120,5 +120,5 @@
 
 ![](imgs/real/floydwarshall-ex.png)
 
-#sidenote ask if `ti*w_i` as the answer is correct in decreasing order
+
 
