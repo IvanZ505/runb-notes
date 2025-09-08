@@ -725,8 +725,3 @@ convergence from olfactory epithelium to olfactory bulb
 
 - **Contingencies**: Why might that timing matter?
 
-
-
-#todo Patient reported outcomes
-
-#todo something else what?? 
