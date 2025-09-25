@@ -232,4 +232,121 @@ However, if you had a scenario where:
 - MEU: A_3 is preferred, highest EU value (3.5 EU vs 1.6EU(A_2))
 
 19. Relations: They are all intransitive with one another.
-- 
+
+
+## Sept 22
+
+### Paradoxes of Decision Theory
+
+#### The Allais Paradox
+
+|     | T₁   | T₂₋₁₁ | T₁₂₋₁₀₀ |
+| --- | ---- | ----- | ------- |
+| G₁  | 1mil | 1mil  | 1mil    |
+| G₂  | 0    | 5mil  | 1mil    |
+
+- What would you prefer in this case?
+	- Me personally, fuck it we ball, G₂ all day.
+
+
+|     | T₁   | T₂₋₁₁ | T₁₂₋₁₀₀ |
+| --- | ---- | ----- | ------- |
+| G₃  | 1mil | 1mil  | 0       |
+| G₄  | 0    | 5mil  | 0       |
+
+- What about in this case?
+	- Still going wit the 5 mil...
+
+> However, despite the utilities still leaning toward G₂ and G₄, many people would prefer G₁ to G₂ still. 
+
+- Because there is a guarantee for a million, there is much more regret for losing a million (even if it is super rare).
+
+#### Ellsberg Paradox
+
+- You set it up with 4 gambles. There is a setup with 2 boxes with balls in them.
+
+![](imgs/ellsberg-paradox.png)
+
+#todo stuff about how people tend to underestimate low priorities and overestimate high priorities.
+
+#### St Petersberg Game
+
+- You start flipping a coin *until it comes up heads*. (`h` = num. of flips to get heads.)
+- **Payout:** `2ⁿ`
+
+| flips | 1   | 2   | 3   | 4   | ... |
+| ----- | --- | --- | --- | --- | --- |
+| util  | 2   | 4   | 8   | 16  | ... |
+
+**According to EU theory**: You should be willing to pay **as much money as possible** to play this game. (Bc it has infinite utility)
+
+## Sept 25
+
+### Pasadena Paradox
+
+- `n` - number of flips to get a head.
+- *If `n` is even*: You pay $\frac{2^n}{n}$
+- *If `n` is odd*: You get $\frac{2^n}{n}$
+
+| n    | 1   | 2    | 3    | ... |
+| ---- | --- | ---- | ---- | --- |
+| pay  | 2   | -2   | 8/3  | ... |
+| prob | 1/2 | 1/4  | 1/8  | ... |
+| EV   | 1   | -1/2 | +1/3 | ... |
+
+- The EV alternates `+/-`(1/n), which is the following equation:
+
+$$EV=\sum_{n=1}^{\infty}{\frac{-1^{n+1}}{n}}$$
+
+> This is an *alternating* harmonic series and converges on `ln(2)`
+
+However, if you rearrange the numbers of the expected value to have 1 positive value and then 2 negative value...
+
+- $EV=1-\frac{1}{2}-\frac{1}{4}+\frac{1}{3}-\frac{1}{6}-\frac{1}{8}+\frac{1}{5}...$
+- Add some of them up... $EV=\frac{1}{2}-\frac{1}{4}+\frac{1}{6}-\frac{1}{8}...$
+- Which is $=\frac{1}{2}(1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}...)$
+- And that converges on `1/2ln(2)` Which is a completely different answer.
+
+> The Pasadena Paradox *may feel like a fair game*...
+
+
+### Two-Envelope Paradox
+
+- Envelope A
+- Envelope B
+- It will *either be*:
+	- `$A` = `2$B`
+	- Or `$B` = `2$A`
+
+|     | A+(p=1/2) | B+(1/2) |
+| --- | --------- | ------- |
+| A   | x         | x       |
+| B   | x/2       | 2x      |
+
+- EV[A] = x
+- EV[B] = 5/4x
+
+
+> When you look at it *this way*... you should then choose **B**. BUT, if you switch the order of it, you would be told to pick **A**. According this this expected utility, **you would always be better off choosing the other one**.
+
+- Of course, this is because of *how you are formulating the problem!*
+
+|     | A+(p=1/2) | B+(1/2) |
+| --- | --------- | ------- |
+| A   | x         | 2x      |
+| B   | 2x        | x       |
+
+- In this solution... the EVs are EQUAL!!
+
+### Newcomb's Problem
+
+- There are two boxes...
+	- A transparent box with *$1,000*
+	- A opaque box with *$1,000,000 or $0*
+- You have the choice between either taking only 1 box or taking both boxes.
+- *Now to add to this*, there is an angel that peers into your soul and predicts whether you will choose one or two boxes.
+	- If the angel thinks you're a **one-boxer**, the angel will put `$1,000,000` into the opaque box.
+	- If the angel thinks you're a **two-boxer**, the angel will put `$0` into the opaque box.
+	- *However...* this angel has a 99% accuracy in predicting.
+- **Once she makes the choice, SHE CAN'T CHANGE IT!**
+	- Doesn't that mean after the choice is made, the probabilities are gone... meaning that two-boxing is strictly dominant!
