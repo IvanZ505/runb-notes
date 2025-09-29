@@ -230,3 +230,5 @@ Design a Database for census information
 ```
 
 
+## [Exam 1 Guide](exam-1-guide)
+
