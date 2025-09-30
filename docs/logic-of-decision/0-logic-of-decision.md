@@ -1,4 +1,3 @@
-# Logic of Decision
 
 > Taught by Dr. Max Bialek ([Email](mailto:mbialek@rutgers.edu))
 

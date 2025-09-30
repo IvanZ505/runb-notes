@@ -93,9 +93,105 @@
 
 - In the case above, the employee may also be a manager that has employees reporting to him/her. 
 
+#### `n`-ary Relationships
+
+> Relationship sets with multiple different (`n`-ary) sets that may all be related via this one relationship.
+
+![](imgs/n-ary-relationship.png)
+
 ### Constraints
 
+#### Key Constraints
+
 - **Candidate keys:** Minimal set of attributes that uniquely identify an element. (There can be many candidate keys in a *entity*)
+	- If multiple candidate keys are needed to uniquely identify an employee, they would form a *composite key*.
+- **Primary keys**: These are the candidate keys that will be enforced by the DBMS to keep track of unique entries.
+	- In a ERD, you would **underline** the attribute that is being used as the primary key.
+
+#### Cardinality Constraints
+
+ > What is the mapping between two different entity sets?
+ 
+ - **Many-to-many:** You can have multiple entries mapping to multiple different entries from either entity set. (No cardinality limits)
+	 - This is represented in arrow notation as just a **regular line**.
+	 - *Note:* You can write in more general cardinality constraints using *cardinality notation*.
+	 - ![](imgs/erd-many-many.png)
+ - **One-to-many:** You can only have one of a particular entity in the relationship set.
+	 - Represented by a **arrow** in arrow notation.
+	 - Ex: A user can post any number of posts... but each post *only has one user who posted*.
+	 - ![](imgs/erd-one-many.png)
+ - **One-to-One:** Each relationship set is unique, and has only one singular mapping.
+	 - **Arrows on both sides** in arrow notation.
+	 - ![](imgs/erd-one-one.png)
+#### Participation Constraints
+
+> Are all the entities in the relationship set participating in the following relationship?
+
+- **Partial Participation:** Each entity is not required to be part of this relationship.
+	- Normal line in arrow notation.
+- **Total participation:** Each entity *MUST* participate in the given relationship *at least once*.
+	- THICC line in arrow notation.
+
+![](imgs/erd-total-participation.png)
+
+- In this example, there is a one-to-many, total participation relationship where each post *has to* be posted by one user, and the user could post many different posts.
+
+#### Domain Constraints
+
+> What is the data type of the attributes in the entity set.
+
+- **Composite types:** Use multiple different types and attributes to form a singular attribute.
+- `int`, `float`, `double`, `boolean`, `date`, `datetime`, `time`
+- `char(10)` - Fixed length of 10 characters.
+- `varchar(10)` - Variable length of *up to* 10 characters.
+
+### ISA Relationships
+
+> Allows the inheriting of attributes and relationships from a particular entity set whilst *tacking on* specific attributes depending on a specific instance.
+
+![](imgs/isa-relationships.png)
+
+- Used to factor out commonalities and avoid repetitions in the ERD.
+- Precisely identify specific *subsets* of entities that may require different attributes.
+- Organizing large models and the process of creating and modifying models.
+
+#### Constraints
+
+> Each *ISA Relationship* has these constraints!
+
+##### Cover Constraint
+- **Partial vs Complete:** Do all the entities participate in the *ISA Relationship*? If so, it is a *complete* ISA Relation.
+	- For this case, do *all employees* have to be either an Hourly or Contracted employee?
+
+##### Overlap Constraint
+- **Overlapping vs Disjoint:** Can the particular entity be part of *both* subsets and domains? If so, it is an *overlapping* ISA Relation.
+	- For this case, *can an employee* be **both** Hourly and Contracted?
+
+### Weak Entities
+
+> Weak entities do not have enough attributes "stored" to uniquely identify it's existence.
+
+- Used when an entity set is *entirely dependent* on a relationship set for its existence.
+	- Represented using a double diamond and a double rectangle around the weak entity.
+- Weak entities have to be *One-to-many* relationships and have *total* participation in it's identifying relationship.
+- They can also have a *partial key* that assists in identifying a weak entity alongside the key of stronger entity sets.
+
+![](imgs/weak-entity.png)
+
+### Aggregation
+
+> Allows you to treat the entire Relationship set as an entity set, and connect another relationship set to it.
+
+![](imgs/erd-aggregation.png)
+
+### Reification
+
+> Converts relationship sets into entity sets with binary relationships with its participants, allowing each of the participants to have relationships of their own.
+
+![](imgs/erd-reification.png)
+
+- It makes the relationship into a *weak entity* and connects it to the original strong entities.
+- Considered an *alternative* to aggregation.
 
 ### Notations
 
