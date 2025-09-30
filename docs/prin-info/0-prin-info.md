@@ -10,7 +10,7 @@
 
 > Created in the 1960s
 
-![](imgs/dmbs-hierarchical.png)
+![](imgs/real/dmbs-hierarchical.png)
 
 - Top levels are large categories for the lower levels.
 - An example would be A hierarchical organization of Country -> States -> Counties -> Towns
@@ -31,7 +31,7 @@
 
 #### Relational Model
 
-![](imgs/dmbs-relational.png)
+![](imgs/real/dmbs-relational.png)
 
 > Created in 1970s by Ted Codd.
 
@@ -153,7 +153,7 @@ Some employees are managers of a Department
 
 > Subsets that inherit attributes.
 
-![](imgs/isa-relationship.png)
+![](imgs/real/isa-relationship.png)
 
 > This ISA relationship is *disjoint* and *complete*.
 
@@ -170,7 +170,7 @@ Some employees are managers of a Department
 > - Take these keys from another entity set through identifying relationships.
 > - might have partial keys.
 
-![](imgs/er-symbols.png)
+![](imgs/real/er-symbols.png)
 
 ---
 
