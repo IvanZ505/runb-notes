@@ -266,6 +266,9 @@ However, if you had a scenario where:
 
 ![](imgs/ellsberg-paradox.png)
 
+- E and F vs G and H have the same value for utilities in the two cases. If you prefer E to F, you should also prefer G to H, but that is not true.
+- It seems to make sense to prefer H to G because (sure thing probability axioms)
+
 #todo stuff about how people tend to underestimate low priorities and overestimate high priorities.
 
 #### St Petersberg Game
@@ -349,3 +352,235 @@ However, if you rearrange the numbers of the expected value to have 1 positive v
 	- *However...* this angel has a 99% accuracy in predicting.
 - **Once she makes the choice, SHE CAN'T CHANGE IT!**
 	- Doesn't that mean after the choice is made, the probabilities are gone... meaning that two-boxing is strictly dominant!
+
+> Once she has looked at you and *put the money in the box*, there is no longer just the same probabilities, as she has already made her own decision!
+
+## Oct 2
+
+### Mathematics of Probability
+
+> Just check out [these notes](../discrete-2/discrete-2#Probability) on probability instead..
+
+
+> [!NOTE] Axioms
+> Fundamental Truths
+
+#### Kolmogorov Axioms
+
+1. $1 \ge p(A) \ge 0$
+2. p(S) = 1 (If `E` is a tautology, then `p(E)=1`)
+3. If $A \cap B = \emptyset$, then $p(A \cup B) = p(A)+ p(B)$
+	- If `A ∩ B` is a contradiction, then `P(A ∪ B) = p(A) + P(B)`
+
+#### Theorems
+
+- **Theorem 6.1**: $p(A) + p(¬A)=1$
+- **Theorem 6.2**: If A and B are logically equivalent, `p(A) = p(B)`
+- **Theorem 6.3**: $p(A∪B)=p(A) + p(B) - p(A∩B)$
+
+
+## 10/3
+
+### Philosophy of Probability
+
+- The *classical interpretation* of probability: the probability of an event `E` occuring is the number of *outcomes* where `E` occurs vs the *total number of outcomes*.
+
+However, what if you have a situation where you are *flipping two heads?*
+
+- In this case, the possibility will depend on how you interpret the probability...
+- If you see it in the sense of, "its possible to get two heads, 1 head, or no heads..." Doesn't that mean the `P(2 heads) = 1/3`?
+- Hm, but then if you draw up a table with all the possibilities, there is only 1 scenario where you get 1 head out of 4 possible, which means is it `P(2 heads) = 1/4`?
+
+> In probability, we must all agree on a view of the possibility space.
+
+
+#### Hypothetical Infinite Frequentism
+
+- Reference class is a hypothetical infinite series of repetitions of the stochastic process.
+- The p(E) is the limiting relative frequencies *in the infinite hypothetical reference class*.
+
+##### Naive Frequentism
+
+- Different reference classes yield different probabilities.
+- Bigger reference class to take advantage of law of large numbers but then leading to including irrelevant things.
+
+> [!NOTE] Degree of Belief
+> There is some degree of similarity to your own answer where you are *willing* to believe them.
+
+---
+
+However, by structuring and rearranging the occurrences of the reference class... you can still *reconstruct* any probability you want.
+
+
+#### The Propensity Interpretation
+
+> The *disposition* of a particular event to occur. (Ex: Glass has a disposition to shatter)
+
+- In both classical and frequentist interpretations, probability is something in the world, and does not depend on us at all.
+	- *Even if no one existed, people would still be able to talk about probabilities.*
+- **Probabilities** are physical magnitudes possessed by systems (similar to charge or mass)
+
+- There is an objection to this interpretation due to a lack of explanation.
+
+#### Humphrey's Paradox
+
+- A challenge to the Propensity Interpretation.
+- When you look at the probability axioms, there is a "backwards" or inverse conditional probability.
+	- If `p(H | F)` exists, `p(H|F)=p(F|H)P(H)/P(F)` must exist...
+- However, with the Propensity Interpretation, it does not make sense to have physical causing dispositions that go backwards.
+
+
+### Logical Probability
+
+> A confirmation function `c(hypothesis | Evidence)`. \
+>> He wanted to know, to what extent does evidence *confirm* a hypothesis.
+
+$$c(hyp|Evidence) = \frac{m(H\wedge E)}{m(E)}$$
+
+- Since `m` depends on a structural description, *if you describe the structure differently*, you can get different probabilities for the same event.
+- You can't presume the future will look like the past *just because* the past looked like the past.
+	- It's the question of "How do you know the sun will rise tomorrow?"
+	- **Cause it always has...**
+
+### Credence
+
+> What's in our heads, the *subjective interpretation*.
+
+#### The Dutch Book Theorem
+
+> Degrees of belief *satisfy* axiom of probability iff you are **not** vulnerable to dutch books.
+
+- If your degrees of belief violate the probability axioms, you will be subjected to the *Dutch Book* (Bets you'd be willing to take where you are guaranteed to lose money.)
+
+---
+
+```
+"S" is the stake a player receives if event E occurs.
+
+p is the "betting quotient" i.e. the player's degree of belief in E.
+
+E: S - p * S
+¬E: -p * S
+
+EV[bet] = p*(S-p*S) + (1-p)(-p*S)
+```
+
+---
+
+##### Violating Axiom 1
+
+- Axiom 1: 0 <= p <= 1
+
+```
+let p < 0
+set S = -1
+E: -1 - p * -1 = -1 + p (which is less than 0), which means with a negative stake, the agent loses money.
+¬E: -p * S = -p -1 = p < 0
+
+*If your degree of belief is less than the probability axiom, you are guaranteed to lose money.*
+```
+
+##### Violating Axiom 2
+
+- Axiom 2: p(S) = 1, a tautology has a probability of 1.
+- Violates easily, set only 1 condition.
+
+```
+let p > 1
+Set S = 1
+E: S - pS = 1 - p, E < 0
+
+let p < 1
+set S = -1
+E: -1 + p, E < 0
+```
+
+##### Violating Axiom 3
+
+- If `E` and `H` are mutually exclusive (ie E ∧ H is impossible), then the p(E ∨ H) = p(E) + p(H)
+- To violate this, you have to violate the equality.
+
+```
+let p(E ∨ H) > p(E) + p(H)
+set S_{E ∨ H} = ? (-1), S_{E} = ? (1), S_{H} = ? (1)
+
+E ∧ ¬H: 
+H ∧ ¬E:
+
+```
+
+## 11/13
+
+#### Small Improvement Argument
+
+- To prove: `¬(x > y) ∧ ¬(y > x) ∧ ¬(x ~ y)`
+- Step 1: `¬(x > y) ∧ ¬(y > x)`
+- Step 2: Let `y+` be some amount, *just slightly* more than the amount `y`, that you would get. (So ofc, in this case, you would prefer `y+` to `y`)
+- Step 3: `[(x ~ y) ∧ (y+ > y)] -> (y+ > x)`
+- Step 4: But thats not true... `¬(y+ > x)`
+- Step 5: Then, it must *not be the case (step 3)* -> Thus, `¬(x ~ y ∧ y+ > y)`
+	- This means at least one of them has to be false.
+- Step 6: `¬(x ~ y)` has to be the the case then, since we said in step 2 that `y+ > y`
+- Step 7: `¬(x > y) ∧ ¬(y ~ x) ∧ ¬(x ~ y)`
+
+### Bayesianism
+
+1. Our degrees of belief must satisfy the probability axioms.
+2. You should update your degrees of belief (credences) in proposition `H` in light of new evidence `E` using Bayes Rule.
+
+
+- Probability
+	- Chance
+	- Credence
+		- Bayesianism
+			- Subjective - any prior that you want, you can take (No reason to prefer one prior over the other)
+				- You shouldn't assign zero prior probability to anything though. (Since if you were 100% certain something could not happen, then anything that would depend on that would also *never happen*)
+			- Objective - All views of trying to pick a prior are a little bit like the classical approach. (Choose a uniform prior)
+				- Suppose you have a box that could be 1-2ft. Prob. of the box would then be 1.5
+				- Runs into a problem as if you tried to manufacture something for the 1.5 box, and its not exactly 1.5, ur fucked!
+
+P(B|P) = 7/10
+P(B| -P) = 1/10
+P(P) = 1/20
+
+P(P | B) = 7/26
+
+
+## Exam Review
+
+1
+
+- he wont ask about violating continuity probably
+- He cares about the list of completeness, transitivty, asymmetry, and negative transitivity (if there is an indifference, its negative transitivity being violated, not transitivity).
+	- Negative transitivity can be violated with: B > S, B ~ T, S ~ T
+
+
+2
+
+```
+u(Peas) = 2/3 u(Beans) + 1/3 u(Spinach)
+u(Beans) = 1/2 u(Broccolli) + 1/2 u(Peas)
+
+u(Broccoli) > u(Beans) > u(Peas) > u(Spinach)
+
+B -> 1 (If it's one) | 1
+
+Beans -> 0 | 1/2
+
+P -> 2/3 (Must be 2/3 from first equation) | 0
+
+S -> 0
+
+However, it asks for B to be 0 and S to be -1, so you would just step it down.
+
+```
+8/9
+
+- What does actual frequentism say...?
+	- Whats the problem with it, why is it philosophically unsatisfying
+- Even though we cant tell the difference between probability of getting 2 heads etc... we see a frequency.
+
+Equally possible possibility space: classical: space of possibilities that are equally possible. point is... thats passing the buck from defining what possibilities are.
+
+Reference class too big vs too small? - It shouldnt be too big (includes irrelevant info), too small and the prob. isnt accurate.
+

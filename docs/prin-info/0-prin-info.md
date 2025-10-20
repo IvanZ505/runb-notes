@@ -1,3 +1,4 @@
+{% include math.html %}
 # Principles of Information and Data Management
 
 ## DBMS
