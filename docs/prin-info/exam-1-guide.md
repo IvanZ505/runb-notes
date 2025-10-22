@@ -63,7 +63,7 @@
 ## Entity Relationship Diagrams
 
 ### Concepts
-
+a
 - *Entity Set*: A collection of similar individual things...
 	- **Think about it like a *class* in OOP.**
 - *Attribute:* A simple value that is associated with an entity, usually helping to describe it.

@@ -584,3 +584,5 @@ Equally possible possibility space: classical: space of possibilities that are e
 
 Reference class too big vs too small? - It shouldnt be too big (includes irrelevant info), too small and the prob. isnt accurate.
 
+## [Midterm Exam Review](midterm-study-guide)
+
