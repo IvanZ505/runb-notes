@@ -586,3 +586,280 @@ Reference class too big vs too small? - It shouldnt be too big (includes irrelev
 
 ## [Midterm Exam Review](midterm-study-guide)
 
+
+## Game Theory
+
+### Types of Games
+
+- **Zero-sum Game vs Nonzero-sum Game:** Anything a player gains is matched by a corresponding loss for the other player.
+- **Noncooperative Game vs Cooperative Game:** All agents are *rationally self interested*. They will do what is best for themselves.
+- **Simultaneous-move Game vs Sequential-move Game:** Decisions are made at the same time. (Rock, paper, scissors vs Chess)
+- **Games with perfect info vs imperfect info:** Does you opponent know information that you don't know.
+
+> You can use iterative dominance reasoning to arrive at a dominance reasoning solution to the game.
+
+### Solutions
+
+- Dominance solutions
+- Equilibrium solutions
+	- Look for the row player's column maximum and the column player's row maximum when the row player chooses their maximum.
+	- This is the nash equilibrium
+- Can look at them together
+
+
+##### Example
+
+- Find the equilibrium?
+
+|     | C_1   | C_2   | C_3   |
+| --- | ----- | ----- | ----- |
+| R_1 | 0, 0  | -4, 4 | 4, -4 |
+| R_2 | 4, -4 | 1, -1 | 2, -2 |
+| R_3 | 9, -9 | -3, 3 | 3, -3 |
+
+- Column player's best outcome is C_2, which strictly dominates C_1 and C_3 (*look on the right*)
+- The Row player would then choose the best outcome out of the C_2 column, which is R_2.
+
+
+|     | C_1   | C_2   |
+| --- | ----- | ----- |
+| R_1 | (a) 5 | (d) 2 |
+| R_2 | (c) 3 | (b) 4 |
+
+- In this case, there is no *pure equilibrium* solution, as no matter what each person chooses, the other person would want to switch to another choice!
+- However, there is a *mixed equilibrium* solution...
+	- Use probability.
+
+---
+
+Detective Sikert and Kondwani
+
+|     | C    | ¬C     |     |
+| --- | ---- | ------ | --- |
+| P   | ,0   | ,3+5-2 |     |
+| ¬P  | ,3-1 | ,3-2   |     |
+
+```
+u_k(1 year) = -1 (Kondwani has negative utility for a 1 year sentence as jail bad)
+u_s(unhappy) = -1 (Is the detective is unhappy)
+u_s(happy) = 1
+```
+
+|     | C     | ¬C    |
+| --- | ----- | ----- |
+| P   | -1,0  | 1,-6  |
+| ¬P  | -1,-2 | -1,-1 |
+
+- Here is the final game table.
+	- Identify all the unique, non dominated *pure strategy* equilibrium.
+	- If there isn't one answer, identify a mixed one.
+- Planting the drugs weakly dominates, Kondwani's going to choose to confess. NDE -> `{P, C}`
+
+## Voting Notations
+
+- V: Set of voters `1,2,3 ...` / `i,j,k,...`
+- X: Set of candidates/alternatives `A,B,C,...`
+
+> Each voter has a *ballot* ranking elements of `X` (ie alternatives)
+
+`B` is the set of possible ballots:
+
+- `X` = `{A, B, C}`
+- `B` = `{(A,B,C), (A, C, B), ...}`
+
+> A *ranking* is a relation `P` on `X` that is:
+
+- *Complete*: ∀y,z ∈ X, yPz or zPy.
+- *Transitive:* ∀w,y,z ∈ X, (yPw ∧ wPz) -> yPz.
+- *Irreflexive:* ∀y ∈ X ¬yPy
+
+#### Plurality Rule
+
+- The *plurality rule* tells us to look at who got the *most* first place votes.
+
+#### Majority Vote
+
+- You need to have more than half of the votes.
+
+#### Condorcet Method
+
+- Look at all the pairings and determine who prefers which pairing.
+
+```
+Example:
+
+10 Votes: A B C
+10 Votes: B C A
+10 Votes: C A B
+
+Plurality: 3 Winners- A, B and C.
+Majority: Nobody
+Condorcet: Nobody either, since we have a cycle.
+A ≻ B   |  A ≺ C  | B ≻ C
+20  10  | 10   20 | 20  10
+```
+
+#### Borda Counting
+
+- Assign points to each of the ballots in order of preference
+- Whoever has the most points wins.
+
+---
+
+Example
+
+```
+7: A B C D
+5: B C D A
+4: D B C A
+3: C D B A
+```
+
+- Plurality winner: A
+- Majority winner: none
+- Condorcet: B > C > D > A
+- Borda: B > C > D > A
+
+#### The Frenchies Do This
+
+> **Plurality with Runoff**: If There is a majority, that person wins. If not, you run a second election with the top 2 vote-getters, and then determine a winner from there.
+
+
+### The Hare Rule
+
+> Instead of cutting out *everybody* who didn't get the most votes, you just remove the person who had the least first place votes and run it back.
+
+```
+7: A B C D -> A B   D -> A     D
+5: B C D A -> B   D A ->     D A
+4: D B C A -> D B   A -> D     A
+3: C D B A ->   D B A ->   D   A
+```
+
+- In the *Hare's Rule*, we would somehow get: `D > A > B > C`
+
+### Coombs Rule
+
+> Instead of cutting out the person with the *least first place* votes, you cut out the person with the *most* last place votes.
+
+```
+7: A B C D ->   B C D ->   B C 
+5: B C D A -> B C D   -> B C 
+4: D B C A -> D B C   ->   B C
+3: C D B A -> C D B   -> C   B (B wins!)
+```
+
+- In the Coomb's rule: `B > C ~ D > A`
+
+### 74 Fishburn Theorem
+
+> For all `m >= 3`, there is some voting situation with a Condorcet winner such that every scoring rule will have at least `m-2` candidates with a greater score than the Condorcet winner.
+
+## Voting Paradoxes
+
+#### Monotonicity
+
+> A voting procedure is *monotonic* if receiving more support is better for a candidate.
+
+```
+6: A B C
+5: C A B
+4: B C A
+2: B A C
+
+Plurality with Runoff: A wins in this case!
+
+6: A B C
+5: C A B
+4: B C A
+2: A B C    <- We swap A and B...
+
+Now it looks as if A has more support...
+
+Plurality with Runoff: C wins!, After removing B, suddenly, C has more votes!
+
+```
+
+This example above just *seems* wrong. *Plurality with Runoff* is a *non-monotonic* voting method.
+
+#### No Show Paradox
+
+```
+4: A B C
+3: B C A
+1: C A B
+3: C B A
+
+Pluarity w/Runoff: C wins
+
+However what if a few voters don't show up that support A...
+
+2: A B C
+3: B C A
+1: C A B
+3: C B A
+
+Now, the winner is suddenly B...
+```
+
+#### Multiple Districts Paradox
+
+> If you win in *all the districts*, you should still be the winner even if there weren't any districts.
+
+```
+District 1:              District 2:
+3: A B C                 2: A B C
+3: B C A                 3: B A C
+3: C A B
+1: C B A
+
+Coomb's Rule: District 1: B wins, District 2: B wins
+
+Combined:
+5: A B C
+3: B C A
+3: B A C
+3: C A B
+1: C B A
+
+Coomb's Rule: Here, A wins instead
+```
+
+---
+
+Let `V` be a voting method that is *Condorcet consistent* and is not susceptible to the Multiple Districts Paradox.
+
+- So, if candidate `X` is among the winners in each of 2 districts, then X must be among the winners of the combined district.
+
+
+```
+District 1:              District 2:       Combined:
+2: A B C                 1: A B C          3: A B C
+2: B C A                 2: B A C          2: B A C
+2: C A B                                   2: B C A
+_                                          2: C A B
+
+B is condorcet winner in District 2.
+Since there is no Condorcet winner in D1, but there is 1 in D2, then the winner of D2 *must be* among the winners of the combined district. (But since there is only 1 winner, B should be the **only** winner.)
+
+Combined Condorcet: 
+
+A > B: 5
+B > C: 7
+B > A: 4
+A > C: 5
+
+A > B > C, somehow... A won.
+```
+
+#### Multiple Elections Paradox
+
+> When multiple elections are being run at the exact same time, each which can have a different result, but each having only 2 choices.
+
+```
+1: YYY     3: YNN      3: NNY
+1: YYN     1: NYY      0: NNN
+1: YNY     3: NYN
+
+Despite the fact that *literally no one* wanted no for all 3 questions, majority dictates that all 3 will not pass.
+```

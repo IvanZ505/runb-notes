@@ -119,7 +119,7 @@ The idea is that *you will never choose an act that is being dominated*.
 
 The utilities of these sets also leans toward the riskier outcomes, which is why it contradicts the expected utility theory.
 
-### Elllsberg Paradox
+### Ellsberg Paradox
 
 > The Ellsberg Paradox is a choice problem that *also* contradicts Expected Utility Theory. It demonstrates *uncertain probabilities* affects decision making.
 
