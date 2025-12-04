@@ -1,3 +1,4 @@
+{% include math.html %}
 
 > Taught by Dr. Max Bialek ([Email](mailto:mbialek@rutgers.edu))
 
@@ -863,3 +864,18 @@ A > B > C, somehow... A won.
 
 Despite the fact that *literally no one* wanted no for all 3 questions, majority dictates that all 3 will not pass.
 ```
+
+
+---
+
+- In the following groups, each of these will be a condorcet cycle, but then somehow, B is the winner here whereas Condorcet says that A should win.
+
+|     |       | G1  | G2  | G3  |
+| --- | ----- | --- | --- | --- |
+| 30  | A B C | 10  |     | 20  |
+| 1   | A C B |     | 1   |     |
+| 29  | B A C |     | 1   | 28  |
+| 10  | C B A | 10  |     |     |
+| 10  | C A B | 10  |     |     |
+| 1   | C B A |     | 1   |     |
+
