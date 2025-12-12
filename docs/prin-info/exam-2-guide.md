@@ -82,7 +82,87 @@
 
 > You can also use *another* `SELECT` statement inside a query, in something called a *subquery*. This allows you to loop SQL commands and chain them together.
 
+#### Aggregate Operators
 
+`sum()`, `max()`, `min()`
 
 ## Relational Algebra
 
+## Practice 1
+
+1.
+
+```
+CREATE TABLE enrolled (
+	snum: int,
+	cname: varchar(30),
+	primary key(snum, cname),
+	Foreign key (snum) References student (snum),
+	Foreign key (cname) References class (cname)
+)
+
+CREATE TABLE class (
+	cname: varchar(30) primary key,
+	meets_at: time,
+	room: varchar(30),
+	fid: int,
+	Foreign key (fid) References faculty (fid)
+)
+
+CREATE TABLE faculty (
+	fid: int primary key,
+	fname: varchar(30),
+	dept: varchar(30)
+)
+
+CREATE TABLE student(
+	snum: int primary key,
+	sname: varchar(30),
+	major: varchar(20),
+	level: varchar(10),
+	age: int
+)
+```
+
+b.
+
+if the table were to be populated, you would need to populate the students and faculty table first, and then the class and enrolled tables.
+
+2.
+
+```
+SELECT f.name
+FROM faculty f
+WHERE f.dept = "cs"
+AND f.name = "W%";
+```
+
+3.
+
+```
+SELECT s.name
+FROM student s
+WHERE s.age = ( SELECT s.age 
+FROM student s
+WHERE s.name = "Horatio")
+```
+
+4.
+
+```
+SELECT s.name
+FROM student s
+WHERE s.age > (SELECT MAX(s.age) FROM student WHERE s.name = "A%");
+```
+
+5.
+
+```
+SELECT c.cname
+FROM class c
+WHERE c.cname NOT IN (SELECT e.cname FROM enrolled e WHERE e.cname = c.cname)
+```
+
+6.
+
+dfadfasdfdasfasdf
