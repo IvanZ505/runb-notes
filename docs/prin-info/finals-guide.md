@@ -94,15 +94,57 @@ $$X^+=\{A \in R \space | \space x \rightarrow A \}$$
 
 #### Lock Based Concurrency Control
 
+- S-locks (Obtained in order to read data)
+	- If A transaction has a S-lock, another transaction can only get another S-lock, but can not get a X-lock.
+- X-locks (Obtained in order to write data)
+	- If a transaction has a X-lock, other transactions can not get a S-lock *or* a X-lock until the transaction releases the X-lock.
+
 #### Isolation Levels
+
+- Read uncommitted:
+	- This allows for all anomalies to occur, which also means it uses no locks.
+- Read committed:
+	- Requires you to have the S-lock in order to read data, and release the S-lock after the read. 
+	- This prevents dirty reads.
+- Repeatable Read:
+	- Requires you to have the S-lock in order to read data, but you only release the S-lock after the transaction commits.
+	- This prevents unrepeatable reads.
+- Serializable:
+	- Requires you to have the X-lock in order to write, and also only releasing both when the transaction commits.
+	- This prevents phantom reads.
 
 ### NoSQL Databases
 
+- Relational Databases put a lot of emphasis on the consistency of data.
+	- This means the entire database *must* remain consistent at all times (Except when processing a transaction) (ACID Property!)
+- This can become a burden and comes at the cost of flexibility and scalability.
+	- Since it has to comply with a rigid schema and all Integrity Constraints.
+- RDBMSs are not very good at horizontal scaling. (Meaning adding more nodes to a cluster)
+	- It incurs a lot of overhead for consistency, complexed queries and most modern applications only really need simple instructions.
+
 #### Types
+
+- Document based NoSQL databases like MongoDB.
+- Key-value based NoSQL databases.
 
 #### Key Value Databases
 
+- Key value based databases store data as (key, value) pairs.
+- Each key is unique and there is a hashmap or hash table that maps to each value.
+	- Each key is hashed via a 
+- Completely independent, with no referential integrity and *no relationships*.
+
 #### Consistent Hashing
+
+- **Consistent hashing** schemas are often used, which avoid having the remap each key to a new node when nodes are added or removed.
+	- Using *mod* is an example of a non-consistent hashing method.\
+- "Ring"-topology: a hashing method that puts servers on a point in a number range between 0 and 1.
+
+![](imgs/Pasted%20image%2020251214153845.png)
+
+
+- You would hash each key to a position on the ring, and store the actual key-value pair on the first server that appears clockwise of the hashed point on the ring.
+- 1/n of the key-value pairs will end up being stored on each server (n being the number of servers)
 
 #### Dissemination
 
